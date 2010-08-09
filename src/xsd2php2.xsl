@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0"
+	xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:exslt="http://exslt.org/common">
+
+	<xsl:template
+		match="//*[local-name()='schema' and namespace-uri()='http://www.w3.org/2001/XMLSchema']">
+
+		<xsl:variable name="targetNamespace" select="@targetNamespace" />
+
+		<!-- Generate classes for each element with data type as extention -->
+		<xsdschema>
+			<classes>
+                
+				<xsl:for-each
+					select="*[local-name()='element' and
+					namespace-uri()='http://www.w3.org/2001/XMLSchema']">
+					<xsl:choose>
+						<xsl:when test="@namespace">
+							<class debug="1.0" name="{@name}" namespace="{@namespace}">
+								<extends debug="1.0Extend" name="{@type}" />
+								<xsl:apply-templates />
+							</class>
+						</xsl:when>
+						<xsl:otherwise>
+							<class debug="1.1" name="{@name}" namespace="{$targetNamespace}">
+								<extends debug="1.1Extend" name="{@type}" />
+								<xsl:apply-templates />
+							</class>
+						</xsl:otherwise>
+					</xsl:choose>
+				</xsl:for-each>
+ 
+				<xsl:for-each
+					select="//*[local-name()='complexType' and namespace-uri()='http://www.w3.org/2001/XMLSchema']">
+					<xsl:variable name="classSimpleType"
+						select="substring-after(current()/*[local-name()='simpleContent']/*[local-name()='extension']/@base, ':')" />
+					<xsl:choose>
+						<xsl:when test="@namespace">
+
+							<class debug="1.2-1" name="{@name}" simpleType="{$classSimpleType}"
+								namespace="{@namespace}">
+								<xsl:apply-templates />
+							</class>
+						</xsl:when>
+						<xsl:otherwise>
+							<class debug="1.2-2" name="{@name}" simpleType="{$classSimpleType}"
+								namespace="{$targetNamespace}">
+								<xsl:apply-templates />
+							</class>
+						</xsl:otherwise>
+					</xsl:choose>
+				</xsl:for-each>
+              
+				<xsl:for-each
+					select="//*[local-name()='simpleType' and
+					namespace-uri()='http://www.w3.org/2001/XMLSchema']">
+					<xsl:variable name="type"
+						select="substring-after(current()/*[local-name()='restriction']/@base,
+					':')" />
+					<xsl:choose>
+						<xsl:when test="@namespace">
+							<class debug="1.3-1" name="{@name}" type="{$type}"
+								namespace="{@namespace}">
+								<xsl:apply-templates
+									select="*[local-name()='annotation' and
+					namespace-uri()='http://www.w3.org/2001/XMLSchema']" />
+							</class>
+						</xsl:when>
+						<xsl:otherwise>
+							<class debug="1.3-2 - ERROR No
+					Namespace" name="{@name}"
+								type="{$type}" namespace="{@namespace}">
+								<xsl:apply-templates
+									select="*[local-name()='annotation' and
+					namespace-uri()='http://www.w3.org/2001/XMLSchema']" />
+							</class>
+						</xsl:otherwise>
+					</xsl:choose>
+				</xsl:for-each>
+
+
+
+
+			</classes>
+		</xsdschema>
+
+	</xsl:template>
+
+
+	<!-- Annotation -->
+	<xsl:template
+		match="*[local-name()='annotation' and namespace-uri()='http://www.w3.org/2001/XMLSchema']">
+		<docs>
+			<xsl:apply-templates />
+		</docs>
+	</xsl:template>
+
+	<!-- Sequence -->
+	<xsl:template
+		match="*[local-name()='sequence' and namespace-uri()='http://www.w3.org/2001/XMLSchema']">
+		<xsl:apply-templates />
+	</xsl:template>
+
+    <!-- any -->
+    <xsl:template
+        match="*[local-name()='any' and namespace-uri()='http://www.w3.org/2001/XMLSchema']">
+            <any name="{local-name()}" />
+        <xsl:apply-templates />
+    </xsl:template>
+
+	<!-- element -->
+	<xsl:template
+		match="*[local-name()='element' and namespace-uri()='http://www.w3.org/2001/XMLSchema']">
+		<xsl:choose>
+			<xsl:when test="contains(@ref,':')">
+				<property debug="refElement" xmlType="element"
+					name="{substring-after(@ref,':')}" type="{substring-after(@ref,':')}"
+					namespace="{substring-before(@ref,':')}" minOccurs="{@minOccurs}"
+					maxOccurs="{@maxOccurs}">
+					<xsl:apply-templates />
+				</property>
+			</xsl:when>
+			<xsl:when test="@ref and not(contains(@ref,':'))">
+				<property debug="refElementNoNS" xmlType="element" name="{@ref}"
+					type="{@ref}" minOccurs="{@minOccurs}" maxOccurs="{@maxOccurs}">
+					<xsl:apply-templates />
+				</property>
+			</xsl:when>
+			<xsl:when test="@name">
+				<property debug="nameElement" xmlType="element" name="{@name}"
+					minOccurs="{@minOccurs}" maxOccurs="{@maxOccurs}">
+					<xsl:apply-templates />
+				</property>
+			</xsl:when>
+
+		</xsl:choose>
+	</xsl:template>
+
+	<!-- restriction -->
+	<xsl:template
+		match="*[local-name()='restriction' and namespace-uri()='http://www.w3.org/2001/XMLSchema']">
+		<xsl:if test="@base">
+			<xsl:choose>
+				<xsl:when test="contains(@base, ':')">
+					<extends debug="CollonBase" name="{substring-after(@base,':')}"
+						namespace="{substring-before(@base,':')}" />
+				</xsl:when>
+				<xsl:otherwise>
+					<extends debug="NoCollonBase" name="{@base}" namespace="{$targetNamespace}" />
+				</xsl:otherwise>
+			</xsl:choose>
+		</xsl:if>
+		<xsl:apply-templates />
+	</xsl:template>
+
+	<!-- Simplecontent -->
+
+	<xsl:template
+		match="*[local-name()='simpleContent' and namespace-uri()='http://www.w3.org/2001/XMLSchema']">
+		<xsl:apply-templates />
+	</xsl:template>
+
+	<xsl:template
+		match="*[local-name()='extension' and namespace-uri()='http://www.w3.org/2001/XMLSchema']">
+		<xsl:if test="@base">
+			<!--
+				@todo Crappy: Checking if the @base namespace is XMLSchema. it slows
+				down everything so bad. Will be using 'xsd' for check now, improve
+				in future
+			-->
+			<xsl:variable name="nspace" select="substring-before(@base,':')" />
+			<xsl:if test="$nspace!='xsd'">
+
+
+				<xsl:choose>
+					<xsl:when test="contains(@base, ':')">
+						<extends debug="Extends3" name="{substring-after(@base,':')}" namespace="{substring-before(@base,':')}" />
+						<xsl:apply-templates />
+					</xsl:when>
+					<xsl:otherwise>
+						<!-- Not sure about namespace here... -->
+						<extends debug="Extends4" name="{@base}" namespace="{@base}" />
+						<xsl:apply-templates />
+					</xsl:otherwise>
+				</xsl:choose>
+			</xsl:if>
+			<xsl:if test="$nspace='xsd'">
+				<xsl:apply-templates />
+			</xsl:if>
+
+		</xsl:if>
+
+	</xsl:template>
+
+	<!-- Attribute -->
+
+	<xsl:template
+		match="*[local-name()='attribute' and namespace-uri()='http://www.w3.org/2001/XMLSchema']">
+		<property debug="attribute" xmlType="attribute" name="{@name}"
+			type="{@type}" default="{@default}" use="{@use}">
+			<xsl:apply-templates />
+		</property>
+	</xsl:template>
+
+	<!-- Documentation -->
+	<xsl:template
+		match="*[local-name()='documentation' and namespace-uri()='http://www.w3.org/2001/XMLSchema']">
+		<xsl:choose>
+			<xsl:when test="child::*">
+				<xsl:for-each select="child::*">
+					<xsl:choose>
+						<xsl:when test="local-name()='Component'">
+							<xsl:for-each select="child::*">
+								<doc name="{local-name()}">
+									<xsl:value-of select="current()" />
+								</doc>
+							</xsl:for-each>
+						</xsl:when>
+						<xsl:otherwise>
+							<doc name="{local-name()}">
+								<xsl:value-of select="current()" />
+							</doc>
+						</xsl:otherwise>
+					</xsl:choose>
+				</xsl:for-each>
+			</xsl:when>
+			<xsl:otherwise>
+				<doc name="Definition">
+					<xsl:value-of select="current()" />
+				</doc>
+			</xsl:otherwise>
+		</xsl:choose>
+	</xsl:template>
+
+</xsl:stylesheet>

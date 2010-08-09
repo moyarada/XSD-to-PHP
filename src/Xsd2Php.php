@@ -1,9 +1,28 @@
 <?php
 /**
+ * Copyright 2010 Mike Bevz <myb@mikebevz.com>
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+require_once 'PHPClass.php';
+ 
+ /** 
  * Generate PHP classes based on XSD schema
  * 
  * @author Mike Bevz <myb@mikebevz.com>
  * @version 0.0.1
+ * 
  */
 class Xsd2Php
 {
@@ -45,6 +64,8 @@ class Xsd2Php
     
     private $shortNamespaces;
     
+    private $xmlSource;
+    
     private $reservedWords = array (
         'and', 'or', 'xor', '__FILE__', 'exception',
         '__LINE__', 'array', 'as', 'break', 'case',
@@ -63,24 +84,46 @@ class Xsd2Php
         '__DIR__'
     );
     
+    
+    /**
+     * XSD schema converted to XML
+     * @return string $xmlSource
+     */
+    public function getXmlSource()
+    {
+        return $this->xmlSource;
+    }
+
+	/**
+	 * 
+     * @param string $xmlSource XML Source
+     */
+    public function setXmlSource($xmlSource)
+    {
+        $this->xmlSource = $xmlSource;
+    }
+    
     /**
      * 
      * @param string $xsdFile Xsd file to convert
      * 
      * @return void
      */
-    public function __construct($xsdFile)
+	public function __construct($xsdFile)
     {
+        
         $this->xsdFile = $xsdFile;
+        
         $this->dom = new DOMDocument();
         $this->dom->load($this->xsdFile, 
-            LIBXML_DTDLOAD | LIBXML_DTDATTR |
-                 LIBXML_NOENT |
-                 LIBXML_XINCLUDE);
+                         LIBXML_DTDLOAD | 
+                         LIBXML_DTDATTR |
+                         LIBXML_NOENT |
+                         LIBXML_XINCLUDE);
                  
         $this->xpath = new DOMXPath($this->dom);         
         
-        $query = "//namespace::*";
+        $query   = "//namespace::*";
         $entries =  $this->xpath->query($query);
         $nspaces = array();
         foreach ($entries as $entry) {
@@ -98,28 +141,30 @@ class Xsd2Php
         }
         
         $this->shortNamespaces = $nspaces;
-        
         $this->dom = $this->loadImports($this->xsdFile, $this->dom);
-       
-        
-        // Read file
-        // Apply XSLT
-        // Generate XML
-        // Generate classes from XML
+    }
+    
+    /**
+     * Save generated classes to directory
+     * @param string  $dir             Directory to save classes to
+     * @param boolean $createDirectory Create directory, false by default
+     * 
+     * @return void
+     */
+    public function saveClasses($dir, $createDirectory) {
+        $this->setXmlSource($this->getXML()->saveXML());
+        $this->savePhpFiles($dir, $createDirectory);
     }
     
     /**
      * Recursive method adding imports and includes
      * 
-     * @param string $xsdFile
-     * @param DOMDocument $domNode
-     * @param $domRef 
+     * @param string      $xsdFile Path to XSD Schema filename
+     * @param DOMDocument $domNode 
+     * @param DOMDocument $domRef 
      */
-    public function loadImports($xsdFile, $domNode, $domRef = null) {
+    private function loadImports($xsdFile, $domNode, $domRef = null) {
         
-        print_r("Start: \n xsdFileName=". $xsdFile."\n");
-        //print_r("domNode:".is_object($domNode)."\n"); 
-        // load includes
         if (is_null($domRef)) {
             $domRef = $domNode;
         }
@@ -141,9 +186,6 @@ class Xsd2Php
                 $result = $xsd->load($xsdFileName, 
                                 LIBXML_DTDLOAD|LIBXML_DTDATTR|LIBXML_NOENT|LIBXML_XINCLUDE);
                 
-                //print_r("xsdFileName=". $xsdFileName."\n");
-                //print_r("domNode:".is_object($domNode)."\n");
-                //print_r("xsd:".is_object($xsd)."\n");         
                 if ($result) {
                         $xsd = $this->importIncludes($xsdFileName, $xsd);
                         foreach ($xsd->documentElement->childNodes as $node) {
@@ -163,20 +205,23 @@ class Xsd2Php
                 $xpath = new DOMXPath($xsd);
                 $query = "//*[local-name()='import' and namespace-uri()='http://www.w3.org/2001/XMLSchema']";
                 $imports = $xpath->query($query);
-              // print_r("Length:".$imports->length." ".$xsdFileName." \n");
-                        
                 if ($imports->length != 0) {
-                    
                    $domRef = $this->loadImports($xsdFileName, $xsd, $domRef);
                 } 
                 
             }
             
-            print_r("Return node $xsdFile\n");
             return $domRef;
     }
     
-    public function importIncludes($xsdFile, $domNode, $domRef = null) {
+    /**
+     * Recursive import of includes
+     * 
+     * @param string      $xsdFile Path to XSD file
+     * @param DOMDocument $domNode DOM document
+     * @param DOMDocument $domRef  Used only recursivelly
+     */
+    private function importIncludes($xsdFile, $domNode, $domRef = null) {
         /**
          * Import includes, because it's not always correctly processed 
          * @see http://www.mail-archive.com/php-bugs@lists.php.net/msg102950.html
@@ -195,7 +240,7 @@ class Xsd2Php
             $xsd = new DOMDocument();
             
             $xsdFileName = realpath(dirname($xsdFile) . "/" . $include->getAttribute("schemaLocation"));
-            print_r('Import include '.$xsdFileName."\n");
+            print_r('Importing schema '.$xsdFileName."\n");
             if (!file_exists($xsdFileName)) {
                 print_r('Include File '.$xsdFileName. "does not exist"."\n");
                 continue;
@@ -211,18 +256,16 @@ class Xsd2Php
                 $parent->removeChild($include);
             } 
 
-                $xpath = new DOMXPath($xsd);
-                $query = "//*[local-name()='import' and namespace-uri()='http://www.w3.org/2001/XMLSchema']";
-                $imports = $xpath->query($query);
-              // print_r("Length:".$imports->length." ".$xsdFileName." \n");
-                        
-                if ($imports->length != 0) {
+            $xpath = new DOMXPath($xsd);
+            $query = "//*[local-name()='import' and namespace-uri()='http://www.w3.org/2001/XMLSchema']";
+            $imports = $xpath->query($query);
                     
-                   $domRef = $this->importIncludes($xsdFileName, $xsd, $domRef);
-                }
+            if ($imports->length != 0) {
+               $domRef = $this->importIncludes($xsdFileName, $xsd, $domRef);
+            }
             
         }
-        print_r("Return node $xsdFile\n");
+        print("Processed schema $xsdFile\n");
         return $domRef;
     }
     
@@ -237,7 +280,9 @@ class Xsd2Php
     }
 
 	/**
-     * @param $xmlForPhp the $xmlForPhp to set
+     * @param string $xmlForPhp XML
+     * 
+     * @return void
      */
     public function setXmlForPhp($xmlForPhp)
     {
@@ -252,22 +297,19 @@ class Xsd2Php
 	public function getXML()
     {
         try {
-            $xsl = new XSLTProcessor();
+            $xsl    = new XSLTProcessor();
             $xslDom = new DOMDocument();
             $xslDom->load(dirname(__FILE__) . "/xsd2php2.xsl");
             $xsl->registerPHPFunctions();
             $xsl->importStyleSheet($xslDom);
             $this->dom = $xsl->transformToDoc($this->dom);
             $this->dom->formatOutput = true;
-            
-            //@todo expand short namespace to long ones
+
             return $this->dom;
             
         } catch (Exception $e) {
             throw new Exception(
-                "Error interpreting XSD document (" .
-                     $e->getMessage() .
-                     ")");
+                "Error interpreting XSD document (".$e->getMessage().")");
         }
     }
     
@@ -278,31 +320,30 @@ class Xsd2Php
      * 
      * @return void
      * 
-     * @throws RuntimeException if given directory is not exist
+     * @throws RuntimeException if given directory does not exist
      */
-    public function savePhpFiles($dir) {
-        if (!file_exists($dir)) {
+    private function savePhpFiles($dir, $createDirectory = false) {
+        if (!file_exists($dir) && $createDirectory === false) {
             throw new RuntimeException($dir." does not exist");
+        }
+        
+        if (!file_exists($dir) && $createDirectory === true) {
+            mkdir($dir, 0777, true);
         }
         
         $classes = $this->getPHP();
         
         foreach ($classes as $fullkey => $value) {
-            // @todo save file to directories according to namespace
-            
             $keys = explode("|", $fullkey);
-            
             $key = $keys[0];
-            
-            $namespace = $this->namespaceToPath($keys[1]);//$this->namespaceToPath($this->namespaces[$key]); //@todo Parse namespace and create directories iteratively 
-            
+            $namespace = $this->namespaceToPath($keys[1]); 
             $targetDir = $dir.DIRECTORY_SEPARATOR.$namespace;
             if (!file_exists($targetDir)) {
                 mkdir($targetDir, 0777, true);
             }
-            print_r($targetDir."\n");
             file_put_contents($targetDir.DIRECTORY_SEPARATOR.$key.'.php', $value);
         }
+        echo "Generated classes saved to ".$dir;
     }
     
     /**
@@ -310,31 +351,30 @@ class Xsd2Php
      * 
      * @return string
      */
-    public function getPHP() {
+    private function getPHP() {
         $phpfile = $this->getXmlForPhp();
-        if ($phpfile == '') {
-            throw new RuntimeException('There is no XML file generated');
+        if ($phpfile == '' && $this->getXmlSource() == '') {
+            throw new RuntimeException('There is no XML generated');
         }
         
         $dom = new DOMDocument();
-        $dom->load($phpfile, LIBXML_DTDLOAD | LIBXML_DTDATTR |
+        if ($this->getXmlSource() != '') {
+            $dom->loadXML($this->getXmlSource(), LIBXML_DTDLOAD | LIBXML_DTDATTR |
                  LIBXML_NOENT | LIBXML_XINCLUDE);
-        
+        } else {
+            $dom->load($phpfile, LIBXML_DTDLOAD | LIBXML_DTDATTR |
+                 LIBXML_NOENT | LIBXML_XINCLUDE);
+        }
                  
         $xPath = new DOMXPath($dom);         
                  
         $classes = $xPath->query('//classes/class');
         
-        $sourceCode = array();//"<?php \n";
-        //print_r($classes);
+        $sourceCode = array();
         foreach ($classes as $class) {
             
             $phpClass = new PHPClass();
             $phpClass->name = $class->getAttribute('name');
-            if ($phpClass->name == 'QuantityType') {
-                print('Type='.$class->getAttribute('type'));
-                print('Namespace='.$class->getAttribute('namespace'));
-            }
             
             if ($class->getAttribute('type') != '') {
                 $phpClass->type = $class->getAttribute('type');
@@ -348,19 +388,15 @@ class Xsd2Php
             
             if ($class->getElementsByTagName('extends')->length > 0) {
                 $phpClass->extends = $class->getElementsByTagName('extends')->item(0)->getAttribute('name');
-                $phpClass->type = $class->getElementsByTagName('extends')->item(0)->getAttribute('name');
+                $phpClass->type    = $class->getElementsByTagName('extends')->item(0)->getAttribute('name');
                 $phpClass->extendsNamespace = $this->namespaceToPhp($class->getElementsByTagName('extends')->item(0)->getAttribute('namespace'));
-                //($phpClass->extendsNamespace."\n");
-                
             }
             
             $docs = $xPath->query('docs/doc', $class);
             $docBlock = array();
             $docBlock['xmlNamespace'] = $this->expandNS($phpClass->namespace);
-            $docBlock['xmlType'] = $phpClass->type;
-            $docBlock['xmlName'] = $phpClass->name;
-            //@todo What is we have two classes with equal name?
-            $this->namespaces[$phpClass->name] = $phpClass->namespace;
+            $docBlock['xmlType']      = $phpClass->type;
+            $docBlock['xmlName']      = $phpClass->name;
             
             foreach ($docs as $doc) {
                 if ($doc->nodeValue != '') {
@@ -372,66 +408,60 @@ class Xsd2Php
             
             $phpClass->classDocBlock = $docBlock;
             
-            $props = $xPath->query('property', $class);
+            $props      = $xPath->query('property', $class);
             $properties = array();
             $i = 0;
             foreach($props as $prop) {
                 $properties[$i]['name'] = $prop->getAttribute('name');
-                //$properties[$i]['docs'] = ;
-               $docs = $xPath->query('docs/doc', $prop);
-               foreach ($docs as $doc) {
+                $docs                   = $xPath->query('docs/doc', $prop);
+                foreach ($docs as $doc) {
                     $properties[$i]["docs"][$doc->getAttribute('name')] = $doc->nodeValue;
-               } 
-               $properties[$i]["docs"]['xmlType'] = $prop->getAttribute('xmlType');
-               $properties[$i]["docs"]['xmlNamespace'] = $this->expandNS($prop->getAttribute('namespace'));
-               $properties[$i]["docs"]['xmlMinOccurs'] = $prop->getAttribute('minOccurs');
-               $properties[$i]["docs"]['xmlMaxOccurs'] = $prop->getAttribute('maxOccurs');
-               $properties[$i]["docs"]['xmlName'] = $prop->getAttribute('name');
-               $properties[$i]["docs"]['var'] = $prop->getAttribute('type');
-               $i++;
+                } 
+                $properties[$i]["docs"]['xmlType']      = $prop->getAttribute('xmlType');
+                $properties[$i]["docs"]['xmlNamespace'] = $this->expandNS($prop->getAttribute('namespace'));
+                $properties[$i]["docs"]['xmlMinOccurs'] = $prop->getAttribute('minOccurs');
+                $properties[$i]["docs"]['xmlMaxOccurs'] = $prop->getAttribute('maxOccurs');
+                $properties[$i]["docs"]['xmlName']      = $prop->getAttribute('name');
+                $properties[$i]["docs"]['var']          = $prop->getAttribute('type');
+                $i++;
             }
             
             $phpClass->classProperties = $properties;
-            $namespaceClause = "namespace ".$this->namespaceToPhp($docBlock['xmlNamespace']).";\n";
+            $namespaceClause           = "namespace ".$this->namespaceToPhp($docBlock['xmlNamespace']).";\n";
             $sourceCode[$docBlock['xmlName']."|".$phpClass->namespace] = "<?php\n".
                 $namespaceClause.
                 $phpClass->getPhpCode();
-            
-            // type="RelatedItemType" namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
-            
-        // For each class - generate class
-        // Generate docBlocks
-        //   -- generate properties
-        //   -- generate restrictions  
         }         
-                 
         return $sourceCode; 
      }
-     
-     private function expandNS($ns) {
+
+    /**
+     * Resolve short namespace 
+     * @param string $ns Short namespace 
+     * 
+     * @return string
+     */    
+    private function expandNS($ns) {
         foreach($this->shortNamespaces as $shortNs => $longNs) {
-            if ($ns == $shortNs) {
-                $ns = $longNs;
-            }
-         }
-         return $ns;  
-     }
+           if ($ns == $shortNs) {
+               $ns = $longNs;
+           }
+        }
+        return $ns;  
+    }
      
      /**
       * Convert XML URI to PHP complient namespace
+      * 
       * @param string $xmlNS XML URI
+      * 
+      * @return string
       */
-     public function namespaceToPhp($xmlNS) {
+     private function namespaceToPhp($xmlNS) {
          $ns = $xmlNS;
-         
          $ns = $this->expandNS($ns);
-         
-         
          if (preg_match('/urn:/',$ns)) {
             //@todo check if there are any components of namespace which are
-            // - php keywords
-            // - numbers
-            // - special symbols 
             $ns = preg_replace('/-/', '_',$ns);
             $ns = preg_replace('/urn:/', '', $ns);
             $ns = preg_replace('/:/','\\', $ns);
@@ -440,7 +470,6 @@ class Xsd2Php
          $ns = explode('\\', $ns);
          $i = 0;
          foreach($ns as $elem) {
-            //@todo check if elem is only a number of a keyword
             if (preg_match('/^[0-9]$/', $elem)) {
                 $ns[$i] = "_".$elem;
             }
@@ -448,7 +477,6 @@ class Xsd2Php
             if (in_array($elem, $this->reservedWords)) {
                 $ns[$i] = "_".$elem;
             } 
-            
             $i++;
          }
         
@@ -463,11 +491,9 @@ class Xsd2Php
       * 
       * @return string
       */
-     public function namespaceToPath($xmlNS) {
+     private function namespaceToPath($xmlNS) {
         $ns = $xmlNS;
-        
         $ns = $this->expandNS($ns);
-        
         
         if (preg_match('/urn:/', $ns)) {
             $ns = preg_replace('/-/', '_', $ns);
@@ -477,138 +503,15 @@ class Xsd2Php
         $ns = explode(DIRECTORY_SEPARATOR, $ns);
         $i = 0;
         foreach($ns as $elem) {
-            //@todo check if elem is only a number of a keyword
             if (preg_match('/^[0-9]$/', $elem)) {
                 $ns[$i] = "_".$elem;
             }
-            
             if (in_array($elem, $this->reservedWords)) {
                 $ns[$i] = "_".$elem;
             } 
-            
             $i++;
         }
-        
         $ns = implode(DIRECTORY_SEPARATOR, $ns);
         return $ns;
      }
-}
-
-/**
- * PHP Class representation
- * 
- * @author Mike Bevz <myb@mikebevz.com>
- *
- */
-class PHPClass {
-    /**
-     * 
-     * @var class name
-     */
-    public $name;
-    
-    /**
-     * Array of class level documentation
-     * @var array
-     */
-    public $classDocBlock;
-    
-    public $type;
-    
-    public $namespace;
-    
-    public $classProperties;
-    
-    public $extends;
-    
-    public $extendsNamespace;
-    
-    /**
-     * Array of class properties  arry(array('name'=>'propertyName', 'docs' => array('property'=>'value')))
-     * @var array
-     */
-    public $properties;
-    
-    private $basicTypes = array('decimal', 'base64Binary', 'normalizedString', 'dateTime', 'date', 'boolean',
-                            'string', 'time');
-    
-    
-    public function getPhpCode() {
-        $code = "\n";
-        //$code .= 'if (!class_exists("'.$this->name.'")) {'."\n";
-        if ($this->extendsNamespace != '') {
-            $code .= "use ".$this->extendsNamespace.";\n";
-            //print($this->extendsNamespace."\n");
-        }
-        
-        if (!empty($this->classDocBlock)) {
-            $code .= $this->getDocBlock($this->classDocBlock);
-        }
-        
-        $code .= 'class '.$this->name."\n";
-        if ($this->extends != '') {
-            if ($this->extendsNamespace != '') {
-                $nsLastName = array_reverse(explode('\\', $this->extendsNamespace));
-                $code .= "\t".'extends '.$nsLastName[0].'\\'.$this->extends."\n";
-            
-            } else {
-                $code .= "\t".'extends '.$this->extends."\n";
-            }
-        }
-        $code .= "\t".'{'."\n";
-        $code .= ''."\n";
-        if (in_array($this->type, $this->basicTypes)) {
-            $code .= "\t\t".$this->getDocBlock(array('xmlType'=>'value', 'var' => $this->type), "\t\t");
-            $code .= "\t\tpublic ".'$value;';
-        }
-        
-        if (!empty($this->classProperties)) {
-            $code .= $this->getClassProperties($this->classProperties);
-        }
-        
-        $code .= ''."\n";
-        $code .= ''."\n";
-        $code .= '} // end class '.$this->name."\n";
-        
-        //$code .= ''."\n";    
-        //$code .= '}'."\n";
-        
-        return $code;
-    }   
-    
-    public function getClassProperties($props, $indent = "\t") {
-        $code = $indent."\n";
-        
-        foreach ($props as $prop) {
-            
-            if (!empty($prop['docs'])) {
-                $code .= $indent.$this->getDocBlock($prop['docs'], $indent);
-            }
-            $code .= $indent.'public $'.$prop['name'].";\n";
-        
-        }
-        
-        return $code;
-        
-    }
-    
-    /**
-     * Return docBlock
-     * 
-     * @param array  $docs  
-     * @param string $indent 
-     */
-    public function getDocBlock($docs, $indent = "") {
-        
-        $code  = '/**'."\n";
-        
-        foreach ($docs as $key => $value) {
-            $code .= $indent.' * @'.$key.' '.$value."\n";
-        }
-        
-        $code .= $indent.' */'."\n";
-        
-        return $code; 
-    }
-        
 }

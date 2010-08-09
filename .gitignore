@@ -3,5 +3,6 @@
 .project
 .zfproject.xml
 .jsdtscope
+.svn
 org.eclipse.*
 *.log

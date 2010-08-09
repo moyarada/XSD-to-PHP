@@ -1,11 +1,20 @@
 <?php
+set_include_path(dirname(__FILE__).'/data/expected/ubl2.0'.
+                        PATH_SEPARATOR.get_include_path());
+                        
+function __autoload($class) {  
+    // convert namespace to full file path  
+    $class = 'data/expected/ubl2.0/' . str_replace('\\', '/', $class) . '.php';  
+    require_once($class);  
+}
+                        
 use oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2;
 use oasis\names\specification\ubl\schema\xsd\Order_2;
 use oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2;
 
-require_once dirname(__FILE__) . '/../../bootstrap.php';
+//require_once dirname(__FILE__) . '/../../bootstrap.php';
 require_once 'PHPUnit/Framework.php';
-require_once "application/connector/ubl/utils/Php2Xml.php";
+require_once "../src/Php2Xml.php";
 
 class Xsd2PhpTest extends PHPUnit_Framework_TestCase
 {
@@ -23,14 +32,19 @@ class Xsd2PhpTest extends PHPUnit_Framework_TestCase
     }
     
     public function testOrderClass() {
-         set_include_path(realpath(dirname(__FILE__).'/data').PATH_SEPARATOR.get_include_path());
-       require_once 'oasis/names/specification/ubl/schema/xsd/Order_2/Order.php';
+       
+       
        
        //print(get_include_path());
+
+       //require_once 'oasis/names/specification/ubl/schema/xsd/Order_2/OrderType.php';
+       //
+       
+       
        
        $order = new Order_2\Order();
        
-        $orderLine =   new CommonAggregateComponents_2\OrderLine();
+       $orderLine =   new CommonAggregateComponents_2\OrderLine();
        
             $lineItem = new CommonAggregateComponents_2\LineItem();
             $lineItem->ID = 'DYE_SUB';
@@ -69,5 +83,6 @@ class Xsd2PhpTest extends PHPUnit_Framework_TestCase
        $xml = $php2xml->getXml($order);
        
        print_r($xml);
+       
     }
 }

@@ -1,0 +1,7 @@
+.settings/*.*
+.buildpath
+.project
+.zfproject.xml
+.jsdtscope
+org.eclipse.*
+*.log

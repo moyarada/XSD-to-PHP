@@ -1,0 +1,15 @@
+<?php
+namespace oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2;
+
+/**
+ * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2
+ * @xmlType LanguageIDType
+ * @xmlName LanguageID
+ */
+class LanguageID
+	extends LanguageIDType
+	{
+
+
+
+} // end class LanguageID

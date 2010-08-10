@@ -5,10 +5,53 @@ set_include_path(dirname(__FILE__).'/data/expected/ubl2.0'.PATH_SEPARATOR.
                  dirname(__FILE__).'/data/expected/simple1'.PATH_SEPARATOR.
                  get_include_path());
                         
-function __autoload($class) {  
-    // convert namespace to full file path  
-    $class = 'data/expected/ubl2.0/' . str_replace('\\', '/', $class) . '.php';  
-    require_once($class);  
+
+
+function __autoload($className){
+    //Directories added here must be 
+//relative to the script going to use this file. 
+//New entries can be added to this list
+    $directories = array(
+      '',
+      'data/expected/ubl2.0/',
+      'data/expected/simple1/',  
+      'data/'
+    );
+
+    //Add your file naming formats here
+    $fileNameFormats = array(
+      '%s.php'
+    );
+    
+    // @todo include classes using namespaces
+   // if (preg_match('/\\/', $className)) {
+        
+    //}
+        
+    // this is to take care of the PEAR style of naming classes
+    $path = str_ireplace('_', '/', $className);
+    if(@include_once $path.'.php'){
+        return;
+    }
+    
+    //if (preg_match('/\\/', $className)) {
+        $className = str_replace('\\', '/', $className);
+    //echo($className."\n");
+    //}
+    
+    //exit();
+    foreach($directories as $directory){
+        foreach($fileNameFormats as $fileNameFormat){
+
+            $path = $directory.sprintf($fileNameFormat, $className);
+
+            if(file_exists($path)){
+                
+                include_once $path;
+                return;
+            }
+        }
+    }
 }
                         
 use oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2;
@@ -19,7 +62,7 @@ use oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2;
 require_once 'PHPUnit/Framework.php';
 require_once "../src/Php2Xml.php";
 
-class Xsd2PhpTest extends PHPUnit_Framework_TestCase
+class Php2XmlTest extends PHPUnit_Framework_TestCase
 {
     
     private $tclass;  
@@ -152,7 +195,7 @@ class Xsd2PhpTest extends PHPUnit_Framework_TestCase
         
         $php2xml = new xsd2php\Php2Xml();
         
-       $xml = $php2xml->getXml($shiporder);
+        $xml = $php2xml->getXml($shiporder);
        
        //file_put_contents("data/expected/simple1/shiporder.xml", $xml);
        

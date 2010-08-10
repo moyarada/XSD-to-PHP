@@ -1,0 +1,9 @@
+<phpunit>
+  <testsuites>
+    <testsuite name="XSD2PHP">
+      <file>BindTest.php</file>
+      <file>Php2XmlTest.php</file>
+      <file>Xsd2PhpTest.php</file>
+    </testsuite>
+  </testsuites>
+</phpunit>

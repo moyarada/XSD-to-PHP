@@ -1,5 +1,6 @@
 <?php
 
+use com\mikebevz\xsd2php;
 require_once 'PHPUnit/Framework.php';
 require_once dirname(__FILE__)."/../src/Xsd2Php.php";
 
@@ -16,7 +17,7 @@ class Xsd2PhpTest extends PHPUnit_Framework_TestCase
     protected function setUp ()
     {
         $this->xsd = dirname(__FILE__)."/../resources/ubl2.0/maindoc/UBL-Order-2.0.xsd";
-        $this->tclass = new Xsd2Php($this->xsd);
+        $this->tclass = new xsd2php\Xsd2Php($this->xsd);
     }
     protected function tearDown ()
     {
@@ -39,8 +40,8 @@ class Xsd2PhpTest extends PHPUnit_Framework_TestCase
     public function testXSDMustBeConvertedToXML() {
         $xml = $this->tclass->getXML();
         $actual = $xml->saveXml();
-        //file_put_contents(dirname(__FILE__).'/data/XSDConvertertoXML.xml', $xml->saveXml());
-        $expected = file_get_contents(dirname(__FILE__).'/data/XSDConvertertoXML.xml');
+        //file_put_contents(dirname(__FILE__).'/data/expected/ubl2.0/XSDConvertertoXML.xml', $xml->saveXml());
+        $expected = file_get_contents(dirname(__FILE__).'/data/expected/ubl2.0/XSDConvertertoXML.xml');
         $this->assertEquals($expected, $actual);
     }
     
@@ -75,8 +76,63 @@ class Xsd2PhpTest extends PHPUnit_Framework_TestCase
         }
         
         if (file_exists('data/generated/ubl2.0')) {
-            $this->rmdir_recursive(realpath('data/generated/ubl2.0'));
+           $this->rmdir_recursive(realpath('data/generated/ubl2.0'));
         }
         
+    }
+    
+    public function testSimpleSchema1() {
+        $this->tclass = new xsd2php\Xsd2Php("../resources/simple1/simple.xsd");
+        $xml = $this->tclass->getXML();
+        //file_put_contents(dirname(__FILE__).'/data/expected/simple1/generated.xml', $xml->saveXml());
+        $expectedXml = file_get_contents(dirname(__FILE__).'/data/expected/simple1/generated.xml');
+        $this->assertEquals($expectedXml, $xml->saveXml());
+        
+        
+        if (file_exists(dirname(__FILE__).'/data/generated/simple1')) {
+            $this->rmdir_recursive(realpath('data/generated/simple1'));
+        }
+        
+        $shipModelExpected = array(
+                    'data/expected/simple1/address.php',
+                    'data/expected/simple1/city.php',
+                    'data/expected/simple1/country.php',
+                    'data/expected/simple1/item.php',
+                    'data/expected/simple1/name.php',
+                    'data/expected/simple1/note.php',
+                    'data/expected/simple1/orderperson.php',
+                    'data/expected/simple1/price.php',
+                    'data/expected/simple1/quantity.php',
+                    'data/expected/simple1/shiporder.php',
+                    'data/expected/simple1/shipto.php',
+                    'data/expected/simple1/title.php'
+                    );
+        $shipModelActual = array(
+                    'data/generated/simple1/address.php',
+                    'data/generated/simple1/city.php',
+                    'data/generated/simple1/country.php',
+                    'data/generated/simple1/item.php',
+                    'data/generated/simple1/name.php',
+                    'data/generated/simple1/note.php',
+                    'data/generated/simple1/orderperson.php',
+                    'data/generated/simple1/price.php',
+                    'data/generated/simple1/quantity.php',
+                    'data/generated/simple1/shiporder.php',
+                    'data/generated/simple1/shipto.php',
+                    'data/generated/simple1/title.php'
+                    );
+        
+        
+        $this->tclass->saveClasses(dirname(__FILE__).'/data/generated/simple1', true);
+        
+        $i = 0;
+        foreach ($shipModelExpected as $model) {
+            $this->assertEquals(file_get_contents($model), file_get_contents($shipModelActual[$i]));
+            $i++;
+        }
+        
+        if (file_exists(dirname(__FILE__).'/data/generated/simple1')) {
+            $this->rmdir_recursive(realpath('data/generated/simple1'));
+        }
     }
 }

@@ -1,6 +1,9 @@
 <?php
-set_include_path(dirname(__FILE__).'/data/expected/ubl2.0'.
-                        PATH_SEPARATOR.get_include_path());
+use com\mikebevz\xsd2php;
+
+set_include_path(dirname(__FILE__).'/data/expected/ubl2.0'.PATH_SEPARATOR.
+                 dirname(__FILE__).'/data/expected/simple1'.PATH_SEPARATOR.
+                 get_include_path());
                         
 function __autoload($class) {  
     // convert namespace to full file path  
@@ -24,7 +27,7 @@ class Xsd2PhpTest extends PHPUnit_Framework_TestCase
     
     protected function setUp ()
     {
-        $this->tclass = new Php2Xml();
+        $this->tclass = new xsd2php\Php2Xml();
     }
     protected function tearDown ()
     {
@@ -78,11 +81,84 @@ class Xsd2PhpTest extends PHPUnit_Framework_TestCase
         
         $order->BuyerCustomerParty = $buyerCustomer;
 
-       $php2xml = new Php2Xml();
+       $php2xml = new xsd2php\Php2Xml();
         
        $xml = $php2xml->getXml($order);
+       //file_put_contents("data/expected/ubl2.0/Order.xml", $xml);
+       $expected = file_get_contents("data/expected/ubl2.0/Order.xml");
        
-       print_r($xml);
+       $this->assertEquals($expected, $xml);
+       //print_r($xml);
        
+    }
+    
+    public function testSimple1Schema() {
+        require_once 'shiporder.php';
+        require_once 'item.php';
+        require_once 'note.php';
+        require_once 'price.php';
+        require_once 'quantity.php';
+        require_once 'title.php';
+        require_once 'orderperson.php';
+        require_once 'shipto.php';
+        require_once 'address.php';
+        require_once 'city.php';
+        require_once 'country.php';
+        require_once 'name.php';
+        
+        $shiporder = new shiporder();
+        $item = new item();
+        
+        $note = new note();
+        $note->value = "Note";
+        $item->note = $note;
+        
+        $price = new price();
+        $price->value = 125.5;    
+        $item->price = $price;
+        
+        $quantity = new quantity();
+        $quantity->value = 145;
+        $item->quantity = $quantity;
+        
+        $title = new title();
+        $title->value = 'Example title';
+        $item->title = $title;
+        $shiporder->item = $item; 
+        
+        $shiporder->orderid = 'Order ID';
+        $orderperson = new orderperson();
+        $orderperson->value = "Jon Doe";        
+        
+        $shiporder->orderperson = $orderperson;
+        
+        $shipto = new shipto();
+        $address = new address();
+        $address->value = "Big Valley Str. 142";
+        
+        $shipto->address = $address;
+        $city = new city();
+        $city->value = "Aalborg"; 
+        $shipto->city = $city;
+        $country = new country();
+        $country->value = "Denmark";
+        $shipto->country = $country;
+        $name = new name();
+        $name->value = "Jon Doe Company";
+        $shipto->name = $name;
+        
+        $shiporder->shipto = $shipto;
+       
+        
+        $php2xml = new xsd2php\Php2Xml();
+        
+       $xml = $php2xml->getXml($shiporder);
+       
+       //file_put_contents("data/expected/simple1/shiporder.xml", $xml);
+       
+       $expected = file_get_contents("data/expected/simple1/shiporder.xml");
+       
+       $this->assertEquals($expected, $xml);
+       //print_r($xml);
     }
 }

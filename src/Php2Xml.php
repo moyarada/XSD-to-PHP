@@ -1,4 +1,6 @@
 <?php
+namespace com\mikebevz\xsd2php;
+
 /**
  * Copyright 2010 Mike Bevz <myb@mikebevz.com>
  * 
@@ -15,13 +17,15 @@
  * limitations under the License.
  */
 
+require_once dirname(__FILE__).'/Common.php';
+
 /**
  * PHP to XML converter
  * 
  * @author Mike Bevz <myb@mikebevz.com>
  * @version 0.0.1
  */
-class Php2Xml {
+class Php2Xml extends Common {
     /**
      * Php class to convert to XML
      * @var Object
@@ -46,14 +50,11 @@ class Php2Xml {
         }
         
         $this->buildXml();
-        //Analyze class
-        //Convert XML code
-        //Save XML to file
     }
     
     public function getXml($phpClass = null) {
         if ($this->phpClass == null && $phpClass == null) {
-            throw new RuntimeException("Php class is not set");
+            throw new \RuntimeException("Php class is not set");
         }
         
         if ($phpClass != null) {
@@ -62,7 +63,7 @@ class Php2Xml {
         
         $xml = "XML";
         
-        $refl = new ReflectionClass($this->phpClass);
+        $refl = new \ReflectionClass($this->phpClass);
         //$refl->getProperty('ds')->getValue();
         $classDocs = $this->parseDocComments($refl->getDocComment());
         
@@ -87,14 +88,19 @@ class Php2Xml {
     }
     
     private function buildXml() {
-        $this->dom = new DOMDocument('1.0', 'UTF-8');
+        $this->dom = new \DOMDocument('1.0', 'UTF-8');
         $this->dom->formatOutput = true;
         
     }
     
     private function addRoot($docs) {
-        $this->root = $this->dom->createElementNS($docs['xmlNamespace'], $docs['xmlName']);
-        $this->dom->appendChild($this->root);
+        if ($docs['xmlNamespace'] != '') {
+            $this->root = $this->dom->createElementNS($docs['xmlNamespace'], $docs['xmlName']);
+            $this->dom->appendChild($this->root);
+        } else {
+            $this->root = $this->dom->createElement($docs['xmlName']);
+            $this->dom->appendChild($this->root);
+        }
         //$this->dom->createAttributeNS();
     } 
     
@@ -114,7 +120,7 @@ class Php2Xml {
     
     private function parseObjectValue($obj, $element) {
         
-        $refl = new ReflectionClass($obj);
+        $refl = new \ReflectionClass($obj);
         
         $classDocs  = $this->parseDocComments($refl->getDocComment());
         $classProps = $refl->getProperties(); 
@@ -126,13 +132,24 @@ class Php2Xml {
             //print('Value:');
             //print_r($prop->getValue($refl));
             if (is_object($prop->getValue($obj))) {
-                $el = $this->dom->createElementNS($namespace, $propDocs['xmlName']);
+                $el = '';
+                if ($namespace != '') {
+                    $el = $this->dom->createElementNS($namespace, $propDocs['xmlName']);
+                } else {
+                    $el = $this->dom->createElement($propDocs['xmlName']);
+                }
                 $el = $this->parseObjectValue($prop->getValue($obj), $el);
                 $element->appendChild($el);
+                
             } else {
                 if ($prop->getValue($obj) != '') {
                     if ($propDocs['xmlType'] == 'element') {
-                        $el = $this->dom->createElementNS($propDocs['xmlNamespace'], $propDocs['xmlName'], $prop->getValue($obj));
+                        $el = '';
+                        if ($propDocs['xmlNamespace'] != '') {
+                            $el = $this->dom->createElementNS($propDocs['xmlNamespace'], $propDocs['xmlName'], $prop->getValue($obj));
+                        } else {
+                            $el = $this->dom->createElement($propDocs['xmlName'], $prop->getValue($obj));
+                        }
                         $element->appendChild($el);
                     } elseif ($propDocs['xmlType'] == 'attribute') {
                         $atr = $this->dom->createAttribute($propDocs['xmlName']);

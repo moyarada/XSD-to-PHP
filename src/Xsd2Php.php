@@ -1,4 +1,6 @@
 <?php
+namespace com\mikebevz\xsd2php;
+
 /**
  * Copyright 2010 Mike Bevz <myb@mikebevz.com>
  * 
@@ -15,7 +17,8 @@
  * limitations under the License.
  */
 
-require_once 'PHPClass.php';
+require_once dirname(__FILE__).'/PHPClass.php';
+require_once dirname(__FILE__).'/Common.php';
  
  /** 
  * Generate PHP classes based on XSD schema
@@ -24,7 +27,7 @@ require_once 'PHPClass.php';
  * @version 0.0.1
  * 
  */
-class Xsd2Php
+class Xsd2Php extends Common
 {
     /**
      * XSD schema to convert from
@@ -66,24 +69,6 @@ class Xsd2Php
     
     private $xmlSource;
     
-    private $reservedWords = array (
-        'and', 'or', 'xor', '__FILE__', 'exception',
-        '__LINE__', 'array', 'as', 'break', 'case',
-        'class', 'const', 'continue', 'declare', 'default',
-        'die', 'do', 'echo', 'else', 'elseif',
-        'empty', 'enddeclare', 'endfor', 'endforeach', 'endif',
-        'endswitch', 'endwhile', 'eval', 'exit', 'extends',
-        'for', 'foreach', 'function', 'global', 'if',
-        'include', 'include_once', 'isset', 'list', 'new',
-        'print', 'require', 'require_once', 'return', 'static',
-        'switch', 'unset', 'use', 'var', 'while', 
-        '__FUNCTION__', '__CLASS__', '__METHOD__', 'final', 'php_user_filter',
-        'interface', 'implements', 'instanceof', 'public', 'private',
-        'protected', 'abstract', 'clone', 'try', 'catch',
-        'throw', 'this', 'final', '__NAMESPACE__', 'namespace', 'goto',
-        '__DIR__'
-    );
-    
     
     /**
      * XSD schema converted to XML
@@ -114,14 +99,14 @@ class Xsd2Php
         
         $this->xsdFile = $xsdFile;
         
-        $this->dom = new DOMDocument();
+        $this->dom = new \DOMDocument();
         $this->dom->load($this->xsdFile, 
                          LIBXML_DTDLOAD | 
                          LIBXML_DTDATTR |
                          LIBXML_NOENT |
                          LIBXML_XINCLUDE);
                  
-        $this->xpath = new DOMXPath($this->dom);         
+        $this->xpath = new \DOMXPath($this->dom);         
         
         $query   = "//namespace::*";
         $entries =  $this->xpath->query($query);
@@ -169,14 +154,14 @@ class Xsd2Php
             $domRef = $domNode;
         }
         
-        $xpath = new DOMXPath($domNode);
+        $xpath = new \DOMXPath($domNode);
         
         $query = "//*[local-name()='import' and namespace-uri()='http://www.w3.org/2001/XMLSchema']";
         $entries = $xpath->query($query);
             foreach ($entries as $entry) {
                 $namespace = $entry->getAttribute('namespace');
                 $parent = $entry->parentNode;
-                $xsd = new DOMDocument();
+                $xsd = new \DOMDocument();
                 
                 $xsdFileName = realpath(dirname($xsdFile) . "/" . $entry->getAttribute("schemaLocation"));
                 if (!file_exists($xsdFileName)) {
@@ -202,7 +187,7 @@ class Xsd2Php
                   
                 }
                 
-                $xpath = new DOMXPath($xsd);
+                $xpath = new \DOMXPath($xsd);
                 $query = "//*[local-name()='import' and namespace-uri()='http://www.w3.org/2001/XMLSchema']";
                 $imports = $xpath->query($query);
                 if ($imports->length != 0) {
@@ -230,14 +215,14 @@ class Xsd2Php
             $domRef = $domNode;
         }
 
-        $xpath = new DOMXPath($domNode);    
+        $xpath = new \DOMXPath($domNode);    
         $query = "//*[local-name()='include' and namespace-uri()='http://www.w3.org/2001/XMLSchema']";
         $includes = $xpath->query($query);
         
         foreach ($includes as $include) {
             $parent = $include->parentNode;
             //$namespace = $include->parentNode;
-            $xsd = new DOMDocument();
+            $xsd = new \DOMDocument();
             
             $xsdFileName = realpath(dirname($xsdFile) . "/" . $include->getAttribute("schemaLocation"));
             print_r('Importing schema '.$xsdFileName."\n");
@@ -256,7 +241,7 @@ class Xsd2Php
                 $parent->removeChild($include);
             } 
 
-            $xpath = new DOMXPath($xsd);
+            $xpath = new \DOMXPath($xsd);
             $query = "//*[local-name()='import' and namespace-uri()='http://www.w3.org/2001/XMLSchema']";
             $imports = $xpath->query($query);
                     
@@ -296,21 +281,27 @@ class Xsd2Php
      */
 	public function getXML()
     {
-        try {
-            $xsl    = new XSLTProcessor();
-            $xslDom = new DOMDocument();
-            $xslDom->load(dirname(__FILE__) . "/xsd2php2.xsl");
-            $xsl->registerPHPFunctions();
-            $xsl->importStyleSheet($xslDom);
-            $this->dom = $xsl->transformToDoc($this->dom);
-            $this->dom->formatOutput = true;
-
-            return $this->dom;
-            
-        } catch (Exception $e) {
-            throw new Exception(
-                "Error interpreting XSD document (".$e->getMessage().")");
-        }
+        //if ($this->getXmlSource() != '') {
+            try {
+                $xsl    = new \XSLTProcessor();
+                $xslDom = new \DOMDocument();
+                $xslDom->load(dirname(__FILE__) . "/xsd2php2.xsl");
+                $xsl->registerPHPFunctions();
+                $xsl->importStyleSheet($xslDom);
+                $dom = $xsl->transformToDoc($this->dom);
+                $dom->formatOutput = true;
+    
+                return $dom;
+                
+            } catch (\Exception $e) {
+                throw new \Exception(
+                    "Error interpreting XSD document (".$e->getMessage().")");
+            }
+        //} else {
+        //    return $this->dom;
+        //}
+        
+        
     }
     
     /**
@@ -324,7 +315,7 @@ class Xsd2Php
      */
     private function savePhpFiles($dir, $createDirectory = false) {
         if (!file_exists($dir) && $createDirectory === false) {
-            throw new RuntimeException($dir." does not exist");
+            throw new \RuntimeException($dir." does not exist");
         }
         
         if (!file_exists($dir) && $createDirectory === true) {
@@ -354,10 +345,11 @@ class Xsd2Php
     private function getPHP() {
         $phpfile = $this->getXmlForPhp();
         if ($phpfile == '' && $this->getXmlSource() == '') {
-            throw new RuntimeException('There is no XML generated');
+            throw new \RuntimeException('There is no XML generated');
         }
         
-        $dom = new DOMDocument();
+        $dom = new \DOMDocument();
+        //print_r($this->getXmlSource());
         if ($this->getXmlSource() != '') {
             $dom->loadXML($this->getXmlSource(), LIBXML_DTDLOAD | LIBXML_DTDATTR |
                  LIBXML_NOENT | LIBXML_XINCLUDE);
@@ -366,7 +358,7 @@ class Xsd2Php
                  LIBXML_NOENT | LIBXML_XINCLUDE);
         }
                  
-        $xPath = new DOMXPath($dom);         
+        $xPath = new \DOMXPath($dom);         
                  
         $classes = $xPath->query('//classes/class');
         
@@ -383,13 +375,16 @@ class Xsd2Php
             if ($class->getAttribute('simpleType') != '') {
                 $phpClass->type = $class->getAttribute('simpleType');
             }
-            
-            $phpClass->namespace = $class->getAttribute('namespace');
+            if ($class->getAttribute('namespace') != '') {
+                $phpClass->namespace = $class->getAttribute('namespace');
+            }
             
             if ($class->getElementsByTagName('extends')->length > 0) {
-                $phpClass->extends = $class->getElementsByTagName('extends')->item(0)->getAttribute('name');
-                $phpClass->type    = $class->getElementsByTagName('extends')->item(0)->getAttribute('name');
-                $phpClass->extendsNamespace = $this->namespaceToPhp($class->getElementsByTagName('extends')->item(0)->getAttribute('namespace'));
+                if (!in_array($class->getElementsByTagName('extends')->item(0)->getAttribute('name'), $this->basicTypes)) {
+                    $phpClass->extends = $class->getElementsByTagName('extends')->item(0)->getAttribute('name');
+                    $phpClass->type    = $class->getElementsByTagName('extends')->item(0)->getAttribute('name');
+                    $phpClass->extendsNamespace = $this->namespaceToPhp($class->getElementsByTagName('extends')->item(0)->getAttribute('namespace'));
+                }
             }
             
             $docs = $xPath->query('docs/doc', $class);
@@ -417,17 +412,32 @@ class Xsd2Php
                 foreach ($docs as $doc) {
                     $properties[$i]["docs"][$doc->getAttribute('name')] = $doc->nodeValue;
                 } 
-                $properties[$i]["docs"]['xmlType']      = $prop->getAttribute('xmlType');
-                $properties[$i]["docs"]['xmlNamespace'] = $this->expandNS($prop->getAttribute('namespace'));
-                $properties[$i]["docs"]['xmlMinOccurs'] = $prop->getAttribute('minOccurs');
-                $properties[$i]["docs"]['xmlMaxOccurs'] = $prop->getAttribute('maxOccurs');
-                $properties[$i]["docs"]['xmlName']      = $prop->getAttribute('name');
-                $properties[$i]["docs"]['var']          = $prop->getAttribute('type');
+                if ($prop->getAttribute('xmlType') != '') {
+                    $properties[$i]["docs"]['xmlType']      = $prop->getAttribute('xmlType');
+                }
+                if ($prop->getAttribute('namespace') != '') {
+                    $properties[$i]["docs"]['xmlNamespace'] = $this->expandNS($prop->getAttribute('namespace'));
+                }
+                if ($prop->getAttribute('minOccurs') != '') {
+                    $properties[$i]["docs"]['xmlMinOccurs'] = $prop->getAttribute('minOccurs');
+                }
+                if ($prop->getAttribute('maxOccurs') != '') {
+                    $properties[$i]["docs"]['xmlMaxOccurs'] = $prop->getAttribute('maxOccurs');
+                }
+                if ($prop->getAttribute('name') != '') {
+                    $properties[$i]["docs"]['xmlName']      = $prop->getAttribute('name');
+                }
+                if ($prop->getAttribute('type') != '') {
+                    $properties[$i]["docs"]['var']          = $prop->getAttribute('type');
+                }
                 $i++;
             }
             
             $phpClass->classProperties = $properties;
-            $namespaceClause           = "namespace ".$this->namespaceToPhp($docBlock['xmlNamespace']).";\n";
+            $namespaceClause = '';
+            if ($docBlock['xmlNamespace'] != '') {
+                $namespaceClause           = "namespace ".$this->namespaceToPhp($docBlock['xmlNamespace']).";\n";
+            } 
             $sourceCode[$docBlock['xmlName']."|".$phpClass->namespace] = "<?php\n".
                 $namespaceClause.
                 $phpClass->getPhpCode();

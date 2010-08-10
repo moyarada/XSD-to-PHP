@@ -1,4 +1,5 @@
 <?php
+namespace com\mikebevz\xsd2php;
 /**
  * Copyright 2010 Mike Bevz <myb@mikebevz.com>
  * 
@@ -15,6 +16,8 @@
  * limitations under the License.
  */
 
+require_once dirname(__FILE__).'/Common.php';
+
 /**
  * PHP Class representation
  * 
@@ -22,7 +25,7 @@
  * @version 0.0.1
  * 
  */
-class PHPClass {
+class PHPClass extends Common {
     /**
      * Class name
      * 
@@ -79,9 +82,7 @@ class PHPClass {
      * Basic data type to be associated with value
      * @var array
      */
-    private $basicTypes = array('decimal', 'base64Binary', 'normalizedString', 
-                                'dateTime', 'date', 'boolean',
-                                'string', 'time');
+    
     
     /**
      * Returns array of PHP classes

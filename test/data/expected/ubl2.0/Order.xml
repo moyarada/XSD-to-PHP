@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Order xmlns="urn:oasis:names:specification:ubl:schema:xsd:Order-2">
+  <BuyerCustomerParty xmlns:default="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:default1="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2">
+    <default:SupplierAssignedAccountID xmlns="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">CT02933822</default:SupplierAssignedAccountID>
+    <default1:BuyerContact xmlns="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:default="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
+      <default:ID xmlns="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">CT2344332</default:ID>
+      <default:Name xmlns="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">Jon Doe</default:Name>
+      <default:Telephone xmlns="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">24533223</default:Telephone>
+      <default:ElectronicMail xmlns="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">email@example.com</default:ElectronicMail>
+    </default1:BuyerContact>
+  </BuyerCustomerParty>
+  <OrderLine xmlns:default="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:default1="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
+    <default:LineItem xmlns="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:default="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
+      <default1:ID xmlns="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">DYE_SUB</default1:ID>
+      <default:Quantity unitCode="M2">110.22</default:Quantity>
+      <default:Price xmlns:default="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
+        <default1:PriceAmount xmlns="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">200.75</default1:PriceAmount>
+      </default:Price>
+    </default:LineItem>
+  </OrderLine>
+</Order>

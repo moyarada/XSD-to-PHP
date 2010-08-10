@@ -169,21 +169,6 @@ class Php2Xml extends Common {
     
     
     
-    private function parseDocComments($comments) {
-        $comments = explode("\n", $comments);
-        $commentsOut = array();
-        foreach ($comments as $com) {
-            if (preg_match('/@/', $com)) {
-                $com = preg_replace('/\* /', '', $com);
-                $com = preg_replace('/@([a-zA-Z]*)( *)(.*)/', '$1|$3', $com);
-                $com = explode('|', $com);
-                //$arr = array();
-                $commentsOut[trim($com[0])] = trim($com[1]);
-                //array_push($commentsOut, array($com[0] => $com[1]));
-            }
-        }
-        
-        return $commentsOut;
-    }
+    
     
 }

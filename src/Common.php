@@ -27,7 +27,18 @@ class Common {
     
     protected $basicTypes = array('decimal', 'base64Binary', 'normalizedString', 
                                 'dateTime', 'date', 'boolean',
-                                'string', 'time', 'positiveInteger');
+                                'positiveInteger', 'anySimpleType',
+                                'anyURI', 'byte', 'double', 'duration', 
+                                //'ENTITIES', 'ENTITY', - not sure about those
+                                'float', 'gDay', 'gMonth', 'gMonthDay', 'gYear', 'gYearMonth',
+                                'hexBinary', 
+                                //'ID', 'IDREFS', 'IDREF', - not sure 
+                                'int', 'integer', 'language', 'long',
+                                'negativeInteger', 'nonPositiveInteger', 'nonNegativeInteger',
+                                //'Name', 'NSName', 'NMTOKEN', 'NMTOKENS', 'NOTATION',
+                                'QName', 'short', 'string', 'time', 'token',
+                                'unsignedByte', 'unsignedInt', 'unsignedLong', 'unsignedShort'
+                                );
     
     protected $reservedWords = array (
         'and', 'or', 'xor', '__FILE__', 'exception',

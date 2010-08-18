@@ -1,3 +1,13 @@
 XSD to PHP 
 
 
+Versions history
+
+0.0.2 XSD Imports and includes routines rewritten
+ # Refactored XSD import and include tags processing
+ # Fixed problem with numeric namespaces in generated PHP models
+ # Added new test cases: Multi level include and import processing, custom schema based on UBL2.0
+ 
+0.0.1 Initial release
+ # Compile XSD to PHP
+ # Marshal/unmarshal XML 

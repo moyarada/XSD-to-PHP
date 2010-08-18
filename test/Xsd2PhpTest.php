@@ -143,7 +143,16 @@ class Xsd2PhpTest extends PHPUnit_Framework_TestCase
          //file_put_contents(dirname(__FILE__).'/data/expected/MultiLevelImport/generated.xml', $xml->saveXml());
          $expectedXml = file_get_contents(dirname(__FILE__).'/data/expected/MultiLevelImport/generated.xml');
          $this->assertEquals($expectedXml, $xml->saveXml());
+         
+         if (file_exists(dirname(__FILE__).'/data/generated/MultiLevelImport')) {
+            $this->rmdir_recursive(realpath(dirname(__FILE__).'/data/generated/MultiLevelImport'));
+         } 
+         
          $this->tclass->saveClasses(dirname(__FILE__).'/data/generated/MultiLevelImport', true);
+         
+         if (file_exists(dirname(__FILE__).'/data/generated/MultiLevelImport')) {
+            $this->rmdir_recursive(realpath(dirname(__FILE__).'/data/generated/MultiLevelImport'));
+         } 
     }
     
     public function testContactPerson1() {
@@ -154,6 +163,14 @@ class Xsd2PhpTest extends PHPUnit_Framework_TestCase
          $expectedXml = file_get_contents(dirname(__FILE__).'/data/expected/ContactPerson1/generated.xml');
          $this->assertEquals($expectedXml, $xml->saveXml());
          
+         if (file_exists(dirname(__FILE__).'/data/generated/ContactPerson1')) {
+            $this->rmdir_recursive(realpath(dirname(__FILE__).'/data/generated/ContactPerson1'));
+         } 
+         
          $this->tclass->saveClasses(dirname(__FILE__).'/data/generated/ContactPerson1', true);
+         
+         if (file_exists(dirname(__FILE__).'/data/generated/ContactPerson1')) {
+            $this->rmdir_recursive(realpath(dirname(__FILE__).'/data/generated/ContactPerson1'));
+         } 
     }
 }

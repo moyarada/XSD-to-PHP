@@ -79,11 +79,10 @@ class PHPClass extends Common {
     public $properties;
     
     /**
-     * Basic data type to be associated with value
-     * @var array
+     * Show debug info
+     * @var boolean
      */
-    
-    
+    public $debug = false;
     /**
      * Returns array of PHP classes
      * 

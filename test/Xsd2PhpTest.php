@@ -135,4 +135,25 @@ class Xsd2PhpTest extends PHPUnit_Framework_TestCase
             $this->rmdir_recursive(realpath('data/generated/simple1'));
         }
     }
+    
+    public function testMultiLevelImportAndIncludes() {
+         
+         $this->tclass = new xsd2php\Xsd2Php("../resources/MultiLevelImport/ContactPerson.xsd");
+         $xml = $this->tclass->getXML();
+         //file_put_contents(dirname(__FILE__).'/data/expected/MultiLevelImport/generated.xml', $xml->saveXml());
+         $expectedXml = file_get_contents(dirname(__FILE__).'/data/expected/MultiLevelImport/generated.xml');
+         $this->assertEquals($expectedXml, $xml->saveXml());
+         $this->tclass->saveClasses(dirname(__FILE__).'/data/generated/MultiLevelImport', true);
+    }
+    
+    public function testContactPerson1() {
+         
+         $this->tclass = new xsd2php\Xsd2Php("../resources/ContactPerson1/ContactPerson.xsd");
+         $xml = $this->tclass->getXML();
+         //file_put_contents(dirname(__FILE__).'/data/expected/ContactPerson1/generated.xml', $xml->saveXml());
+         $expectedXml = file_get_contents(dirname(__FILE__).'/data/expected/ContactPerson1/generated.xml');
+         $this->assertEquals($expectedXml, $xml->saveXml());
+         
+         $this->tclass->saveClasses(dirname(__FILE__).'/data/generated/ContactPerson1', true);
+    }
 }

@@ -33,9 +33,6 @@ class AmountType
 	 * @PrimitiveType string
 	 * @BuiltinType normalisedString
 	 * @xmlType attribute
-	 * @xmlNamespace 
-	 * @xmlMinOccurs 
-	 * @xmlMaxOccurs 
 	 * @xmlName currencyID
 	 * @var clm54217:CurrencyCodeContentType
 	 */

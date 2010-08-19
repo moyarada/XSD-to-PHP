@@ -28,7 +28,7 @@ class EndorserPartyType
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName RoleCode
-	 * @var RoleCode
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\RoleCode
 	 */
 	public $RoleCode;
 	/**
@@ -45,7 +45,7 @@ class EndorserPartyType
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName SequenceNumeric
-	 * @var SequenceNumeric
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\SequenceNumeric
 	 */
 	public $SequenceNumeric;
 	/**
@@ -57,7 +57,6 @@ class EndorserPartyType
 	 * @PropertyTerm Party
 	 * @AssociatedObjectClass Party
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName Party
@@ -74,7 +73,6 @@ class EndorserPartyType
 	 * @PropertyTerm Contact
 	 * @AssociatedObjectClass Contact
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName SignatoryContact

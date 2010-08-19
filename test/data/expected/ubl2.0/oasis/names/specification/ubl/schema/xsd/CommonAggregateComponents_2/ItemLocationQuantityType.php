@@ -29,7 +29,7 @@ class ItemLocationQuantityType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName LeadTimeMeasure
-	 * @var LeadTimeMeasure
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\LeadTimeMeasure
 	 */
 	public $LeadTimeMeasure;
 	/**
@@ -48,7 +48,7 @@ class ItemLocationQuantityType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName MinimumQuantity
-	 * @var MinimumQuantity
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\MinimumQuantity
 	 */
 	public $MinimumQuantity;
 	/**
@@ -67,7 +67,7 @@ class ItemLocationQuantityType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName MaximumQuantity
-	 * @var MaximumQuantity
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\MaximumQuantity
 	 */
 	public $MaximumQuantity;
 	/**
@@ -86,7 +86,7 @@ class ItemLocationQuantityType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName HazardousRiskIndicator
-	 * @var HazardousRiskIndicator
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\HazardousRiskIndicator
 	 */
 	public $HazardousRiskIndicator;
 	/**
@@ -104,7 +104,7 @@ class ItemLocationQuantityType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName TradingRestrictions
-	 * @var TradingRestrictions
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\TradingRestrictions
 	 */
 	public $TradingRestrictions;
 	/**
@@ -117,7 +117,6 @@ class ItemLocationQuantityType
 	 * @PropertyTerm Address
 	 * @AssociatedObjectClass Address
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName ApplicableTerritoryAddress
@@ -133,7 +132,6 @@ class ItemLocationQuantityType
 	 * @PropertyTerm Price
 	 * @AssociatedObjectClass Price
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName Price
@@ -149,7 +147,6 @@ class ItemLocationQuantityType
 	 * @PropertyTerm Delivery Unit
 	 * @AssociatedObjectClass Delivery Unit
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName DeliveryUnit
@@ -166,7 +163,6 @@ class ItemLocationQuantityType
 	 * @PropertyTerm Tax Category
 	 * @AssociatedObjectClass Tax Category
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName ApplicableTaxCategory

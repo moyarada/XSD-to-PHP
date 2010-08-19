@@ -28,7 +28,7 @@ class DimensionType
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName AttributeID
-	 * @var AttributeID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\AttributeID
 	 */
 	public $AttributeID;
 	/**
@@ -45,7 +45,7 @@ class DimensionType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName Measure
-	 * @var Measure
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\Measure
 	 */
 	public $Measure;
 	/**
@@ -62,7 +62,7 @@ class DimensionType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName Description
-	 * @var Description
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\Description
 	 */
 	public $Description;
 	/**
@@ -80,7 +80,7 @@ class DimensionType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName MinimumMeasure
-	 * @var MinimumMeasure
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\MinimumMeasure
 	 */
 	public $MinimumMeasure;
 	/**
@@ -98,7 +98,7 @@ class DimensionType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName MaximumMeasure
-	 * @var MaximumMeasure
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\MaximumMeasure
 	 */
 	public $MaximumMeasure;
 

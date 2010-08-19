@@ -28,7 +28,7 @@ class PaymentTermsType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ID
-	 * @var ID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ID
 	 */
 	public $ID;
 	/**
@@ -45,7 +45,7 @@ class PaymentTermsType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName PaymentMeansID
-	 * @var PaymentMeansID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\PaymentMeansID
 	 */
 	public $PaymentMeansID;
 	/**
@@ -62,7 +62,7 @@ class PaymentTermsType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName PrepaidPaymentReferenceID
-	 * @var PrepaidPaymentReferenceID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\PrepaidPaymentReferenceID
 	 */
 	public $PrepaidPaymentReferenceID;
 	/**
@@ -79,7 +79,7 @@ class PaymentTermsType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName Note
-	 * @var Note
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\Note
 	 */
 	public $Note;
 	/**
@@ -97,7 +97,7 @@ class PaymentTermsType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ReferenceEventCode
-	 * @var ReferenceEventCode
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ReferenceEventCode
 	 */
 	public $ReferenceEventCode;
 	/**
@@ -115,7 +115,7 @@ class PaymentTermsType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName SettlementDiscountPercent
-	 * @var SettlementDiscountPercent
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\SettlementDiscountPercent
 	 */
 	public $SettlementDiscountPercent;
 	/**
@@ -133,7 +133,7 @@ class PaymentTermsType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName PenaltySurchargePercent
-	 * @var PenaltySurchargePercent
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\PenaltySurchargePercent
 	 */
 	public $PenaltySurchargePercent;
 	/**
@@ -150,7 +150,7 @@ class PaymentTermsType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName Amount
-	 * @var Amount
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\Amount
 	 */
 	public $Amount;
 	/**
@@ -163,7 +163,6 @@ class PaymentTermsType
 	 * @PropertyTerm Period
 	 * @AssociatedObjectClass Period
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName SettlementPeriod
@@ -180,7 +179,6 @@ class PaymentTermsType
 	 * @PropertyTerm Period
 	 * @AssociatedObjectClass Period
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName PenaltyPeriod

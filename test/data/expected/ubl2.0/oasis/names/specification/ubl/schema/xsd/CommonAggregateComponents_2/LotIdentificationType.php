@@ -28,7 +28,7 @@ class LotIdentificationType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName LotNumberID
-	 * @var LotNumberID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\LotNumberID
 	 */
 	public $LotNumberID;
 	/**
@@ -45,7 +45,7 @@ class LotIdentificationType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ExpiryDate
-	 * @var ExpiryDate
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ExpiryDate
 	 */
 	public $ExpiryDate;
 	/**
@@ -58,7 +58,6 @@ class LotIdentificationType
 	 * @PropertyTerm Item Property
 	 * @AssociatedObjectClass Item Property
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName AdditionalItemProperty

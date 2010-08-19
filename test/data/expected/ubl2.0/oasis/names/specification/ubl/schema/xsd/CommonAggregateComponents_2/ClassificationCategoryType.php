@@ -30,7 +30,7 @@ class ClassificationCategoryType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName Name
-	 * @var Name
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\Name
 	 */
 	public $Name;
 	/**
@@ -49,7 +49,7 @@ class ClassificationCategoryType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName CodeValue
-	 * @var CodeValue
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\CodeValue
 	 */
 	public $CodeValue;
 	/**
@@ -68,7 +68,7 @@ class ClassificationCategoryType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName Description
-	 * @var Description
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\Description
 	 */
 	public $Description;
 	/**
@@ -81,7 +81,6 @@ class ClassificationCategoryType
 	 * @PropertyTerm Classification Category
 	 * @AssociatedObjectClass Classification Category
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName CategorizesClassificationCategory

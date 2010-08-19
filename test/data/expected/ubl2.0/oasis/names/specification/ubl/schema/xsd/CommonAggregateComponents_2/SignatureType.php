@@ -28,7 +28,7 @@ class SignatureType
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName ID
-	 * @var ID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ID
 	 */
 	public $ID;
 	/**
@@ -45,7 +45,7 @@ class SignatureType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName Note
-	 * @var Note
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\Note
 	 */
 	public $Note;
 	/**
@@ -62,7 +62,7 @@ class SignatureType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ValidationDate
-	 * @var ValidationDate
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ValidationDate
 	 */
 	public $ValidationDate;
 	/**
@@ -79,7 +79,7 @@ class SignatureType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ValidationTime
-	 * @var ValidationTime
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ValidationTime
 	 */
 	public $ValidationTime;
 	/**
@@ -96,7 +96,7 @@ class SignatureType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ValidatorID
-	 * @var ValidatorID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ValidatorID
 	 */
 	public $ValidatorID;
 	/**
@@ -113,7 +113,7 @@ class SignatureType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName CanonicalizationMethod
-	 * @var CanonicalizationMethod
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\CanonicalizationMethod
 	 */
 	public $CanonicalizationMethod;
 	/**
@@ -130,7 +130,7 @@ class SignatureType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName SignatureMethod
-	 * @var SignatureMethod
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\SignatureMethod
 	 */
 	public $SignatureMethod;
 	/**
@@ -143,7 +143,6 @@ class SignatureType
 	 * @PropertyTerm Party
 	 * @AssociatedObjectClass Party
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName SignatoryParty
@@ -160,7 +159,6 @@ class SignatureType
 	 * @PropertyTerm Attachment
 	 * @AssociatedObjectClass Attachment
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName DigitalSignatureAttachment
@@ -177,7 +175,6 @@ class SignatureType
 	 * @PropertyTerm Document Reference
 	 * @AssociatedObjectClass Document Reference
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName OriginalDocumentReference

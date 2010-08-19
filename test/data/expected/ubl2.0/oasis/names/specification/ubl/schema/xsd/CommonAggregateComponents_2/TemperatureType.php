@@ -28,7 +28,7 @@ class TemperatureType
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName AttributeID
-	 * @var AttributeID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\AttributeID
 	 */
 	public $AttributeID;
 	/**
@@ -45,7 +45,7 @@ class TemperatureType
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName Measure
-	 * @var Measure
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\Measure
 	 */
 	public $Measure;
 	/**
@@ -63,7 +63,7 @@ class TemperatureType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName Description
-	 * @var Description
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\Description
 	 */
 	public $Description;
 

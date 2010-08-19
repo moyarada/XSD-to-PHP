@@ -28,7 +28,7 @@ class RemittanceAdviceLineType
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName ID
-	 * @var ID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ID
 	 */
 	public $ID;
 	/**
@@ -45,7 +45,7 @@ class RemittanceAdviceLineType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName Note
-	 * @var Note
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\Note
 	 */
 	public $Note;
 	/**
@@ -62,7 +62,7 @@ class RemittanceAdviceLineType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName UUID
-	 * @var UUID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\UUID
 	 */
 	public $UUID;
 	/**
@@ -80,7 +80,7 @@ class RemittanceAdviceLineType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName DebitLineAmount
-	 * @var DebitLineAmount
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\DebitLineAmount
 	 */
 	public $DebitLineAmount;
 	/**
@@ -98,7 +98,7 @@ class RemittanceAdviceLineType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName CreditLineAmount
-	 * @var CreditLineAmount
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\CreditLineAmount
 	 */
 	public $CreditLineAmount;
 	/**
@@ -115,7 +115,7 @@ class RemittanceAdviceLineType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName BalanceAmount
-	 * @var BalanceAmount
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\BalanceAmount
 	 */
 	public $BalanceAmount;
 	/**
@@ -128,7 +128,6 @@ class RemittanceAdviceLineType
 	 * @PropertyTerm Supplier Party
 	 * @AssociatedObjectClass Supplier Party
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName AccountingSupplierParty
@@ -145,7 +144,6 @@ class RemittanceAdviceLineType
 	 * @PropertyTerm Customer Party
 	 * @AssociatedObjectClass Customer Party
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName AccountingCustomerParty
@@ -162,7 +160,6 @@ class RemittanceAdviceLineType
 	 * @PropertyTerm Customer Party
 	 * @AssociatedObjectClass Customer Party
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName BuyerCustomerParty
@@ -179,7 +176,6 @@ class RemittanceAdviceLineType
 	 * @PropertyTerm Supplier Party
 	 * @AssociatedObjectClass Supplier Party
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName SellerSupplierParty
@@ -196,7 +192,6 @@ class RemittanceAdviceLineType
 	 * @PropertyTerm Customer Party
 	 * @AssociatedObjectClass Customer Party
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName OriginatorCustomerParty
@@ -213,7 +208,6 @@ class RemittanceAdviceLineType
 	 * @PropertyTerm Party
 	 * @AssociatedObjectClass Party
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName PayeeParty
@@ -230,7 +224,6 @@ class RemittanceAdviceLineType
 	 * @PropertyTerm Period
 	 * @AssociatedObjectClass Period
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName InvoicePeriod
@@ -246,7 +239,6 @@ class RemittanceAdviceLineType
 	 * @PropertyTerm Billing Reference
 	 * @AssociatedObjectClass Billing Reference
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName BillingReference
@@ -262,7 +254,6 @@ class RemittanceAdviceLineType
 	 * @PropertyTerm Document Reference
 	 * @AssociatedObjectClass Document Reference
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName DocumentReference
@@ -278,7 +269,6 @@ class RemittanceAdviceLineType
 	 * @PropertyTerm Exchange Rate
 	 * @AssociatedObjectClass Exchange Rate
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ExchangeRate

@@ -28,7 +28,7 @@ class PartyIdentificationType
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName ID
-	 * @var ID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ID
 	 */
 	public $ID;
 

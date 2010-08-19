@@ -29,7 +29,7 @@ class FinancialAccountType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ID
-	 * @var ID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ID
 	 */
 	public $ID;
 	/**
@@ -46,7 +46,7 @@ class FinancialAccountType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName Name
-	 * @var Name
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\Name
 	 */
 	public $Name;
 	/**
@@ -63,7 +63,7 @@ class FinancialAccountType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName AccountTypeCode
-	 * @var AccountTypeCode
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\AccountTypeCode
 	 */
 	public $AccountTypeCode;
 	/**
@@ -80,7 +80,7 @@ class FinancialAccountType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName CurrencyCode
-	 * @var CurrencyCode
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\CurrencyCode
 	 */
 	public $CurrencyCode;
 	/**
@@ -98,7 +98,7 @@ class FinancialAccountType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName PaymentNote
-	 * @var PaymentNote
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\PaymentNote
 	 */
 	public $PaymentNote;
 	/**
@@ -111,7 +111,6 @@ class FinancialAccountType
 	 * @PropertyTerm Branch
 	 * @AssociatedObjectClass Branch
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName FinancialInstitutionBranch
@@ -127,7 +126,6 @@ class FinancialAccountType
 	 * @PropertyTerm Country
 	 * @AssociatedObjectClass Country
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName Country

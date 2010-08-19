@@ -33,9 +33,6 @@ class NameType
 	 * @PrimitiveType string
 	 * @BuiltinType language
 	 * @xmlType attribute
-	 * @xmlNamespace 
-	 * @xmlMinOccurs 
-	 * @xmlMaxOccurs 
 	 * @xmlName languageID
 	 * @var xsd:language
 	 */

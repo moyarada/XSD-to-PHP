@@ -29,7 +29,7 @@ class OrderReferenceType
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName ID
-	 * @var ID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ID
 	 */
 	public $ID;
 	/**
@@ -46,7 +46,7 @@ class OrderReferenceType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName SalesOrderID
-	 * @var SalesOrderID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\SalesOrderID
 	 */
 	public $SalesOrderID;
 	/**
@@ -64,7 +64,7 @@ class OrderReferenceType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName CopyIndicator
-	 * @var CopyIndicator
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\CopyIndicator
 	 */
 	public $CopyIndicator;
 	/**
@@ -81,7 +81,7 @@ class OrderReferenceType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName UUID
-	 * @var UUID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\UUID
 	 */
 	public $UUID;
 	/**
@@ -98,7 +98,7 @@ class OrderReferenceType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName IssueDate
-	 * @var IssueDate
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\IssueDate
 	 */
 	public $IssueDate;
 	/**
@@ -115,7 +115,7 @@ class OrderReferenceType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName IssueTime
-	 * @var IssueTime
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\IssueTime
 	 */
 	public $IssueTime;
 	/**
@@ -134,7 +134,7 @@ class OrderReferenceType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName CustomerReference
-	 * @var CustomerReference
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\CustomerReference
 	 */
 	public $CustomerReference;
 	/**
@@ -146,7 +146,6 @@ class OrderReferenceType
 	 * @PropertyTerm Document Reference
 	 * @AssociatedObjectClass Document Reference
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName DocumentReference

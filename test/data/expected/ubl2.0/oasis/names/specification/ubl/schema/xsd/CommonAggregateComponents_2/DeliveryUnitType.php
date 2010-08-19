@@ -29,7 +29,7 @@ class DeliveryUnitType
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName BatchQuantity
-	 * @var BatchQuantity
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\BatchQuantity
 	 */
 	public $BatchQuantity;
 	/**
@@ -48,7 +48,7 @@ class DeliveryUnitType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ConsumerUnitQuantity
-	 * @var ConsumerUnitQuantity
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ConsumerUnitQuantity
 	 */
 	public $ConsumerUnitQuantity;
 	/**
@@ -67,7 +67,7 @@ class DeliveryUnitType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName HazardousRiskIndicator
-	 * @var HazardousRiskIndicator
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\HazardousRiskIndicator
 	 */
 	public $HazardousRiskIndicator;
 

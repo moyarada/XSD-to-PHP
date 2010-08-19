@@ -29,7 +29,7 @@ class PartyType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName MarkCareIndicator
-	 * @var MarkCareIndicator
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\MarkCareIndicator
 	 */
 	public $MarkCareIndicator;
 	/**
@@ -47,7 +47,7 @@ class PartyType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName MarkAttentionIndicator
-	 * @var MarkAttentionIndicator
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\MarkAttentionIndicator
 	 */
 	public $MarkAttentionIndicator;
 	/**
@@ -65,7 +65,7 @@ class PartyType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName WebsiteURI
-	 * @var WebsiteURI
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\WebsiteURI
 	 */
 	public $WebsiteURI;
 	/**
@@ -83,7 +83,7 @@ class PartyType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName LogoReferenceID
-	 * @var LogoReferenceID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\LogoReferenceID
 	 */
 	public $LogoReferenceID;
 	/**
@@ -101,7 +101,7 @@ class PartyType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName EndpointID
-	 * @var EndpointID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\EndpointID
 	 */
 	public $EndpointID;
 	/**
@@ -113,7 +113,6 @@ class PartyType
 	 * @PropertyTerm Party Identification
 	 * @AssociatedObjectClass Party Identification
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName PartyIdentification
@@ -129,7 +128,6 @@ class PartyType
 	 * @PropertyTerm Party Name
 	 * @AssociatedObjectClass Party Name
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName PartyName
@@ -145,7 +143,6 @@ class PartyType
 	 * @PropertyTerm Language
 	 * @AssociatedObjectClass Language
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName Language
@@ -162,7 +159,6 @@ class PartyType
 	 * @PropertyTerm Address
 	 * @AssociatedObjectClass Address
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName PostalAddress
@@ -179,7 +175,6 @@ class PartyType
 	 * @PropertyTerm Location
 	 * @AssociatedObjectClass Location
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName PhysicalLocation
@@ -195,7 +190,6 @@ class PartyType
 	 * @PropertyTerm Party Tax Scheme
 	 * @AssociatedObjectClass Party Tax Scheme
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName PartyTaxScheme
@@ -211,7 +205,6 @@ class PartyType
 	 * @PropertyTerm Party Legal Entity
 	 * @AssociatedObjectClass Party Legal Entity
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName PartyLegalEntity
@@ -227,7 +220,6 @@ class PartyType
 	 * @PropertyTerm Contact
 	 * @AssociatedObjectClass Contact
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName Contact
@@ -243,7 +235,6 @@ class PartyType
 	 * @PropertyTerm Person
 	 * @AssociatedObjectClass Person
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName Person
@@ -260,7 +251,6 @@ class PartyType
 	 * @PropertyTerm Party
 	 * @AssociatedObjectClass Party
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName AgentParty

@@ -28,7 +28,7 @@ class AirTransportType
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName AircraftID
-	 * @var AircraftID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\AircraftID
 	 */
 	public $AircraftID;
 

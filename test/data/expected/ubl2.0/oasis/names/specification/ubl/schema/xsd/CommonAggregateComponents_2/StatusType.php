@@ -29,7 +29,7 @@ class StatusType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ConditionCode
-	 * @var ConditionCode
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ConditionCode
 	 */
 	public $ConditionCode;
 	/**
@@ -47,7 +47,7 @@ class StatusType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ReferenceDate
-	 * @var ReferenceDate
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ReferenceDate
 	 */
 	public $ReferenceDate;
 	/**
@@ -65,7 +65,7 @@ class StatusType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ReferenceTime
-	 * @var ReferenceTime
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ReferenceTime
 	 */
 	public $ReferenceTime;
 	/**
@@ -82,7 +82,7 @@ class StatusType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName Description
-	 * @var Description
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\Description
 	 */
 	public $Description;
 	/**
@@ -99,7 +99,7 @@ class StatusType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName StatusReasonCode
-	 * @var StatusReasonCode
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\StatusReasonCode
 	 */
 	public $StatusReasonCode;
 	/**
@@ -117,7 +117,7 @@ class StatusType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName StatusReason
-	 * @var StatusReason
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\StatusReason
 	 */
 	public $StatusReason;
 	/**
@@ -134,7 +134,7 @@ class StatusType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName SequenceID
-	 * @var SequenceID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\SequenceID
 	 */
 	public $SequenceID;
 	/**
@@ -151,7 +151,7 @@ class StatusType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName Text
-	 * @var Text
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\Text
 	 */
 	public $Text;
 	/**
@@ -169,7 +169,7 @@ class StatusType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName IndicationIndicator
-	 * @var IndicationIndicator
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\IndicationIndicator
 	 */
 	public $IndicationIndicator;
 	/**
@@ -186,7 +186,7 @@ class StatusType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName Percent
-	 * @var Percent
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\Percent
 	 */
 	public $Percent;
 

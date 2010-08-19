@@ -29,7 +29,7 @@ class DocumentDistributionType
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName PrintQualifier
-	 * @var PrintQualifier
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\PrintQualifier
 	 */
 	public $PrintQualifier;
 	/**
@@ -47,7 +47,7 @@ class DocumentDistributionType
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName MaximumCopiesNumeric
-	 * @var MaximumCopiesNumeric
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\MaximumCopiesNumeric
 	 */
 	public $MaximumCopiesNumeric;
 	/**
@@ -59,7 +59,6 @@ class DocumentDistributionType
 	 * @PropertyTerm Party
 	 * @AssociatedObjectClass Party
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName Party

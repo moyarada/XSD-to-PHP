@@ -28,7 +28,7 @@ class InvoiceLineType
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName ID
-	 * @var ID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ID
 	 */
 	public $ID;
 	/**
@@ -45,7 +45,7 @@ class InvoiceLineType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName UUID
-	 * @var UUID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\UUID
 	 */
 	public $UUID;
 	/**
@@ -62,7 +62,7 @@ class InvoiceLineType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName Note
-	 * @var Note
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\Note
 	 */
 	public $Note;
 	/**
@@ -80,7 +80,7 @@ class InvoiceLineType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName InvoicedQuantity
-	 * @var InvoicedQuantity
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\InvoicedQuantity
 	 */
 	public $InvoicedQuantity;
 	/**
@@ -97,7 +97,7 @@ class InvoiceLineType
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName LineExtensionAmount
-	 * @var LineExtensionAmount
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\LineExtensionAmount
 	 */
 	public $LineExtensionAmount;
 	/**
@@ -114,7 +114,7 @@ class InvoiceLineType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName TaxPointDate
-	 * @var TaxPointDate
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\TaxPointDate
 	 */
 	public $TaxPointDate;
 	/**
@@ -131,7 +131,7 @@ class InvoiceLineType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName AccountingCostCode
-	 * @var AccountingCostCode
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\AccountingCostCode
 	 */
 	public $AccountingCostCode;
 	/**
@@ -148,7 +148,7 @@ class InvoiceLineType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName AccountingCost
-	 * @var AccountingCost
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\AccountingCost
 	 */
 	public $AccountingCost;
 	/**
@@ -166,7 +166,7 @@ class InvoiceLineType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName FreeOfChargeIndicator
-	 * @var FreeOfChargeIndicator
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\FreeOfChargeIndicator
 	 */
 	public $FreeOfChargeIndicator;
 	/**
@@ -178,7 +178,6 @@ class InvoiceLineType
 	 * @PropertyTerm Order Line Reference
 	 * @AssociatedObjectClass Order Line Reference
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName OrderLineReference
@@ -195,7 +194,6 @@ class InvoiceLineType
 	 * @PropertyTerm Line Reference
 	 * @AssociatedObjectClass Line Reference
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName DespatchLineReference
@@ -212,7 +210,6 @@ class InvoiceLineType
 	 * @PropertyTerm Line Reference
 	 * @AssociatedObjectClass Line Reference
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName ReceiptLineReference
@@ -228,7 +225,6 @@ class InvoiceLineType
 	 * @PropertyTerm Billing Reference
 	 * @AssociatedObjectClass Billing Reference
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName BillingReference
@@ -244,7 +240,6 @@ class InvoiceLineType
 	 * @PropertyTerm Document Reference
 	 * @AssociatedObjectClass Document Reference
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName DocumentReference
@@ -260,7 +255,6 @@ class InvoiceLineType
 	 * @PropertyTerm Pricing Reference
 	 * @AssociatedObjectClass Pricing Reference
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName PricingReference
@@ -277,7 +271,6 @@ class InvoiceLineType
 	 * @PropertyTerm Party
 	 * @AssociatedObjectClass Party
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName OriginatorParty
@@ -293,7 +286,6 @@ class InvoiceLineType
 	 * @PropertyTerm Delivery
 	 * @AssociatedObjectClass Delivery
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName Delivery
@@ -309,7 +301,6 @@ class InvoiceLineType
 	 * @PropertyTerm Payment Terms
 	 * @AssociatedObjectClass Payment Terms
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName PaymentTerms
@@ -325,7 +316,6 @@ class InvoiceLineType
 	 * @PropertyTerm Allowance Charge
 	 * @AssociatedObjectClass Allowance Charge
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName AllowanceCharge
@@ -341,7 +331,6 @@ class InvoiceLineType
 	 * @PropertyTerm Tax Total
 	 * @AssociatedObjectClass Tax Total
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName TaxTotal
@@ -357,7 +346,6 @@ class InvoiceLineType
 	 * @PropertyTerm Item
 	 * @AssociatedObjectClass Item
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName Item
@@ -373,7 +361,6 @@ class InvoiceLineType
 	 * @PropertyTerm Price
 	 * @AssociatedObjectClass Price
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName Price
@@ -389,7 +376,6 @@ class InvoiceLineType
 	 * @PropertyTerm Delivery Terms
 	 * @AssociatedObjectClass Delivery Terms
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName DeliveryTerms

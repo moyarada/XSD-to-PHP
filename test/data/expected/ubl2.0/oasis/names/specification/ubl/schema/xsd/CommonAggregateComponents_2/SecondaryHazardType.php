@@ -28,7 +28,7 @@ class SecondaryHazardType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ID
-	 * @var ID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ID
 	 */
 	public $ID;
 	/**
@@ -46,7 +46,7 @@ class SecondaryHazardType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName PlacardNotation
-	 * @var PlacardNotation
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\PlacardNotation
 	 */
 	public $PlacardNotation;
 	/**
@@ -64,7 +64,7 @@ class SecondaryHazardType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName PlacardEndorsement
-	 * @var PlacardEndorsement
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\PlacardEndorsement
 	 */
 	public $PlacardEndorsement;
 	/**
@@ -82,7 +82,7 @@ class SecondaryHazardType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName EmergencyProceduresCode
-	 * @var EmergencyProceduresCode
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\EmergencyProceduresCode
 	 */
 	public $EmergencyProceduresCode;
 	/**
@@ -100,7 +100,7 @@ class SecondaryHazardType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName Extension
-	 * @var Extension
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\Extension
 	 */
 	public $Extension;
 

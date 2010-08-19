@@ -29,7 +29,7 @@ class ContractType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ID
-	 * @var ID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ID
 	 */
 	public $ID;
 	/**
@@ -46,7 +46,7 @@ class ContractType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName IssueDate
-	 * @var IssueDate
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\IssueDate
 	 */
 	public $IssueDate;
 	/**
@@ -63,7 +63,7 @@ class ContractType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName IssueTime
-	 * @var IssueTime
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\IssueTime
 	 */
 	public $IssueTime;
 	/**
@@ -80,7 +80,7 @@ class ContractType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ContractTypeCode
-	 * @var ContractTypeCode
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ContractTypeCode
 	 */
 	public $ContractTypeCode;
 	/**
@@ -97,7 +97,7 @@ class ContractType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ContractType
-	 * @var ContractType
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ContractType
 	 */
 	public $ContractType;
 	/**
@@ -110,7 +110,6 @@ class ContractType
 	 * @PropertyTerm Period
 	 * @AssociatedObjectClass Period
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ValidityPeriod
@@ -127,7 +126,6 @@ class ContractType
 	 * @PropertyTerm Document Reference
 	 * @AssociatedObjectClass Document Reference
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName ContractDocumentReference

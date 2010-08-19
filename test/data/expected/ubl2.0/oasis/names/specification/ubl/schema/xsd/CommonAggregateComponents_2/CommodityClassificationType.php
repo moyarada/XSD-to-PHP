@@ -29,7 +29,7 @@ class CommodityClassificationType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName NatureCode
-	 * @var NatureCode
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\NatureCode
 	 */
 	public $NatureCode;
 	/**
@@ -47,7 +47,7 @@ class CommodityClassificationType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName CargoTypeCode
-	 * @var CargoTypeCode
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\CargoTypeCode
 	 */
 	public $CargoTypeCode;
 	/**
@@ -66,7 +66,7 @@ class CommodityClassificationType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName CommodityCode
-	 * @var CommodityCode
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\CommodityCode
 	 */
 	public $CommodityCode;
 	/**
@@ -85,7 +85,7 @@ class CommodityClassificationType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ItemClassificationCode
-	 * @var ItemClassificationCode
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ItemClassificationCode
 	 */
 	public $ItemClassificationCode;
 

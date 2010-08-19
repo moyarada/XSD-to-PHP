@@ -28,7 +28,7 @@ class AllowanceChargeType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ID
-	 * @var ID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ID
 	 */
 	public $ID;
 	/**
@@ -46,7 +46,7 @@ class AllowanceChargeType
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName ChargeIndicator
-	 * @var ChargeIndicator
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ChargeIndicator
 	 */
 	public $ChargeIndicator;
 	/**
@@ -63,7 +63,7 @@ class AllowanceChargeType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName AllowanceChargeReasonCode
-	 * @var AllowanceChargeReasonCode
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\AllowanceChargeReasonCode
 	 */
 	public $AllowanceChargeReasonCode;
 	/**
@@ -81,7 +81,7 @@ class AllowanceChargeType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName AllowanceChargeReason
-	 * @var AllowanceChargeReason
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\AllowanceChargeReason
 	 */
 	public $AllowanceChargeReason;
 	/**
@@ -100,7 +100,7 @@ class AllowanceChargeType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName MultiplierFactorNumeric
-	 * @var MultiplierFactorNumeric
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\MultiplierFactorNumeric
 	 */
 	public $MultiplierFactorNumeric;
 	/**
@@ -118,7 +118,7 @@ class AllowanceChargeType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName PrepaidIndicator
-	 * @var PrepaidIndicator
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\PrepaidIndicator
 	 */
 	public $PrepaidIndicator;
 	/**
@@ -136,7 +136,7 @@ class AllowanceChargeType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName SequenceNumeric
-	 * @var SequenceNumeric
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\SequenceNumeric
 	 */
 	public $SequenceNumeric;
 	/**
@@ -154,7 +154,7 @@ class AllowanceChargeType
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName Amount
-	 * @var Amount
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\Amount
 	 */
 	public $Amount;
 	/**
@@ -172,7 +172,7 @@ class AllowanceChargeType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName BaseAmount
-	 * @var BaseAmount
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\BaseAmount
 	 */
 	public $BaseAmount;
 	/**
@@ -189,7 +189,7 @@ class AllowanceChargeType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName AccountingCostCode
-	 * @var AccountingCostCode
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\AccountingCostCode
 	 */
 	public $AccountingCostCode;
 	/**
@@ -206,7 +206,7 @@ class AllowanceChargeType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName AccountingCost
-	 * @var AccountingCost
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\AccountingCost
 	 */
 	public $AccountingCost;
 	/**
@@ -218,7 +218,6 @@ class AllowanceChargeType
 	 * @PropertyTerm Tax Category
 	 * @AssociatedObjectClass Tax Category
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName TaxCategory
@@ -234,7 +233,6 @@ class AllowanceChargeType
 	 * @PropertyTerm Tax Total
 	 * @AssociatedObjectClass Tax Total
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName TaxTotal
@@ -250,7 +248,6 @@ class AllowanceChargeType
 	 * @PropertyTerm Payment Means
 	 * @AssociatedObjectClass Payment Means
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName PaymentMeans

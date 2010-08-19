@@ -29,7 +29,7 @@ class CatalogueRequestLineType
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName ID
-	 * @var ID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ID
 	 */
 	public $ID;
 	/**
@@ -47,7 +47,7 @@ class CatalogueRequestLineType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ContractSubdivision
-	 * @var ContractSubdivision
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ContractSubdivision
 	 */
 	public $ContractSubdivision;
 	/**
@@ -64,7 +64,7 @@ class CatalogueRequestLineType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName Note
-	 * @var Note
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\Note
 	 */
 	public $Note;
 	/**
@@ -77,7 +77,6 @@ class CatalogueRequestLineType
 	 * @PropertyTerm Period
 	 * @AssociatedObjectClass Period
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName LineValidityPeriod
@@ -94,7 +93,6 @@ class CatalogueRequestLineType
 	 * @PropertyTerm Item Location Quantity
 	 * @AssociatedObjectClass Item Location Quantity
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName RequiredItemLocationQuantity
@@ -110,7 +108,6 @@ class CatalogueRequestLineType
 	 * @PropertyTerm Item
 	 * @AssociatedObjectClass Item
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName Item

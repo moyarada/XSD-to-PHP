@@ -29,7 +29,7 @@ class ItemType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName Description
-	 * @var Description
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\Description
 	 */
 	public $Description;
 	/**
@@ -46,7 +46,7 @@ class ItemType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName PackQuantity
-	 * @var PackQuantity
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\PackQuantity
 	 */
 	public $PackQuantity;
 	/**
@@ -63,7 +63,7 @@ class ItemType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName PackSizeNumeric
-	 * @var PackSizeNumeric
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\PackSizeNumeric
 	 */
 	public $PackSizeNumeric;
 	/**
@@ -81,7 +81,7 @@ class ItemType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName CatalogueIndicator
-	 * @var CatalogueIndicator
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\CatalogueIndicator
 	 */
 	public $CatalogueIndicator;
 	/**
@@ -98,7 +98,7 @@ class ItemType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName Name
-	 * @var Name
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\Name
 	 */
 	public $Name;
 	/**
@@ -117,7 +117,7 @@ class ItemType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName HazardousRiskIndicator
-	 * @var HazardousRiskIndicator
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\HazardousRiskIndicator
 	 */
 	public $HazardousRiskIndicator;
 	/**
@@ -135,7 +135,7 @@ class ItemType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName AdditionalInformation
-	 * @var AdditionalInformation
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\AdditionalInformation
 	 */
 	public $AdditionalInformation;
 	/**
@@ -152,7 +152,7 @@ class ItemType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName Keyword
-	 * @var Keyword
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\Keyword
 	 */
 	public $Keyword;
 	/**
@@ -170,7 +170,7 @@ class ItemType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName BrandName
-	 * @var BrandName
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\BrandName
 	 */
 	public $BrandName;
 	/**
@@ -188,7 +188,7 @@ class ItemType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName ModelName
-	 * @var ModelName
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ModelName
 	 */
 	public $ModelName;
 	/**
@@ -201,7 +201,6 @@ class ItemType
 	 * @PropertyTerm Item Identification
 	 * @AssociatedObjectClass Item Identification
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName BuyersItemIdentification
@@ -218,7 +217,6 @@ class ItemType
 	 * @PropertyTerm Item Identification
 	 * @AssociatedObjectClass Item Identification
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName SellersItemIdentification
@@ -235,7 +233,6 @@ class ItemType
 	 * @PropertyTerm Item Identification
 	 * @AssociatedObjectClass Item Identification
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName ManufacturersItemIdentification
@@ -252,7 +249,6 @@ class ItemType
 	 * @PropertyTerm Item Identification
 	 * @AssociatedObjectClass Item Identification
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName StandardItemIdentification
@@ -269,7 +265,6 @@ class ItemType
 	 * @PropertyTerm Item Identification
 	 * @AssociatedObjectClass Item Identification
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName CatalogueItemIdentification
@@ -286,7 +281,6 @@ class ItemType
 	 * @PropertyTerm Item Identification
 	 * @AssociatedObjectClass Item Identification
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName AdditionalItemIdentification
@@ -303,7 +297,6 @@ class ItemType
 	 * @PropertyTerm Document Reference
 	 * @AssociatedObjectClass Document Reference
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName CatalogueDocumentReference
@@ -320,7 +313,6 @@ class ItemType
 	 * @PropertyTerm Document Reference
 	 * @AssociatedObjectClass Document Reference
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName ItemSpecificationDocumentReference
@@ -337,7 +329,6 @@ class ItemType
 	 * @PropertyTerm Country
 	 * @AssociatedObjectClass Country
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName OriginCountry
@@ -353,7 +344,6 @@ class ItemType
 	 * @PropertyTerm Commodity Classification
 	 * @AssociatedObjectClass Commodity Classification
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName CommodityClassification
@@ -369,7 +359,6 @@ class ItemType
 	 * @PropertyTerm Transaction Conditions
 	 * @AssociatedObjectClass Transaction Conditions
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName TransactionConditions
@@ -385,7 +374,6 @@ class ItemType
 	 * @PropertyTerm Hazardous Item
 	 * @AssociatedObjectClass Hazardous Item
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName HazardousItem
@@ -402,7 +390,6 @@ class ItemType
 	 * @PropertyTerm Tax Category
 	 * @AssociatedObjectClass Tax Category
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName ClassifiedTaxCategory
@@ -419,7 +406,6 @@ class ItemType
 	 * @PropertyTerm Item Property
 	 * @AssociatedObjectClass Item Property
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName AdditionalItemProperty
@@ -436,7 +422,6 @@ class ItemType
 	 * @PropertyTerm Party
 	 * @AssociatedObjectClass Party
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName ManufacturerParty
@@ -453,7 +438,6 @@ class ItemType
 	 * @PropertyTerm Party
 	 * @AssociatedObjectClass Party
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName InformationContentProviderParty
@@ -470,7 +454,6 @@ class ItemType
 	 * @PropertyTerm Address
 	 * @AssociatedObjectClass Address
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName OriginAddress
@@ -486,7 +469,6 @@ class ItemType
 	 * @PropertyTerm Item Instance
 	 * @AssociatedObjectClass Item Instance
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName ItemInstance

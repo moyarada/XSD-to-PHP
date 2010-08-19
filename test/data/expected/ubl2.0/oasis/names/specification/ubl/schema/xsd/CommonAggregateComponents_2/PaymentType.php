@@ -28,7 +28,7 @@ class PaymentType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ID
-	 * @var ID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ID
 	 */
 	public $ID;
 	/**
@@ -46,7 +46,7 @@ class PaymentType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName PaidAmount
-	 * @var PaidAmount
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\PaidAmount
 	 */
 	public $PaidAmount;
 	/**
@@ -64,7 +64,7 @@ class PaymentType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ReceivedDate
-	 * @var ReceivedDate
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ReceivedDate
 	 */
 	public $ReceivedDate;
 	/**
@@ -82,7 +82,7 @@ class PaymentType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName PaidDate
-	 * @var PaidDate
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\PaidDate
 	 */
 	public $PaidDate;
 	/**
@@ -100,7 +100,7 @@ class PaymentType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName PaidTime
-	 * @var PaidTime
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\PaidTime
 	 */
 	public $PaidTime;
 	/**
@@ -117,7 +117,7 @@ class PaymentType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName InstructionID
-	 * @var InstructionID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\InstructionID
 	 */
 	public $InstructionID;
 

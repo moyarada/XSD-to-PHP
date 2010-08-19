@@ -28,7 +28,7 @@ class ItemComparisonType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName PriceAmount
-	 * @var PriceAmount
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\PriceAmount
 	 */
 	public $PriceAmount;
 	/**
@@ -46,7 +46,7 @@ class ItemComparisonType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName Quantity
-	 * @var Quantity
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\Quantity
 	 */
 	public $Quantity;
 

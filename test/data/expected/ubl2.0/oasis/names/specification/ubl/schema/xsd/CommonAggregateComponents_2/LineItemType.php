@@ -28,7 +28,7 @@ class LineItemType
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName ID
-	 * @var ID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ID
 	 */
 	public $ID;
 	/**
@@ -46,7 +46,7 @@ class LineItemType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName SalesOrderID
-	 * @var SalesOrderID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\SalesOrderID
 	 */
 	public $SalesOrderID;
 	/**
@@ -63,7 +63,7 @@ class LineItemType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName UUID
-	 * @var UUID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\UUID
 	 */
 	public $UUID;
 	/**
@@ -80,7 +80,7 @@ class LineItemType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName Note
-	 * @var Note
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\Note
 	 */
 	public $Note;
 	/**
@@ -97,7 +97,7 @@ class LineItemType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName LineStatusCode
-	 * @var LineStatusCode
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\LineStatusCode
 	 */
 	public $LineStatusCode;
 	/**
@@ -114,7 +114,7 @@ class LineItemType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName Quantity
-	 * @var Quantity
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\Quantity
 	 */
 	public $Quantity;
 	/**
@@ -131,7 +131,7 @@ class LineItemType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName LineExtensionAmount
-	 * @var LineExtensionAmount
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\LineExtensionAmount
 	 */
 	public $LineExtensionAmount;
 	/**
@@ -149,7 +149,7 @@ class LineItemType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName TotalTaxAmount
-	 * @var TotalTaxAmount
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\TotalTaxAmount
 	 */
 	public $TotalTaxAmount;
 	/**
@@ -167,7 +167,7 @@ class LineItemType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName MinimumQuantity
-	 * @var MinimumQuantity
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\MinimumQuantity
 	 */
 	public $MinimumQuantity;
 	/**
@@ -185,7 +185,7 @@ class LineItemType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName MaximumQuantity
-	 * @var MaximumQuantity
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\MaximumQuantity
 	 */
 	public $MaximumQuantity;
 	/**
@@ -203,7 +203,7 @@ class LineItemType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName MinimumBackorderQuantity
-	 * @var MinimumBackorderQuantity
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\MinimumBackorderQuantity
 	 */
 	public $MinimumBackorderQuantity;
 	/**
@@ -221,7 +221,7 @@ class LineItemType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName MaximumBackorderQuantity
-	 * @var MaximumBackorderQuantity
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\MaximumBackorderQuantity
 	 */
 	public $MaximumBackorderQuantity;
 	/**
@@ -238,7 +238,7 @@ class LineItemType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName InspectionMethodCode
-	 * @var InspectionMethodCode
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\InspectionMethodCode
 	 */
 	public $InspectionMethodCode;
 	/**
@@ -255,7 +255,7 @@ class LineItemType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName PartialDeliveryIndicator
-	 * @var PartialDeliveryIndicator
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\PartialDeliveryIndicator
 	 */
 	public $PartialDeliveryIndicator;
 	/**
@@ -272,7 +272,7 @@ class LineItemType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName BackOrderAllowedIndicator
-	 * @var BackOrderAllowedIndicator
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\BackOrderAllowedIndicator
 	 */
 	public $BackOrderAllowedIndicator;
 	/**
@@ -289,7 +289,7 @@ class LineItemType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName AccountingCostCode
-	 * @var AccountingCostCode
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\AccountingCostCode
 	 */
 	public $AccountingCostCode;
 	/**
@@ -306,7 +306,7 @@ class LineItemType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName AccountingCost
-	 * @var AccountingCost
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\AccountingCost
 	 */
 	public $AccountingCost;
 	/**
@@ -318,7 +318,6 @@ class LineItemType
 	 * @PropertyTerm Delivery
 	 * @AssociatedObjectClass Delivery
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName Delivery
@@ -334,7 +333,6 @@ class LineItemType
 	 * @PropertyTerm Delivery Terms
 	 * @AssociatedObjectClass Delivery Terms
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName DeliveryTerms
@@ -351,7 +349,6 @@ class LineItemType
 	 * @PropertyTerm Party
 	 * @AssociatedObjectClass Party
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName OriginatorParty
@@ -367,7 +364,6 @@ class LineItemType
 	 * @PropertyTerm Ordered Shipment
 	 * @AssociatedObjectClass Ordered Shipment
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName OrderedShipment
@@ -383,7 +379,6 @@ class LineItemType
 	 * @PropertyTerm Pricing Reference
 	 * @AssociatedObjectClass Pricing Reference
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName PricingReference
@@ -399,7 +394,6 @@ class LineItemType
 	 * @PropertyTerm Allowance Charge
 	 * @AssociatedObjectClass Allowance Charge
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName AllowanceCharge
@@ -415,7 +409,6 @@ class LineItemType
 	 * @PropertyTerm Price
 	 * @AssociatedObjectClass Price
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName Price
@@ -431,7 +424,6 @@ class LineItemType
 	 * @PropertyTerm Item
 	 * @AssociatedObjectClass Item
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName Item

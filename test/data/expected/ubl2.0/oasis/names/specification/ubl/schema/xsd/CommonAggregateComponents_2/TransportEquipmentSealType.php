@@ -30,7 +30,7 @@ class TransportEquipmentSealType
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName ID
-	 * @var ID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ID
 	 */
 	public $ID;
 	/**
@@ -47,7 +47,7 @@ class TransportEquipmentSealType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName SealIssuerTypeCode
-	 * @var SealIssuerTypeCode
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\SealIssuerTypeCode
 	 */
 	public $SealIssuerTypeCode;
 	/**
@@ -64,7 +64,7 @@ class TransportEquipmentSealType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName Condition
-	 * @var Condition
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\Condition
 	 */
 	public $Condition;
 	/**
@@ -81,7 +81,7 @@ class TransportEquipmentSealType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName SealStatusCode
-	 * @var SealStatusCode
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\SealStatusCode
 	 */
 	public $SealStatusCode;
 	/**
@@ -99,7 +99,7 @@ class TransportEquipmentSealType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName SealingPartyType
-	 * @var SealingPartyType
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\SealingPartyType
 	 */
 	public $SealingPartyType;
 

@@ -28,7 +28,7 @@ class DebitNoteLineType
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName ID
-	 * @var ID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ID
 	 */
 	public $ID;
 	/**
@@ -45,7 +45,7 @@ class DebitNoteLineType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName UUID
-	 * @var UUID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\UUID
 	 */
 	public $UUID;
 	/**
@@ -62,7 +62,7 @@ class DebitNoteLineType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName Note
-	 * @var Note
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\Note
 	 */
 	public $Note;
 	/**
@@ -80,7 +80,7 @@ class DebitNoteLineType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName DebitedQuantity
-	 * @var DebitedQuantity
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\DebitedQuantity
 	 */
 	public $DebitedQuantity;
 	/**
@@ -97,7 +97,7 @@ class DebitNoteLineType
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName LineExtensionAmount
-	 * @var LineExtensionAmount
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\LineExtensionAmount
 	 */
 	public $LineExtensionAmount;
 	/**
@@ -114,7 +114,7 @@ class DebitNoteLineType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName TaxPointDate
-	 * @var TaxPointDate
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\TaxPointDate
 	 */
 	public $TaxPointDate;
 	/**
@@ -131,7 +131,7 @@ class DebitNoteLineType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName AccountingCostCode
-	 * @var AccountingCostCode
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\AccountingCostCode
 	 */
 	public $AccountingCostCode;
 	/**
@@ -148,7 +148,7 @@ class DebitNoteLineType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName AccountingCost
-	 * @var AccountingCost
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\AccountingCost
 	 */
 	public $AccountingCost;
 	/**
@@ -161,7 +161,6 @@ class DebitNoteLineType
 	 * @PropertyTerm Response
 	 * @AssociatedObjectClass Response
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName DiscrepancyResponse
@@ -178,7 +177,6 @@ class DebitNoteLineType
 	 * @PropertyTerm Line Reference
 	 * @AssociatedObjectClass Line Reference
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName DespatchLineReference
@@ -195,7 +193,6 @@ class DebitNoteLineType
 	 * @PropertyTerm Line Reference
 	 * @AssociatedObjectClass Line Reference
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName ReceiptLineReference
@@ -211,7 +208,6 @@ class DebitNoteLineType
 	 * @PropertyTerm Billing Reference
 	 * @AssociatedObjectClass Billing Reference
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName BillingReference
@@ -227,7 +223,6 @@ class DebitNoteLineType
 	 * @PropertyTerm Document Reference
 	 * @AssociatedObjectClass Document Reference
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName DocumentReference
@@ -243,7 +238,6 @@ class DebitNoteLineType
 	 * @PropertyTerm Pricing Reference
 	 * @AssociatedObjectClass Pricing Reference
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName PricingReference
@@ -259,7 +253,6 @@ class DebitNoteLineType
 	 * @PropertyTerm Delivery
 	 * @AssociatedObjectClass Delivery
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName Delivery
@@ -275,7 +268,6 @@ class DebitNoteLineType
 	 * @PropertyTerm Tax Total
 	 * @AssociatedObjectClass Tax Total
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName TaxTotal
@@ -291,7 +283,6 @@ class DebitNoteLineType
 	 * @PropertyTerm Item
 	 * @AssociatedObjectClass Item
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName Item
@@ -307,7 +298,6 @@ class DebitNoteLineType
 	 * @PropertyTerm Price
 	 * @AssociatedObjectClass Price
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName Price

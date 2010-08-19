@@ -29,7 +29,7 @@ class CreditAccountType
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName AccountID
-	 * @var AccountID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\AccountID
 	 */
 	public $AccountID;
 

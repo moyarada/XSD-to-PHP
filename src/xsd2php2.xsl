@@ -11,14 +11,15 @@
 		License.
 	-->
 <xsl:stylesheet version="1.0"
-	xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsl="http://www.w3.org/1999/XSL/Transform" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
 	xmlns:exslt="http://exslt.org/common">
 
 	<xsl:template
 		match="//*[local-name()='schema' and namespace-uri()='http://www.w3.org/2001/XMLSchema']">
 
 		<xsl:variable name="targetNamespace" select="@targetNamespace" />
-
+       
 		<!-- Generate classes for each element with data type as extention -->
 		<xsdschema>
 			<classes>
@@ -161,10 +162,21 @@
 				</property>
 			</xsl:when>
 			<xsl:when test="@name">
-				<property debug="nameElement" xmlType="element" name="{@name}"
-					minOccurs="{@minOccurs}" maxOccurs="{@maxOccurs}">
-					<xsl:apply-templates />
-				</property>
+				<xsl:choose>
+					<xsl:when test="contains(@type, ':')">
+						<property debug="nameElement-TypeColon" xmlType="element" name="{@name}"
+							type="{substring-after(@type, ':')}" namespace="{substring-before(@type, ':')}" minOccurs="{@minOccurs}" maxOccurs="{@maxOccurs}">
+							<xsl:apply-templates />
+						</property>
+					</xsl:when>
+                    <xsl:otherwise>
+                        <property debug="nameElement-TypeNoColon" xmlType="element" name="{@name}"
+                            type="{@type}" namespace="#default#" minOccurs="{@minOccurs}" maxOccurs="{@maxOccurs}">
+                            <xsl:apply-templates />
+                        </property>
+                        
+                    </xsl:otherwise>
+				</xsl:choose>
 			</xsl:when>
 
 		</xsl:choose>
@@ -244,14 +256,15 @@
 					select="//*[local-name()='attribute' and namespace-uri()='http://www.w3.org/2001/XMLSchema'][@name=current()/@ref]/@type" />
 				<xsl:choose>
 					<xsl:when test="contains($attRef, ':')">
-						<property debug="attribute-Ref-1" xmlType="attribute" name="{@ref}"
-							type="{substring-after($attRef,':')}" namespace="{substring-before($attRef,':')}" default="{@default}" use="{@use}">
+						<property debug="attribute-Ref-1" xmlType="attribute"
+							name="{@ref}" type="{substring-after($attRef,':')}" namespace="{substring-before($attRef,':')}"
+							default="{@default}" use="{@use}">
 						</property>
 					</xsl:when>
 					<xsl:otherwise>
-					   <property debug="attribute-Ref-2" xmlType="attribute" name="{@ref}"
-                            type="{$attRef}" default="{@default}" use="{@use}">
-                        </property>
+						<property debug="attribute-Ref-2" xmlType="attribute"
+							name="{@ref}" type="{$attRef}" default="{@default}" use="{@use}">
+						</property>
 					</xsl:otherwise>
 				</xsl:choose>
 

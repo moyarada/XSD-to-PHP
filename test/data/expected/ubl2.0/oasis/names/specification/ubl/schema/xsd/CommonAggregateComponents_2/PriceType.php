@@ -30,7 +30,7 @@ class PriceType
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName PriceAmount
-	 * @var PriceAmount
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\PriceAmount
 	 */
 	public $PriceAmount;
 	/**
@@ -48,7 +48,7 @@ class PriceType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName BaseQuantity
-	 * @var BaseQuantity
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\BaseQuantity
 	 */
 	public $BaseQuantity;
 	/**
@@ -67,7 +67,7 @@ class PriceType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName PriceChangeReason
-	 * @var PriceChangeReason
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\PriceChangeReason
 	 */
 	public $PriceChangeReason;
 	/**
@@ -84,7 +84,7 @@ class PriceType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName PriceTypeCode
-	 * @var PriceTypeCode
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\PriceTypeCode
 	 */
 	public $PriceTypeCode;
 	/**
@@ -102,7 +102,7 @@ class PriceType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName PriceType
-	 * @var PriceType
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\PriceType
 	 */
 	public $PriceType;
 	/**
@@ -120,7 +120,7 @@ class PriceType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName OrderableUnitFactorRate
-	 * @var OrderableUnitFactorRate
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\OrderableUnitFactorRate
 	 */
 	public $OrderableUnitFactorRate;
 	/**
@@ -133,7 +133,6 @@ class PriceType
 	 * @PropertyTerm Period
 	 * @AssociatedObjectClass Period
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName ValidityPeriod
@@ -149,7 +148,6 @@ class PriceType
 	 * @PropertyTerm Price List
 	 * @AssociatedObjectClass Price List
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName PriceList
@@ -165,7 +163,6 @@ class PriceType
 	 * @PropertyTerm Allowance Charge
 	 * @AssociatedObjectClass Allowance Charge
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName AllowanceCharge

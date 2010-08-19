@@ -28,7 +28,7 @@ class DespatchLineType
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName ID
-	 * @var ID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ID
 	 */
 	public $ID;
 	/**
@@ -45,7 +45,7 @@ class DespatchLineType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName UUID
-	 * @var UUID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\UUID
 	 */
 	public $UUID;
 	/**
@@ -62,7 +62,7 @@ class DespatchLineType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName Note
-	 * @var Note
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\Note
 	 */
 	public $Note;
 	/**
@@ -79,7 +79,7 @@ class DespatchLineType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName LineStatusCode
-	 * @var LineStatusCode
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\LineStatusCode
 	 */
 	public $LineStatusCode;
 	/**
@@ -97,7 +97,7 @@ class DespatchLineType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName DeliveredQuantity
-	 * @var DeliveredQuantity
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\DeliveredQuantity
 	 */
 	public $DeliveredQuantity;
 	/**
@@ -115,7 +115,7 @@ class DespatchLineType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName BackorderQuantity
-	 * @var BackorderQuantity
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\BackorderQuantity
 	 */
 	public $BackorderQuantity;
 	/**
@@ -133,7 +133,7 @@ class DespatchLineType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName BackorderReason
-	 * @var BackorderReason
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\BackorderReason
 	 */
 	public $BackorderReason;
 	/**
@@ -151,7 +151,7 @@ class DespatchLineType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName OutstandingQuantity
-	 * @var OutstandingQuantity
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\OutstandingQuantity
 	 */
 	public $OutstandingQuantity;
 	/**
@@ -169,7 +169,7 @@ class DespatchLineType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName OutstandingReason
-	 * @var OutstandingReason
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\OutstandingReason
 	 */
 	public $OutstandingReason;
 	/**
@@ -187,7 +187,7 @@ class DespatchLineType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName OversupplyQuantity
-	 * @var OversupplyQuantity
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\OversupplyQuantity
 	 */
 	public $OversupplyQuantity;
 	/**
@@ -199,7 +199,6 @@ class DespatchLineType
 	 * @PropertyTerm Order Line Reference
 	 * @AssociatedObjectClass Order Line Reference
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName OrderLineReference
@@ -215,7 +214,6 @@ class DespatchLineType
 	 * @PropertyTerm Document Reference
 	 * @AssociatedObjectClass Document Reference
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName DocumentReference
@@ -231,7 +229,6 @@ class DespatchLineType
 	 * @PropertyTerm Item
 	 * @AssociatedObjectClass Item
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName Item
@@ -247,7 +244,6 @@ class DespatchLineType
 	 * @PropertyTerm Shipment
 	 * @AssociatedObjectClass Shipment
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName Shipment

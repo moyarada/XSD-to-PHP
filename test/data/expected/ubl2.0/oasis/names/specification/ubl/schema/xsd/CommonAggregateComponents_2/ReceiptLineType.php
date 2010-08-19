@@ -28,7 +28,7 @@ class ReceiptLineType
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName ID
-	 * @var ID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ID
 	 */
 	public $ID;
 	/**
@@ -45,7 +45,7 @@ class ReceiptLineType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName UUID
-	 * @var UUID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\UUID
 	 */
 	public $UUID;
 	/**
@@ -62,7 +62,7 @@ class ReceiptLineType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName Note
-	 * @var Note
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\Note
 	 */
 	public $Note;
 	/**
@@ -80,7 +80,7 @@ class ReceiptLineType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ReceivedQuantity
-	 * @var ReceivedQuantity
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ReceivedQuantity
 	 */
 	public $ReceivedQuantity;
 	/**
@@ -98,7 +98,7 @@ class ReceiptLineType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ShortQuantity
-	 * @var ShortQuantity
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ShortQuantity
 	 */
 	public $ShortQuantity;
 	/**
@@ -115,7 +115,7 @@ class ReceiptLineType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ShortageActionCode
-	 * @var ShortageActionCode
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ShortageActionCode
 	 */
 	public $ShortageActionCode;
 	/**
@@ -133,7 +133,7 @@ class ReceiptLineType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName RejectedQuantity
-	 * @var RejectedQuantity
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\RejectedQuantity
 	 */
 	public $RejectedQuantity;
 	/**
@@ -150,7 +150,7 @@ class ReceiptLineType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName RejectReasonCode
-	 * @var RejectReasonCode
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\RejectReasonCode
 	 */
 	public $RejectReasonCode;
 	/**
@@ -168,7 +168,7 @@ class ReceiptLineType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName RejectReason
-	 * @var RejectReason
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\RejectReason
 	 */
 	public $RejectReason;
 	/**
@@ -185,7 +185,7 @@ class ReceiptLineType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName RejectActionCode
-	 * @var RejectActionCode
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\RejectActionCode
 	 */
 	public $RejectActionCode;
 	/**
@@ -202,7 +202,7 @@ class ReceiptLineType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName OversupplyQuantity
-	 * @var OversupplyQuantity
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\OversupplyQuantity
 	 */
 	public $OversupplyQuantity;
 	/**
@@ -220,7 +220,7 @@ class ReceiptLineType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ReceivedDate
-	 * @var ReceivedDate
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ReceivedDate
 	 */
 	public $ReceivedDate;
 	/**
@@ -237,7 +237,7 @@ class ReceiptLineType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName TimingComplaintCode
-	 * @var TimingComplaintCode
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\TimingComplaintCode
 	 */
 	public $TimingComplaintCode;
 	/**
@@ -254,7 +254,7 @@ class ReceiptLineType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName TimingComplaint
-	 * @var TimingComplaint
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\TimingComplaint
 	 */
 	public $TimingComplaint;
 	/**
@@ -266,7 +266,6 @@ class ReceiptLineType
 	 * @PropertyTerm Order Line Reference
 	 * @AssociatedObjectClass Order Line Reference
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName OrderLineReference
@@ -283,7 +282,6 @@ class ReceiptLineType
 	 * @PropertyTerm Line Reference
 	 * @AssociatedObjectClass Line Reference
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName DespatchLineReference
@@ -299,7 +297,6 @@ class ReceiptLineType
 	 * @PropertyTerm Document Reference
 	 * @AssociatedObjectClass Document Reference
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName DocumentReference
@@ -315,7 +312,6 @@ class ReceiptLineType
 	 * @PropertyTerm Item
 	 * @AssociatedObjectClass Item
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName Item
@@ -331,7 +327,6 @@ class ReceiptLineType
 	 * @PropertyTerm Shipment
 	 * @AssociatedObjectClass Shipment
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName Shipment

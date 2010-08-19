@@ -28,7 +28,7 @@ class UBLExtensionType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ID
-	 * @var ID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ID
 	 */
 	public $ID;
 	/**
@@ -46,7 +46,7 @@ class UBLExtensionType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName Name
-	 * @var Name
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\Name
 	 */
 	public $Name;
 	/**
@@ -54,7 +54,6 @@ class UBLExtensionType
             An agency that maintains one or more Extensions.
           
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ExtensionAgencyID
@@ -66,7 +65,6 @@ class UBLExtensionType
             The name of the agency that maintains the Extension.
           
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ExtensionAgencyName
@@ -78,7 +76,6 @@ class UBLExtensionType
             The version of the Extension.
           
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ExtensionVersionID
@@ -90,7 +87,6 @@ class UBLExtensionType
             A URI for the Agency that maintains the Extension.
           
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ExtensionAgencyURI
@@ -102,7 +98,6 @@ class UBLExtensionType
             A URI for the Extension.
           
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ExtensionURI
@@ -114,7 +109,6 @@ class UBLExtensionType
             A code for reason the Extension is being included.
           
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ExtensionReasonCode
@@ -126,7 +120,6 @@ class UBLExtensionType
             A description of the reason for the Extension.
           
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ExtensionReason
@@ -138,7 +131,6 @@ class UBLExtensionType
             The definition of the extension content.
           
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName ExtensionContent

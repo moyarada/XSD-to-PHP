@@ -29,7 +29,7 @@ class CataloguePricingUpdateLineType
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName ID
-	 * @var ID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ID
 	 */
 	public $ID;
 	/**
@@ -42,7 +42,6 @@ class CataloguePricingUpdateLineType
 	 * @PropertyTerm Customer Party
 	 * @AssociatedObjectClass Customer Party
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ContractorCustomerParty
@@ -59,7 +58,6 @@ class CataloguePricingUpdateLineType
 	 * @PropertyTerm Supplier Party
 	 * @AssociatedObjectClass Supplier Party
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName SellerSupplierParty
@@ -76,7 +74,6 @@ class CataloguePricingUpdateLineType
 	 * @PropertyTerm Item Location Quantity
 	 * @AssociatedObjectClass Item Location Quantity
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName RequiredItemLocationQuantity

@@ -644,7 +644,11 @@ class Xsd2Php extends Common
                 
                 //@todo if $prop->getAttribute('maxOccurs') > 1 - var can be an array
                 if ($prop->getAttribute('type') != '') {
-                    $properties[$i]["docs"]['var']          = $prop->getAttribute('type');
+                    if ($prop->getAttribute('namespace') != '') {
+                        $properties[$i]["docs"]['var'] = $this->namespaceToPhp($this->expandNS($prop->getAttribute('namespace'))).'\\'.$prop->getAttribute('type');
+                    } else {
+                        $properties[$i]["docs"]['var'] = $prop->getAttribute('type');
+                    }
                 }
                 $i++;
             }

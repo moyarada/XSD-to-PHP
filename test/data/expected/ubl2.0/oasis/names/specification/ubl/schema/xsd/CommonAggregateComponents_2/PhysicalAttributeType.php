@@ -29,7 +29,7 @@ class PhysicalAttributeType
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName AttributeID
-	 * @var AttributeID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\AttributeID
 	 */
 	public $AttributeID;
 	/**
@@ -46,7 +46,7 @@ class PhysicalAttributeType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName PositionCode
-	 * @var PositionCode
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\PositionCode
 	 */
 	public $PositionCode;
 	/**
@@ -64,7 +64,7 @@ class PhysicalAttributeType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName DescriptionCode
-	 * @var DescriptionCode
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\DescriptionCode
 	 */
 	public $DescriptionCode;
 	/**
@@ -81,7 +81,7 @@ class PhysicalAttributeType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName Description
-	 * @var Description
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\Description
 	 */
 	public $Description;
 

@@ -24,9 +24,6 @@ class CurrencyCodeType
 	 * @Definition 
 	 * @PrimitiveType String
 	 * @xmlType attribute
-	 * @xmlNamespace 
-	 * @xmlMinOccurs 
-	 * @xmlMaxOccurs 
 	 * @xmlName listID
 	 * @var xsd:normalizedString
 	 */
@@ -36,9 +33,6 @@ class CurrencyCodeType
 	 * @Definition Defaults to the UN/EDIFACT data element 3055 code list.
 	 * @PrimitiveType String
 	 * @xmlType attribute
-	 * @xmlNamespace 
-	 * @xmlMinOccurs 
-	 * @xmlMaxOccurs 
 	 * @xmlName listAgencyID
 	 * @var xsd:normalizedString
 	 */
@@ -48,9 +42,6 @@ class CurrencyCodeType
 	 * @Definition 
 	 * @PrimitiveType String
 	 * @xmlType attribute
-	 * @xmlNamespace 
-	 * @xmlMinOccurs 
-	 * @xmlMaxOccurs 
 	 * @xmlName listAgencyName
 	 * @var xsd:string
 	 */
@@ -60,9 +51,6 @@ class CurrencyCodeType
 	 * @Definition 
 	 * @PrimitiveType String
 	 * @xmlType attribute
-	 * @xmlNamespace 
-	 * @xmlMinOccurs 
-	 * @xmlMaxOccurs 
 	 * @xmlName listName
 	 * @var xsd:string
 	 */
@@ -72,9 +60,6 @@ class CurrencyCodeType
 	 * @Definition 
 	 * @PrimitiveType String
 	 * @xmlType attribute
-	 * @xmlNamespace 
-	 * @xmlMinOccurs 
-	 * @xmlMaxOccurs 
 	 * @xmlName listVersionID
 	 * @var xsd:normalizedString
 	 */
@@ -84,9 +69,6 @@ class CurrencyCodeType
 	 * @Definition 
 	 * @PrimitiveType String
 	 * @xmlType attribute
-	 * @xmlNamespace 
-	 * @xmlMinOccurs 
-	 * @xmlMaxOccurs 
 	 * @xmlName name
 	 * @var xsd:string
 	 */
@@ -96,9 +78,6 @@ class CurrencyCodeType
 	 * @Definition 
 	 * @PrimitiveType String
 	 * @xmlType attribute
-	 * @xmlNamespace 
-	 * @xmlMinOccurs 
-	 * @xmlMaxOccurs 
 	 * @xmlName languageID
 	 * @var xsd:language
 	 */
@@ -108,9 +87,6 @@ class CurrencyCodeType
 	 * @Definition 
 	 * @PrimitiveType String
 	 * @xmlType attribute
-	 * @xmlNamespace 
-	 * @xmlMinOccurs 
-	 * @xmlMaxOccurs 
 	 * @xmlName listURI
 	 * @var xsd:anyURI
 	 */
@@ -120,9 +96,6 @@ class CurrencyCodeType
 	 * @Definition 
 	 * @PrimitiveType String
 	 * @xmlType attribute
-	 * @xmlNamespace 
-	 * @xmlMinOccurs 
-	 * @xmlMaxOccurs 
 	 * @xmlName listSchemeURI
 	 * @var xsd:anyURI
 	 */

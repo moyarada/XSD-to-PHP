@@ -30,7 +30,7 @@ class TransportMeansType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName JourneyID
-	 * @var JourneyID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\JourneyID
 	 */
 	public $JourneyID;
 	/**
@@ -50,7 +50,7 @@ class TransportMeansType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName RegistrationNationalityID
-	 * @var RegistrationNationalityID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\RegistrationNationalityID
 	 */
 	public $RegistrationNationalityID;
 	/**
@@ -70,7 +70,7 @@ class TransportMeansType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName RegistrationNationality
-	 * @var RegistrationNationality
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\RegistrationNationality
 	 */
 	public $RegistrationNationality;
 	/**
@@ -89,7 +89,7 @@ class TransportMeansType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName DirectionCode
-	 * @var DirectionCode
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\DirectionCode
 	 */
 	public $DirectionCode;
 	/**
@@ -101,7 +101,6 @@ class TransportMeansType
 	 * @PropertyTerm Stowage
 	 * @AssociatedObjectClass Stowage
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName Stowage
@@ -117,7 +116,6 @@ class TransportMeansType
 	 * @PropertyTerm Air Transport
 	 * @AssociatedObjectClass Air Transport
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName AirTransport
@@ -133,7 +131,6 @@ class TransportMeansType
 	 * @PropertyTerm Road Transport
 	 * @AssociatedObjectClass Road Transport
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName RoadTransport
@@ -149,7 +146,6 @@ class TransportMeansType
 	 * @PropertyTerm Rail Transport
 	 * @AssociatedObjectClass Rail Transport
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName RailTransport
@@ -165,7 +161,6 @@ class TransportMeansType
 	 * @PropertyTerm Maritime Transport
 	 * @AssociatedObjectClass Maritime Transport
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName MaritimeTransport
@@ -182,7 +177,6 @@ class TransportMeansType
 	 * @PropertyTerm Party
 	 * @AssociatedObjectClass Party
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName OwnerParty

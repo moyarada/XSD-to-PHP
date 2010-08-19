@@ -28,7 +28,7 @@ class DeliveryType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ID
-	 * @var ID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ID
 	 */
 	public $ID;
 	/**
@@ -45,7 +45,7 @@ class DeliveryType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName Quantity
-	 * @var Quantity
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\Quantity
 	 */
 	public $Quantity;
 	/**
@@ -63,7 +63,7 @@ class DeliveryType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName MinimumQuantity
-	 * @var MinimumQuantity
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\MinimumQuantity
 	 */
 	public $MinimumQuantity;
 	/**
@@ -81,7 +81,7 @@ class DeliveryType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName MaximumQuantity
-	 * @var MaximumQuantity
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\MaximumQuantity
 	 */
 	public $MaximumQuantity;
 	/**
@@ -99,7 +99,7 @@ class DeliveryType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ActualDeliveryDate
-	 * @var ActualDeliveryDate
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ActualDeliveryDate
 	 */
 	public $ActualDeliveryDate;
 	/**
@@ -117,7 +117,7 @@ class DeliveryType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ActualDeliveryTime
-	 * @var ActualDeliveryTime
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ActualDeliveryTime
 	 */
 	public $ActualDeliveryTime;
 	/**
@@ -135,7 +135,7 @@ class DeliveryType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName LatestDeliveryDate
-	 * @var LatestDeliveryDate
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\LatestDeliveryDate
 	 */
 	public $LatestDeliveryDate;
 	/**
@@ -153,7 +153,7 @@ class DeliveryType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName LatestDeliveryTime
-	 * @var LatestDeliveryTime
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\LatestDeliveryTime
 	 */
 	public $LatestDeliveryTime;
 	/**
@@ -170,7 +170,7 @@ class DeliveryType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName TrackingID
-	 * @var TrackingID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\TrackingID
 	 */
 	public $TrackingID;
 	/**
@@ -183,7 +183,6 @@ class DeliveryType
 	 * @PropertyTerm Address
 	 * @AssociatedObjectClass Address
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName DeliveryAddress
@@ -200,7 +199,6 @@ class DeliveryType
 	 * @PropertyTerm Location
 	 * @AssociatedObjectClass Location
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName DeliveryLocation
@@ -217,7 +215,6 @@ class DeliveryType
 	 * @PropertyTerm Period
 	 * @AssociatedObjectClass Period
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName RequestedDeliveryPeriod
@@ -234,7 +231,6 @@ class DeliveryType
 	 * @PropertyTerm Period
 	 * @AssociatedObjectClass Period
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName PromisedDeliveryPeriod
@@ -251,7 +247,6 @@ class DeliveryType
 	 * @PropertyTerm Period
 	 * @AssociatedObjectClass Period
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName EstimatedDeliveryPeriod
@@ -268,7 +263,6 @@ class DeliveryType
 	 * @PropertyTerm Party
 	 * @AssociatedObjectClass Party
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName DeliveryParty
@@ -284,7 +278,6 @@ class DeliveryType
 	 * @PropertyTerm Despatch
 	 * @AssociatedObjectClass Despatch
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName Despatch

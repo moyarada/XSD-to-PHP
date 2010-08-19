@@ -33,9 +33,6 @@ class VideoType
 	 * @PrimitiveType string
 	 * @BuiltinType string
 	 * @xmlType attribute
-	 * @xmlNamespace 
-	 * @xmlMinOccurs 
-	 * @xmlMaxOccurs 
 	 * @xmlName format
 	 * @var xsd:string
 	 */
@@ -51,9 +48,6 @@ class VideoType
 	 * @PrimitiveType string
 	 * @BuiltinType normalizedString
 	 * @xmlType attribute
-	 * @xmlNamespace 
-	 * @xmlMinOccurs 
-	 * @xmlMaxOccurs 
 	 * @xmlName mimeCode
 	 * @var clmIANAMIMEMediaType:BinaryObjectMimeCodeContentType
 	 */
@@ -69,9 +63,6 @@ class VideoType
 	 * @PrimitiveType string
 	 * @BuiltinType normalizedString
 	 * @xmlType attribute
-	 * @xmlNamespace 
-	 * @xmlMinOccurs 
-	 * @xmlMaxOccurs 
 	 * @xmlName encodingCode
 	 * @var xsd:normalizedString
 	 */
@@ -87,9 +78,6 @@ class VideoType
 	 * @PrimitiveType string
 	 * @BuiltinType anyURI
 	 * @xmlType attribute
-	 * @xmlNamespace 
-	 * @xmlMinOccurs 
-	 * @xmlMaxOccurs 
 	 * @xmlName uri
 	 * @var xsd:anyURI
 	 */
@@ -105,9 +93,6 @@ class VideoType
 	 * @PrimitiveType string
 	 * @BuiltinType string
 	 * @xmlType attribute
-	 * @xmlNamespace 
-	 * @xmlMinOccurs 
-	 * @xmlMaxOccurs 
 	 * @xmlName filename
 	 * @var xsd:string
 	 */

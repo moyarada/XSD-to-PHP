@@ -28,7 +28,7 @@ class BillingReferenceLineType
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName ID
-	 * @var ID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ID
 	 */
 	public $ID;
 	/**
@@ -45,7 +45,7 @@ class BillingReferenceLineType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName Amount
-	 * @var Amount
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\Amount
 	 */
 	public $Amount;
 	/**
@@ -57,7 +57,6 @@ class BillingReferenceLineType
 	 * @PropertyTerm Allowance Charge
 	 * @AssociatedObjectClass Allowance Charge
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName AllowanceCharge

@@ -29,7 +29,7 @@ class CorporateRegistrationSchemeType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ID
-	 * @var ID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ID
 	 */
 	public $ID;
 	/**
@@ -47,7 +47,7 @@ class CorporateRegistrationSchemeType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName Name
-	 * @var Name
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\Name
 	 */
 	public $Name;
 	/**
@@ -65,7 +65,7 @@ class CorporateRegistrationSchemeType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName CorporateRegistrationTypeCode
-	 * @var CorporateRegistrationTypeCode
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\CorporateRegistrationTypeCode
 	 */
 	public $CorporateRegistrationTypeCode;
 	/**
@@ -78,7 +78,6 @@ class CorporateRegistrationSchemeType
 	 * @PropertyTerm Address
 	 * @AssociatedObjectClass Address
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName JurisdictionRegionAddress

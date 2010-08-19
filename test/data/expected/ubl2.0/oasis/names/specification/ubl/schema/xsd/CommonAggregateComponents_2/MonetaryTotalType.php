@@ -28,7 +28,7 @@ class MonetaryTotalType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName LineExtensionAmount
-	 * @var LineExtensionAmount
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\LineExtensionAmount
 	 */
 	public $LineExtensionAmount;
 	/**
@@ -45,7 +45,7 @@ class MonetaryTotalType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName TaxExclusiveAmount
-	 * @var TaxExclusiveAmount
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\TaxExclusiveAmount
 	 */
 	public $TaxExclusiveAmount;
 	/**
@@ -62,7 +62,7 @@ class MonetaryTotalType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName TaxInclusiveAmount
-	 * @var TaxInclusiveAmount
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\TaxInclusiveAmount
 	 */
 	public $TaxInclusiveAmount;
 	/**
@@ -79,7 +79,7 @@ class MonetaryTotalType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName AllowanceTotalAmount
-	 * @var AllowanceTotalAmount
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\AllowanceTotalAmount
 	 */
 	public $AllowanceTotalAmount;
 	/**
@@ -96,7 +96,7 @@ class MonetaryTotalType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ChargeTotalAmount
-	 * @var ChargeTotalAmount
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ChargeTotalAmount
 	 */
 	public $ChargeTotalAmount;
 	/**
@@ -113,7 +113,7 @@ class MonetaryTotalType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName PrepaidAmount
-	 * @var PrepaidAmount
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\PrepaidAmount
 	 */
 	public $PrepaidAmount;
 	/**
@@ -131,7 +131,7 @@ class MonetaryTotalType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName PayableRoundingAmount
-	 * @var PayableRoundingAmount
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\PayableRoundingAmount
 	 */
 	public $PayableRoundingAmount;
 	/**
@@ -149,7 +149,7 @@ class MonetaryTotalType
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName PayableAmount
-	 * @var PayableAmount
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\PayableAmount
 	 */
 	public $PayableAmount;
 

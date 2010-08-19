@@ -22,7 +22,7 @@ class OrderType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName UBLExtensions
-	 * @var UBLExtensions
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonExtensionComponents_2\UBLExtensions
 	 */
 	public $UBLExtensions;
 	/**
@@ -40,7 +40,7 @@ class OrderType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName UBLVersionID
-	 * @var UBLVersionID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\UBLVersionID
 	 */
 	public $UBLVersionID;
 	/**
@@ -58,7 +58,7 @@ class OrderType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName CustomizationID
-	 * @var CustomizationID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\CustomizationID
 	 */
 	public $CustomizationID;
 	/**
@@ -76,7 +76,7 @@ class OrderType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ProfileID
-	 * @var ProfileID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ProfileID
 	 */
 	public $ProfileID;
 	/**
@@ -94,7 +94,7 @@ class OrderType
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName ID
-	 * @var ID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ID
 	 */
 	public $ID;
 	/**
@@ -112,7 +112,7 @@ class OrderType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName SalesOrderID
-	 * @var SalesOrderID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\SalesOrderID
 	 */
 	public $SalesOrderID;
 	/**
@@ -130,7 +130,7 @@ class OrderType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName CopyIndicator
-	 * @var CopyIndicator
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\CopyIndicator
 	 */
 	public $CopyIndicator;
 	/**
@@ -147,7 +147,7 @@ class OrderType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName UUID
-	 * @var UUID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\UUID
 	 */
 	public $UUID;
 	/**
@@ -165,7 +165,7 @@ class OrderType
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName IssueDate
-	 * @var IssueDate
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\IssueDate
 	 */
 	public $IssueDate;
 	/**
@@ -182,7 +182,7 @@ class OrderType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName IssueTime
-	 * @var IssueTime
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\IssueTime
 	 */
 	public $IssueTime;
 	/**
@@ -199,7 +199,7 @@ class OrderType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName Note
-	 * @var Note
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\Note
 	 */
 	public $Note;
 	/**
@@ -217,7 +217,7 @@ class OrderType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName RequestedInvoiceCurrencyCode
-	 * @var RequestedInvoiceCurrencyCode
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\RequestedInvoiceCurrencyCode
 	 */
 	public $RequestedInvoiceCurrencyCode;
 	/**
@@ -235,7 +235,7 @@ class OrderType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName DocumentCurrencyCode
-	 * @var DocumentCurrencyCode
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\DocumentCurrencyCode
 	 */
 	public $DocumentCurrencyCode;
 	/**
@@ -253,7 +253,7 @@ class OrderType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName PricingCurrencyCode
-	 * @var PricingCurrencyCode
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\PricingCurrencyCode
 	 */
 	public $PricingCurrencyCode;
 	/**
@@ -271,7 +271,7 @@ class OrderType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName TaxCurrencyCode
-	 * @var TaxCurrencyCode
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\TaxCurrencyCode
 	 */
 	public $TaxCurrencyCode;
 	/**
@@ -289,7 +289,7 @@ class OrderType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName CustomerReference
-	 * @var CustomerReference
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\CustomerReference
 	 */
 	public $CustomerReference;
 	/**
@@ -306,7 +306,7 @@ class OrderType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName AccountingCostCode
-	 * @var AccountingCostCode
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\AccountingCostCode
 	 */
 	public $AccountingCostCode;
 	/**
@@ -323,7 +323,7 @@ class OrderType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName AccountingCost
-	 * @var AccountingCost
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\AccountingCost
 	 */
 	public $AccountingCost;
 	/**
@@ -340,7 +340,7 @@ class OrderType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName LineCountNumeric
-	 * @var LineCountNumeric
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\LineCountNumeric
 	 */
 	public $LineCountNumeric;
 	/**
@@ -357,7 +357,7 @@ class OrderType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName ValidityPeriod
-	 * @var ValidityPeriod
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\ValidityPeriod
 	 */
 	public $ValidityPeriod;
 	/**
@@ -374,7 +374,7 @@ class OrderType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName QuotationDocumentReference
-	 * @var QuotationDocumentReference
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\QuotationDocumentReference
 	 */
 	public $QuotationDocumentReference;
 	/**
@@ -391,7 +391,7 @@ class OrderType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName OrderDocumentReference
-	 * @var OrderDocumentReference
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\OrderDocumentReference
 	 */
 	public $OrderDocumentReference;
 	/**
@@ -408,7 +408,7 @@ class OrderType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName OriginatorDocumentReference
-	 * @var OriginatorDocumentReference
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\OriginatorDocumentReference
 	 */
 	public $OriginatorDocumentReference;
 	/**
@@ -425,7 +425,7 @@ class OrderType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName AdditionalDocumentReference
-	 * @var AdditionalDocumentReference
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\AdditionalDocumentReference
 	 */
 	public $AdditionalDocumentReference;
 	/**
@@ -441,7 +441,7 @@ class OrderType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName Contract
-	 * @var Contract
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\Contract
 	 */
 	public $Contract;
 	/**
@@ -457,7 +457,7 @@ class OrderType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName Signature
-	 * @var Signature
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\Signature
 	 */
 	public $Signature;
 	/**
@@ -474,7 +474,7 @@ class OrderType
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName BuyerCustomerParty
-	 * @var BuyerCustomerParty
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\BuyerCustomerParty
 	 */
 	public $BuyerCustomerParty;
 	/**
@@ -491,7 +491,7 @@ class OrderType
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName SellerSupplierParty
-	 * @var SellerSupplierParty
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\SellerSupplierParty
 	 */
 	public $SellerSupplierParty;
 	/**
@@ -508,7 +508,7 @@ class OrderType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName OriginatorCustomerParty
-	 * @var OriginatorCustomerParty
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\OriginatorCustomerParty
 	 */
 	public $OriginatorCustomerParty;
 	/**
@@ -525,7 +525,7 @@ class OrderType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName FreightForwarderParty
-	 * @var FreightForwarderParty
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\FreightForwarderParty
 	 */
 	public $FreightForwarderParty;
 	/**
@@ -542,7 +542,7 @@ class OrderType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName AccountingCustomerParty
-	 * @var AccountingCustomerParty
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\AccountingCustomerParty
 	 */
 	public $AccountingCustomerParty;
 	/**
@@ -558,7 +558,7 @@ class OrderType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName Delivery
-	 * @var Delivery
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\Delivery
 	 */
 	public $Delivery;
 	/**
@@ -574,7 +574,7 @@ class OrderType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName DeliveryTerms
-	 * @var DeliveryTerms
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\DeliveryTerms
 	 */
 	public $DeliveryTerms;
 	/**
@@ -590,7 +590,7 @@ class OrderType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName PaymentMeans
-	 * @var PaymentMeans
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\PaymentMeans
 	 */
 	public $PaymentMeans;
 	/**
@@ -606,7 +606,7 @@ class OrderType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName TransactionConditions
-	 * @var TransactionConditions
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\TransactionConditions
 	 */
 	public $TransactionConditions;
 	/**
@@ -622,7 +622,7 @@ class OrderType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName AllowanceCharge
-	 * @var AllowanceCharge
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\AllowanceCharge
 	 */
 	public $AllowanceCharge;
 	/**
@@ -639,7 +639,7 @@ class OrderType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName DestinationCountry
-	 * @var DestinationCountry
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\DestinationCountry
 	 */
 	public $DestinationCountry;
 	/**
@@ -655,7 +655,7 @@ class OrderType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName TaxTotal
-	 * @var TaxTotal
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\TaxTotal
 	 */
 	public $TaxTotal;
 	/**
@@ -672,7 +672,7 @@ class OrderType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName AnticipatedMonetaryTotal
-	 * @var AnticipatedMonetaryTotal
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\AnticipatedMonetaryTotal
 	 */
 	public $AnticipatedMonetaryTotal;
 	/**
@@ -688,7 +688,7 @@ class OrderType
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName OrderLine
-	 * @var OrderLine
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\OrderLine
 	 */
 	public $OrderLine;
 

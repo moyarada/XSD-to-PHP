@@ -28,7 +28,7 @@ class TaxTotalType
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName TaxAmount
-	 * @var TaxAmount
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\TaxAmount
 	 */
 	public $TaxAmount;
 	/**
@@ -45,7 +45,7 @@ class TaxTotalType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName RoundingAmount
-	 * @var RoundingAmount
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\RoundingAmount
 	 */
 	public $RoundingAmount;
 	/**
@@ -64,7 +64,7 @@ class TaxTotalType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName TaxEvidenceIndicator
-	 * @var TaxEvidenceIndicator
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\TaxEvidenceIndicator
 	 */
 	public $TaxEvidenceIndicator;
 	/**
@@ -76,7 +76,6 @@ class TaxTotalType
 	 * @PropertyTerm Tax Subtotal
 	 * @AssociatedObjectClass Tax Subtotal
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName TaxSubtotal

@@ -29,7 +29,7 @@ class CatalogueLineType
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName ID
-	 * @var ID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ID
 	 */
 	public $ID;
 	/**
@@ -47,7 +47,7 @@ class CatalogueLineType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ActionCode
-	 * @var ActionCode
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ActionCode
 	 */
 	public $ActionCode;
 	/**
@@ -65,7 +65,7 @@ class CatalogueLineType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName LifeCycleStatusCode
-	 * @var LifeCycleStatusCode
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\LifeCycleStatusCode
 	 */
 	public $LifeCycleStatusCode;
 	/**
@@ -83,7 +83,7 @@ class CatalogueLineType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ContractSubdivision
-	 * @var ContractSubdivision
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ContractSubdivision
 	 */
 	public $ContractSubdivision;
 	/**
@@ -100,7 +100,7 @@ class CatalogueLineType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName Note
-	 * @var Note
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\Note
 	 */
 	public $Note;
 	/**
@@ -119,7 +119,7 @@ class CatalogueLineType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName OrderableIndicator
-	 * @var OrderableIndicator
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\OrderableIndicator
 	 */
 	public $OrderableIndicator;
 	/**
@@ -137,7 +137,7 @@ class CatalogueLineType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName OrderableUnit
-	 * @var OrderableUnit
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\OrderableUnit
 	 */
 	public $OrderableUnit;
 	/**
@@ -155,7 +155,7 @@ class CatalogueLineType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ContentUnitQuantity
-	 * @var ContentUnitQuantity
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ContentUnitQuantity
 	 */
 	public $ContentUnitQuantity;
 	/**
@@ -172,7 +172,7 @@ class CatalogueLineType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName OrderQuantityIncrementNumeric
-	 * @var OrderQuantityIncrementNumeric
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\OrderQuantityIncrementNumeric
 	 */
 	public $OrderQuantityIncrementNumeric;
 	/**
@@ -191,7 +191,7 @@ class CatalogueLineType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName MinimumOrderQuantity
-	 * @var MinimumOrderQuantity
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\MinimumOrderQuantity
 	 */
 	public $MinimumOrderQuantity;
 	/**
@@ -210,7 +210,7 @@ class CatalogueLineType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName MaximumOrderQuantity
-	 * @var MaximumOrderQuantity
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\MaximumOrderQuantity
 	 */
 	public $MaximumOrderQuantity;
 	/**
@@ -229,7 +229,7 @@ class CatalogueLineType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName WarrantyInformation
-	 * @var WarrantyInformation
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\WarrantyInformation
 	 */
 	public $WarrantyInformation;
 	/**
@@ -248,7 +248,7 @@ class CatalogueLineType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName PackLevelCode
-	 * @var PackLevelCode
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\PackLevelCode
 	 */
 	public $PackLevelCode;
 	/**
@@ -261,7 +261,6 @@ class CatalogueLineType
 	 * @PropertyTerm Customer Party
 	 * @AssociatedObjectClass Customer Party
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ContractorCustomerParty
@@ -278,7 +277,6 @@ class CatalogueLineType
 	 * @PropertyTerm Supplier Party
 	 * @AssociatedObjectClass Supplier Party
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName SellerSupplierParty
@@ -295,7 +293,6 @@ class CatalogueLineType
 	 * @PropertyTerm Party
 	 * @AssociatedObjectClass Party
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName WarrantyParty
@@ -312,7 +309,6 @@ class CatalogueLineType
 	 * @PropertyTerm Period
 	 * @AssociatedObjectClass Period
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName WarrantyValidityPeriod
@@ -329,7 +325,6 @@ class CatalogueLineType
 	 * @PropertyTerm Period
 	 * @AssociatedObjectClass Period
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName LineValidityPeriod
@@ -345,7 +340,6 @@ class CatalogueLineType
 	 * @PropertyTerm Item Comparison
 	 * @AssociatedObjectClass Item Comparison
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName ItemComparison
@@ -362,7 +356,6 @@ class CatalogueLineType
 	 * @PropertyTerm Related Item
 	 * @AssociatedObjectClass Related Item
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName ComponentRelatedItem
@@ -379,7 +372,6 @@ class CatalogueLineType
 	 * @PropertyTerm Related Item
 	 * @AssociatedObjectClass Related Item
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName AccessoryRelatedItem
@@ -396,7 +388,6 @@ class CatalogueLineType
 	 * @PropertyTerm Related Item
 	 * @AssociatedObjectClass Related Item
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName RequiredRelatedItem
@@ -413,7 +404,6 @@ class CatalogueLineType
 	 * @PropertyTerm Related Item
 	 * @AssociatedObjectClass Related Item
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName ReplacementRelatedItem
@@ -430,7 +420,6 @@ class CatalogueLineType
 	 * @PropertyTerm Related Item
 	 * @AssociatedObjectClass Related Item
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName ComplementaryRelatedItem
@@ -447,7 +436,6 @@ class CatalogueLineType
 	 * @PropertyTerm Item Location Quantity
 	 * @AssociatedObjectClass Item Location Quantity
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName RequiredItemLocationQuantity
@@ -463,7 +451,6 @@ class CatalogueLineType
 	 * @PropertyTerm Document Reference
 	 * @AssociatedObjectClass Document Reference
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName DocumentReference
@@ -479,7 +466,6 @@ class CatalogueLineType
 	 * @PropertyTerm Item
 	 * @AssociatedObjectClass Item
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName Item

@@ -28,7 +28,7 @@ class ReminderLineType
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName ID
-	 * @var ID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ID
 	 */
 	public $ID;
 	/**
@@ -45,7 +45,7 @@ class ReminderLineType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName Note
-	 * @var Note
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\Note
 	 */
 	public $Note;
 	/**
@@ -62,7 +62,7 @@ class ReminderLineType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName UUID
-	 * @var UUID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\UUID
 	 */
 	public $UUID;
 	/**
@@ -80,7 +80,7 @@ class ReminderLineType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName BalanceBroughtForwardIndicator
-	 * @var BalanceBroughtForwardIndicator
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\BalanceBroughtForwardIndicator
 	 */
 	public $BalanceBroughtForwardIndicator;
 	/**
@@ -98,7 +98,7 @@ class ReminderLineType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName DebitLineAmount
-	 * @var DebitLineAmount
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\DebitLineAmount
 	 */
 	public $DebitLineAmount;
 	/**
@@ -116,7 +116,7 @@ class ReminderLineType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName CreditLineAmount
-	 * @var CreditLineAmount
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\CreditLineAmount
 	 */
 	public $CreditLineAmount;
 	/**
@@ -133,7 +133,7 @@ class ReminderLineType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName AccountingCostCode
-	 * @var AccountingCostCode
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\AccountingCostCode
 	 */
 	public $AccountingCostCode;
 	/**
@@ -150,7 +150,7 @@ class ReminderLineType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName AccountingCost
-	 * @var AccountingCost
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\AccountingCost
 	 */
 	public $AccountingCost;
 	/**
@@ -163,7 +163,6 @@ class ReminderLineType
 	 * @PropertyTerm Period
 	 * @AssociatedObjectClass Period
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName ReminderPeriod
@@ -179,7 +178,6 @@ class ReminderLineType
 	 * @PropertyTerm Billing Reference
 	 * @AssociatedObjectClass Billing Reference
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName BillingReference
@@ -195,7 +193,6 @@ class ReminderLineType
 	 * @PropertyTerm Exchange Rate
 	 * @AssociatedObjectClass Exchange Rate
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ExchangeRate

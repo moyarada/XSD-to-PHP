@@ -18,7 +18,6 @@ class UBLExtensionsType
             A single extension for private use.
           
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName UBLExtension

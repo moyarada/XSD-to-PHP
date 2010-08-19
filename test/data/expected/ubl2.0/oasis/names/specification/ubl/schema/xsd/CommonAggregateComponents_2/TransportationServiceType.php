@@ -28,7 +28,7 @@ class TransportationServiceType
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName TransportServiceCode
-	 * @var TransportServiceCode
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\TransportServiceCode
 	 */
 	public $TransportServiceCode;
 	/**
@@ -46,7 +46,7 @@ class TransportationServiceType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName TariffClassCode
-	 * @var TariffClassCode
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\TariffClassCode
 	 */
 	public $TariffClassCode;
 	/**
@@ -63,7 +63,7 @@ class TransportationServiceType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName Priority
-	 * @var Priority
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\Priority
 	 */
 	public $Priority;
 	/**
@@ -81,7 +81,7 @@ class TransportationServiceType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName FreightRateClassCode
-	 * @var FreightRateClassCode
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\FreightRateClassCode
 	 */
 	public $FreightRateClassCode;
 

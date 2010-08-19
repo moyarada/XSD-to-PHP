@@ -29,7 +29,7 @@ class LocationType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ID
-	 * @var ID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ID
 	 */
 	public $ID;
 	/**
@@ -46,7 +46,7 @@ class LocationType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName Description
-	 * @var Description
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\Description
 	 */
 	public $Description;
 	/**
@@ -63,7 +63,7 @@ class LocationType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName Conditions
-	 * @var Conditions
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\Conditions
 	 */
 	public $Conditions;
 	/**
@@ -82,7 +82,7 @@ class LocationType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName CountrySubentity
-	 * @var CountrySubentity
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\CountrySubentity
 	 */
 	public $CountrySubentity;
 	/**
@@ -100,7 +100,7 @@ class LocationType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName CountrySubentityCode
-	 * @var CountrySubentityCode
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\CountrySubentityCode
 	 */
 	public $CountrySubentityCode;
 	/**
@@ -113,7 +113,6 @@ class LocationType
 	 * @PropertyTerm Period
 	 * @AssociatedObjectClass Period
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName ValidityPeriod
@@ -129,7 +128,6 @@ class LocationType
 	 * @PropertyTerm Address
 	 * @AssociatedObjectClass Address
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName Address

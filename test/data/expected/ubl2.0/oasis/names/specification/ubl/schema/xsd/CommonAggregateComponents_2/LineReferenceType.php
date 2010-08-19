@@ -28,7 +28,7 @@ class LineReferenceType
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName LineID
-	 * @var LineID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\LineID
 	 */
 	public $LineID;
 	/**
@@ -45,7 +45,7 @@ class LineReferenceType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName UUID
-	 * @var UUID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\UUID
 	 */
 	public $UUID;
 	/**
@@ -62,7 +62,7 @@ class LineReferenceType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName LineStatusCode
-	 * @var LineStatusCode
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\LineStatusCode
 	 */
 	public $LineStatusCode;
 	/**
@@ -74,7 +74,6 @@ class LineReferenceType
 	 * @PropertyTerm Document Reference
 	 * @AssociatedObjectClass Document Reference
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName DocumentReference

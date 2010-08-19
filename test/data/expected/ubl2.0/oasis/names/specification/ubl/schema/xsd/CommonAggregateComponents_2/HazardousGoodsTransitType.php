@@ -29,7 +29,7 @@ class HazardousGoodsTransitType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName TransportEmergencyCardCode
-	 * @var TransportEmergencyCardCode
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\TransportEmergencyCardCode
 	 */
 	public $TransportEmergencyCardCode;
 	/**
@@ -47,7 +47,7 @@ class HazardousGoodsTransitType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName PackingCriteriaCode
-	 * @var PackingCriteriaCode
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\PackingCriteriaCode
 	 */
 	public $PackingCriteriaCode;
 	/**
@@ -64,7 +64,7 @@ class HazardousGoodsTransitType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName HazardousRegulationCode
-	 * @var HazardousRegulationCode
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\HazardousRegulationCode
 	 */
 	public $HazardousRegulationCode;
 	/**
@@ -81,7 +81,7 @@ class HazardousGoodsTransitType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName InhalationToxicityZoneCode
-	 * @var InhalationToxicityZoneCode
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\InhalationToxicityZoneCode
 	 */
 	public $InhalationToxicityZoneCode;
 	/**
@@ -99,7 +99,7 @@ class HazardousGoodsTransitType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName TransportAuthorizationCode
-	 * @var TransportAuthorizationCode
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\TransportAuthorizationCode
 	 */
 	public $TransportAuthorizationCode;
 	/**
@@ -112,7 +112,6 @@ class HazardousGoodsTransitType
 	 * @PropertyTerm Temperature
 	 * @AssociatedObjectClass Temperature
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName MaximumTemperature
@@ -129,7 +128,6 @@ class HazardousGoodsTransitType
 	 * @PropertyTerm Temperature
 	 * @AssociatedObjectClass Temperature
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName MinimumTemperature

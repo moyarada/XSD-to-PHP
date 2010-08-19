@@ -30,7 +30,7 @@ class CardAccountType
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName PrimaryAccountNumberID
-	 * @var PrimaryAccountNumberID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\PrimaryAccountNumberID
 	 */
 	public $PrimaryAccountNumberID;
 	/**
@@ -48,7 +48,7 @@ class CardAccountType
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName NetworkID
-	 * @var NetworkID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\NetworkID
 	 */
 	public $NetworkID;
 	/**
@@ -66,7 +66,7 @@ class CardAccountType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName CardTypeCode
-	 * @var CardTypeCode
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\CardTypeCode
 	 */
 	public $CardTypeCode;
 	/**
@@ -83,7 +83,7 @@ class CardAccountType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ValidityStartDate
-	 * @var ValidityStartDate
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ValidityStartDate
 	 */
 	public $ValidityStartDate;
 	/**
@@ -100,7 +100,7 @@ class CardAccountType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ExpiryDate
-	 * @var ExpiryDate
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ExpiryDate
 	 */
 	public $ExpiryDate;
 	/**
@@ -117,7 +117,7 @@ class CardAccountType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName IssuerID
-	 * @var IssuerID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\IssuerID
 	 */
 	public $IssuerID;
 	/**
@@ -134,7 +134,7 @@ class CardAccountType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName IssueNumberID
-	 * @var IssueNumberID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\IssueNumberID
 	 */
 	public $IssueNumberID;
 	/**
@@ -151,7 +151,7 @@ class CardAccountType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName CV2ID
-	 * @var CV2ID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\CV2ID
 	 */
 	public $CV2ID;
 	/**
@@ -168,7 +168,7 @@ class CardAccountType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName CardChipCode
-	 * @var CardChipCode
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\CardChipCode
 	 */
 	public $CardChipCode;
 	/**
@@ -186,7 +186,7 @@ class CardAccountType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ChipApplicationID
-	 * @var ChipApplicationID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ChipApplicationID
 	 */
 	public $ChipApplicationID;
 	/**
@@ -203,7 +203,7 @@ class CardAccountType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName HolderName
-	 * @var HolderName
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\HolderName
 	 */
 	public $HolderName;
 

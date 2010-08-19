@@ -28,7 +28,7 @@ class DespatchType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ID
-	 * @var ID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ID
 	 */
 	public $ID;
 	/**
@@ -46,7 +46,7 @@ class DespatchType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName RequestedDespatchDate
-	 * @var RequestedDespatchDate
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\RequestedDespatchDate
 	 */
 	public $RequestedDespatchDate;
 	/**
@@ -64,7 +64,7 @@ class DespatchType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName RequestedDespatchTime
-	 * @var RequestedDespatchTime
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\RequestedDespatchTime
 	 */
 	public $RequestedDespatchTime;
 	/**
@@ -82,7 +82,7 @@ class DespatchType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName EstimatedDespatchDate
-	 * @var EstimatedDespatchDate
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\EstimatedDespatchDate
 	 */
 	public $EstimatedDespatchDate;
 	/**
@@ -100,7 +100,7 @@ class DespatchType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName EstimatedDespatchTime
-	 * @var EstimatedDespatchTime
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\EstimatedDespatchTime
 	 */
 	public $EstimatedDespatchTime;
 	/**
@@ -118,7 +118,7 @@ class DespatchType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ActualDespatchDate
-	 * @var ActualDespatchDate
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ActualDespatchDate
 	 */
 	public $ActualDespatchDate;
 	/**
@@ -136,7 +136,7 @@ class DespatchType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ActualDespatchTime
-	 * @var ActualDespatchTime
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ActualDespatchTime
 	 */
 	public $ActualDespatchTime;
 	/**
@@ -149,7 +149,6 @@ class DespatchType
 	 * @PropertyTerm Address
 	 * @AssociatedObjectClass Address
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName DespatchAddress
@@ -166,7 +165,6 @@ class DespatchType
 	 * @PropertyTerm Party
 	 * @AssociatedObjectClass Party
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName DespatchParty
@@ -182,7 +180,6 @@ class DespatchType
 	 * @PropertyTerm Contact
 	 * @AssociatedObjectClass Contact
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName Contact

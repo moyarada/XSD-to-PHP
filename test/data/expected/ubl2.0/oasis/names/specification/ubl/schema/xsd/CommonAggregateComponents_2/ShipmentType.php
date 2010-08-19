@@ -30,7 +30,7 @@ class ShipmentType
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName ID
-	 * @var ID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ID
 	 */
 	public $ID;
 	/**
@@ -48,7 +48,7 @@ class ShipmentType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ShippingPriorityLevelCode
-	 * @var ShippingPriorityLevelCode
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ShippingPriorityLevelCode
 	 */
 	public $ShippingPriorityLevelCode;
 	/**
@@ -66,7 +66,7 @@ class ShipmentType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName HandlingCode
-	 * @var HandlingCode
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\HandlingCode
 	 */
 	public $HandlingCode;
 	/**
@@ -84,7 +84,7 @@ class ShipmentType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName HandlingInstructions
-	 * @var HandlingInstructions
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\HandlingInstructions
 	 */
 	public $HandlingInstructions;
 	/**
@@ -101,7 +101,7 @@ class ShipmentType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName Information
-	 * @var Information
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\Information
 	 */
 	public $Information;
 	/**
@@ -119,7 +119,7 @@ class ShipmentType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName GrossWeightMeasure
-	 * @var GrossWeightMeasure
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\GrossWeightMeasure
 	 */
 	public $GrossWeightMeasure;
 	/**
@@ -137,7 +137,7 @@ class ShipmentType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName NetWeightMeasure
-	 * @var NetWeightMeasure
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\NetWeightMeasure
 	 */
 	public $NetWeightMeasure;
 	/**
@@ -155,7 +155,7 @@ class ShipmentType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName NetNetWeightMeasure
-	 * @var NetNetWeightMeasure
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\NetNetWeightMeasure
 	 */
 	public $NetNetWeightMeasure;
 	/**
@@ -173,7 +173,7 @@ class ShipmentType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName GrossVolumeMeasure
-	 * @var GrossVolumeMeasure
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\GrossVolumeMeasure
 	 */
 	public $GrossVolumeMeasure;
 	/**
@@ -191,7 +191,7 @@ class ShipmentType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName NetVolumeMeasure
-	 * @var NetVolumeMeasure
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\NetVolumeMeasure
 	 */
 	public $NetVolumeMeasure;
 	/**
@@ -209,7 +209,7 @@ class ShipmentType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName TotalGoodsItemQuantity
-	 * @var TotalGoodsItemQuantity
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\TotalGoodsItemQuantity
 	 */
 	public $TotalGoodsItemQuantity;
 	/**
@@ -228,7 +228,7 @@ class ShipmentType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName TotalTransportHandlingUnitQuantity
-	 * @var TotalTransportHandlingUnitQuantity
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\TotalTransportHandlingUnitQuantity
 	 */
 	public $TotalTransportHandlingUnitQuantity;
 	/**
@@ -247,7 +247,7 @@ class ShipmentType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName InsuranceValueAmount
-	 * @var InsuranceValueAmount
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\InsuranceValueAmount
 	 */
 	public $InsuranceValueAmount;
 	/**
@@ -265,7 +265,7 @@ class ShipmentType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName DeclaredCustomsValueAmount
-	 * @var DeclaredCustomsValueAmount
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\DeclaredCustomsValueAmount
 	 */
 	public $DeclaredCustomsValueAmount;
 	/**
@@ -284,7 +284,7 @@ class ShipmentType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName DeclaredForCarriageValueAmount
-	 * @var DeclaredForCarriageValueAmount
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\DeclaredForCarriageValueAmount
 	 */
 	public $DeclaredForCarriageValueAmount;
 	/**
@@ -303,7 +303,7 @@ class ShipmentType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName DeclaredStatisticsValueAmount
-	 * @var DeclaredStatisticsValueAmount
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\DeclaredStatisticsValueAmount
 	 */
 	public $DeclaredStatisticsValueAmount;
 	/**
@@ -322,7 +322,7 @@ class ShipmentType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName FreeOnBoardValueAmount
-	 * @var FreeOnBoardValueAmount
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\FreeOnBoardValueAmount
 	 */
 	public $FreeOnBoardValueAmount;
 	/**
@@ -340,7 +340,7 @@ class ShipmentType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName SpecialInstructions
-	 * @var SpecialInstructions
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\SpecialInstructions
 	 */
 	public $SpecialInstructions;
 	/**
@@ -358,7 +358,7 @@ class ShipmentType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName DeliveryInstructions
-	 * @var DeliveryInstructions
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\DeliveryInstructions
 	 */
 	public $DeliveryInstructions;
 	/**
@@ -376,7 +376,7 @@ class ShipmentType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName SplitConsignmentIndicator
-	 * @var SplitConsignmentIndicator
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\SplitConsignmentIndicator
 	 */
 	public $SplitConsignmentIndicator;
 	/**
@@ -388,7 +388,6 @@ class ShipmentType
 	 * @PropertyTerm Consignment
 	 * @AssociatedObjectClass Consignment
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName Consignment
@@ -404,7 +403,6 @@ class ShipmentType
 	 * @PropertyTerm Goods Item
 	 * @AssociatedObjectClass Goods Item
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName GoodsItem
@@ -420,7 +418,6 @@ class ShipmentType
 	 * @PropertyTerm Shipment Stage
 	 * @AssociatedObjectClass Shipment Stage
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName ShipmentStage
@@ -436,7 +433,6 @@ class ShipmentType
 	 * @PropertyTerm Delivery
 	 * @AssociatedObjectClass Delivery
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName Delivery
@@ -452,7 +448,6 @@ class ShipmentType
 	 * @PropertyTerm Transport Handling Unit
 	 * @AssociatedObjectClass Transport Handling Unit
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName TransportHandlingUnit
@@ -469,7 +464,6 @@ class ShipmentType
 	 * @PropertyTerm Address
 	 * @AssociatedObjectClass Address
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName OriginAddress
@@ -486,7 +480,6 @@ class ShipmentType
 	 * @PropertyTerm Location
 	 * @AssociatedObjectClass Location
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName FirstArrivalPortLocation
@@ -503,7 +496,6 @@ class ShipmentType
 	 * @PropertyTerm Location
 	 * @AssociatedObjectClass Location
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName LastExitPortLocation
@@ -520,7 +512,6 @@ class ShipmentType
 	 * @PropertyTerm Country
 	 * @AssociatedObjectClass Country
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ExportCountry
@@ -537,7 +528,6 @@ class ShipmentType
 	 * @PropertyTerm Allowance Charge
 	 * @AssociatedObjectClass Allowance Charge
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName FreightAllowanceCharge

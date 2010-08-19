@@ -30,7 +30,7 @@ class PartyTaxSchemeType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName RegistrationName
-	 * @var RegistrationName
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\RegistrationName
 	 */
 	public $RegistrationName;
 	/**
@@ -49,7 +49,7 @@ class PartyTaxSchemeType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName CompanyID
-	 * @var CompanyID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\CompanyID
 	 */
 	public $CompanyID;
 	/**
@@ -66,7 +66,7 @@ class PartyTaxSchemeType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName TaxLevelCode
-	 * @var TaxLevelCode
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\TaxLevelCode
 	 */
 	public $TaxLevelCode;
 	/**
@@ -83,7 +83,7 @@ class PartyTaxSchemeType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ExemptionReasonCode
-	 * @var ExemptionReasonCode
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ExemptionReasonCode
 	 */
 	public $ExemptionReasonCode;
 	/**
@@ -101,7 +101,7 @@ class PartyTaxSchemeType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ExemptionReason
-	 * @var ExemptionReason
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ExemptionReason
 	 */
 	public $ExemptionReason;
 	/**
@@ -114,7 +114,6 @@ class PartyTaxSchemeType
 	 * @PropertyTerm Address
 	 * @AssociatedObjectClass Address
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName RegistrationAddress
@@ -130,7 +129,6 @@ class PartyTaxSchemeType
 	 * @PropertyTerm Tax Scheme
 	 * @AssociatedObjectClass Tax Scheme
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName TaxScheme

@@ -28,7 +28,7 @@ class GoodsItemType
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName ID
-	 * @var ID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ID
 	 */
 	public $ID;
 	/**
@@ -46,7 +46,7 @@ class GoodsItemType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName SequenceNumberID
-	 * @var SequenceNumberID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\SequenceNumberID
 	 */
 	public $SequenceNumberID;
 	/**
@@ -64,7 +64,7 @@ class GoodsItemType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName Description
-	 * @var Description
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\Description
 	 */
 	public $Description;
 	/**
@@ -83,7 +83,7 @@ class GoodsItemType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName HazardousRiskIndicator
-	 * @var HazardousRiskIndicator
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\HazardousRiskIndicator
 	 */
 	public $HazardousRiskIndicator;
 	/**
@@ -102,7 +102,7 @@ class GoodsItemType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName DeclaredCustomsValueAmount
-	 * @var DeclaredCustomsValueAmount
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\DeclaredCustomsValueAmount
 	 */
 	public $DeclaredCustomsValueAmount;
 	/**
@@ -121,7 +121,7 @@ class GoodsItemType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName DeclaredForCarriageValueAmount
-	 * @var DeclaredForCarriageValueAmount
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\DeclaredForCarriageValueAmount
 	 */
 	public $DeclaredForCarriageValueAmount;
 	/**
@@ -140,7 +140,7 @@ class GoodsItemType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName DeclaredStatisticsValueAmount
-	 * @var DeclaredStatisticsValueAmount
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\DeclaredStatisticsValueAmount
 	 */
 	public $DeclaredStatisticsValueAmount;
 	/**
@@ -159,7 +159,7 @@ class GoodsItemType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName FreeOnBoardValueAmount
-	 * @var FreeOnBoardValueAmount
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\FreeOnBoardValueAmount
 	 */
 	public $FreeOnBoardValueAmount;
 	/**
@@ -178,7 +178,7 @@ class GoodsItemType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName InsuranceValueAmount
-	 * @var InsuranceValueAmount
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\InsuranceValueAmount
 	 */
 	public $InsuranceValueAmount;
 	/**
@@ -196,7 +196,7 @@ class GoodsItemType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ValueAmount
-	 * @var ValueAmount
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ValueAmount
 	 */
 	public $ValueAmount;
 	/**
@@ -215,7 +215,7 @@ class GoodsItemType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName GrossWeightMeasure
-	 * @var GrossWeightMeasure
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\GrossWeightMeasure
 	 */
 	public $GrossWeightMeasure;
 	/**
@@ -233,7 +233,7 @@ class GoodsItemType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName NetWeightMeasure
-	 * @var NetWeightMeasure
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\NetWeightMeasure
 	 */
 	public $NetWeightMeasure;
 	/**
@@ -252,7 +252,7 @@ class GoodsItemType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName NetNetWeightMeasure
-	 * @var NetNetWeightMeasure
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\NetNetWeightMeasure
 	 */
 	public $NetNetWeightMeasure;
 	/**
@@ -270,7 +270,7 @@ class GoodsItemType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ChargeableWeightMeasure
-	 * @var ChargeableWeightMeasure
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ChargeableWeightMeasure
 	 */
 	public $ChargeableWeightMeasure;
 	/**
@@ -289,7 +289,7 @@ class GoodsItemType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName GrossVolumeMeasure
-	 * @var GrossVolumeMeasure
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\GrossVolumeMeasure
 	 */
 	public $GrossVolumeMeasure;
 	/**
@@ -307,7 +307,7 @@ class GoodsItemType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName NetVolumeMeasure
-	 * @var NetVolumeMeasure
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\NetVolumeMeasure
 	 */
 	public $NetVolumeMeasure;
 	/**
@@ -324,7 +324,7 @@ class GoodsItemType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName Quantity
-	 * @var Quantity
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\Quantity
 	 */
 	public $Quantity;
 	/**
@@ -349,7 +349,7 @@ Thus, the column "Preference Criterion" will indicate either A, B, C,...
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName PreferenceCriterionCode
-	 * @var PreferenceCriterionCode
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\PreferenceCriterionCode
 	 */
 	public $PreferenceCriterionCode;
 	/**
@@ -368,7 +368,7 @@ Thus, the column "Preference Criterion" will indicate either A, B, C,...
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName RequiredCustomsID
-	 * @var RequiredCustomsID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\RequiredCustomsID
 	 */
 	public $RequiredCustomsID;
 	/**
@@ -386,7 +386,7 @@ Thus, the column "Preference Criterion" will indicate either A, B, C,...
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName CustomsStatusCode
-	 * @var CustomsStatusCode
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\CustomsStatusCode
 	 */
 	public $CustomsStatusCode;
 	/**
@@ -403,7 +403,7 @@ Thus, the column "Preference Criterion" will indicate either A, B, C,...
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName CustomsTariffQuantity
-	 * @var CustomsTariffQuantity
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\CustomsTariffQuantity
 	 */
 	public $CustomsTariffQuantity;
 	/**
@@ -421,7 +421,7 @@ Thus, the column "Preference Criterion" will indicate either A, B, C,...
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName CustomsImportClassifiedIndicator
-	 * @var CustomsImportClassifiedIndicator
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\CustomsImportClassifiedIndicator
 	 */
 	public $CustomsImportClassifiedIndicator;
 	/**
@@ -433,7 +433,6 @@ Thus, the column "Preference Criterion" will indicate either A, B, C,...
 	 * @PropertyTerm Item
 	 * @AssociatedObjectClass Item
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName Item
@@ -449,7 +448,6 @@ Thus, the column "Preference Criterion" will indicate either A, B, C,...
 	 * @PropertyTerm Goods Item Container
 	 * @AssociatedObjectClass Goods Item Container
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName GoodsItemContainer
@@ -466,7 +464,6 @@ Thus, the column "Preference Criterion" will indicate either A, B, C,...
 	 * @PropertyTerm Allowance Charge
 	 * @AssociatedObjectClass Allowance Charge
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName FreightAllowanceCharge
@@ -482,7 +479,6 @@ Thus, the column "Preference Criterion" will indicate either A, B, C,...
 	 * @PropertyTerm Invoice Line
 	 * @AssociatedObjectClass Invoice Line
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName InvoiceLine
@@ -498,7 +494,6 @@ Thus, the column "Preference Criterion" will indicate either A, B, C,...
 	 * @PropertyTerm Temperature
 	 * @AssociatedObjectClass Temperature
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName Temperature
@@ -515,7 +510,6 @@ Thus, the column "Preference Criterion" will indicate either A, B, C,...
 	 * @PropertyTerm Goods Item
 	 * @AssociatedObjectClass Goods Item
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName ContainedGoodsItem
@@ -532,7 +526,6 @@ Thus, the column "Preference Criterion" will indicate either A, B, C,...
 	 * @PropertyTerm Address
 	 * @AssociatedObjectClass Address
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName OriginAddress

@@ -29,7 +29,7 @@ class ItemPropertyType
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName Name
-	 * @var Name
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\Name
 	 */
 	public $Name;
 	/**
@@ -47,7 +47,7 @@ class ItemPropertyType
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName Value
-	 * @var Value
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\Value
 	 */
 	public $Value;
 	/**
@@ -60,7 +60,6 @@ class ItemPropertyType
 	 * @PropertyTerm Period
 	 * @AssociatedObjectClass Period
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName UsabilityPeriod
@@ -76,7 +75,6 @@ class ItemPropertyType
 	 * @PropertyTerm Item Property Group
 	 * @AssociatedObjectClass Item Property Group
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName ItemPropertyGroup

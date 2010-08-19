@@ -1,5 +1,7 @@
 <?php
 
+use oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2;
+use dk\nordsign\schema\ContactCompany;
 use com\mikebevz\xsd2php;
 require_once 'PHPUnit/Framework.php';
 require_once dirname(__FILE__)."/../src/Xsd2Php.php";
@@ -155,22 +157,55 @@ class Xsd2PhpTest extends PHPUnit_Framework_TestCase
          } 
     }
     
-    public function testContactPerson1() {
-         
+ public function testContactPerson() {
+        
+        $expPath = dirname(__FILE__).'/data/expected/ContactPerson1/';
+        $genPath = dirname(__FILE__).'/data/generated/ContactPerson1/';
+        
          $this->tclass = new xsd2php\Xsd2Php("../resources/ContactPerson1/ContactPerson.xsd");
          $xml = $this->tclass->getXML();
-         //file_put_contents(dirname(__FILE__).'/data/expected/ContactPerson1/generated.xml', $xml->saveXml());
-         $expectedXml = file_get_contents(dirname(__FILE__).'/data/expected/ContactPerson1/generated.xml');
+         //file_put_contents($expPath.'generated.xml', $xml->saveXml());
+         $expectedXml = file_get_contents($expPath.'generated.xml');
          $this->assertEquals($expectedXml, $xml->saveXml());
          
-         if (file_exists(dirname(__FILE__).'/data/generated/ContactPerson1')) {
-            $this->rmdir_recursive(realpath(dirname(__FILE__).'/data/generated/ContactPerson1'));
+         if (file_exists($genPath)) {
+            $this->rmdir_recursive(realpath($genPath));
          } 
          
-         $this->tclass->saveClasses(dirname(__FILE__).'/data/generated/ContactPerson1', true);
+         $this->tclass->saveClasses($genPath, true);
          
-         if (file_exists(dirname(__FILE__).'/data/generated/ContactPerson1')) {
-            $this->rmdir_recursive(realpath(dirname(__FILE__).'/data/generated/ContactPerson1'));
+         if (file_exists($genPath)) {
+            $this->rmdir_recursive(realpath($genPath));
+         } 
+        
+        
+    }
+ 
+    
+    public function testContactCompany() {
+        $expPath = dirname(__FILE__).'/data/expected/ContactCompany/';
+        $genPath = dirname(__FILE__).'/data/generated/ContactCompany/';
+        
+         $this->tclass = new xsd2php\Xsd2Php("../resources/ContactCompany/ContactCompany.xsd");
+         $xml = $this->tclass->getXML();
+         //file_put_contents($expPath.'generated.xml', $xml->saveXml());
+         $expectedXml = file_get_contents($expPath.'generated.xml');
+         $this->assertEquals($expectedXml, $xml->saveXml());
+         
+         if (file_exists($genPath)) {
+            $this->rmdir_recursive(realpath($genPath));
+         } 
+         
+         $this->tclass->saveClasses($genPath, true);
+         
+         //$cp = new ContactCompany\ContactCompany();
+         //$id = new CommonBasicComponents_2\ID();
+            
+         
+         if (file_exists($genPath)) {
+            $this->rmdir_recursive(realpath($genPath));
          } 
     }
+    
+   
 }

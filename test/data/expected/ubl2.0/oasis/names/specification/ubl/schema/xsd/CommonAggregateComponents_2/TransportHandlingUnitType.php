@@ -29,7 +29,7 @@ class TransportHandlingUnitType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ID
-	 * @var ID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ID
 	 */
 	public $ID;
 	/**
@@ -46,7 +46,7 @@ class TransportHandlingUnitType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName TransportHandlingUnitTypeCode
-	 * @var TransportHandlingUnitTypeCode
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\TransportHandlingUnitTypeCode
 	 */
 	public $TransportHandlingUnitTypeCode;
 	/**
@@ -64,7 +64,7 @@ class TransportHandlingUnitType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName HandlingCode
-	 * @var HandlingCode
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\HandlingCode
 	 */
 	public $HandlingCode;
 	/**
@@ -82,7 +82,7 @@ class TransportHandlingUnitType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName HandlingInstructions
-	 * @var HandlingInstructions
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\HandlingInstructions
 	 */
 	public $HandlingInstructions;
 	/**
@@ -101,7 +101,7 @@ class TransportHandlingUnitType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName HazardousRiskIndicator
-	 * @var HazardousRiskIndicator
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\HazardousRiskIndicator
 	 */
 	public $HazardousRiskIndicator;
 	/**
@@ -119,7 +119,7 @@ class TransportHandlingUnitType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName TotalGoodsItemQuantity
-	 * @var TotalGoodsItemQuantity
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\TotalGoodsItemQuantity
 	 */
 	public $TotalGoodsItemQuantity;
 	/**
@@ -137,7 +137,7 @@ class TransportHandlingUnitType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName TotalPackageQuantity
-	 * @var TotalPackageQuantity
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\TotalPackageQuantity
 	 */
 	public $TotalPackageQuantity;
 	/**
@@ -155,7 +155,7 @@ class TransportHandlingUnitType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName DamageRemarks
-	 * @var DamageRemarks
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\DamageRemarks
 	 */
 	public $DamageRemarks;
 	/**
@@ -174,7 +174,7 @@ class TransportHandlingUnitType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName ShippingMarks
-	 * @var ShippingMarks
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ShippingMarks
 	 */
 	public $ShippingMarks;
 	/**
@@ -187,7 +187,6 @@ class TransportHandlingUnitType
 	 * @PropertyTerm Despatch Line
 	 * @AssociatedObjectClass Despatch Line
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName HandlingUnitDespatchLine
@@ -204,7 +203,6 @@ class TransportHandlingUnitType
 	 * @PropertyTerm Package
 	 * @AssociatedObjectClass Package
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName ActualPackage
@@ -221,7 +219,6 @@ class TransportHandlingUnitType
 	 * @PropertyTerm Receipt Line
 	 * @AssociatedObjectClass Receipt Line
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName ReceivedHandlingUnitReceiptLine
@@ -237,7 +234,6 @@ class TransportHandlingUnitType
 	 * @PropertyTerm Transport Equipment
 	 * @AssociatedObjectClass Transport Equipment
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName TransportEquipment
@@ -253,7 +249,6 @@ class TransportHandlingUnitType
 	 * @PropertyTerm Hazardous Goods Transit
 	 * @AssociatedObjectClass Hazardous Goods Transit
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName HazardousGoodsTransit
@@ -270,7 +265,6 @@ class TransportHandlingUnitType
 	 * @PropertyTerm Dimension
 	 * @AssociatedObjectClass Dimension
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName MeasurementDimension
@@ -287,7 +281,6 @@ class TransportHandlingUnitType
 	 * @PropertyTerm Temperature
 	 * @AssociatedObjectClass Temperature
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName MinimumTemperature
@@ -304,7 +297,6 @@ class TransportHandlingUnitType
 	 * @PropertyTerm Temperature
 	 * @AssociatedObjectClass Temperature
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName MaximumTemperature

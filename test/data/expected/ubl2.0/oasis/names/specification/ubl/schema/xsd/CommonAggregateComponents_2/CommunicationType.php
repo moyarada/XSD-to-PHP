@@ -29,7 +29,7 @@ class CommunicationType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ChannelCode
-	 * @var ChannelCode
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ChannelCode
 	 */
 	public $ChannelCode;
 	/**
@@ -47,7 +47,7 @@ class CommunicationType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName Channel
-	 * @var Channel
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\Channel
 	 */
 	public $Channel;
 	/**
@@ -65,7 +65,7 @@ class CommunicationType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName Value
-	 * @var Value
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\Value
 	 */
 	public $Value;
 

@@ -29,7 +29,7 @@ class StowageType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName LocationID
-	 * @var LocationID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\LocationID
 	 */
 	public $LocationID;
 	/**
@@ -47,7 +47,7 @@ class StowageType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName Location
-	 * @var Location
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\Location
 	 */
 	public $Location;
 	/**
@@ -60,7 +60,6 @@ class StowageType
 	 * @PropertyTerm Dimension
 	 * @AssociatedObjectClass Dimension
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName MeasurementDimension

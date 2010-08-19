@@ -35,9 +35,6 @@ class MeasureType
 	 * @BuiltinType normalizedString
 	 * @UsageRule Reference UN/ECE Rec 20 and X12 355.
 	 * @xmlType attribute
-	 * @xmlNamespace 
-	 * @xmlMinOccurs 
-	 * @xmlMaxOccurs 
 	 * @xmlName unitCode
 	 * @var clm66411:UnitCodeContentType
 	 */

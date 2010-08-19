@@ -28,7 +28,7 @@ class ExternalReferenceType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName URI
-	 * @var URI
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\URI
 	 */
 	public $URI;
 	/**
@@ -45,7 +45,7 @@ class ExternalReferenceType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName DocumentHash
-	 * @var DocumentHash
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\DocumentHash
 	 */
 	public $DocumentHash;
 	/**
@@ -62,7 +62,7 @@ class ExternalReferenceType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ExpiryDate
-	 * @var ExpiryDate
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ExpiryDate
 	 */
 	public $ExpiryDate;
 	/**
@@ -79,7 +79,7 @@ class ExternalReferenceType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ExpiryTime
-	 * @var ExpiryTime
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ExpiryTime
 	 */
 	public $ExpiryTime;
 

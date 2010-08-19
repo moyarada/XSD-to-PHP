@@ -28,7 +28,7 @@ class OrderLineType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName SubstitutionStatusCode
-	 * @var SubstitutionStatusCode
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\SubstitutionStatusCode
 	 */
 	public $SubstitutionStatusCode;
 	/**
@@ -45,7 +45,7 @@ class OrderLineType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName Note
-	 * @var Note
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\Note
 	 */
 	public $Note;
 	/**
@@ -57,7 +57,6 @@ class OrderLineType
 	 * @PropertyTerm Line Item
 	 * @AssociatedObjectClass Line Item
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName LineItem
@@ -74,7 +73,6 @@ class OrderLineType
 	 * @PropertyTerm Line Item
 	 * @AssociatedObjectClass Line Item
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName SellerProposedSubstituteLineItem
@@ -91,7 +89,6 @@ class OrderLineType
 	 * @PropertyTerm Line Item
 	 * @AssociatedObjectClass Line Item
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName SellerSubstitutedLineItem
@@ -108,7 +105,6 @@ class OrderLineType
 	 * @PropertyTerm Line Item
 	 * @AssociatedObjectClass Line Item
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName BuyerProposedSubstituteLineItem
@@ -125,7 +121,6 @@ class OrderLineType
 	 * @PropertyTerm Line Reference
 	 * @AssociatedObjectClass Line Reference
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName CatalogueLineReference
@@ -142,7 +137,6 @@ class OrderLineType
 	 * @PropertyTerm Line Reference
 	 * @AssociatedObjectClass Line Reference
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName QuotationLineReference
@@ -158,7 +152,6 @@ class OrderLineType
 	 * @PropertyTerm Document Reference
 	 * @AssociatedObjectClass Document Reference
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName DocumentReference

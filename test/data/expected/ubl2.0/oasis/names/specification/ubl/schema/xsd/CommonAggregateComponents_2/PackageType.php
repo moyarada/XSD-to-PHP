@@ -28,7 +28,7 @@ class PackageType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ID
-	 * @var ID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ID
 	 */
 	public $ID;
 	/**
@@ -45,7 +45,7 @@ class PackageType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName Quantity
-	 * @var Quantity
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\Quantity
 	 */
 	public $Quantity;
 	/**
@@ -63,7 +63,7 @@ class PackageType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ReturnableMaterialIndicator
-	 * @var ReturnableMaterialIndicator
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ReturnableMaterialIndicator
 	 */
 	public $ReturnableMaterialIndicator;
 	/**
@@ -80,7 +80,7 @@ class PackageType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName PackageLevelCode
-	 * @var PackageLevelCode
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\PackageLevelCode
 	 */
 	public $PackageLevelCode;
 	/**
@@ -98,7 +98,7 @@ class PackageType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName PackagingTypeCode
-	 * @var PackagingTypeCode
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\PackagingTypeCode
 	 */
 	public $PackagingTypeCode;
 	/**
@@ -115,7 +115,7 @@ class PackageType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName PackingMaterial
-	 * @var PackingMaterial
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\PackingMaterial
 	 */
 	public $PackingMaterial;
 	/**
@@ -128,7 +128,6 @@ class PackageType
 	 * @PropertyTerm Package
 	 * @AssociatedObjectClass Package
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName ContainedPackage
@@ -144,7 +143,6 @@ class PackageType
 	 * @PropertyTerm Goods Item
 	 * @AssociatedObjectClass Goods Item
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName GoodsItem
@@ -161,7 +159,6 @@ class PackageType
 	 * @PropertyTerm Dimension
 	 * @AssociatedObjectClass Dimension
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName MeasurementDimension
@@ -177,7 +174,6 @@ class PackageType
 	 * @PropertyTerm Delivery Unit
 	 * @AssociatedObjectClass Delivery Unit
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName DeliveryUnit

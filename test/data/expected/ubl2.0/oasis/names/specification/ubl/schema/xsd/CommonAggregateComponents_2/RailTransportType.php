@@ -29,7 +29,7 @@ class RailTransportType
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName TrainID
-	 * @var TrainID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\TrainID
 	 */
 	public $TrainID;
 	/**
@@ -46,7 +46,7 @@ class RailTransportType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName RailCarID
-	 * @var RailCarID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\RailCarID
 	 */
 	public $RailCarID;
 

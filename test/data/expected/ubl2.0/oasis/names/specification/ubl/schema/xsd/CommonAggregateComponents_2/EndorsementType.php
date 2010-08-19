@@ -28,7 +28,7 @@ class EndorsementType
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName DocumentID
-	 * @var DocumentID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\DocumentID
 	 */
 	public $DocumentID;
 	/**
@@ -46,7 +46,7 @@ class EndorsementType
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName ApprovalStatus
-	 * @var ApprovalStatus
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ApprovalStatus
 	 */
 	public $ApprovalStatus;
 	/**
@@ -63,7 +63,7 @@ class EndorsementType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName Remarks
-	 * @var Remarks
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\Remarks
 	 */
 	public $Remarks;
 	/**
@@ -75,7 +75,6 @@ class EndorsementType
 	 * @PropertyTerm Endorser Party
 	 * @AssociatedObjectClass Endorser Party
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName EndorserParty
@@ -91,7 +90,6 @@ class EndorsementType
 	 * @PropertyTerm Signature
 	 * @AssociatedObjectClass Signature
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName Signature

@@ -29,7 +29,7 @@ class RoadTransportType
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName LicensePlateID
-	 * @var LicensePlateID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\LicensePlateID
 	 */
 	public $LicensePlateID;
 

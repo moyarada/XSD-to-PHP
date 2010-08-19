@@ -30,7 +30,7 @@ class TransportEquipmentType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ID
-	 * @var ID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ID
 	 */
 	public $ID;
 	/**
@@ -47,7 +47,7 @@ class TransportEquipmentType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName TransportEquipmentTypeCode
-	 * @var TransportEquipmentTypeCode
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\TransportEquipmentTypeCode
 	 */
 	public $TransportEquipmentTypeCode;
 	/**
@@ -64,7 +64,7 @@ class TransportEquipmentType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ProviderTypeCode
-	 * @var ProviderTypeCode
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ProviderTypeCode
 	 */
 	public $ProviderTypeCode;
 	/**
@@ -81,7 +81,7 @@ class TransportEquipmentType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName OwnerTypeCode
-	 * @var OwnerTypeCode
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\OwnerTypeCode
 	 */
 	public $OwnerTypeCode;
 	/**
@@ -99,7 +99,7 @@ class TransportEquipmentType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName SizeTypeCode
-	 * @var SizeTypeCode
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\SizeTypeCode
 	 */
 	public $SizeTypeCode;
 	/**
@@ -117,7 +117,7 @@ class TransportEquipmentType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName DispositionCode
-	 * @var DispositionCode
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\DispositionCode
 	 */
 	public $DispositionCode;
 	/**
@@ -134,7 +134,7 @@ class TransportEquipmentType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName FullnessIndicationCode
-	 * @var FullnessIndicationCode
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\FullnessIndicationCode
 	 */
 	public $FullnessIndicationCode;
 	/**
@@ -152,7 +152,7 @@ class TransportEquipmentType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName RefrigerationOnIndicator
-	 * @var RefrigerationOnIndicator
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\RefrigerationOnIndicator
 	 */
 	public $RefrigerationOnIndicator;
 	/**
@@ -169,7 +169,7 @@ class TransportEquipmentType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName Information
-	 * @var Information
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\Information
 	 */
 	public $Information;
 	/**
@@ -187,7 +187,7 @@ class TransportEquipmentType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ReturnabilityIndicator
-	 * @var ReturnabilityIndicator
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ReturnabilityIndicator
 	 */
 	public $ReturnabilityIndicator;
 	/**
@@ -205,7 +205,7 @@ class TransportEquipmentType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName LegalStatusIndicator
-	 * @var LegalStatusIndicator
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\LegalStatusIndicator
 	 */
 	public $LegalStatusIndicator;
 	/**
@@ -218,7 +218,6 @@ class TransportEquipmentType
 	 * @PropertyTerm Dimension
 	 * @AssociatedObjectClass Dimension
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName MeasurementDimension
@@ -234,7 +233,6 @@ class TransportEquipmentType
 	 * @PropertyTerm Transport Equipment Seal
 	 * @AssociatedObjectClass Transport Equipment Seal
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName TransportEquipmentSeal
@@ -251,7 +249,6 @@ class TransportEquipmentType
 	 * @PropertyTerm Temperature
 	 * @AssociatedObjectClass Temperature
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName MinimumTemperature
@@ -268,7 +265,6 @@ class TransportEquipmentType
 	 * @PropertyTerm Temperature
 	 * @AssociatedObjectClass Temperature
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName MaximumTemperature
@@ -285,7 +281,6 @@ class TransportEquipmentType
 	 * @PropertyTerm Party
 	 * @AssociatedObjectClass Party
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ProviderParty
@@ -302,7 +297,6 @@ class TransportEquipmentType
 	 * @PropertyTerm Party
 	 * @AssociatedObjectClass Party
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName LoadingProofParty
@@ -319,7 +313,6 @@ class TransportEquipmentType
 	 * @PropertyTerm Location
 	 * @AssociatedObjectClass Location
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName LoadingLocation

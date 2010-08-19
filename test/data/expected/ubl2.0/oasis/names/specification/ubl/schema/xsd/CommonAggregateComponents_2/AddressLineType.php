@@ -29,7 +29,7 @@ class AddressLineType
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName Line
-	 * @var Line
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\Line
 	 */
 	public $Line;
 

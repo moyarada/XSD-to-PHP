@@ -29,7 +29,7 @@ class ConsignmentType
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName ID
-	 * @var ID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ID
 	 */
 	public $ID;
 	/**
@@ -47,7 +47,7 @@ class ConsignmentType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName SummaryDescription
-	 * @var SummaryDescription
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\SummaryDescription
 	 */
 	public $SummaryDescription;
 	/**
@@ -65,7 +65,7 @@ class ConsignmentType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName TotalInvoiceAmount
-	 * @var TotalInvoiceAmount
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\TotalInvoiceAmount
 	 */
 	public $TotalInvoiceAmount;
 	/**
@@ -83,7 +83,7 @@ class ConsignmentType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName DeclaredCustomsValueAmount
-	 * @var DeclaredCustomsValueAmount
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\DeclaredCustomsValueAmount
 	 */
 	public $DeclaredCustomsValueAmount;
 	/**
@@ -100,7 +100,7 @@ class ConsignmentType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName TariffDescription
-	 * @var TariffDescription
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\TariffDescription
 	 */
 	public $TariffDescription;
 	/**
@@ -118,7 +118,7 @@ class ConsignmentType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName TariffCode
-	 * @var TariffCode
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\TariffCode
 	 */
 	public $TariffCode;
 	/**
@@ -136,7 +136,7 @@ class ConsignmentType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName InsurancePremiumAmount
-	 * @var InsurancePremiumAmount
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\InsurancePremiumAmount
 	 */
 	public $InsurancePremiumAmount;
 	/**
@@ -156,7 +156,7 @@ class ConsignmentType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName GrossWeightMeasure
-	 * @var GrossWeightMeasure
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\GrossWeightMeasure
 	 */
 	public $GrossWeightMeasure;
 	/**
@@ -174,7 +174,7 @@ class ConsignmentType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName NetWeightMeasure
-	 * @var NetWeightMeasure
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\NetWeightMeasure
 	 */
 	public $NetWeightMeasure;
 	/**
@@ -192,7 +192,7 @@ class ConsignmentType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName NetNetWeightMeasure
-	 * @var NetNetWeightMeasure
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\NetNetWeightMeasure
 	 */
 	public $NetNetWeightMeasure;
 	/**
@@ -211,7 +211,7 @@ class ConsignmentType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ChargeableWeightMeasure
-	 * @var ChargeableWeightMeasure
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ChargeableWeightMeasure
 	 */
 	public $ChargeableWeightMeasure;
 	/**
@@ -230,7 +230,7 @@ class ConsignmentType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName GrossVolumeMeasure
-	 * @var GrossVolumeMeasure
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\GrossVolumeMeasure
 	 */
 	public $GrossVolumeMeasure;
 	/**
@@ -248,7 +248,7 @@ class ConsignmentType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName NetVolumeMeasure
-	 * @var NetVolumeMeasure
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\NetVolumeMeasure
 	 */
 	public $NetVolumeMeasure;
 	/**
@@ -266,7 +266,7 @@ class ConsignmentType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName LoadingLengthMeasure
-	 * @var LoadingLengthMeasure
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\LoadingLengthMeasure
 	 */
 	public $LoadingLengthMeasure;
 	/**
@@ -283,7 +283,7 @@ class ConsignmentType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName Remarks
-	 * @var Remarks
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\Remarks
 	 */
 	public $Remarks;
 	/**
@@ -303,7 +303,7 @@ class ConsignmentType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName HazardousRiskIndicator
-	 * @var HazardousRiskIndicator
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\HazardousRiskIndicator
 	 */
 	public $HazardousRiskIndicator;
 	/**
@@ -316,7 +316,6 @@ class ConsignmentType
 	 * @PropertyTerm Party
 	 * @AssociatedObjectClass Party
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ConsigneeParty
@@ -333,7 +332,6 @@ class ConsignmentType
 	 * @PropertyTerm Party
 	 * @AssociatedObjectClass Party
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ExporterParty
@@ -350,7 +348,6 @@ class ConsignmentType
 	 * @PropertyTerm Party
 	 * @AssociatedObjectClass Party
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ConsignorParty
@@ -367,7 +364,6 @@ class ConsignmentType
 	 * @PropertyTerm Party
 	 * @AssociatedObjectClass Party
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ImporterParty
@@ -384,7 +380,6 @@ class ConsignmentType
 	 * @PropertyTerm Party
 	 * @AssociatedObjectClass Party
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName CarrierParty
@@ -401,7 +396,6 @@ class ConsignmentType
 	 * @PropertyTerm Party
 	 * @AssociatedObjectClass Party
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName FreightForwarderParty
@@ -418,7 +412,6 @@ class ConsignmentType
 	 * @PropertyTerm Party
 	 * @AssociatedObjectClass Party
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName NotifyParty
@@ -435,7 +428,6 @@ class ConsignmentType
 	 * @PropertyTerm Party
 	 * @AssociatedObjectClass Party
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName OriginalDespatchParty
@@ -452,7 +444,6 @@ class ConsignmentType
 	 * @PropertyTerm Party
 	 * @AssociatedObjectClass Party
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName FinalDeliveryParty
@@ -469,7 +460,6 @@ class ConsignmentType
 	 * @PropertyTerm Country
 	 * @AssociatedObjectClass Country
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName OriginalDepartureCountry
@@ -486,7 +476,6 @@ class ConsignmentType
 	 * @PropertyTerm Country
 	 * @AssociatedObjectClass Country
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName FinalDestinationCountry
@@ -503,7 +492,6 @@ class ConsignmentType
 	 * @PropertyTerm Country
 	 * @AssociatedObjectClass Country
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName TransitCountry
@@ -520,7 +508,6 @@ class ConsignmentType
 	 * @PropertyTerm Contract
 	 * @AssociatedObjectClass Contract
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName TransportContract
@@ -537,7 +524,6 @@ class ConsignmentType
 	 * @PropertyTerm Transportation Service
 	 * @AssociatedObjectClass Transportation Service
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName OriginalDespatchTransportationService
@@ -554,7 +540,6 @@ class ConsignmentType
 	 * @PropertyTerm Transportation Service
 	 * @AssociatedObjectClass Transportation Service
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName FinalDeliveryTransportationService
@@ -570,7 +555,6 @@ class ConsignmentType
 	 * @PropertyTerm Delivery Terms
 	 * @AssociatedObjectClass Delivery Terms
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName DeliveryTerms
@@ -586,7 +570,6 @@ class ConsignmentType
 	 * @PropertyTerm Payment Terms
 	 * @AssociatedObjectClass Payment Terms
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName PaymentTerms
@@ -603,7 +586,6 @@ class ConsignmentType
 	 * @PropertyTerm Allowance Charge
 	 * @AssociatedObjectClass Allowance Charge
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName FreightAllowanceCharge

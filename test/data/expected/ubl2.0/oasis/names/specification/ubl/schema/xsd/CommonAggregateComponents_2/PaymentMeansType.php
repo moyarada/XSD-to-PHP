@@ -28,7 +28,7 @@ class PaymentMeansType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ID
-	 * @var ID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ID
 	 */
 	public $ID;
 	/**
@@ -45,7 +45,7 @@ class PaymentMeansType
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName PaymentMeansCode
-	 * @var PaymentMeansCode
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\PaymentMeansCode
 	 */
 	public $PaymentMeansCode;
 	/**
@@ -62,7 +62,7 @@ class PaymentMeansType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName PaymentDueDate
-	 * @var PaymentDueDate
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\PaymentDueDate
 	 */
 	public $PaymentDueDate;
 	/**
@@ -79,7 +79,7 @@ class PaymentMeansType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName PaymentChannelCode
-	 * @var PaymentChannelCode
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\PaymentChannelCode
 	 */
 	public $PaymentChannelCode;
 	/**
@@ -96,7 +96,7 @@ class PaymentMeansType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName InstructionID
-	 * @var InstructionID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\InstructionID
 	 */
 	public $InstructionID;
 	/**
@@ -114,7 +114,7 @@ class PaymentMeansType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName InstructionNote
-	 * @var InstructionNote
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\InstructionNote
 	 */
 	public $InstructionNote;
 	/**
@@ -131,7 +131,7 @@ class PaymentMeansType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName PaymentID
-	 * @var PaymentID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\PaymentID
 	 */
 	public $PaymentID;
 	/**
@@ -143,7 +143,6 @@ class PaymentMeansType
 	 * @PropertyTerm Card Account
 	 * @AssociatedObjectClass Card Account
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName CardAccount
@@ -160,7 +159,6 @@ class PaymentMeansType
 	 * @PropertyTerm Financial Account
 	 * @AssociatedObjectClass Financial Account
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName PayerFinancialAccount
@@ -177,7 +175,6 @@ class PaymentMeansType
 	 * @PropertyTerm Financial Account
 	 * @AssociatedObjectClass Financial Account
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName PayeeFinancialAccount
@@ -193,7 +190,6 @@ class PaymentMeansType
 	 * @PropertyTerm Credit Account
 	 * @AssociatedObjectClass Credit Account
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName CreditAccount

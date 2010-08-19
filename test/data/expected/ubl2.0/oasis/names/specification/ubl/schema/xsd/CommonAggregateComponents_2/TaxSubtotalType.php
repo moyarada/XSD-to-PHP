@@ -29,7 +29,7 @@ class TaxSubtotalType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName TaxableAmount
-	 * @var TaxableAmount
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\TaxableAmount
 	 */
 	public $TaxableAmount;
 	/**
@@ -46,7 +46,7 @@ class TaxSubtotalType
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName TaxAmount
-	 * @var TaxAmount
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\TaxAmount
 	 */
 	public $TaxAmount;
 	/**
@@ -63,7 +63,7 @@ class TaxSubtotalType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName CalculationSequenceNumeric
-	 * @var CalculationSequenceNumeric
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\CalculationSequenceNumeric
 	 */
 	public $CalculationSequenceNumeric;
 	/**
@@ -81,7 +81,7 @@ class TaxSubtotalType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName TransactionCurrencyTaxAmount
-	 * @var TransactionCurrencyTaxAmount
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\TransactionCurrencyTaxAmount
 	 */
 	public $TransactionCurrencyTaxAmount;
 	/**
@@ -98,7 +98,7 @@ class TaxSubtotalType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName Percent
-	 * @var Percent
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\Percent
 	 */
 	public $Percent;
 	/**
@@ -115,7 +115,7 @@ class TaxSubtotalType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName BaseUnitMeasure
-	 * @var BaseUnitMeasure
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\BaseUnitMeasure
 	 */
 	public $BaseUnitMeasure;
 	/**
@@ -133,7 +133,7 @@ class TaxSubtotalType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName PerUnitAmount
-	 * @var PerUnitAmount
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\PerUnitAmount
 	 */
 	public $PerUnitAmount;
 	/**
@@ -150,7 +150,7 @@ class TaxSubtotalType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName TierRange
-	 * @var TierRange
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\TierRange
 	 */
 	public $TierRange;
 	/**
@@ -167,7 +167,7 @@ class TaxSubtotalType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName TierRatePercent
-	 * @var TierRatePercent
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\TierRatePercent
 	 */
 	public $TierRatePercent;
 	/**
@@ -179,7 +179,6 @@ class TaxSubtotalType
 	 * @PropertyTerm Tax Category
 	 * @AssociatedObjectClass Tax Category
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName TaxCategory

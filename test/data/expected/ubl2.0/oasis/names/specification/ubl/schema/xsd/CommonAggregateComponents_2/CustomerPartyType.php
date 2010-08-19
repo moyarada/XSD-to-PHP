@@ -29,7 +29,7 @@ class CustomerPartyType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName CustomerAssignedAccountID
-	 * @var CustomerAssignedAccountID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\CustomerAssignedAccountID
 	 */
 	public $CustomerAssignedAccountID;
 	/**
@@ -47,7 +47,7 @@ class CustomerPartyType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName SupplierAssignedAccountID
-	 * @var SupplierAssignedAccountID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\SupplierAssignedAccountID
 	 */
 	public $SupplierAssignedAccountID;
 	/**
@@ -65,7 +65,7 @@ class CustomerPartyType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName AdditionalAccountID
-	 * @var AdditionalAccountID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\AdditionalAccountID
 	 */
 	public $AdditionalAccountID;
 	/**
@@ -77,7 +77,6 @@ class CustomerPartyType
 	 * @PropertyTerm Party
 	 * @AssociatedObjectClass Party
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName Party
@@ -94,7 +93,6 @@ class CustomerPartyType
 	 * @PropertyTerm Contact
 	 * @AssociatedObjectClass Contact
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName DeliveryContact
@@ -111,7 +109,6 @@ class CustomerPartyType
 	 * @PropertyTerm Contact
 	 * @AssociatedObjectClass Contact
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName AccountingContact
@@ -128,7 +125,6 @@ class CustomerPartyType
 	 * @PropertyTerm Contact
 	 * @AssociatedObjectClass Contact
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName BuyerContact

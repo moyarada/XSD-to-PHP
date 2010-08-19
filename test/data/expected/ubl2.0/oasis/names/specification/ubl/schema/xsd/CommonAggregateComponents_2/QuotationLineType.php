@@ -28,7 +28,7 @@ class QuotationLineType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ID
-	 * @var ID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ID
 	 */
 	public $ID;
 	/**
@@ -45,7 +45,7 @@ class QuotationLineType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName Note
-	 * @var Note
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\Note
 	 */
 	public $Note;
 	/**
@@ -62,7 +62,7 @@ class QuotationLineType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName Quantity
-	 * @var Quantity
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\Quantity
 	 */
 	public $Quantity;
 	/**
@@ -79,7 +79,7 @@ class QuotationLineType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName LineExtensionAmount
-	 * @var LineExtensionAmount
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\LineExtensionAmount
 	 */
 	public $LineExtensionAmount;
 	/**
@@ -97,7 +97,7 @@ class QuotationLineType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName TotalTaxAmount
-	 * @var TotalTaxAmount
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\TotalTaxAmount
 	 */
 	public $TotalTaxAmount;
 	/**
@@ -109,7 +109,6 @@ class QuotationLineType
 	 * @PropertyTerm Document Reference
 	 * @AssociatedObjectClass Document Reference
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName DocumentReference
@@ -125,7 +124,6 @@ class QuotationLineType
 	 * @PropertyTerm Line Item
 	 * @AssociatedObjectClass Line Item
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName LineItem
@@ -142,7 +140,6 @@ class QuotationLineType
 	 * @PropertyTerm Line Item
 	 * @AssociatedObjectClass Line Item
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName SellerProposedSubstituteLineItem

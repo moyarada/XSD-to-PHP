@@ -28,7 +28,7 @@ class PriceListType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ID
-	 * @var ID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ID
 	 */
 	public $ID;
 	/**
@@ -46,7 +46,7 @@ class PriceListType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName StatusCode
-	 * @var StatusCode
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\StatusCode
 	 */
 	public $StatusCode;
 	/**
@@ -59,7 +59,6 @@ class PriceListType
 	 * @PropertyTerm Period
 	 * @AssociatedObjectClass Period
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName ValidityPeriod
@@ -76,7 +75,6 @@ class PriceListType
 	 * @PropertyTerm Price List
 	 * @AssociatedObjectClass Price List
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName PreviousPriceList

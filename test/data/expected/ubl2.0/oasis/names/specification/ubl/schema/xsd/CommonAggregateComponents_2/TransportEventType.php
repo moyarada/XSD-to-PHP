@@ -28,7 +28,7 @@ class TransportEventType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName IdentificationID
-	 * @var IdentificationID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\IdentificationID
 	 */
 	public $IdentificationID;
 	/**
@@ -45,7 +45,7 @@ class TransportEventType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName OccurrenceDate
-	 * @var OccurrenceDate
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\OccurrenceDate
 	 */
 	public $OccurrenceDate;
 	/**
@@ -62,7 +62,7 @@ class TransportEventType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName OccurrenceTime
-	 * @var OccurrenceTime
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\OccurrenceTime
 	 */
 	public $OccurrenceTime;
 	/**
@@ -79,7 +79,7 @@ class TransportEventType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName TransportEventTypeCode
-	 * @var TransportEventTypeCode
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\TransportEventTypeCode
 	 */
 	public $TransportEventTypeCode;
 	/**
@@ -96,7 +96,7 @@ class TransportEventType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName Description
-	 * @var Description
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\Description
 	 */
 	public $Description;
 	/**
@@ -114,7 +114,7 @@ class TransportEventType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName CompletionIndicator
-	 * @var CompletionIndicator
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\CompletionIndicator
 	 */
 	public $CompletionIndicator;
 	/**
@@ -127,7 +127,6 @@ class TransportEventType
 	 * @PropertyTerm Shipment
 	 * @AssociatedObjectClass Shipment
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ReportedShipment
@@ -144,7 +143,6 @@ class TransportEventType
 	 * @PropertyTerm Status
 	 * @AssociatedObjectClass Status
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName CurrentStatus
@@ -160,7 +158,6 @@ class TransportEventType
 	 * @PropertyTerm Contact
 	 * @AssociatedObjectClass Contact
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName Contact

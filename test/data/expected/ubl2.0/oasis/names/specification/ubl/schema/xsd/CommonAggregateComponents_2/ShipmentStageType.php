@@ -29,7 +29,7 @@ class ShipmentStageType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ID
-	 * @var ID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ID
 	 */
 	public $ID;
 	/**
@@ -46,7 +46,7 @@ class ShipmentStageType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName TransportModeCode
-	 * @var TransportModeCode
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\TransportModeCode
 	 */
 	public $TransportModeCode;
 	/**
@@ -63,7 +63,7 @@ class ShipmentStageType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName TransportMeansTypeCode
-	 * @var TransportMeansTypeCode
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\TransportMeansTypeCode
 	 */
 	public $TransportMeansTypeCode;
 	/**
@@ -81,7 +81,7 @@ class ShipmentStageType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName TransitDirectionCode
-	 * @var TransitDirectionCode
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\TransitDirectionCode
 	 */
 	public $TransitDirectionCode;
 	/**
@@ -100,7 +100,7 @@ class ShipmentStageType
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName PreCarriageIndicator
-	 * @var PreCarriageIndicator
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\PreCarriageIndicator
 	 */
 	public $PreCarriageIndicator;
 	/**
@@ -119,7 +119,7 @@ class ShipmentStageType
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName OnCarriageIndicator
-	 * @var OnCarriageIndicator
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\OnCarriageIndicator
 	 */
 	public $OnCarriageIndicator;
 	/**
@@ -132,7 +132,6 @@ class ShipmentStageType
 	 * @PropertyTerm Period
 	 * @AssociatedObjectClass Period
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName TransitPeriod
@@ -149,7 +148,6 @@ class ShipmentStageType
 	 * @PropertyTerm Party
 	 * @AssociatedObjectClass Party
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName CarrierParty
@@ -165,7 +163,6 @@ class ShipmentStageType
 	 * @PropertyTerm Transport Means
 	 * @AssociatedObjectClass Transport Means
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName TransportMeans
@@ -182,7 +179,6 @@ class ShipmentStageType
 	 * @PropertyTerm Location
 	 * @AssociatedObjectClass Location
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName LoadingPortLocation
@@ -199,7 +195,6 @@ class ShipmentStageType
 	 * @PropertyTerm Location
 	 * @AssociatedObjectClass Location
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName UnloadingPortLocation
@@ -216,7 +211,6 @@ class ShipmentStageType
 	 * @PropertyTerm Location
 	 * @AssociatedObjectClass Location
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName TransshipPortLocation

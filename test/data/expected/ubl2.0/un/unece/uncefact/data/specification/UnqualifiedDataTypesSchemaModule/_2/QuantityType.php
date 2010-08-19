@@ -33,9 +33,6 @@ class QuantityType
 	 * @PrimitiveType string
 	 * @BuiltinType normalizedString
 	 * @xmlType attribute
-	 * @xmlNamespace 
-	 * @xmlMinOccurs 
-	 * @xmlMaxOccurs 
 	 * @xmlName unitCode
 	 * @var clm66411:UnitCodeContentType
 	 */

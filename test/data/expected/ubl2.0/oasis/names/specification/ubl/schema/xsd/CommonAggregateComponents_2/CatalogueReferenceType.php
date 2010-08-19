@@ -28,7 +28,7 @@ class CatalogueReferenceType
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName ID
-	 * @var ID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ID
 	 */
 	public $ID;
 	/**
@@ -45,7 +45,7 @@ class CatalogueReferenceType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName UUID
-	 * @var UUID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\UUID
 	 */
 	public $UUID;
 	/**
@@ -62,7 +62,7 @@ class CatalogueReferenceType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName IssueDate
-	 * @var IssueDate
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\IssueDate
 	 */
 	public $IssueDate;
 	/**
@@ -79,7 +79,7 @@ class CatalogueReferenceType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName IssueTime
-	 * @var IssueTime
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\IssueTime
 	 */
 	public $IssueTime;
 	/**
@@ -96,7 +96,7 @@ class CatalogueReferenceType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName RevisionDate
-	 * @var RevisionDate
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\RevisionDate
 	 */
 	public $RevisionDate;
 	/**
@@ -113,7 +113,7 @@ class CatalogueReferenceType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName RevisionTime
-	 * @var RevisionTime
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\RevisionTime
 	 */
 	public $RevisionTime;
 	/**
@@ -130,7 +130,7 @@ class CatalogueReferenceType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName Note
-	 * @var Note
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\Note
 	 */
 	public $Note;
 	/**
@@ -148,7 +148,7 @@ class CatalogueReferenceType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName Description
-	 * @var Description
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\Description
 	 */
 	public $Description;
 	/**
@@ -166,7 +166,7 @@ class CatalogueReferenceType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName VersionID
-	 * @var VersionID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\VersionID
 	 */
 	public $VersionID;
 	/**
@@ -185,7 +185,7 @@ class CatalogueReferenceType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName PreviousVersionID
-	 * @var PreviousVersionID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\PreviousVersionID
 	 */
 	public $PreviousVersionID;
 

@@ -28,7 +28,7 @@ class ResponseType
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName ReferenceID
-	 * @var ReferenceID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ReferenceID
 	 */
 	public $ReferenceID;
 	/**
@@ -45,7 +45,7 @@ class ResponseType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ResponseCode
-	 * @var ResponseCode
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ResponseCode
 	 */
 	public $ResponseCode;
 	/**
@@ -62,7 +62,7 @@ class ResponseType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName Description
-	 * @var Description
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\Description
 	 */
 	public $Description;
 

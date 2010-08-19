@@ -29,7 +29,7 @@ class ItemIdentificationType
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName ID
-	 * @var ID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ID
 	 */
 	public $ID;
 	/**
@@ -47,7 +47,7 @@ class ItemIdentificationType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ExtendedID
-	 * @var ExtendedID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ExtendedID
 	 */
 	public $ExtendedID;
 	/**
@@ -59,7 +59,6 @@ class ItemIdentificationType
 	 * @PropertyTerm Physical Attribute
 	 * @AssociatedObjectClass Physical Attribute
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName PhysicalAttribute
@@ -76,7 +75,6 @@ class ItemIdentificationType
 	 * @PropertyTerm Dimension
 	 * @AssociatedObjectClass Dimension
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName MeasurementDimension
@@ -93,7 +91,6 @@ class ItemIdentificationType
 	 * @PropertyTerm Party
 	 * @AssociatedObjectClass Party
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName IssuerParty

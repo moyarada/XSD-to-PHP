@@ -29,7 +29,7 @@ class ContactType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ID
-	 * @var ID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ID
 	 */
 	public $ID;
 	/**
@@ -47,7 +47,7 @@ class ContactType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName Name
-	 * @var Name
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\Name
 	 */
 	public $Name;
 	/**
@@ -64,7 +64,7 @@ class ContactType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName Telephone
-	 * @var Telephone
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\Telephone
 	 */
 	public $Telephone;
 	/**
@@ -81,7 +81,7 @@ class ContactType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName Telefax
-	 * @var Telefax
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\Telefax
 	 */
 	public $Telefax;
 	/**
@@ -99,7 +99,7 @@ class ContactType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ElectronicMail
-	 * @var ElectronicMail
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ElectronicMail
 	 */
 	public $ElectronicMail;
 	/**
@@ -116,7 +116,7 @@ class ContactType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName Note
-	 * @var Note
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\Note
 	 */
 	public $Note;
 	/**
@@ -129,7 +129,6 @@ class ContactType
 	 * @PropertyTerm Communication
 	 * @AssociatedObjectClass Communication
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName OtherCommunication

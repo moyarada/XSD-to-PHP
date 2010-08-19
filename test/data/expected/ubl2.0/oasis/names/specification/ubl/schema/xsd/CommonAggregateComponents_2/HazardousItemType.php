@@ -29,7 +29,7 @@ class HazardousItemType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ID
-	 * @var ID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ID
 	 */
 	public $ID;
 	/**
@@ -47,7 +47,7 @@ class HazardousItemType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName PlacardNotation
-	 * @var PlacardNotation
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\PlacardNotation
 	 */
 	public $PlacardNotation;
 	/**
@@ -65,7 +65,7 @@ class HazardousItemType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName PlacardEndorsement
-	 * @var PlacardEndorsement
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\PlacardEndorsement
 	 */
 	public $PlacardEndorsement;
 	/**
@@ -84,7 +84,7 @@ class HazardousItemType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName AdditionalInformation
-	 * @var AdditionalInformation
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\AdditionalInformation
 	 */
 	public $AdditionalInformation;
 	/**
@@ -102,7 +102,7 @@ class HazardousItemType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName UNDGCode
-	 * @var UNDGCode
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\UNDGCode
 	 */
 	public $UNDGCode;
 	/**
@@ -120,7 +120,7 @@ class HazardousItemType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName EmergencyProceduresCode
-	 * @var EmergencyProceduresCode
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\EmergencyProceduresCode
 	 */
 	public $EmergencyProceduresCode;
 	/**
@@ -138,7 +138,7 @@ class HazardousItemType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName MedicalFirstAidGuideCode
-	 * @var MedicalFirstAidGuideCode
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\MedicalFirstAidGuideCode
 	 */
 	public $MedicalFirstAidGuideCode;
 	/**
@@ -157,7 +157,7 @@ class HazardousItemType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName TechnicalName
-	 * @var TechnicalName
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\TechnicalName
 	 */
 	public $TechnicalName;
 	/**
@@ -174,7 +174,7 @@ class HazardousItemType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName CategoryName
-	 * @var CategoryName
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\CategoryName
 	 */
 	public $CategoryName;
 	/**
@@ -192,7 +192,7 @@ class HazardousItemType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName HazardousCategoryCode
-	 * @var HazardousCategoryCode
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\HazardousCategoryCode
 	 */
 	public $HazardousCategoryCode;
 	/**
@@ -211,7 +211,7 @@ class HazardousItemType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName UpperOrangeHazardPlacardID
-	 * @var UpperOrangeHazardPlacardID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\UpperOrangeHazardPlacardID
 	 */
 	public $UpperOrangeHazardPlacardID;
 	/**
@@ -230,7 +230,7 @@ class HazardousItemType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName LowerOrangeHazardPlacardID
-	 * @var LowerOrangeHazardPlacardID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\LowerOrangeHazardPlacardID
 	 */
 	public $LowerOrangeHazardPlacardID;
 	/**
@@ -248,7 +248,7 @@ class HazardousItemType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName MarkingID
-	 * @var MarkingID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\MarkingID
 	 */
 	public $MarkingID;
 	/**
@@ -266,7 +266,7 @@ class HazardousItemType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName HazardClassID
-	 * @var HazardClassID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\HazardClassID
 	 */
 	public $HazardClassID;
 	/**
@@ -284,7 +284,7 @@ class HazardousItemType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName NetWeightMeasure
-	 * @var NetWeightMeasure
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\NetWeightMeasure
 	 */
 	public $NetWeightMeasure;
 	/**
@@ -302,7 +302,7 @@ class HazardousItemType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName NetVolumeMeasure
-	 * @var NetVolumeMeasure
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\NetVolumeMeasure
 	 */
 	public $NetVolumeMeasure;
 	/**
@@ -319,7 +319,7 @@ class HazardousItemType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName Quantity
-	 * @var Quantity
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\Quantity
 	 */
 	public $Quantity;
 	/**
@@ -332,7 +332,6 @@ class HazardousItemType
 	 * @PropertyTerm Party
 	 * @AssociatedObjectClass Party
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ContactParty
@@ -348,7 +347,6 @@ class HazardousItemType
 	 * @PropertyTerm Secondary Hazard
 	 * @AssociatedObjectClass Secondary Hazard
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName SecondaryHazard
@@ -364,7 +362,6 @@ class HazardousItemType
 	 * @PropertyTerm Hazardous Goods Transit
 	 * @AssociatedObjectClass Hazardous Goods Transit
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName HazardousGoodsTransit
@@ -381,7 +378,6 @@ class HazardousItemType
 	 * @PropertyTerm Temperature
 	 * @AssociatedObjectClass Temperature
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName EmergencyTemperature
@@ -398,7 +394,6 @@ class HazardousItemType
 	 * @PropertyTerm Temperature
 	 * @AssociatedObjectClass Temperature
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName FlashpointTemperature
@@ -415,7 +410,6 @@ class HazardousItemType
 	 * @PropertyTerm Temperature
 	 * @AssociatedObjectClass Temperature
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName AdditionalTemperature

@@ -30,7 +30,7 @@ class PartyLegalEntityType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName RegistrationName
-	 * @var RegistrationName
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\RegistrationName
 	 */
 	public $RegistrationName;
 	/**
@@ -49,7 +49,7 @@ class PartyLegalEntityType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName CompanyID
-	 * @var CompanyID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\CompanyID
 	 */
 	public $CompanyID;
 	/**
@@ -62,7 +62,6 @@ class PartyLegalEntityType
 	 * @PropertyTerm Address
 	 * @AssociatedObjectClass Address
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName RegistrationAddress
@@ -78,7 +77,6 @@ class PartyLegalEntityType
 	 * @PropertyTerm Corporate Registration Scheme
 	 * @AssociatedObjectClass Corporate Registration Scheme
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName CorporateRegistrationScheme

@@ -29,7 +29,7 @@ class DeliveryTermsType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ID
-	 * @var ID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ID
 	 */
 	public $ID;
 	/**
@@ -47,7 +47,7 @@ class DeliveryTermsType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName SpecialTerms
-	 * @var SpecialTerms
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\SpecialTerms
 	 */
 	public $SpecialTerms;
 	/**
@@ -64,7 +64,7 @@ class DeliveryTermsType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName LossRiskResponsibilityCode
-	 * @var LossRiskResponsibilityCode
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\LossRiskResponsibilityCode
 	 */
 	public $LossRiskResponsibilityCode;
 	/**
@@ -81,7 +81,7 @@ class DeliveryTermsType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName LossRisk
-	 * @var LossRisk
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\LossRisk
 	 */
 	public $LossRisk;
 	/**
@@ -94,7 +94,6 @@ class DeliveryTermsType
 	 * @PropertyTerm Location
 	 * @AssociatedObjectClass Location
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName DeliveryLocation
@@ -110,7 +109,6 @@ class DeliveryTermsType
 	 * @PropertyTerm Allowance Charge
 	 * @AssociatedObjectClass Allowance Charge
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName AllowanceCharge

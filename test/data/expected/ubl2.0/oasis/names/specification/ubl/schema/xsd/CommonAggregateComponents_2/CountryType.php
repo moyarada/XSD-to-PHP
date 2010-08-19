@@ -28,7 +28,7 @@ class CountryType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName IdentificationCode
-	 * @var IdentificationCode
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\IdentificationCode
 	 */
 	public $IdentificationCode;
 	/**
@@ -46,7 +46,7 @@ class CountryType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName Name
-	 * @var Name
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\Name
 	 */
 	public $Name;
 

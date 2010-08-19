@@ -28,7 +28,7 @@ class StatementLineType
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName ID
-	 * @var ID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ID
 	 */
 	public $ID;
 	/**
@@ -45,7 +45,7 @@ class StatementLineType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName Note
-	 * @var Note
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\Note
 	 */
 	public $Note;
 	/**
@@ -62,7 +62,7 @@ class StatementLineType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName UUID
-	 * @var UUID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\UUID
 	 */
 	public $UUID;
 	/**
@@ -80,7 +80,7 @@ class StatementLineType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName BalanceBroughtForwardIndicator
-	 * @var BalanceBroughtForwardIndicator
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\BalanceBroughtForwardIndicator
 	 */
 	public $BalanceBroughtForwardIndicator;
 	/**
@@ -98,7 +98,7 @@ class StatementLineType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName DebitLineAmount
-	 * @var DebitLineAmount
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\DebitLineAmount
 	 */
 	public $DebitLineAmount;
 	/**
@@ -116,7 +116,7 @@ class StatementLineType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName CreditLineAmount
-	 * @var CreditLineAmount
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\CreditLineAmount
 	 */
 	public $CreditLineAmount;
 	/**
@@ -133,7 +133,7 @@ class StatementLineType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName BalanceAmount
-	 * @var BalanceAmount
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\BalanceAmount
 	 */
 	public $BalanceAmount;
 	/**
@@ -145,7 +145,6 @@ class StatementLineType
 	 * @PropertyTerm Payment Means
 	 * @AssociatedObjectClass Payment Means
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName PaymentMeans
@@ -161,7 +160,6 @@ class StatementLineType
 	 * @PropertyTerm Payment Terms
 	 * @AssociatedObjectClass Payment Terms
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName PaymentTerms
@@ -178,7 +176,6 @@ class StatementLineType
 	 * @PropertyTerm Customer Party
 	 * @AssociatedObjectClass Customer Party
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName BuyerCustomerParty
@@ -195,7 +192,6 @@ class StatementLineType
 	 * @PropertyTerm Supplier Party
 	 * @AssociatedObjectClass Supplier Party
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName SellerSupplierParty
@@ -212,7 +208,6 @@ class StatementLineType
 	 * @PropertyTerm Customer Party
 	 * @AssociatedObjectClass Customer Party
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName OriginatorCustomerParty
@@ -229,7 +224,6 @@ class StatementLineType
 	 * @PropertyTerm Customer Party
 	 * @AssociatedObjectClass Customer Party
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName AccountingCustomerParty
@@ -246,7 +240,6 @@ class StatementLineType
 	 * @PropertyTerm Supplier Party
 	 * @AssociatedObjectClass Supplier Party
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName AccountingSupplierParty
@@ -263,7 +256,6 @@ class StatementLineType
 	 * @PropertyTerm Party
 	 * @AssociatedObjectClass Party
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName PayeeParty
@@ -280,7 +272,6 @@ class StatementLineType
 	 * @PropertyTerm Period
 	 * @AssociatedObjectClass Period
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName InvoicePeriod
@@ -296,7 +287,6 @@ class StatementLineType
 	 * @PropertyTerm Billing Reference
 	 * @AssociatedObjectClass Billing Reference
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName BillingReference
@@ -312,7 +302,6 @@ class StatementLineType
 	 * @PropertyTerm Document Reference
 	 * @AssociatedObjectClass Document Reference
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName DocumentReference
@@ -328,7 +317,6 @@ class StatementLineType
 	 * @PropertyTerm Exchange Rate
 	 * @AssociatedObjectClass Exchange Rate
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ExchangeRate

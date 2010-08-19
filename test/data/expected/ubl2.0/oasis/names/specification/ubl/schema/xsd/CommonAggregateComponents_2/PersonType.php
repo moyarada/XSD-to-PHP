@@ -29,7 +29,7 @@ class PersonType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName FirstName
-	 * @var FirstName
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\FirstName
 	 */
 	public $FirstName;
 	/**
@@ -47,7 +47,7 @@ class PersonType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName FamilyName
-	 * @var FamilyName
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\FamilyName
 	 */
 	public $FamilyName;
 	/**
@@ -64,7 +64,7 @@ class PersonType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName Title
-	 * @var Title
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\Title
 	 */
 	public $Title;
 	/**
@@ -82,7 +82,7 @@ class PersonType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName MiddleName
-	 * @var MiddleName
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\MiddleName
 	 */
 	public $MiddleName;
 	/**
@@ -99,7 +99,7 @@ class PersonType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName NameSuffix
-	 * @var NameSuffix
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\NameSuffix
 	 */
 	public $NameSuffix;
 	/**
@@ -116,7 +116,7 @@ class PersonType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName JobTitle
-	 * @var JobTitle
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\JobTitle
 	 */
 	public $JobTitle;
 	/**
@@ -134,7 +134,7 @@ class PersonType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName OrganizationDepartment
-	 * @var OrganizationDepartment
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\OrganizationDepartment
 	 */
 	public $OrganizationDepartment;
 

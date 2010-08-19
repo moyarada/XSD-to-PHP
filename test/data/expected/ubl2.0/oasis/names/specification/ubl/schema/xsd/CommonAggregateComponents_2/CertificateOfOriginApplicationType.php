@@ -28,7 +28,7 @@ class CertificateOfOriginApplicationType
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName ReferenceID
-	 * @var ReferenceID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ReferenceID
 	 */
 	public $ReferenceID;
 	/**
@@ -45,7 +45,7 @@ class CertificateOfOriginApplicationType
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName CertificateType
-	 * @var CertificateType
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\CertificateType
 	 */
 	public $CertificateType;
 	/**
@@ -62,7 +62,7 @@ class CertificateOfOriginApplicationType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ApplicationStatusCode
-	 * @var ApplicationStatusCode
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ApplicationStatusCode
 	 */
 	public $ApplicationStatusCode;
 	/**
@@ -80,7 +80,7 @@ class CertificateOfOriginApplicationType
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName OriginalJobID
-	 * @var OriginalJobID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\OriginalJobID
 	 */
 	public $OriginalJobID;
 	/**
@@ -98,7 +98,7 @@ class CertificateOfOriginApplicationType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName PreviousJobID
-	 * @var PreviousJobID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\PreviousJobID
 	 */
 	public $PreviousJobID;
 	/**
@@ -115,7 +115,7 @@ class CertificateOfOriginApplicationType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName Remarks
-	 * @var Remarks
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\Remarks
 	 */
 	public $Remarks;
 	/**
@@ -127,7 +127,6 @@ class CertificateOfOriginApplicationType
 	 * @PropertyTerm Shipment
 	 * @AssociatedObjectClass Shipment
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName Shipment
@@ -143,7 +142,6 @@ class CertificateOfOriginApplicationType
 	 * @PropertyTerm Endorser Party
 	 * @AssociatedObjectClass Endorser Party
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName EndorserParty
@@ -160,7 +158,6 @@ class CertificateOfOriginApplicationType
 	 * @PropertyTerm Party
 	 * @AssociatedObjectClass Party
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName PreparationParty
@@ -177,7 +174,6 @@ class CertificateOfOriginApplicationType
 	 * @PropertyTerm Party
 	 * @AssociatedObjectClass Party
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName IssuerParty
@@ -194,7 +190,6 @@ class CertificateOfOriginApplicationType
 	 * @PropertyTerm Country
 	 * @AssociatedObjectClass Country
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName IssuingCountry
@@ -210,7 +205,6 @@ class CertificateOfOriginApplicationType
 	 * @PropertyTerm Document Distribution
 	 * @AssociatedObjectClass Document Distribution
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName DocumentDistribution
@@ -227,7 +221,6 @@ class CertificateOfOriginApplicationType
 	 * @PropertyTerm Document Reference
 	 * @AssociatedObjectClass Document Reference
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName SupportingDocumentReference
@@ -243,7 +236,6 @@ class CertificateOfOriginApplicationType
 	 * @PropertyTerm Signature
 	 * @AssociatedObjectClass Signature
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName Signature

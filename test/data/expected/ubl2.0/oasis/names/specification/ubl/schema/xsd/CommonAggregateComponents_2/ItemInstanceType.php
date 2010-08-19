@@ -29,7 +29,7 @@ class ItemInstanceType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ProductTraceID
-	 * @var ProductTraceID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ProductTraceID
 	 */
 	public $ProductTraceID;
 	/**
@@ -46,7 +46,7 @@ class ItemInstanceType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ManufactureDate
-	 * @var ManufactureDate
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ManufactureDate
 	 */
 	public $ManufactureDate;
 	/**
@@ -63,7 +63,7 @@ class ItemInstanceType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ManufactureTime
-	 * @var ManufactureTime
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ManufactureTime
 	 */
 	public $ManufactureTime;
 	/**
@@ -81,7 +81,7 @@ class ItemInstanceType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName RegistrationID
-	 * @var RegistrationID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\RegistrationID
 	 */
 	public $RegistrationID;
 	/**
@@ -99,7 +99,7 @@ class ItemInstanceType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName SerialID
-	 * @var SerialID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\SerialID
 	 */
 	public $SerialID;
 	/**
@@ -112,7 +112,6 @@ class ItemInstanceType
 	 * @PropertyTerm Item Property
 	 * @AssociatedObjectClass Item Property
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName AdditionalItemProperty
@@ -128,7 +127,6 @@ class ItemInstanceType
 	 * @PropertyTerm Lot Identification
 	 * @AssociatedObjectClass Lot Identification
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName LotIdentification

@@ -33,9 +33,6 @@ class CodeType
 	 * @RepresentationTermName Identifier
 	 * @PrimitiveType string
 	 * @xmlType attribute
-	 * @xmlNamespace 
-	 * @xmlMinOccurs 
-	 * @xmlMaxOccurs 
 	 * @xmlName listID
 	 * @var xsd:normalizedString
 	 */
@@ -51,9 +48,6 @@ class CodeType
 	 * @PrimitiveType string
 	 * @UsageRule Defaults to the UN/EDIFACT data element 3055 code list.
 	 * @xmlType attribute
-	 * @xmlNamespace 
-	 * @xmlMinOccurs 
-	 * @xmlMaxOccurs 
 	 * @xmlName listAgencyID
 	 * @var xsd:normalizedString
 	 */
@@ -68,9 +62,6 @@ class CodeType
 	 * @RepresentationTermName Text
 	 * @PrimitiveType string
 	 * @xmlType attribute
-	 * @xmlNamespace 
-	 * @xmlMinOccurs 
-	 * @xmlMaxOccurs 
 	 * @xmlName listAgencyName
 	 * @var xsd:string
 	 */
@@ -85,9 +76,6 @@ class CodeType
 	 * @RepresentationTermName Text
 	 * @PrimitiveType string
 	 * @xmlType attribute
-	 * @xmlNamespace 
-	 * @xmlMinOccurs 
-	 * @xmlMaxOccurs 
 	 * @xmlName listName
 	 * @var xsd:string
 	 */
@@ -103,9 +91,6 @@ class CodeType
 	 * @PrimitiveType string
 	 * @BuiltinType string
 	 * @xmlType attribute
-	 * @xmlNamespace 
-	 * @xmlMinOccurs 
-	 * @xmlMaxOccurs 
 	 * @xmlName listVersionID
 	 * @var xsd:normalizedString
 	 */
@@ -121,9 +106,6 @@ class CodeType
 	 * @PrimitiveType string
 	 * @BuiltinType string
 	 * @xmlType attribute
-	 * @xmlNamespace 
-	 * @xmlMinOccurs 
-	 * @xmlMaxOccurs 
 	 * @xmlName name
 	 * @var xsd:string
 	 */
@@ -139,9 +121,6 @@ class CodeType
 	 * @PrimitiveType string
 	 * @BuiltinType language
 	 * @xmlType attribute
-	 * @xmlNamespace 
-	 * @xmlMinOccurs 
-	 * @xmlMaxOccurs 
 	 * @xmlName languageID
 	 * @var xsd:language
 	 */
@@ -157,9 +136,6 @@ class CodeType
 	 * @PrimitiveType string
 	 * @BuiltinType anyURI
 	 * @xmlType attribute
-	 * @xmlNamespace 
-	 * @xmlMinOccurs 
-	 * @xmlMaxOccurs 
 	 * @xmlName listURI
 	 * @var xsd:anyURI
 	 */
@@ -175,9 +151,6 @@ class CodeType
 	 * @PrimitiveType string
 	 * @BuiltinType anyURI
 	 * @xmlType attribute
-	 * @xmlNamespace 
-	 * @xmlMinOccurs 
-	 * @xmlMaxOccurs 
 	 * @xmlName listSchemeURI
 	 * @var xsd:anyURI
 	 */

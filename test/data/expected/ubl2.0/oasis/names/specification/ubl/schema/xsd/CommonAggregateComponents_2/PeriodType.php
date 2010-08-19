@@ -28,7 +28,7 @@ class PeriodType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName StartDate
-	 * @var StartDate
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\StartDate
 	 */
 	public $StartDate;
 	/**
@@ -45,7 +45,7 @@ class PeriodType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName StartTime
-	 * @var StartTime
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\StartTime
 	 */
 	public $StartTime;
 	/**
@@ -62,7 +62,7 @@ class PeriodType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName EndDate
-	 * @var EndDate
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\EndDate
 	 */
 	public $EndDate;
 	/**
@@ -79,7 +79,7 @@ class PeriodType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName EndTime
-	 * @var EndTime
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\EndTime
 	 */
 	public $EndTime;
 	/**
@@ -96,7 +96,7 @@ class PeriodType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName DurationMeasure
-	 * @var DurationMeasure
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\DurationMeasure
 	 */
 	public $DurationMeasure;
 	/**
@@ -113,7 +113,7 @@ class PeriodType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName DescriptionCode
-	 * @var DescriptionCode
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\DescriptionCode
 	 */
 	public $DescriptionCode;
 	/**
@@ -130,7 +130,7 @@ class PeriodType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName Description
-	 * @var Description
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\Description
 	 */
 	public $Description;
 

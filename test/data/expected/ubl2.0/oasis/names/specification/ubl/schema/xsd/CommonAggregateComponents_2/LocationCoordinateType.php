@@ -28,7 +28,7 @@ class LocationCoordinateType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName CoordinateSystemCode
-	 * @var CoordinateSystemCode
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\CoordinateSystemCode
 	 */
 	public $CoordinateSystemCode;
 	/**
@@ -46,7 +46,7 @@ class LocationCoordinateType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName LatitudeDegreesMeasure
-	 * @var LatitudeDegreesMeasure
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\LatitudeDegreesMeasure
 	 */
 	public $LatitudeDegreesMeasure;
 	/**
@@ -64,7 +64,7 @@ class LocationCoordinateType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName LatitudeMinutesMeasure
-	 * @var LatitudeMinutesMeasure
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\LatitudeMinutesMeasure
 	 */
 	public $LatitudeMinutesMeasure;
 	/**
@@ -81,7 +81,7 @@ class LocationCoordinateType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName LatitudeDirectionCode
-	 * @var LatitudeDirectionCode
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\LatitudeDirectionCode
 	 */
 	public $LatitudeDirectionCode;
 	/**
@@ -99,7 +99,7 @@ class LocationCoordinateType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName LongitudeDegreesMeasure
-	 * @var LongitudeDegreesMeasure
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\LongitudeDegreesMeasure
 	 */
 	public $LongitudeDegreesMeasure;
 	/**
@@ -117,7 +117,7 @@ class LocationCoordinateType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName LongitudeMinutesMeasure
-	 * @var LongitudeMinutesMeasure
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\LongitudeMinutesMeasure
 	 */
 	public $LongitudeMinutesMeasure;
 	/**
@@ -134,7 +134,7 @@ class LocationCoordinateType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName LongitudeDirectionCode
-	 * @var LongitudeDirectionCode
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\LongitudeDirectionCode
 	 */
 	public $LongitudeDirectionCode;
 

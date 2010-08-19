@@ -23,7 +23,6 @@ class DocumentResponseType
 	 * @PropertyTerm Response
 	 * @AssociatedObjectClass Response
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName Response
@@ -39,7 +38,6 @@ class DocumentResponseType
 	 * @PropertyTerm Document Reference
 	 * @AssociatedObjectClass Document Reference
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName DocumentReference
@@ -56,7 +54,6 @@ class DocumentResponseType
 	 * @PropertyTerm Party
 	 * @AssociatedObjectClass Party
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName IssuerParty
@@ -73,7 +70,6 @@ class DocumentResponseType
 	 * @PropertyTerm Party
 	 * @AssociatedObjectClass Party
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName RecipientParty
@@ -89,7 +85,6 @@ class DocumentResponseType
 	 * @PropertyTerm Line Response
 	 * @AssociatedObjectClass Line Response
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName LineResponse

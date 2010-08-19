@@ -11572,18 +11572,18 @@ Thus, the column "Preference Criterion" will indicate either A, B, C,...</doc>
     <class debug="1.2-2" name="ContactPersonType" simpleType="" namespace="urn:dk:nordsign:schema:ContactPerson">
 		
 
-			<property debug="nameElement" xmlType="element" name="ID" minOccurs="1" maxOccurs="1"/>
-			<property debug="nameElement" xmlType="element" name="Name" minOccurs="1" maxOccurs="1"/>
-			<property debug="nameElement" xmlType="element" name="Telephone" minOccurs="0" maxOccurs="unbounded"/>
-			<property debug="nameElement" xmlType="element" name="ElectronicMail" minOccurs="0" maxOccurs="unbounded"/>
-			<property debug="nameElement" xmlType="element" name="Username" minOccurs="1" maxOccurs="1"/>
-			<property debug="nameElement" xmlType="element" name="Password" minOccurs="1" maxOccurs="1"/>
-			<property debug="nameElement" xmlType="element" name="Created" minOccurs="1" maxOccurs="1"/>
-			<property debug="nameElement" xmlType="element" name="Role" minOccurs="0" maxOccurs="1"/>
-			<property debug="nameElement" xmlType="element" name="Title" minOccurs="0" maxOccurs="1"/>
-			<property debug="nameElement" xmlType="element" name="Company_No" minOccurs="0" maxOccurs="1"/>
-			<property debug="nameElement" xmlType="element" name="BillingAddress" minOccurs="1" maxOccurs="1"/>
-			<property debug="nameElement" xmlType="element" name="ShippingAddress" minOccurs="0" maxOccurs="unbounded"/>
+			<property debug="nameElement-TypeColon" xmlType="element" name="ID" type="IDType" namespace="cbc" minOccurs="1" maxOccurs="1"/>
+			<property debug="nameElement-TypeColon" xmlType="element" name="Name" type="NameType" namespace="cbc" minOccurs="1" maxOccurs="1"/>
+			<property debug="nameElement-TypeColon" xmlType="element" name="Telephone" type="TelephoneType" namespace="cbc" minOccurs="0" maxOccurs="unbounded"/>
+			<property debug="nameElement-TypeColon" xmlType="element" name="ElectronicMail" type="ElectronicMailType" namespace="cbc" minOccurs="0" maxOccurs="unbounded"/>
+			<property debug="nameElement-TypeColon" xmlType="element" name="Username" type="ElectronicMailType" namespace="cbc" minOccurs="1" maxOccurs="1"/>
+			<property debug="nameElement-TypeColon" xmlType="element" name="Password" type="TextType" namespace="cbc" minOccurs="1" maxOccurs="1"/>
+			<property debug="nameElement-TypeColon" xmlType="element" name="Created" type="DateType" namespace="cbc" minOccurs="1" maxOccurs="1"/>
+			<property debug="nameElement-TypeColon" xmlType="element" name="Role" type="integer" namespace="xsd" minOccurs="0" maxOccurs="1"/>
+			<property debug="nameElement-TypeColon" xmlType="element" name="Title" type="TitleType" namespace="cbc" minOccurs="0" maxOccurs="1"/>
+			<property debug="nameElement-TypeColon" xmlType="element" name="Company_No" type="CompanyIDType" namespace="cbc" minOccurs="0" maxOccurs="1"/>
+			<property debug="nameElement-TypeColon" xmlType="element" name="BillingAddress" type="AddressType" namespace="cac" minOccurs="1" maxOccurs="1"/>
+			<property debug="nameElement-TypeColon" xmlType="element" name="ShippingAddress" type="AddressType" namespace="cac" minOccurs="0" maxOccurs="unbounded"/>
 		
 	</class>
     <class debug="1.3-1" name="UnitCodeContentType" type="token" namespace="urn:un:unece:uncefact:codelist:specification:66411:2001"/>

@@ -23,7 +23,6 @@ class LineResponseType
 	 * @PropertyTerm Line Reference
 	 * @AssociatedObjectClass Line Reference
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName LineReference
@@ -39,7 +38,6 @@ class LineResponseType
 	 * @PropertyTerm Response
 	 * @AssociatedObjectClass Response
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName Response

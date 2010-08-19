@@ -24,7 +24,6 @@ class PricingReferenceType
 	 * @PropertyTerm Item Location Quantity
 	 * @AssociatedObjectClass Item Location Quantity
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName OriginalItemLocationQuantity
@@ -41,7 +40,6 @@ class PricingReferenceType
 	 * @PropertyTerm Price
 	 * @AssociatedObjectClass Price
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName AlternativeConditionPrice

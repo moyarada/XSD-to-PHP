@@ -29,7 +29,7 @@ class ExchangeRateType
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName SourceCurrencyCode
-	 * @var SourceCurrencyCode
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\SourceCurrencyCode
 	 */
 	public $SourceCurrencyCode;
 	/**
@@ -47,7 +47,7 @@ class ExchangeRateType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName SourceCurrencyBaseRate
-	 * @var SourceCurrencyBaseRate
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\SourceCurrencyBaseRate
 	 */
 	public $SourceCurrencyBaseRate;
 	/**
@@ -65,7 +65,7 @@ class ExchangeRateType
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName TargetCurrencyCode
-	 * @var TargetCurrencyCode
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\TargetCurrencyCode
 	 */
 	public $TargetCurrencyCode;
 	/**
@@ -83,7 +83,7 @@ class ExchangeRateType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName TargetCurrencyBaseRate
-	 * @var TargetCurrencyBaseRate
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\TargetCurrencyBaseRate
 	 */
 	public $TargetCurrencyBaseRate;
 	/**
@@ -100,7 +100,7 @@ class ExchangeRateType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ExchangeMarketID
-	 * @var ExchangeMarketID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ExchangeMarketID
 	 */
 	public $ExchangeMarketID;
 	/**
@@ -117,7 +117,7 @@ class ExchangeRateType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName CalculationRate
-	 * @var CalculationRate
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\CalculationRate
 	 */
 	public $CalculationRate;
 	/**
@@ -134,7 +134,7 @@ class ExchangeRateType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName MathematicOperatorCode
-	 * @var MathematicOperatorCode
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\MathematicOperatorCode
 	 */
 	public $MathematicOperatorCode;
 	/**
@@ -151,7 +151,7 @@ class ExchangeRateType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName Date
-	 * @var Date
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\Date
 	 */
 	public $Date;
 	/**
@@ -164,7 +164,6 @@ class ExchangeRateType
 	 * @PropertyTerm Contract
 	 * @AssociatedObjectClass Contract
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ForeignExchangeContract

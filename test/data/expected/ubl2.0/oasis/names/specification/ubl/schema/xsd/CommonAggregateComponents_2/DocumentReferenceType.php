@@ -29,7 +29,7 @@ class DocumentReferenceType
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName ID
-	 * @var ID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ID
 	 */
 	public $ID;
 	/**
@@ -47,7 +47,7 @@ class DocumentReferenceType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName CopyIndicator
-	 * @var CopyIndicator
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\CopyIndicator
 	 */
 	public $CopyIndicator;
 	/**
@@ -64,7 +64,7 @@ class DocumentReferenceType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName UUID
-	 * @var UUID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\UUID
 	 */
 	public $UUID;
 	/**
@@ -81,7 +81,7 @@ class DocumentReferenceType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName IssueDate
-	 * @var IssueDate
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\IssueDate
 	 */
 	public $IssueDate;
 	/**
@@ -98,7 +98,7 @@ class DocumentReferenceType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName DocumentTypeCode
-	 * @var DocumentTypeCode
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\DocumentTypeCode
 	 */
 	public $DocumentTypeCode;
 	/**
@@ -115,7 +115,7 @@ class DocumentReferenceType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName DocumentType
-	 * @var DocumentType
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\DocumentType
 	 */
 	public $DocumentType;
 	/**
@@ -132,7 +132,7 @@ class DocumentReferenceType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName XPath
-	 * @var XPath
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\XPath
 	 */
 	public $XPath;
 	/**
@@ -144,7 +144,6 @@ class DocumentReferenceType
 	 * @PropertyTerm Attachment
 	 * @AssociatedObjectClass Attachment
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName Attachment

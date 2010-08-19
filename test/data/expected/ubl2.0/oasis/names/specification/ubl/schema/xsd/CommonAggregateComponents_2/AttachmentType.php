@@ -29,7 +29,7 @@ class AttachmentType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName EmbeddedDocumentBinaryObject
-	 * @var EmbeddedDocumentBinaryObject
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\EmbeddedDocumentBinaryObject
 	 */
 	public $EmbeddedDocumentBinaryObject;
 	/**
@@ -41,7 +41,6 @@ class AttachmentType
 	 * @PropertyTerm External Reference
 	 * @AssociatedObjectClass External Reference
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ExternalReference

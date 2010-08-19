@@ -29,7 +29,7 @@ class AddressType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ID
-	 * @var ID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ID
 	 */
 	public $ID;
 	/**
@@ -46,7 +46,7 @@ class AddressType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName AddressTypeCode
-	 * @var AddressTypeCode
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\AddressTypeCode
 	 */
 	public $AddressTypeCode;
 	/**
@@ -63,7 +63,7 @@ class AddressType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName AddressFormatCode
-	 * @var AddressFormatCode
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\AddressFormatCode
 	 */
 	public $AddressFormatCode;
 	/**
@@ -82,7 +82,7 @@ class AddressType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName Postbox
-	 * @var Postbox
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\Postbox
 	 */
 	public $Postbox;
 	/**
@@ -101,7 +101,7 @@ class AddressType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName Floor
-	 * @var Floor
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\Floor
 	 */
 	public $Floor;
 	/**
@@ -120,7 +120,7 @@ class AddressType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName Room
-	 * @var Room
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\Room
 	 */
 	public $Room;
 	/**
@@ -139,7 +139,7 @@ class AddressType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName StreetName
-	 * @var StreetName
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\StreetName
 	 */
 	public $StreetName;
 	/**
@@ -159,7 +159,7 @@ class AddressType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName AdditionalStreetName
-	 * @var AdditionalStreetName
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\AdditionalStreetName
 	 */
 	public $AdditionalStreetName;
 	/**
@@ -177,7 +177,7 @@ class AddressType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName BlockName
-	 * @var BlockName
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\BlockName
 	 */
 	public $BlockName;
 	/**
@@ -196,7 +196,7 @@ class AddressType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName BuildingName
-	 * @var BuildingName
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\BuildingName
 	 */
 	public $BuildingName;
 	/**
@@ -215,7 +215,7 @@ class AddressType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName BuildingNumber
-	 * @var BuildingNumber
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\BuildingNumber
 	 */
 	public $BuildingNumber;
 	/**
@@ -234,7 +234,7 @@ class AddressType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName InhouseMail
-	 * @var InhouseMail
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\InhouseMail
 	 */
 	public $InhouseMail;
 	/**
@@ -253,7 +253,7 @@ class AddressType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName Department
-	 * @var Department
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\Department
 	 */
 	public $Department;
 	/**
@@ -270,7 +270,7 @@ class AddressType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName MarkAttention
-	 * @var MarkAttention
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\MarkAttention
 	 */
 	public $MarkAttention;
 	/**
@@ -287,7 +287,7 @@ class AddressType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName MarkCare
-	 * @var MarkCare
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\MarkCare
 	 */
 	public $MarkCare;
 	/**
@@ -304,7 +304,7 @@ class AddressType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName PlotIdentification
-	 * @var PlotIdentification
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\PlotIdentification
 	 */
 	public $PlotIdentification;
 	/**
@@ -321,7 +321,7 @@ class AddressType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName CitySubdivisionName
-	 * @var CitySubdivisionName
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\CitySubdivisionName
 	 */
 	public $CitySubdivisionName;
 	/**
@@ -340,7 +340,7 @@ class AddressType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName CityName
-	 * @var CityName
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\CityName
 	 */
 	public $CityName;
 	/**
@@ -360,7 +360,7 @@ class AddressType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName PostalZone
-	 * @var PostalZone
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\PostalZone
 	 */
 	public $PostalZone;
 	/**
@@ -379,7 +379,7 @@ class AddressType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName CountrySubentity
-	 * @var CountrySubentity
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\CountrySubentity
 	 */
 	public $CountrySubentity;
 	/**
@@ -397,7 +397,7 @@ class AddressType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName CountrySubentityCode
-	 * @var CountrySubentityCode
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\CountrySubentityCode
 	 */
 	public $CountrySubentityCode;
 	/**
@@ -416,7 +416,7 @@ class AddressType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName Region
-	 * @var Region
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\Region
 	 */
 	public $Region;
 	/**
@@ -435,7 +435,7 @@ class AddressType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName District
-	 * @var District
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\District
 	 */
 	public $District;
 	/**
@@ -453,7 +453,7 @@ class AddressType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName TimezoneOffset
-	 * @var TimezoneOffset
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\TimezoneOffset
 	 */
 	public $TimezoneOffset;
 	/**
@@ -465,7 +465,6 @@ class AddressType
 	 * @PropertyTerm Address Line
 	 * @AssociatedObjectClass Address Line
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName AddressLine
@@ -481,7 +480,6 @@ class AddressType
 	 * @PropertyTerm Country
 	 * @AssociatedObjectClass Country
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName Country
@@ -497,7 +495,6 @@ class AddressType
 	 * @PropertyTerm Location Coordinate
 	 * @AssociatedObjectClass Location Coordinate
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName LocationCoordinate

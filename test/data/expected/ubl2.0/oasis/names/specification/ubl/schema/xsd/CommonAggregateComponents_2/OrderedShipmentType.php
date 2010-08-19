@@ -23,7 +23,6 @@ class OrderedShipmentType
 	 * @PropertyTerm Shipment
 	 * @AssociatedObjectClass Shipment
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName Shipment
@@ -39,7 +38,6 @@ class OrderedShipmentType
 	 * @PropertyTerm Package
 	 * @AssociatedObjectClass Package
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName Package

@@ -33,9 +33,6 @@ class IdentifierType
 	 * @RepresentationTermName Identifier
 	 * @PrimitiveType string
 	 * @xmlType attribute
-	 * @xmlNamespace 
-	 * @xmlMinOccurs 
-	 * @xmlMaxOccurs 
 	 * @xmlName schemeID
 	 * @var xsd:normalizedString
 	 */
@@ -50,9 +47,6 @@ class IdentifierType
 	 * @RepresentationTermName Text
 	 * @PrimitiveType string
 	 * @xmlType attribute
-	 * @xmlNamespace 
-	 * @xmlMinOccurs 
-	 * @xmlMaxOccurs 
 	 * @xmlName schemeName
 	 * @var xsd:string
 	 */
@@ -68,9 +62,6 @@ class IdentifierType
 	 * @PrimitiveType string
 	 * @UsageRule Defaults to the UN/EDIFACT data element 3055 code list.
 	 * @xmlType attribute
-	 * @xmlNamespace 
-	 * @xmlMinOccurs 
-	 * @xmlMaxOccurs 
 	 * @xmlName schemeAgencyID
 	 * @var xsd:normalizedString
 	 */
@@ -85,9 +76,6 @@ class IdentifierType
 	 * @RepresentationTermName Text
 	 * @PrimitiveType string
 	 * @xmlType attribute
-	 * @xmlNamespace 
-	 * @xmlMinOccurs 
-	 * @xmlMaxOccurs 
 	 * @xmlName schemeAgencyName
 	 * @var xsd:string
 	 */
@@ -103,9 +91,6 @@ class IdentifierType
 	 * @PrimitiveType string
 	 * @BuiltinType normalizedString
 	 * @xmlType attribute
-	 * @xmlNamespace 
-	 * @xmlMinOccurs 
-	 * @xmlMaxOccurs 
 	 * @xmlName schemeVersionID
 	 * @var xsd:normalizedString
 	 */
@@ -121,9 +106,6 @@ class IdentifierType
 	 * @PrimitiveType string
 	 * @BuiltinType anyURI
 	 * @xmlType attribute
-	 * @xmlNamespace 
-	 * @xmlMinOccurs 
-	 * @xmlMaxOccurs 
 	 * @xmlName schemeDataURI
 	 * @var xsd:anyURI
 	 */
@@ -139,9 +121,6 @@ class IdentifierType
 	 * @PrimitiveType string
 	 * @BuiltinType anyURI
 	 * @xmlType attribute
-	 * @xmlNamespace 
-	 * @xmlMinOccurs 
-	 * @xmlMaxOccurs 
 	 * @xmlName schemeURI
 	 * @var xsd:anyURI
 	 */

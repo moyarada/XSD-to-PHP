@@ -28,7 +28,7 @@ class ClassificationSchemeType
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName ID
-	 * @var ID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\ID
 	 */
 	public $ID;
 	/**
@@ -45,7 +45,7 @@ class ClassificationSchemeType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName UUID
-	 * @var UUID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\UUID
 	 */
 	public $UUID;
 	/**
@@ -63,7 +63,7 @@ class ClassificationSchemeType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName LastRevisionDate
-	 * @var LastRevisionDate
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\LastRevisionDate
 	 */
 	public $LastRevisionDate;
 	/**
@@ -81,7 +81,7 @@ class ClassificationSchemeType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName LastRevisionTime
-	 * @var LastRevisionTime
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\LastRevisionTime
 	 */
 	public $LastRevisionTime;
 	/**
@@ -98,7 +98,7 @@ class ClassificationSchemeType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName Note
-	 * @var Note
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\Note
 	 */
 	public $Note;
 	/**
@@ -116,7 +116,7 @@ class ClassificationSchemeType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName Name
-	 * @var Name
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\Name
 	 */
 	public $Name;
 	/**
@@ -134,7 +134,7 @@ class ClassificationSchemeType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName Description
-	 * @var Description
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\Description
 	 */
 	public $Description;
 	/**
@@ -152,7 +152,7 @@ class ClassificationSchemeType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName AgencyID
-	 * @var AgencyID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\AgencyID
 	 */
 	public $AgencyID;
 	/**
@@ -169,7 +169,7 @@ class ClassificationSchemeType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName AgencyName
-	 * @var AgencyName
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\AgencyName
 	 */
 	public $AgencyName;
 	/**
@@ -186,7 +186,7 @@ class ClassificationSchemeType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName VersionID
-	 * @var VersionID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\VersionID
 	 */
 	public $VersionID;
 	/**
@@ -203,7 +203,7 @@ class ClassificationSchemeType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName URI
-	 * @var URI
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\URI
 	 */
 	public $URI;
 	/**
@@ -221,7 +221,7 @@ class ClassificationSchemeType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName SchemeURI
-	 * @var SchemeURI
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\SchemeURI
 	 */
 	public $SchemeURI;
 	/**
@@ -238,7 +238,7 @@ class ClassificationSchemeType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName LanguageID
-	 * @var LanguageID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\LanguageID
 	 */
 	public $LanguageID;
 	/**
@@ -250,7 +250,6 @@ class ClassificationSchemeType
 	 * @PropertyTerm Classification Category
 	 * @AssociatedObjectClass Classification Category
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName ClassificationCategory

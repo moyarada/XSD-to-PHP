@@ -29,7 +29,7 @@ class TradingTermsType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName Information
-	 * @var Information
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\Information
 	 */
 	public $Information;
 	/**
@@ -47,7 +47,7 @@ class TradingTermsType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName Reference
-	 * @var Reference
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\Reference
 	 */
 	public $Reference;
 	/**
@@ -60,7 +60,6 @@ class TradingTermsType
 	 * @PropertyTerm Address
 	 * @AssociatedObjectClass Address
 	 * @xmlType element
-	 * @xmlNamespace 
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ApplicableAddress

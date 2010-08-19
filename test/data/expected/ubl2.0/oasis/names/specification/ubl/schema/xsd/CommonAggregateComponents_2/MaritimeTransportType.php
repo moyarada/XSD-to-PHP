@@ -30,7 +30,7 @@ class MaritimeTransportType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName VesselID
-	 * @var VesselID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\VesselID
 	 */
 	public $VesselID;
 	/**
@@ -48,7 +48,7 @@ class MaritimeTransportType
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName VesselName
-	 * @var VesselName
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\VesselName
 	 */
 	public $VesselName;
 

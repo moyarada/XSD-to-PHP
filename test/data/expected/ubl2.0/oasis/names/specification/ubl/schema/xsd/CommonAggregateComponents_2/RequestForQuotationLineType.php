@@ -5,6 +5,7 @@ namespace oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2;
  * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2
  * @xmlType 
  * @xmlName RequestForQuotationLineType
+ * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\RequestForQuotationLineType
  * @xmlComponentType ABIE
  * @xmlDictionaryEntryName Request For Quotation Line. Details
  * @xmlDefinition Information about a Line on a Request For Quotation.

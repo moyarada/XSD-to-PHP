@@ -5,6 +5,7 @@ namespace oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2;
  * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2
  * @xmlType 
  * @xmlName ExternalReferenceType
+ * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\ExternalReferenceType
  * @xmlComponentType ABIE
  * @xmlDictionaryEntryName External Reference. Details
  * @xmlDefinition Information directly relating to an external reference i.e. a document stored at a remote location.

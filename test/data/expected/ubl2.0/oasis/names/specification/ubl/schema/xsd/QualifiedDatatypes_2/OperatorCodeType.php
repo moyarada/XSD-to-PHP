@@ -6,6 +6,7 @@ use un\unece\uncefact\data\specification\UnqualifiedDataTypesSchemaModule\_2;
  * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2
  * @xmlType CodeType
  * @xmlName OperatorCodeType
+ * @var oasis\names\specification\ubl\schema\xsd\QualifiedDatatypes_2\OperatorCodeType
  * @xmlDictionaryEntryName Operator_ Code. Type
  * @xmlVersion 2.0
  * @xmlDefinition The set of valid arithmetic operators

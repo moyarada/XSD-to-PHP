@@ -5,6 +5,7 @@ namespace un\unece\uncefact\data\specification\UnqualifiedDataTypesSchemaModule\
  * @xmlNamespace urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2
  * @xmlType base64Binary
  * @xmlName SoundType
+ * @var un\unece\uncefact\data\specification\UnqualifiedDataTypesSchemaModule\_2\SoundType
  * @xmlUniqueID UDT000005
  * @xmlCategoryCode UDT
  * @xmlDictionaryEntryName Sound. Type

@@ -6,6 +6,7 @@ use un\unece\uncefact\data\specification\UnqualifiedDataTypesSchemaModule\_2;
  * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2
  * @xmlType CodeType
  * @xmlName ChipCodeType
+ * @var oasis\names\specification\ubl\schema\xsd\QualifiedDatatypes_2\ChipCodeType
  * @xmlDictionaryEntryName Chip_ Code. Type
  * @xmlVersion 2.0
  * @xmlDefinition Distinction between CHIP and MAG STRIPE cards

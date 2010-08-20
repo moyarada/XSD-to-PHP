@@ -5,6 +5,7 @@ namespace oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2;
  * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2
  * @xmlType 
  * @xmlName BillingReferenceLineType
+ * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\BillingReferenceLineType
  * @xmlComponentType ABIE
  * @xmlDictionaryEntryName Billing Reference Line. Details
  * @xmlDefinition Information about a Billing Line.

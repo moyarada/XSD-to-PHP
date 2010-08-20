@@ -5,6 +5,7 @@ namespace un\unece\uncefact\data\specification\UnqualifiedDataTypesSchemaModule\
  * @xmlNamespace urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2
  * @xmlType normalizedString
  * @xmlName IdentifierType
+ * @var un\unece\uncefact\data\specification\UnqualifiedDataTypesSchemaModule\_2\IdentifierType
  * @xmlUniqueID UDT0000011
  * @xmlCategoryCode UDT
  * @xmlDictionaryEntryName Identifier. Type

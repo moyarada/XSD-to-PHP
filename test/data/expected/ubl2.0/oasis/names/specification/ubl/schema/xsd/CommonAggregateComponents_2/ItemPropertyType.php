@@ -5,6 +5,7 @@ namespace oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2;
  * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2
  * @xmlType 
  * @xmlName ItemPropertyType
+ * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\ItemPropertyType
  * @xmlComponentType ABIE
  * @xmlDictionaryEntryName Item Property. Details
  * @xmlDefinition Information about specific Item Properties.

@@ -5,6 +5,7 @@ namespace oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2;
  * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2
  * @xmlType 
  * @xmlName ClassificationSchemeType
+ * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\ClassificationSchemeType
  * @xmlComponentType ABIE
  * @xmlDictionaryEntryName Classification Scheme. Details
  * @xmlDefinition Information about Classification Scheme; a scheme that defines a taxonomy for classifying goods or services.

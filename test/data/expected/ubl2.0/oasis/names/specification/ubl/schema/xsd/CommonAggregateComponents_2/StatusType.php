@@ -5,6 +5,7 @@ namespace oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2;
  * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2
  * @xmlType 
  * @xmlName StatusType
+ * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\StatusType
  * @xmlComponentType ABIE
  * @xmlDictionaryEntryName Status. Details
  * @xmlDefinition The information relevant to a condition or a position of an object.

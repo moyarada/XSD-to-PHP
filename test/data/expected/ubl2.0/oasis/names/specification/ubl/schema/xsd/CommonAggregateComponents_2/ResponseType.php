@@ -5,6 +5,7 @@ namespace oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2;
  * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2
  * @xmlType 
  * @xmlName ResponseType
+ * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\ResponseType
  * @xmlComponentType ABIE
  * @xmlDictionaryEntryName Response. Details
  * @xmlDefinition Information about responses to a document (at the application level).

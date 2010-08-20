@@ -5,6 +5,7 @@ namespace oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2;
  * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2
  * @xmlType 
  * @xmlName GoodsItemType
+ * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\GoodsItemType
  * @xmlComponentType ABIE
  * @xmlDictionaryEntryName Goods Item. Details
  * @xmlDefinition A separately identifiable quantity of products of a single product type.

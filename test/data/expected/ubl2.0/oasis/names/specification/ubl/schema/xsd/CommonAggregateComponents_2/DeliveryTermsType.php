@@ -5,6 +5,7 @@ namespace oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2;
  * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2
  * @xmlType 
  * @xmlName DeliveryTermsType
+ * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\DeliveryTermsType
  * @xmlComponentType ABIE
  * @xmlDictionaryEntryName Delivery Terms. Details
  * @xmlDefinition Information about Delivery Terms.

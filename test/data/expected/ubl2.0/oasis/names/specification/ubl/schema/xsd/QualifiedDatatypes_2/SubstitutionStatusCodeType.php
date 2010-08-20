@@ -6,6 +6,7 @@ use un\unece\uncefact\data\specification\UnqualifiedDataTypesSchemaModule\_2;
  * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2
  * @xmlType CodeType
  * @xmlName SubstitutionStatusCodeType
+ * @var oasis\names\specification\ubl\schema\xsd\QualifiedDatatypes_2\SubstitutionStatusCodeType
  * @xmlDictionaryEntryName Substitution Status_ Code. Type
  * @xmlVersion 2.0
  * @xmlDefinition The set of values that indicate the status of an OrderItem in relation to substitution, denoting an acceptable substitute in the Order, an original for which an alternative is offered in the Order Confirmation, or an original for which an actual replacement is advised in the Despatch Advice.

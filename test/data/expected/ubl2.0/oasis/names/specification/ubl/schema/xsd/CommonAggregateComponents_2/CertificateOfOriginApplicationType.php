@@ -5,6 +5,7 @@ namespace oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2;
  * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2
  * @xmlType 
  * @xmlName CertificateOfOriginApplicationType
+ * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\CertificateOfOriginApplicationType
  * @xmlComponentType ABIE
  * @xmlDictionaryEntryName Certificate Of Origin Application. Details
  * @xmlDefinition A document that contains information of CO application.

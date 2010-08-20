@@ -5,6 +5,7 @@ namespace oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2;
  * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2
  * @xmlType 
  * @xmlName LanguageType
+ * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\LanguageType
  * @xmlComponentType ABIE
  * @xmlDictionaryEntryName Language. Details
  * @xmlDefinition Information about Language.

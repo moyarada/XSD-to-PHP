@@ -5,6 +5,7 @@ namespace oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2;
  * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2
  * @xmlType 
  * @xmlName PeriodType
+ * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\PeriodType
  * @xmlComponentType ABIE
  * @xmlDictionaryEntryName Period. Details
  * @xmlDefinition Information about a period of time.

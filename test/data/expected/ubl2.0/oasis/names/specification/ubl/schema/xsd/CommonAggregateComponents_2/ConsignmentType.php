@@ -5,6 +5,7 @@ namespace oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2;
  * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2
  * @xmlType 
  * @xmlName ConsignmentType
+ * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\ConsignmentType
  * @xmlComponentType ABIE
  * @xmlDictionaryEntryName Consignment. Details
  * @xmlDefinition A separately identifiable collection of goods items (available to be) transported from one consignor to one consignee via one or more modes of transport.

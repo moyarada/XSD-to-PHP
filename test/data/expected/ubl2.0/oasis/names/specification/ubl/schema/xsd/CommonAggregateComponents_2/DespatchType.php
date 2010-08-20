@@ -5,6 +5,7 @@ namespace oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2;
  * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2
  * @xmlType 
  * @xmlName DespatchType
+ * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\DespatchType
  * @xmlComponentType ABIE
  * @xmlDictionaryEntryName Despatch. Details
  * @xmlDefinition Information about Despatch.

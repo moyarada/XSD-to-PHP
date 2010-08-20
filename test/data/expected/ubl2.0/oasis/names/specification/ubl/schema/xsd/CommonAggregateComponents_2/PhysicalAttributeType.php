@@ -5,6 +5,7 @@ namespace oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2;
  * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2
  * @xmlType 
  * @xmlName PhysicalAttributeType
+ * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\PhysicalAttributeType
  * @xmlComponentType ABIE
  * @xmlDictionaryEntryName Physical Attribute. Details
  * @xmlDefinition Information about physical attributes.

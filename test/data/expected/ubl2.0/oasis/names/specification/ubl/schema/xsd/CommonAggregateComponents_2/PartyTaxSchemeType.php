@@ -5,6 +5,7 @@ namespace oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2;
  * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2
  * @xmlType 
  * @xmlName PartyTaxSchemeType
+ * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\PartyTaxSchemeType
  * @xmlComponentType ABIE
  * @xmlDictionaryEntryName Party Tax Scheme. Details
  * @xmlDefinition Information about a party's Tax Scheme.

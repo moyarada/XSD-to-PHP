@@ -5,6 +5,7 @@ namespace oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2;
  * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2
  * @xmlType 
  * @xmlName SignatureType
+ * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\SignatureType
  * @xmlComponentType ABIE
  * @xmlDictionaryEntryName Signature. Details
  * @xmlDefinition Information about signature. A placeholder for signature.

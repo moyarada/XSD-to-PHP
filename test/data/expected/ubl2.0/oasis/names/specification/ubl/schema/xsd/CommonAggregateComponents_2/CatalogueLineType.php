@@ -5,6 +5,7 @@ namespace oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2;
  * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2
  * @xmlType 
  * @xmlName CatalogueLineType
+ * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\CatalogueLineType
  * @xmlComponentType ABIE
  * @xmlDictionaryEntryName Catalogue Line. Details
  * @xmlDefinition The basic element of Catalogue; something that can be bought.

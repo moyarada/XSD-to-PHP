@@ -5,6 +5,7 @@ namespace oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2;
  * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2
  * @xmlType 
  * @xmlName FinancialInstitutionType
+ * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\FinancialInstitutionType
  * @xmlComponentType ABIE
  * @xmlDictionaryEntryName Financial Institution. Details
  * @xmlDefinition Information about a Financial Institution.

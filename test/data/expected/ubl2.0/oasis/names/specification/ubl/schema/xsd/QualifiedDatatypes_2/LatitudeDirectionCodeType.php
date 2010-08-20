@@ -6,6 +6,7 @@ use un\unece\uncefact\data\specification\UnqualifiedDataTypesSchemaModule\_2;
  * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2
  * @xmlType CodeType
  * @xmlName LatitudeDirectionCodeType
+ * @var oasis\names\specification\ubl\schema\xsd\QualifiedDatatypes_2\LatitudeDirectionCodeType
  * @xmlDictionaryEntryName Latitude Direction_ Code. Type
  * @xmlVersion 2.0
  * @xmlDefinition The possible directions of latitude

@@ -5,6 +5,7 @@ namespace oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2;
  * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2
  * @xmlType 
  * @xmlName TransactionConditionsType
+ * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\TransactionConditionsType
  * @xmlComponentType ABIE
  * @xmlDictionaryEntryName Transaction Conditions. Details
  * @xmlDefinition Information about purchasing, sales, or payment conditions.

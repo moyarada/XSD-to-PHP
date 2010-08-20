@@ -5,6 +5,7 @@ namespace oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2;
  * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2
  * @xmlType 
  * @xmlName OrderReferenceType
+ * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\OrderReferenceType
  * @xmlComponentType ABIE
  * @xmlDictionaryEntryName Order Reference. Details
  * @xmlDefinition Information about an Order Reference.

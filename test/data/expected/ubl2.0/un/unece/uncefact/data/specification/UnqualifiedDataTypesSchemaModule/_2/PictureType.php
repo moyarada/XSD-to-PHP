@@ -5,6 +5,7 @@ namespace un\unece\uncefact\data\specification\UnqualifiedDataTypesSchemaModule\
  * @xmlNamespace urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2
  * @xmlType base64Binary
  * @xmlName PictureType
+ * @var un\unece\uncefact\data\specification\UnqualifiedDataTypesSchemaModule\_2\PictureType
  * @xmlUniqueID UDT000004
  * @xmlCategoryCode UDT
  * @xmlDictionaryEntryName Picture. Type

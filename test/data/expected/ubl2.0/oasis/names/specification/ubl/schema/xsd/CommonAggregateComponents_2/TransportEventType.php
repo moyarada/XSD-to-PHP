@@ -5,6 +5,7 @@ namespace oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2;
  * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2
  * @xmlType 
  * @xmlName TransportEventType
+ * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\TransportEventType
  * @xmlComponentType ABIE
  * @xmlDictionaryEntryName Transport Event. Details
  * @xmlDefinition A significant occurrence or happening related to the transportation of goods.

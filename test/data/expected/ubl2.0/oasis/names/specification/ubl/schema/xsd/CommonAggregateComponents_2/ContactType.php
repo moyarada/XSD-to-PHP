@@ -5,6 +5,7 @@ namespace oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2;
  * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2
  * @xmlType 
  * @xmlName ContactType
+ * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\ContactType
  * @xmlComponentType ABIE
  * @xmlDictionaryEntryName Contact. Details
  * @xmlDefinition Information about a contactable person or organization department.

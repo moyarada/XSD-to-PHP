@@ -6,6 +6,7 @@ use un\unece\uncefact\data\specification\UnqualifiedDataTypesSchemaModule\_2;
  * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2
  * @xmlType CodeType
  * @xmlName PreferenceCriterionCodeType
+ * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\PreferenceCriterionCodeType
  */
 class PreferenceCriterionCodeType
 	extends _2\CodeType

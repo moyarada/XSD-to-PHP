@@ -5,6 +5,7 @@ namespace oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2;
  * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2
  * @xmlType 
  * @xmlName CreditNoteLineType
+ * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\CreditNoteLineType
  * @xmlComponentType ABIE
  * @xmlDictionaryEntryName Credit Note Line. Details
  * @xmlDefinition Information about a Credit Note Line.

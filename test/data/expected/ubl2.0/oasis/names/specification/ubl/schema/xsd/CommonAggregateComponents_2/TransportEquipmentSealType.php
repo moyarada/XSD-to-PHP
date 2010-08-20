@@ -5,6 +5,7 @@ namespace oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2;
  * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2
  * @xmlType 
  * @xmlName TransportEquipmentSealType
+ * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\TransportEquipmentSealType
  * @xmlComponentType ABIE
  * @xmlDictionaryEntryName Transport Equipment Seal. Details
  * @xmlDefinition Information about a transport equipment seal (a security device attached to the doors of a shipping container).

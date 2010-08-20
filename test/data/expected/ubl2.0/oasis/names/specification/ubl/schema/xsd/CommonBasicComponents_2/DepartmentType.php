@@ -6,6 +6,7 @@ use un\unece\uncefact\data\specification\UnqualifiedDataTypesSchemaModule\_2;
  * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2
  * @xmlType TextType
  * @xmlName DepartmentType
+ * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\DepartmentType
  */
 class DepartmentType
 	extends _2\TextType

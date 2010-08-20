@@ -5,6 +5,7 @@ namespace oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2;
  * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2
  * @xmlType 
  * @xmlName ItemLocationQuantityType
+ * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\ItemLocationQuantityType
  * @xmlComponentType ABIE
  * @xmlDictionaryEntryName Item Location Quantity. Details
  * @xmlDefinition Information about the properties of an item as they relate to specific quantities and/or specific locations.

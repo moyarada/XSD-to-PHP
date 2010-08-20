@@ -5,6 +5,7 @@ namespace oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2;
  * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2
  * @xmlType 
  * @xmlName RelatedItemType
+ * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\RelatedItemType
  * @xmlComponentType ABIE
  * @xmlDictionaryEntryName Related Item. Details
  * @xmlDefinition Information about the relationship between two items.

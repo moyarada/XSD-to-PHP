@@ -5,6 +5,7 @@ namespace oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2;
  * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2
  * @xmlType 
  * @xmlName LineReferenceType
+ * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\LineReferenceType
  * @xmlComponentType ABIE
  * @xmlDictionaryEntryName Line Reference. Details
  * @xmlDefinition Reference to a Line on a document.

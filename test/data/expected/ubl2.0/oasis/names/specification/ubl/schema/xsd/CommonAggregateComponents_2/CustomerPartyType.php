@@ -5,6 +5,7 @@ namespace oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2;
  * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2
  * @xmlType 
  * @xmlName CustomerPartyType
+ * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\CustomerPartyType
  * @xmlComponentType ABIE
  * @xmlDictionaryEntryName Customer Party. Details
  * @xmlDefinition Information about the Customer Party.

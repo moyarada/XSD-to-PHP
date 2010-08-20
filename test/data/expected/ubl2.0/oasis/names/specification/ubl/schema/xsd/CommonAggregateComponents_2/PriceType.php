@@ -5,6 +5,7 @@ namespace oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2;
  * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2
  * @xmlType 
  * @xmlName PriceType
+ * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\PriceType
  * @xmlComponentType ABIE
  * @xmlDictionaryEntryName Price. Details
  * @xmlDefinition Information about the price.

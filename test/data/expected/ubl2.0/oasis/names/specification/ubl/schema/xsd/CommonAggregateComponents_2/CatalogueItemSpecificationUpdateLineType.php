@@ -5,6 +5,7 @@ namespace oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2;
  * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2
  * @xmlType 
  * @xmlName CatalogueItemSpecificationUpdateLineType
+ * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\CatalogueItemSpecificationUpdateLineType
  * @xmlComponentType ABIE
  * @xmlDictionaryEntryName Catalogue Item Specification Update Line. Details
  * @xmlDefinition Details of Catalogue Line Item Specification.

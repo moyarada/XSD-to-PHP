@@ -5,6 +5,7 @@ namespace oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2;
  * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2
  * @xmlType 
  * @xmlName CatalogueReferenceType
+ * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\CatalogueReferenceType
  * @xmlComponentType ABIE
  * @xmlDictionaryEntryName Catalogue Reference. Details
  * @xmlDefinition A reference to a Catalogue.

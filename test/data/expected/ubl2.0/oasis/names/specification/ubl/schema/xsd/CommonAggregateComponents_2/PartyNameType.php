@@ -5,6 +5,7 @@ namespace oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2;
  * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2
  * @xmlType 
  * @xmlName PartyNameType
+ * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\PartyNameType
  * @xmlComponentType ABIE
  * @xmlDictionaryEntryName Party Name. Details
  * @xmlDefinition Information about a party's name.

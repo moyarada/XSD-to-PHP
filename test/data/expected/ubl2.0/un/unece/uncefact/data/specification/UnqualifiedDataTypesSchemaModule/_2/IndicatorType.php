@@ -5,6 +5,7 @@ namespace un\unece\uncefact\data\specification\UnqualifiedDataTypesSchemaModule\
  * @xmlNamespace urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2
  * @xmlType boolean
  * @xmlName IndicatorType
+ * @var un\unece\uncefact\data\specification\UnqualifiedDataTypesSchemaModule\_2\IndicatorType
  * @xmlUniqueID UDT0000012
  * @xmlCategoryCode UDT
  * @xmlDictionaryEntryName Indicator. Type

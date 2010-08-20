@@ -5,6 +5,7 @@ namespace oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2;
  * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2
  * @xmlType 
  * @xmlName TransportEquipmentType
+ * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\TransportEquipmentType
  * @xmlComponentType ABIE
  * @xmlDictionaryEntryName Transport Equipment. Details
  * @xmlDefinition Information about Transport Equipment; a piece of equipment used to transport goods.

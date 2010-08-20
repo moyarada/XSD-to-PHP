@@ -5,6 +5,7 @@ namespace oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2;
  * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2
  * @xmlType 
  * @xmlName TransportHandlingUnitType
+ * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\TransportHandlingUnitType
  * @xmlComponentType ABIE
  * @xmlDictionaryEntryName Transport Handling Unit. Details
  * @xmlDefinition A uniquely identifiable physical unit consisting of one or more packages (not necessarily containing the same articles) for enabling physical handling during the transport process.

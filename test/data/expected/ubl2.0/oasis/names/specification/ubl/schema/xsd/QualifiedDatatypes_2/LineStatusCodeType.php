@@ -6,6 +6,7 @@ use un\unece\uncefact\data\specification\UnqualifiedDataTypesSchemaModule\_2;
  * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2
  * @xmlType CodeType
  * @xmlName LineStatusCodeType
+ * @var oasis\names\specification\ubl\schema\xsd\QualifiedDatatypes_2\LineStatusCodeType
  * @xmlDictionaryEntryName Line Status_ Code. Type
  * @xmlVersion 2.0
  * @xmlDefinition The set of possible statuses of a line in a transaction with regard to its original state.

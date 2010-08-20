@@ -5,6 +5,7 @@ namespace oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2;
  * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2
  * @xmlType 
  * @xmlName RoadTransportType
+ * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\RoadTransportType
  * @xmlComponentType ABIE
  * @xmlDictionaryEntryName Road Transport. Details
  * @xmlDefinition Describes a road transport vehicle.

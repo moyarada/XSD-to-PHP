@@ -5,6 +5,7 @@ namespace oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2;
  * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2
  * @xmlType 
  * @xmlName ClassificationCategoryType
+ * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\ClassificationCategoryType
  * @xmlComponentType ABIE
  * @xmlDictionaryEntryName Classification Category. Details
  * @xmlDefinition Information about a Classification Category; a subdivision of a Classification Scheme.

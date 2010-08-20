@@ -5,6 +5,7 @@ namespace oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2;
  * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2
  * @xmlType 
  * @xmlName TransportationServiceType
+ * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\TransportationServiceType
  * @xmlComponentType ABIE
  * @xmlDictionaryEntryName Transportation Service. Details
  * @xmlDefinition Transport service details.

@@ -89,6 +89,8 @@ class Xsd2Php extends Common
      */
     private $loadedImportFiles = array();
     
+    private $importHeadNS = array();
+    
     
     /**
      * XSD schema converted to XML
@@ -199,103 +201,8 @@ class Xsd2Php extends Common
         $this->savePhpFiles($dir, $createDirectory);
     }
     
-    private $importHeadNS = array();
     
-    /**
-     * Recursive method adding imports and includes
-     * 
-     * @param string      $xsdFile Path to XSD Schema filename
-     * @param DOMDocument $domNode 
-     * @param DOMDocument $domRef 
-     */
-    /*
-    private function loadImportsOld($xsdFile, $domNode, $domRef = null) {
-        
-        if (is_null($domRef)) {
-            $domRef = $domNode;
-        }
-        
-        
-        $xpath = new \DOMXPath($domNode);
-        
-        
-        $query = "//*[local-name()='import' and namespace-uri()='http://www.w3.org/2001/XMLSchema']";
-        $entries = $xpath->query($query);
-            foreach ($entries as $entry) {
-                $namespace = $entry->getAttribute('namespace');
-                if ($this->debug) print($namespace."\n");
-                
-                $parent = $entry->parentNode;
-                $xsd = new \DOMDocument();
-                
-                $xsdFileName = realpath(dirname($xsdFile) . DIRECTORY_SEPARATOR . $entry->getAttribute("schemaLocation"));
-                if (!file_exists($xsdFileName)) {
-                    if ($this->debug) print_r('File '.$xsdFileName. "does not exist"."\n");
-                    continue;
-                }
-                
-                if ($this->debug) print_r("Importing ".$xsdFileName."\n");
-                
-                if (in_array($xsdFileName, $this->loadedImportFiles)) {
-                    if ($this->debug) print("File ".$xsdFileName." has been already imported");
-                    continue;
-                }
-                
-                $result = $xsd->load($xsdFileName, 
-                            LIBXML_DTDLOAD|LIBXML_DTDATTR|LIBXML_NOENT|LIBXML_XINCLUDE);
-                $this->loadedImportFiles[] = $xsdFileName;
-                $this->loadedImportFiles = array_unique($this->loadedImportFiles);
-                
-                
-                
-                $mxpath = new \DOMXPath($xsd);
-                $this->shortNamespaces = array_merge($this->shortNamespaces, $this->getNamespaces($mxpath));
-                    
-                
-                if ($result) {
-                        //$xsd = $this->importIncludes($xsdFileName, $xsd);
-                        foreach ($xsd->documentElement->childNodes as $node) {
-                            if ($node->nodeName == "xsd:import") {
-                                // Do not change Namespace for import and include tags
-                                if ($this->debug) print($node->nodeName." \n". $node->getAttribute('namespace'). "\n");
-                                
-                                $newNode = $domNode->importNode($node, true);
-                                $parent->insertBefore($newNode, $entry);
-                                
-                                continue;
-                            }
-                            
-                            $newNodeNs = $domNode->createAttribute("namespace");
-                            
-                            $textEl = $domNode->createTextNode($namespace);
-                            $newNodeNs->appendChild($textEl);
-
-                            $newNode = $domNode->importNode($node, true);
-                            $newNode->appendChild($newNodeNs); 
-                            
-                            $parent->insertBefore($newNode, $entry);
-                            //if ($this->debug) print_r($parent->nodeName);
-                        }
-                        $parent->removeChild($entry);
-                  
-                } else {
-                    if ($this->debug) print 'FIle '. $xsdFileName. " was not loaded";
-                }
-                
-                $xpath = new \DOMXPath($xsd);
-                $query = "//*[local-name()='import' and namespace-uri()='http://www.w3.org/2001/XMLSchema']";
-                $imports = $xpath->query($query);
-                if ($imports->length != 0) {
-                   $domRef = $this->loadImports($xsdFileName, $xsd, $domRef);
-                } 
-                
-            }
-            
-            if ($this->debug) print_r($domRef->saveXml());
-            if ($this->debug) print_r("------------------------------------\n");
-            
-            return $domRef;
-    }*/
+    
     
     /**
      * 
@@ -334,7 +241,6 @@ class Xsd2Php extends Common
                 $mxpath = new \DOMXPath($xsd);
                 $this->shortNamespaces = array_merge($this->shortNamespaces, $this->getNamespaces($mxpath));
                 
-                //@todo Load includes recursively
                 $xsd = $this->loadIncludes($xsd, $filepath);
                 
                 $this->loadedImportFiles[] = $xsdFileName;
@@ -428,61 +334,7 @@ class Xsd2Php extends Common
         
         return $dom;
     }
-    
-    /**
-     * Recursive import of includes
-     * 
-     * @param string      $xsdFile Path to XSD file
-     * @param DOMDocument $domNode DOM document
-     * @param DOMDocument $domRef  Used only recursivelly
-     */
-    /*
-    private function importIncludesOld($xsdFile, $domNode, $domRef = null) {
-        
-        if (is_null($domRef)) {
-            $domRef = $domNode;
-        }
 
-        $xpath = new \DOMXPath($domNode);    
-        $query = "//*[local-name()='include' and namespace-uri()='http://www.w3.org/2001/XMLSchema']";
-        $includes = $xpath->query($query);
-        
-        foreach ($includes as $include) {
-            $parent = $include->parentNode;
-            //$namespace = $include->parentNode;
-            $xsd = new \DOMDocument();
-            
-            $xsdFileName = realpath(dirname($xsdFile) . "/" . $include->getAttribute("schemaLocation"));
-            if ($this->debug) print_r('Including schema '.$xsdFileName."\n");
-            if (!file_exists($xsdFileName)) {
-                if ($this->debug) print_r('Include File '.$xsdFileName. "does not exist"."\n");
-                continue;
-            }
-            $result = $xsd->load($xsdFileName, 
-                                LIBXML_DTDLOAD|LIBXML_DTDATTR|LIBXML_NOENT|LIBXML_XINCLUDE);
-                               
-            if ($result) {
-                foreach ($xsd->documentElement->childNodes as $node) {
-                    $newNode = $domNode->importNode($node, true);
-                    $parent->insertBefore($newNode, $include);
-                }
-                $parent->removeChild($include);
-            } 
-
-            $xpath = new \DOMXPath($xsd);
-            $query = "//*[local-name()='import' and namespace-uri()='http://www.w3.org/2001/XMLSchema']";
-            $imports = $xpath->query($query);
-                    
-            if ($imports->length != 0) {
-               $domRef = $this->importIncludes($xsdFileName, $xsd, $domRef);
-            }
-            
-        }
-        if ($this->debug) print("Processed schema $xsdFile\n");
-        return $domRef;
-    }
-    */
-    
     /**
      * Convert XSD to XML suitable for PHP code generation
      * 
@@ -623,6 +475,7 @@ class Xsd2Php extends Common
             //}
             $docBlock['xmlType']      = $phpClass->type;
             $docBlock['xmlName']      = $phpClass->name;
+            $docBlock['var'] = $this->namespaceToPhp($this->expandNS($phpClass->namespace))."\\".$phpClass->name;
             
             foreach ($docs as $doc) {
                 if ($doc->nodeValue != '') {
@@ -659,7 +512,7 @@ class Xsd2Php extends Common
                     $properties[$i]["docs"]['xmlName']      = $prop->getAttribute('name');
                 }
                 
-                //@todo if $prop->getAttribute('maxOccurs') > 1 - var can be an array
+                //@todo if $prop->getAttribute('maxOccurs') > 1 - var can be an array - in future special accessor cane be implemented
                 if ($prop->getAttribute('type') != '') {
                     if ($prop->getAttribute('namespace') != '' && $prop->getAttribute('namespace') != $this->xsdNs) {
                         $ns = "";
@@ -695,10 +548,14 @@ class Xsd2Php extends Common
      * @return string
      */    
     private function expandNS($ns) {
+        if ($ns == "#default#") {
+            $ns = $this->targetNamespace;
+        }
         foreach($this->shortNamespaces as $shortNs => $longNs) {
            if ($ns == $shortNs) {
                $ns = $longNs;
            }
+           
         }
         return $ns;  
     }

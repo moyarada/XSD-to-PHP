@@ -6,6 +6,7 @@ use un\unece\uncefact\data\specification\UnqualifiedDataTypesSchemaModule\_2;
  * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2
  * @xmlType CodeType
  * @xmlName ContainerSizeTypeCodeType
+ * @var oasis\names\specification\ubl\schema\xsd\QualifiedDatatypes_2\ContainerSizeTypeCodeType
  * @xmlDictionaryEntryName Container Size Type_ Code. Type
  * @xmlVersion 2.0
  * @xmlDefinition The set of code values for classifying series 1 freight containers based on external dimensions and specifies the assoziated ratings and, where appropriate, the minimum internal and door opening dimensions for certain types of containers.

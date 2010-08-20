@@ -5,6 +5,7 @@ namespace oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2;
  * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2
  * @xmlType 
  * @xmlName DimensionType
+ * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\DimensionType
  * @xmlComponentType ABIE
  * @xmlDictionaryEntryName Dimension. Details
  * @xmlDefinition Information about a measurable dimension of an item.

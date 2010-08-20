@@ -5,6 +5,7 @@ namespace oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2;
  * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2
  * @xmlType 
  * @xmlName MonetaryTotalType
+ * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\MonetaryTotalType
  * @xmlComponentType ABIE
  * @xmlDictionaryEntryName Monetary Total. Details
  * @xmlDefinition Information about Monetary Totals.

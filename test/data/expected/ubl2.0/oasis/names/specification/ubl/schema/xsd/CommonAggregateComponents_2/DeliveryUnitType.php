@@ -5,6 +5,7 @@ namespace oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2;
  * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2
  * @xmlType 
  * @xmlName DeliveryUnitType
+ * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\DeliveryUnitType
  * @xmlComponentType ABIE
  * @xmlDictionaryEntryName Delivery Unit. Details
  * @xmlDefinition Information about a Delivery Unit.

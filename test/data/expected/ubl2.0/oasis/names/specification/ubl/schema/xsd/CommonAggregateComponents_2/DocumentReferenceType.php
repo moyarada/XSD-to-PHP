@@ -5,6 +5,7 @@ namespace oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2;
  * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2
  * @xmlType 
  * @xmlName DocumentReferenceType
+ * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\DocumentReferenceType
  * @xmlComponentType ABIE
  * @xmlDictionaryEntryName Document Reference. Details
  * @xmlDefinition Information about a document referred to in another document.

@@ -5,6 +5,7 @@ namespace oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2;
  * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2
  * @xmlType 
  * @xmlName DespatchLineType
+ * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\DespatchLineType
  * @xmlComponentType ABIE
  * @xmlDictionaryEntryName Despatch Line. Details
  * @xmlDefinition Information about a Despatch Line.

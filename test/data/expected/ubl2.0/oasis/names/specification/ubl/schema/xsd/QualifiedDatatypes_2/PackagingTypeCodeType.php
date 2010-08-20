@@ -6,6 +6,7 @@ use un\unece\uncefact\data\specification\UnqualifiedDataTypesSchemaModule\_2;
  * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2
  * @xmlType CodeType
  * @xmlName PackagingTypeCodeType
+ * @var oasis\names\specification\ubl\schema\xsd\QualifiedDatatypes_2\PackagingTypeCodeType
  * @xmlDictionaryEntryName Packaging Type_ Code. Type
  * @xmlVersion 2.0
  * @xmlDefinition The set of code values for Passengers, Types of Cargo, Packages and Packaging Materials (with Complementary Codes for Package Names)

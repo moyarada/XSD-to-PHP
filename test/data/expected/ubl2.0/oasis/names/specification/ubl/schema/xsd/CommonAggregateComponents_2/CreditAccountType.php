@@ -5,6 +5,7 @@ namespace oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2;
  * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2
  * @xmlType 
  * @xmlName CreditAccountType
+ * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\CreditAccountType
  * @xmlComponentType ABIE
  * @xmlDictionaryEntryName Credit Account. Details
  * @xmlDefinition Information about a Credit Account (for sales on account).

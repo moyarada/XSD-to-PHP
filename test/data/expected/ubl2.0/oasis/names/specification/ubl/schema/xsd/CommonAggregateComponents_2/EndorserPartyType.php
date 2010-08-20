@@ -5,6 +5,7 @@ namespace oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2;
  * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2
  * @xmlType 
  * @xmlName EndorserPartyType
+ * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\EndorserPartyType
  * @xmlComponentType ABIE
  * @xmlDictionaryEntryName Endorser Party. Details
  * @xmlDefinition The party endorsing a document.

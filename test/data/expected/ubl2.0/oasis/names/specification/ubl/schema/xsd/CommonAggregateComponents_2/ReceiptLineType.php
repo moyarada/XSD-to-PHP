@@ -5,6 +5,7 @@ namespace oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2;
  * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2
  * @xmlType 
  * @xmlName ReceiptLineType
+ * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\ReceiptLineType
  * @xmlComponentType ABIE
  * @xmlDictionaryEntryName Receipt Line. Details
  * @xmlDefinition Information about a Receipt Line.

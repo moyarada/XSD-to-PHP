@@ -5,6 +5,7 @@ namespace un\unece\uncefact\data\specification\UnqualifiedDataTypesSchemaModule\
  * @xmlNamespace urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2
  * @xmlType decimal
  * @xmlName AmountType
+ * @var un\unece\uncefact\data\specification\UnqualifiedDataTypesSchemaModule\_2\AmountType
  * @xmlUniqueID UDT000001
  * @xmlCategoryCode UDT
  * @xmlDictionaryEntryName Amount. Type

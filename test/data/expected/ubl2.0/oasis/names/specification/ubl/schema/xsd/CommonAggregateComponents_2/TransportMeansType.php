@@ -5,6 +5,7 @@ namespace oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2;
  * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2
  * @xmlType 
  * @xmlName TransportMeansType
+ * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\TransportMeansType
  * @xmlComponentType ABIE
  * @xmlDictionaryEntryName Transport Means. Details
  * @xmlDefinition The particular vehicle used for the transport of goods or persons.

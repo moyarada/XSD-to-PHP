@@ -6,6 +6,7 @@ use un\unece\uncefact\data\specification\UnqualifiedDataTypesSchemaModule\_2;
  * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2
  * @xmlType CodeType
  * @xmlName ChannelCodeType
+ * @var oasis\names\specification\ubl\schema\xsd\QualifiedDatatypes_2\ChannelCodeType
  * @xmlDictionaryEntryName Channel_ Code. Type
  * @xmlVersion 2.0
  * @xmlDefinition The set of possible ways in which communication can be made (eg. Phone, email, etc).

@@ -5,6 +5,7 @@ namespace oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2;
  * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2
  * @xmlType 
  * @xmlName StowageType
+ * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\StowageType
  * @xmlComponentType ABIE
  * @xmlDictionaryEntryName Stowage. Details
  * @xmlDefinition A location on board a means of transport where specified goods or transport equipment have been or are to be stowed.

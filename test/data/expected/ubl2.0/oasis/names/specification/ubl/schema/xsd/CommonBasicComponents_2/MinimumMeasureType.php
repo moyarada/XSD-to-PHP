@@ -6,6 +6,7 @@ use un\unece\uncefact\data\specification\UnqualifiedDataTypesSchemaModule\_2;
  * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2
  * @xmlType MeasureType
  * @xmlName MinimumMeasureType
+ * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\MinimumMeasureType
  */
 class MinimumMeasureType
 	extends _2\MeasureType

@@ -5,6 +5,7 @@ namespace oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2;
  * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2
  * @xmlType 
  * @xmlName TradingTermsType
+ * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\TradingTermsType
  * @xmlComponentType ABIE
  * @xmlDictionaryEntryName Trading Terms. Details
  * @xmlDefinition Information about the terms of a trade agreement.

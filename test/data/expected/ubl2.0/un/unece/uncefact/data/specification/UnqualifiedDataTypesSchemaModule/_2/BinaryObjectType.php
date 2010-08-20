@@ -5,6 +5,7 @@ namespace un\unece\uncefact\data\specification\UnqualifiedDataTypesSchemaModule\
  * @xmlNamespace urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2
  * @xmlType base64Binary
  * @xmlName BinaryObjectType
+ * @var un\unece\uncefact\data\specification\UnqualifiedDataTypesSchemaModule\_2\BinaryObjectType
  * @xmlUniqueID UDT000002
  * @xmlCategoryCode UDT
  * @xmlDictionaryEntryName Binary Object. Type

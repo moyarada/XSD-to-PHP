@@ -5,6 +5,7 @@ namespace oasis\names\specification\ubl\schema\xsd\Order_2;
  * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:Order-2
  * @xmlType 
  * @xmlName OrderType
+ * @var oasis\names\specification\ubl\schema\xsd\Order_2\OrderType
  * @xmlComponentType ABIE
  * @xmlDictionaryEntryName Order. Details
  * @xmlDefinition The document used to order goods and services.

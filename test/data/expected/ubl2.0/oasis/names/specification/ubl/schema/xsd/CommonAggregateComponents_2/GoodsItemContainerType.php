@@ -5,6 +5,7 @@ namespace oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2;
  * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2
  * @xmlType 
  * @xmlName GoodsItemContainerType
+ * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\GoodsItemContainerType
  * @xmlComponentType ABIE
  * @xmlDictionaryEntryName Goods Item Container. Details
  * @xmlDefinition How goods items are split across transport equipment.

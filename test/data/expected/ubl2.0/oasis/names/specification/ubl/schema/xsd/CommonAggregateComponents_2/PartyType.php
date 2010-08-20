@@ -5,6 +5,7 @@ namespace oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2;
  * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2
  * @xmlType 
  * @xmlName PartyType
+ * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\PartyType
  * @xmlComponentType ABIE
  * @xmlDictionaryEntryName Party. Details
  * @xmlDefinition Information about an organization, sub-organization, or individual fulfilling a role in a business process.

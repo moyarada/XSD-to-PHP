@@ -5,6 +5,7 @@ namespace un\unece\uncefact\data\specification\UnqualifiedDataTypesSchemaModule\
  * @xmlNamespace urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2
  * @xmlType time
  * @xmlName TimeType
+ * @var un\unece\uncefact\data\specification\UnqualifiedDataTypesSchemaModule\_2\TimeType
  * @xmlUniqueID UDT0000010
  * @xmlCategoryCode UDT
  * @xmlDictionaryEntryName Time. Type

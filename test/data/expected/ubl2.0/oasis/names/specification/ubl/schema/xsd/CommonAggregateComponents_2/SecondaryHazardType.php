@@ -5,6 +5,7 @@ namespace oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2;
  * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2
  * @xmlType 
  * @xmlName SecondaryHazardType
+ * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\SecondaryHazardType
  * @xmlComponentType ABIE
  * @xmlDictionaryEntryName Secondary Hazard. Details
  * @xmlDefinition Information about Secondary Hazard (related to a Hazardous Item).

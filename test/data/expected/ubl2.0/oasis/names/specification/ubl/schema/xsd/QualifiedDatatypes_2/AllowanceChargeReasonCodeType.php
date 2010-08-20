@@ -6,6 +6,7 @@ use un\unece\uncefact\data\specification\UnqualifiedDataTypesSchemaModule\_2;
  * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2
  * @xmlType CodeType
  * @xmlName AllowanceChargeReasonCodeType
+ * @var oasis\names\specification\ubl\schema\xsd\QualifiedDatatypes_2\AllowanceChargeReasonCodeType
  * @xmlDictionaryEntryName Allowance Charge Reason_ Code. Type
  * @xmlVersion 2.0
  * @xmlDefinition The set of possible reasons for an allowance or charge.

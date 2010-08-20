@@ -5,6 +5,7 @@ namespace oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2;
  * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2
  * @xmlType 
  * @xmlName PartyLegalEntityType
+ * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\PartyLegalEntityType
  * @xmlComponentType ABIE
  * @xmlDictionaryEntryName Party Legal Entity. Details
  * @xmlDefinition Information directly relating to the legal registration that is applicable to a party.

@@ -5,6 +5,7 @@ namespace oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2;
  * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2
  * @xmlType 
  * @xmlName InvoiceLineType
+ * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\InvoiceLineType
  * @xmlComponentType ABIE
  * @xmlDictionaryEntryName Invoice Line. Details
  * @xmlDefinition Information about an Invoice Line.

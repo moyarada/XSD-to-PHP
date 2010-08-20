@@ -5,6 +5,7 @@ namespace oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2;
  * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2
  * @xmlType 
  * @xmlName EndorsementType
+ * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\EndorsementType
  * @xmlComponentType ABIE
  * @xmlDictionaryEntryName Endorsement. Details
  * @xmlDefinition Details of an endorsement on the document.

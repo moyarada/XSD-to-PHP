@@ -5,6 +5,7 @@ namespace oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2;
  * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2
  * @xmlType 
  * @xmlName CorporateRegistrationSchemeType
+ * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\CorporateRegistrationSchemeType
  * @xmlComponentType ABIE
  * @xmlDictionaryEntryName Corporate Registration Scheme. Details
  * @xmlDefinition Information directly relating a scheme for corporate registration of businesses.

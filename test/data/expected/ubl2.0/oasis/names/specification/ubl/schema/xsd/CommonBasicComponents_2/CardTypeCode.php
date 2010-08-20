@@ -5,6 +5,7 @@ namespace oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2;
  * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2
  * @xmlType CardTypeCodeType
  * @xmlName CardTypeCode
+ * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\CardTypeCode
  */
 class CardTypeCode
 	extends CardTypeCodeType

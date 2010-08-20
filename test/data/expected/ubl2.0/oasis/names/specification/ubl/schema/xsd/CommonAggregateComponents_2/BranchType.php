@@ -5,6 +5,7 @@ namespace oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2;
  * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2
  * @xmlType 
  * @xmlName BranchType
+ * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\BranchType
  * @xmlComponentType ABIE
  * @xmlDictionaryEntryName Branch. Details
  * @xmlDefinition Information about a branch or division of an organization.

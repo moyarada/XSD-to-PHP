@@ -5,6 +5,7 @@ namespace oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2;
  * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2
  * @xmlType 
  * @xmlName ShipmentType
+ * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\ShipmentType
  * @xmlComponentType ABIE
  * @xmlDictionaryEntryName Shipment. Details
  * @xmlDefinition Information about a shipment.

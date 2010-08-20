@@ -5,6 +5,7 @@ namespace oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2;
  * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2
  * @xmlType 
  * @xmlName AttachmentType
+ * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\AttachmentType
  * @xmlComponentType ABIE
  * @xmlDictionaryEntryName Attachment. Details
  * @xmlDefinition Information about an attached document. An attachment can be referred to externally (with the URI element) or internally (with the MIME reference element) or contained within the document itself (with the EmbeddedDocument element).

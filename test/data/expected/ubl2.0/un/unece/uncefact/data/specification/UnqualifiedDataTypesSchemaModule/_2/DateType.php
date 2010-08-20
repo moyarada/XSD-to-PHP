@@ -5,6 +5,7 @@ namespace un\unece\uncefact\data\specification\UnqualifiedDataTypesSchemaModule\
  * @xmlNamespace urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2
  * @xmlType date
  * @xmlName DateType
+ * @var un\unece\uncefact\data\specification\UnqualifiedDataTypesSchemaModule\_2\DateType
  * @xmlUniqueID UDT000009
  * @xmlCategoryCode UDT
  * @xmlDictionaryEntryName Date. Type

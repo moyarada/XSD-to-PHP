@@ -5,6 +5,7 @@ namespace un\unece\uncefact\data\specification\UnqualifiedDataTypesSchemaModule\
  * @xmlNamespace urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2
  * @xmlType decimal
  * @xmlName PercentType
+ * @var un\unece\uncefact\data\specification\UnqualifiedDataTypesSchemaModule\_2\PercentType
  * @xmlUniqueID UDT0000016
  * @xmlCategoryCode UDT
  * @xmlVersionID 1.0

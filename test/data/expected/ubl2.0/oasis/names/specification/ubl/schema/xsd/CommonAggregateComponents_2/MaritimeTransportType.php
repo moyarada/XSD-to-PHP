@@ -5,6 +5,7 @@ namespace oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2;
  * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2
  * @xmlType 
  * @xmlName MaritimeTransportType
+ * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\MaritimeTransportType
  * @xmlComponentType ABIE
  * @xmlDictionaryEntryName Maritime Transport. Details
  * @xmlDefinition Describes a water (including sea, river, and canal) transport vessel.

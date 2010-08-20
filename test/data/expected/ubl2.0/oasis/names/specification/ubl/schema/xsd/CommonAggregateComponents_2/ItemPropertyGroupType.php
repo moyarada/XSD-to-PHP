@@ -5,6 +5,7 @@ namespace oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2;
  * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2
  * @xmlType 
  * @xmlName ItemPropertyGroupType
+ * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\ItemPropertyGroupType
  * @xmlComponentType ABIE
  * @xmlDictionaryEntryName Item Property Group. Details
  * @xmlDefinition Information about sets of classifications (or groups) of Item Properties.

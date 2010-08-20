@@ -5,6 +5,7 @@ namespace oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2;
  * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2
  * @xmlType 
  * @xmlName TaxSchemeType
+ * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\TaxSchemeType
  * @xmlComponentType ABIE
  * @xmlDictionaryEntryName Tax Scheme. Details
  * @xmlDefinition Information about a tax scheme.

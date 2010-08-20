@@ -5,6 +5,7 @@ namespace oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2;
  * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2
  * @xmlType 
  * @xmlName ReminderLineType
+ * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\ReminderLineType
  * @xmlComponentType ABIE
  * @xmlDictionaryEntryName Reminder Line. Details
  * @xmlDefinition Information about a Line on a Reminder document.

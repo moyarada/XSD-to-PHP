@@ -5,6 +5,7 @@ namespace un\unece\uncefact\data\specification\UnqualifiedDataTypesSchemaModule\
  * @xmlNamespace urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2
  * @xmlType decimal
  * @xmlName ValueType
+ * @var un\unece\uncefact\data\specification\UnqualifiedDataTypesSchemaModule\_2\ValueType
  * @xmlUniqueID UDT0000015
  * @xmlCategoryCode UDT
  * @xmlVersionID 1.0

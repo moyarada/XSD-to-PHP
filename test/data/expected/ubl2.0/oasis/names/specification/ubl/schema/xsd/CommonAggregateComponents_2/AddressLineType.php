@@ -5,6 +5,7 @@ namespace oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2;
  * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2
  * @xmlType 
  * @xmlName AddressLineType
+ * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\AddressLineType
  * @xmlComponentType ABIE
  * @xmlDictionaryEntryName Address Line. Details
  * @xmlDefinition Information about a line of address expressed as unstructured text.

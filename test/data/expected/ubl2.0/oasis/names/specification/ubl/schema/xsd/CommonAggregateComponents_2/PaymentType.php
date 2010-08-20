@@ -5,6 +5,7 @@ namespace oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2;
  * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2
  * @xmlType 
  * @xmlName PaymentType
+ * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\PaymentType
  * @xmlComponentType ABIE
  * @xmlDictionaryEntryName Payment. Details
  * @xmlDefinition Information directly relating to a specific payment.

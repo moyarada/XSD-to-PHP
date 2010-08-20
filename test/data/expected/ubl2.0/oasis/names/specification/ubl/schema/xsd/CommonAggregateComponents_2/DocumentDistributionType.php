@@ -5,6 +5,7 @@ namespace oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2;
  * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2
  * @xmlType 
  * @xmlName DocumentDistributionType
+ * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\DocumentDistributionType
  * @xmlComponentType ABIE
  * @xmlDictionaryEntryName Document Distribution. Details
  * @xmlDefinition The details of the distribution of the document among business partners.

@@ -5,6 +5,7 @@ namespace oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2;
  * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2
  * @xmlType 
  * @xmlName RemittanceAdviceLineType
+ * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\RemittanceAdviceLineType
  * @xmlComponentType ABIE
  * @xmlDictionaryEntryName Remittance Advice Line. Details
  * @xmlDefinition Information about a Line on a Remittance Advice.

@@ -5,6 +5,7 @@ namespace oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2;
  * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2
  * @xmlType 
  * @xmlName TaxSubtotalType
+ * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\TaxSubtotalType
  * @xmlComponentType ABIE
  * @xmlDictionaryEntryName Tax Subtotal. Details
  * @xmlDefinition Information about the subtotal for a particular tax category within a tax scheme, such as standard rate within VAT.

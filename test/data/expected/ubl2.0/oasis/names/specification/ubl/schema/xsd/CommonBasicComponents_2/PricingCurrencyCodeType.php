@@ -6,6 +6,7 @@ use oasis\names\specification\ubl\schema\xsd\QualifiedDatatypes_2;
  * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2
  * @xmlType CurrencyCodeType
  * @xmlName PricingCurrencyCodeType
+ * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\PricingCurrencyCodeType
  */
 class PricingCurrencyCodeType
 	extends QualifiedDatatypes_2\CurrencyCodeType

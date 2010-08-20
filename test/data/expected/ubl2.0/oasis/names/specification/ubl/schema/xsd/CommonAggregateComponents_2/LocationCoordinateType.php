@@ -5,6 +5,7 @@ namespace oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2;
  * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2
  * @xmlType 
  * @xmlName LocationCoordinateType
+ * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\LocationCoordinateType
  * @xmlComponentType ABIE
  * @xmlDictionaryEntryName Location Coordinate. Details
  * @xmlDefinition Information about physical (geographical) location.

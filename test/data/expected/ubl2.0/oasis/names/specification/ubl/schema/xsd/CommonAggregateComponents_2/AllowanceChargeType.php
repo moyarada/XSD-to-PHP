@@ -5,6 +5,7 @@ namespace oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2;
  * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2
  * @xmlType 
  * @xmlName AllowanceChargeType
+ * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\AllowanceChargeType
  * @xmlComponentType ABIE
  * @xmlDictionaryEntryName Allowance Charge. Details
  * @xmlDefinition Information about a charge or discount price component.

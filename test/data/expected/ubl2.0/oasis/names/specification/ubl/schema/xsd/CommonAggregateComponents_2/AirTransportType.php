@@ -5,6 +5,7 @@ namespace oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2;
  * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2
  * @xmlType 
  * @xmlName AirTransportType
+ * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\AirTransportType
  * @xmlComponentType ABIE
  * @xmlDictionaryEntryName Air Transport. Details
  * @xmlDefinition Information related to an aircraft.

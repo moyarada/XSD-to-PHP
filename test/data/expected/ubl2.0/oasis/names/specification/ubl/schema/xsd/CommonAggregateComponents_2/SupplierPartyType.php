@@ -5,6 +5,7 @@ namespace oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2;
  * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2
  * @xmlType 
  * @xmlName SupplierPartyType
+ * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\SupplierPartyType
  * @xmlComponentType ABIE
  * @xmlDictionaryEntryName Supplier Party. Details
  * @xmlDefinition Information about the Supplier Party.

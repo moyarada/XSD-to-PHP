@@ -5,6 +5,7 @@ namespace oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2;
  * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2
  * @xmlType 
  * @xmlName HazardousGoodsTransitType
+ * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\HazardousGoodsTransitType
  * @xmlComponentType ABIE
  * @xmlDictionaryEntryName Hazardous Goods Transit. Details
  * @xmlDefinition Information about Hazardous Goods Transit.

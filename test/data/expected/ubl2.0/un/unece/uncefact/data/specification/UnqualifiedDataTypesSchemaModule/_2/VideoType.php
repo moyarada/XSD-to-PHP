@@ -5,6 +5,7 @@ namespace un\unece\uncefact\data\specification\UnqualifiedDataTypesSchemaModule\
  * @xmlNamespace urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2
  * @xmlType base64Binary
  * @xmlName VideoType
+ * @var un\unece\uncefact\data\specification\UnqualifiedDataTypesSchemaModule\_2\VideoType
  * @xmlUniqueID UDT000006
  * @xmlCategoryCode UDT
  * @xmlDictionaryEntryName Video. Type

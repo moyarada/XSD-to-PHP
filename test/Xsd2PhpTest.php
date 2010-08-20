@@ -203,7 +203,7 @@ class Xsd2PhpTest extends PHPUnit_Framework_TestCase
             
          
          if (file_exists($genPath)) {
-            $this->rmdir_recursive(realpath($genPath));
+           $this->rmdir_recursive(realpath($genPath));
          } 
     }
     

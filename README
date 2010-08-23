@@ -3,6 +3,10 @@ XSD to PHP
 
 Versions history
 
+0.0.3 XML generation refactored
+ # namespaces generated as ns0 ... nsX 
+ # added @var to PHP models with full class name (with namespace)
+ 
 0.0.2 XSD Imports and includes routines rewritten
  # Refactored XSD import and include tags processing
  # Fixed problem with numeric namespaces in generated PHP models

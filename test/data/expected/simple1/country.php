@@ -4,6 +4,7 @@
  * @xmlNamespace 
  * @xmlType string
  * @xmlName country
+ * @var country
  */
 class country
 	{

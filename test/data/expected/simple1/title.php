@@ -4,6 +4,7 @@
  * @xmlNamespace 
  * @xmlType string
  * @xmlName title
+ * @var title
  */
 class title
 	{

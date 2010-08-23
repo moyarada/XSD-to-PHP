@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<shiporder>
+<shiporder xmlns:ns0="http://www.w3.org/2001/XMLSchema">
   <orderperson>Jon Doe</orderperson>
   <shipto>
     <name>Jon Doe Company</name>
@@ -13,5 +13,5 @@
     <quantity>145</quantity>
     <price>125.5</price>
   </item>
-  <orderid>Order ID</orderid>
+  <ns0:orderid>Order ID</ns0:orderid>
 </shiporder>

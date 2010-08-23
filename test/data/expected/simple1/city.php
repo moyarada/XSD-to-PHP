@@ -4,6 +4,7 @@
  * @xmlNamespace 
  * @xmlType string
  * @xmlName city
+ * @var city
  */
 class city
 	{

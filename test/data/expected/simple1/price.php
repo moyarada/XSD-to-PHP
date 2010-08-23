@@ -4,6 +4,7 @@
  * @xmlNamespace 
  * @xmlType decimal
  * @xmlName price
+ * @var price
  */
 class price
 	{

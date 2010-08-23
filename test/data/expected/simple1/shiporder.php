@@ -4,6 +4,7 @@
  * @xmlNamespace 
  * @xmlType 
  * @xmlName shiporder
+ * @var shiporder
  */
 class shiporder
 	{

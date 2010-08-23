@@ -4,6 +4,7 @@
  * @xmlNamespace 
  * @xmlType string
  * @xmlName address
+ * @var address
  */
 class address
 	{

@@ -4,6 +4,7 @@
  * @xmlNamespace 
  * @xmlType string
  * @xmlName name
+ * @var name
  */
 class name
 	{

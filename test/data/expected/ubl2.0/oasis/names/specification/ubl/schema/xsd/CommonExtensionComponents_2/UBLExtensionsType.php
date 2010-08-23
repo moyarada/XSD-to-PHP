@@ -19,10 +19,11 @@ class UBLExtensionsType
             A single extension for private use.
           
 	 * @xmlType element
+	 * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs unbounded
 	 * @xmlName UBLExtension
-	 * @var UBLExtension
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonExtensionComponents_2\UBLExtension
 	 */
 	public $UBLExtension;
 

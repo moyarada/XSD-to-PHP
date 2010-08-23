@@ -4,6 +4,7 @@
  * @xmlNamespace 
  * @xmlType string
  * @xmlName note
+ * @var note
  */
 class note
 	{

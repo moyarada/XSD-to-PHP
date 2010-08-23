@@ -4,6 +4,7 @@
  * @xmlNamespace 
  * @xmlType string
  * @xmlName orderperson
+ * @var orderperson
  */
 class orderperson
 	{

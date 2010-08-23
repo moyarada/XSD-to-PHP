@@ -4,6 +4,7 @@
  * @xmlNamespace 
  * @xmlType positiveInteger
  * @xmlName quantity
+ * @var quantity
  */
 class quantity
 	{

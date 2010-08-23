@@ -585,7 +585,7 @@
                             </doc>
                 </docs>
             </property>
-            <property debug="refElementNoNS" xmlType="element" name="AddressLine" type="AddressLine" minOccurs="0" maxOccurs="unbounded">
+            <property debug="refElement-ParentNS" xmlType="element" name="AddressLine" type="AddressLine" minOccurs="0" namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" maxOccurs="unbounded">
                 <docs>
                     <doc name="ComponentType">ASBIE</doc><doc name="DictionaryEntryName">Address. Address Line
                             </doc><doc name="Definition">An association to Address Line.
@@ -593,13 +593,13 @@
                             </doc>
                 </docs>
             </property>
-            <property debug="refElementNoNS" xmlType="element" name="Country" type="Country" minOccurs="0" maxOccurs="1">
+            <property debug="refElement-ParentNS" xmlType="element" name="Country" type="Country" minOccurs="0" namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" maxOccurs="1">
                 <docs>
                     <doc name="ComponentType">ASBIE</doc><doc name="DictionaryEntryName">Address. Country
                             </doc><doc name="Definition">An association to Country.</doc><doc name="Cardinality">0..1</doc><doc name="ObjectClass">Address</doc><doc name="PropertyTerm">Country</doc><doc name="AssociatedObjectClass">Country</doc>
                 </docs>
             </property>
-            <property debug="refElementNoNS" xmlType="element" name="LocationCoordinate" type="LocationCoordinate" minOccurs="0" maxOccurs="1">
+            <property debug="refElement-ParentNS" xmlType="element" name="LocationCoordinate" type="LocationCoordinate" minOccurs="0" namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" maxOccurs="1">
                 <docs>
                     <doc name="ComponentType">ASBIE</doc><doc name="DictionaryEntryName">Address. Location Coordinate
                             </doc><doc name="Definition">An association to Location Coordinate.

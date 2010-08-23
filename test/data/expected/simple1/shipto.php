@@ -4,6 +4,7 @@
  * @xmlNamespace 
  * @xmlType 
  * @xmlName shipto
+ * @var shipto
  */
 class shipto
 	{

@@ -55,10 +55,11 @@ class UBLExtensionType
             An agency that maintains one or more Extensions.
           
 	 * @xmlType element
+	 * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ExtensionAgencyID
-	 * @var ExtensionAgencyID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonExtensionComponents_2\ExtensionAgencyID
 	 */
 	public $ExtensionAgencyID;
 	/**
@@ -66,10 +67,11 @@ class UBLExtensionType
             The name of the agency that maintains the Extension.
           
 	 * @xmlType element
+	 * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ExtensionAgencyName
-	 * @var ExtensionAgencyName
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonExtensionComponents_2\ExtensionAgencyName
 	 */
 	public $ExtensionAgencyName;
 	/**
@@ -77,10 +79,11 @@ class UBLExtensionType
             The version of the Extension.
           
 	 * @xmlType element
+	 * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ExtensionVersionID
-	 * @var ExtensionVersionID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonExtensionComponents_2\ExtensionVersionID
 	 */
 	public $ExtensionVersionID;
 	/**
@@ -88,10 +91,11 @@ class UBLExtensionType
             A URI for the Agency that maintains the Extension.
           
 	 * @xmlType element
+	 * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ExtensionAgencyURI
-	 * @var ExtensionAgencyURI
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonExtensionComponents_2\ExtensionAgencyURI
 	 */
 	public $ExtensionAgencyURI;
 	/**
@@ -99,10 +103,11 @@ class UBLExtensionType
             A URI for the Extension.
           
 	 * @xmlType element
+	 * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ExtensionURI
-	 * @var ExtensionURI
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonExtensionComponents_2\ExtensionURI
 	 */
 	public $ExtensionURI;
 	/**
@@ -110,10 +115,11 @@ class UBLExtensionType
             A code for reason the Extension is being included.
           
 	 * @xmlType element
+	 * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ExtensionReasonCode
-	 * @var ExtensionReasonCode
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonExtensionComponents_2\ExtensionReasonCode
 	 */
 	public $ExtensionReasonCode;
 	/**
@@ -121,10 +127,11 @@ class UBLExtensionType
             A description of the reason for the Extension.
           
 	 * @xmlType element
+	 * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2
 	 * @xmlMinOccurs 0
 	 * @xmlMaxOccurs 1
 	 * @xmlName ExtensionReason
-	 * @var ExtensionReason
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonExtensionComponents_2\ExtensionReason
 	 */
 	public $ExtensionReason;
 	/**
@@ -132,10 +139,11 @@ class UBLExtensionType
             The definition of the extension content.
           
 	 * @xmlType element
+	 * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName ExtensionContent
-	 * @var ExtensionContent
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonExtensionComponents_2\ExtensionContent
 	 */
 	public $ExtensionContent;
 

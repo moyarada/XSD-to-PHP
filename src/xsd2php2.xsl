@@ -157,8 +157,8 @@
 			<xsl:when test="@ref and not(contains(@ref,':'))">
 				<xsl:choose>
 					<xsl:when test="../../@namespace">
-						<property debug="refElement-ParentNS" xmlType="element" name="{@ref}"
-							type="{@ref}" minOccurs="{@minOccurs}" namespace="{../../@namespace}"
+						<property debug="refElement-ParentNS" xmlType="element"
+							name="{@ref}" type="{@ref}" minOccurs="{@minOccurs}" namespace="{../../@namespace}"
 							maxOccurs="{@maxOccurs}">
 							<xsl:apply-templates />
 						</property>
@@ -174,16 +174,29 @@
 			<xsl:when test="@name">
 				<xsl:choose>
 					<xsl:when test="contains(@type, ':')">
-						<property debug="nameElement-TypeColon" xmlType="element"
-							name="{@name}" type="{substring-after(@type, ':')}" namespace="{substring-before(@type, ':')}"
-							minOccurs="{@minOccurs}" maxOccurs="{@maxOccurs}">
-							<xsl:apply-templates />
-						</property>
+						<xsl:choose>
+							<xsl:when test="../../@namespace">
+								<property debug="nameElement-TypeColonNamespace" xmlType="element"
+									name="{@name}" type="{substring-after(@type, ':')}" namespace="{../../@namespace}"
+									minOccurs="{@minOccurs}" typeNamespace="{substring-before(@type, ':')}"
+									maxOccurs="{@maxOccurs}">
+									<xsl:apply-templates />
+								</property>
+							</xsl:when>
+							<xsl:otherwise>
+							     <property debug="nameElement-TypeColonNoNamespace" xmlType="element"
+                                    name="{@name}" type="{substring-after(@type, ':')}" namespace="#default#"
+                                    minOccurs="{@minOccurs}" typeNamespace="{substring-before(@type, ':')}"
+                                    maxOccurs="{@maxOccurs}">
+                                    <xsl:apply-templates />
+                                </property>
+							</xsl:otherwise>
+						</xsl:choose>
 					</xsl:when>
 					<xsl:otherwise>
 						<property debug="nameElement-TypeNoColon" xmlType="element"
-							name="{@name}" type="{@type}" namespace="#default#" minOccurs="{@minOccurs}"
-							maxOccurs="{@maxOccurs}">
+							name="{@name}" type="{@type}" namespace="#default#"
+							typeNamespace="#default#" minOccurs="{@minOccurs}" maxOccurs="{@maxOccurs}">
 							<xsl:apply-templates />
 						</property>
 

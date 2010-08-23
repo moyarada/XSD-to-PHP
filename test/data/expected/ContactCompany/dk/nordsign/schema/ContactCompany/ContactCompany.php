@@ -13,11 +13,11 @@ class ContactCompany
 	
 	/**
 	 * @xmlType element
-	 * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2
+	 * @xmlNamespace urn:dk:nordsign:schema:ContactCompany
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName ID
-	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\IDType
+	 * @var dk\nordsign\schema\ContactCompany\IDType
 	 */
 	public $ID;
 	/**

@@ -13,74 +13,74 @@ class AddressType
 	
 	/**
 	 * @xmlType element
-	 * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2
+	 * @xmlNamespace urn:dk:nordsign:schema:ContactCompany
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName Address
-	 * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\AddressLineType
+	 * @var dk\nordsign\schema\ContactCompany\AddressLineType
 	 */
 	public $Address;
 	/**
 	 * @xmlType element
-	 * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2
+	 * @xmlNamespace urn:dk:nordsign:schema:ContactCompany
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName Address2
-	 * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\AddressLineType
+	 * @var dk\nordsign\schema\ContactCompany\AddressLineType
 	 */
 	public $Address2;
 	/**
 	 * @xmlType element
-	 * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2
+	 * @xmlNamespace urn:dk:nordsign:schema:ContactCompany
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName PostBox
-	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\PostboxType
+	 * @var dk\nordsign\schema\ContactCompany\PostboxType
 	 */
 	public $PostBox;
 	/**
 	 * @xmlType element
-	 * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2
+	 * @xmlNamespace urn:dk:nordsign:schema:ContactCompany
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName PostalCode
-	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\PostalZoneType
+	 * @var dk\nordsign\schema\ContactCompany\PostalZoneType
 	 */
 	public $PostalCode;
 	/**
 	 * @xmlType element
-	 * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2
+	 * @xmlNamespace urn:dk:nordsign:schema:ContactCompany
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName City
-	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\CityNameType
+	 * @var dk\nordsign\schema\ContactCompany\CityNameType
 	 */
 	public $City;
 	/**
 	 * @xmlType element
-	 * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2
+	 * @xmlNamespace urn:dk:nordsign:schema:ContactCompany
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName State
-	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\RegionType
+	 * @var dk\nordsign\schema\ContactCompany\RegionType
 	 */
 	public $State;
 	/**
 	 * @xmlType element
-	 * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2
+	 * @xmlNamespace urn:dk:nordsign:schema:ContactCompany
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName Country
-	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\NameType
+	 * @var dk\nordsign\schema\ContactCompany\NameType
 	 */
 	public $Country;
 	/**
 	 * @xmlType element
-	 * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2
+	 * @xmlNamespace urn:dk:nordsign:schema:ContactCompany
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName ContactPerson
-	 * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\ContactType
+	 * @var dk\nordsign\schema\ContactCompany\ContactType
 	 */
 	public $ContactPerson;
 

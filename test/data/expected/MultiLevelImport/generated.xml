@@ -611,18 +611,18 @@
     </class>
     <class debug="1.2-2" name="ContactPersonType" simpleType="" namespace="urn:dk:nordsign:schema:ContactPerson">
 		
-			<property debug="nameElement-TypeColon" xmlType="element" name="ID" type="IDType" namespace="cbc" minOccurs="1" maxOccurs="1"/>
-			<property debug="nameElement-TypeColon" xmlType="element" name="Name" type="NameType" namespace="cbc" minOccurs="1" maxOccurs="1"/>
-			<property debug="nameElement-TypeColon" xmlType="element" name="Telephone" type="TelephoneType" namespace="cbc" minOccurs="0" maxOccurs="unbounded"/>
-			<property debug="nameElement-TypeColon" xmlType="element" name="ElectronicMail" type="ElectronicMailType" namespace="cbc" minOccurs="0" maxOccurs="unbounded"/>
-			<property debug="nameElement-TypeColon" xmlType="element" name="Username" type="ElectronicMailType" namespace="cbc" minOccurs="1" maxOccurs="1"/>
-			<property debug="nameElement-TypeColon" xmlType="element" name="Password" type="TextType" namespace="cbc" minOccurs="1" maxOccurs="1"/>
-			<property debug="nameElement-TypeColon" xmlType="element" name="Created" type="DateType" namespace="cbc" minOccurs="1" maxOccurs="1"/>
-			<property debug="nameElement-TypeColon" xmlType="element" name="Role" type="integer" namespace="xsd" minOccurs="0" maxOccurs="1"/>
-			<property debug="nameElement-TypeColon" xmlType="element" name="Title" type="TitleType" namespace="cbc" minOccurs="0" maxOccurs="1"/>
-			<property debug="nameElement-TypeColon" xmlType="element" name="Company_No" type="CompanyIDType" namespace="cbc" minOccurs="0" maxOccurs="1"/>
-			<property debug="nameElement-TypeColon" xmlType="element" name="BillingAddress" type="AddressType" namespace="cac" minOccurs="1" maxOccurs="1"/>
-			<property debug="nameElement-TypeColon" xmlType="element" name="ShippingAddress" type="AddressType" namespace="cac" minOccurs="0" maxOccurs="unbounded"/>
+			<property debug="nameElement-TypeColonNoNamespace" xmlType="element" name="ID" type="IDType" namespace="#default#" minOccurs="1" typeNamespace="cbc" maxOccurs="1"/>
+			<property debug="nameElement-TypeColonNoNamespace" xmlType="element" name="Name" type="NameType" namespace="#default#" minOccurs="1" typeNamespace="cbc" maxOccurs="1"/>
+			<property debug="nameElement-TypeColonNoNamespace" xmlType="element" name="Telephone" type="TelephoneType" namespace="#default#" minOccurs="0" typeNamespace="cbc" maxOccurs="unbounded"/>
+			<property debug="nameElement-TypeColonNoNamespace" xmlType="element" name="ElectronicMail" type="ElectronicMailType" namespace="#default#" minOccurs="0" typeNamespace="cbc" maxOccurs="unbounded"/>
+			<property debug="nameElement-TypeColonNoNamespace" xmlType="element" name="Username" type="ElectronicMailType" namespace="#default#" minOccurs="1" typeNamespace="cbc" maxOccurs="1"/>
+			<property debug="nameElement-TypeColonNoNamespace" xmlType="element" name="Password" type="TextType" namespace="#default#" minOccurs="1" typeNamespace="cbc" maxOccurs="1"/>
+			<property debug="nameElement-TypeColonNoNamespace" xmlType="element" name="Created" type="DateType" namespace="#default#" minOccurs="1" typeNamespace="cbc" maxOccurs="1"/>
+			<property debug="nameElement-TypeColonNoNamespace" xmlType="element" name="Role" type="integer" namespace="#default#" minOccurs="0" typeNamespace="xsd" maxOccurs="1"/>
+			<property debug="nameElement-TypeColonNoNamespace" xmlType="element" name="Title" type="TitleType" namespace="#default#" minOccurs="0" typeNamespace="cbc" maxOccurs="1"/>
+			<property debug="nameElement-TypeColonNoNamespace" xmlType="element" name="Company_No" type="CompanyIDType" namespace="#default#" minOccurs="0" typeNamespace="cbc" maxOccurs="1"/>
+			<property debug="nameElement-TypeColonNoNamespace" xmlType="element" name="BillingAddress" type="AddressType" namespace="#default#" minOccurs="1" typeNamespace="cac" maxOccurs="1"/>
+			<property debug="nameElement-TypeColonNoNamespace" xmlType="element" name="ShippingAddress" type="AddressType" namespace="#default#" minOccurs="0" typeNamespace="cac" maxOccurs="unbounded"/>
 		
 	</class>
     <class debug="1.3-1" name="DateType" type="date" namespace="urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2">

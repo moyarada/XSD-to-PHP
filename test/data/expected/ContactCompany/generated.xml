@@ -2266,15 +2266,15 @@
     <class debug="1.1-1" name="ContactCompany" type="" namespace="urn:dk:nordsign:schema:ContactCompany"><extends debug="1.2Extend" name=""/>
 		
 			
-				<property debug="nameElement-TypeColon" xmlType="element" name="ID" type="IDType" namespace="cbc" minOccurs="1" maxOccurs="1"/>
+				<property debug="nameElement-TypeColonNoNamespace" xmlType="element" name="ID" type="IDType" namespace="#default#" minOccurs="1" typeNamespace="cbc" maxOccurs="1"/>
 				<property debug="refElement" xmlType="element" name="CompanyID" type="CompanyID" namespace="cbc" minOccurs="1" maxOccurs="1"/>
 				<property debug="refElement" xmlType="element" name="Name" type="Name" namespace="cbc" minOccurs="1" maxOccurs="1"/>
 				<property debug="refElement" xmlType="element" name="Telephone" type="Telephone" namespace="cbc" minOccurs="1" maxOccurs="1"/>
 				<property debug="refElement" xmlType="element" name="Telefax" type="Telefax" namespace="cbc" minOccurs="1" maxOccurs="1"/>
 
 				<property debug="refElement" xmlType="element" name="Party" type="Party" namespace="cac" minOccurs="1" maxOccurs="1"/>
-				<property debug="nameElement-TypeNoColon" xmlType="element" name="BillingAddress" type="AddressType" namespace="#default#" minOccurs="1" maxOccurs="1"/>
-				<property debug="nameElement-TypeNoColon" xmlType="element" name="ShippingAddress" type="AddressType" namespace="#default#" minOccurs="1" maxOccurs="unbounded"/>
+				<property debug="nameElement-TypeNoColon" xmlType="element" name="BillingAddress" type="AddressType" namespace="#default#" typeNamespace="#default#" minOccurs="1" maxOccurs="1"/>
+				<property debug="nameElement-TypeNoColon" xmlType="element" name="ShippingAddress" type="AddressType" namespace="#default#" typeNamespace="#default#" minOccurs="1" maxOccurs="unbounded"/>
 			
 		
 	</class>
@@ -11583,15 +11583,15 @@ Thus, the column "Preference Criterion" will indicate either A, B, C,...</doc>
   </class>
     <class debug="1.2-2" name="AddressType" simpleType="" namespace="urn:dk:nordsign:schema:ContactCompany">
 		
-			<property debug="nameElement-TypeColon" xmlType="element" name="Address" type="AddressLineType" namespace="cac" minOccurs="1" maxOccurs="1"/>
-			<property debug="nameElement-TypeColon" xmlType="element" name="Address2" type="AddressLineType" namespace="cac" minOccurs="1" maxOccurs="1"/>
-			<property debug="nameElement-TypeColon" xmlType="element" name="PostBox" type="PostboxType" namespace="cbc" minOccurs="1" maxOccurs="1"/>
+			<property debug="nameElement-TypeColonNoNamespace" xmlType="element" name="Address" type="AddressLineType" namespace="#default#" minOccurs="1" typeNamespace="cac" maxOccurs="1"/>
+			<property debug="nameElement-TypeColonNoNamespace" xmlType="element" name="Address2" type="AddressLineType" namespace="#default#" minOccurs="1" typeNamespace="cac" maxOccurs="1"/>
+			<property debug="nameElement-TypeColonNoNamespace" xmlType="element" name="PostBox" type="PostboxType" namespace="#default#" minOccurs="1" typeNamespace="cbc" maxOccurs="1"/>
 
-			<property debug="nameElement-TypeColon" xmlType="element" name="PostalCode" type="PostalZoneType" namespace="cbc" minOccurs="1" maxOccurs="1"/>
-			<property debug="nameElement-TypeColon" xmlType="element" name="City" type="CityNameType" namespace="cbc" minOccurs="1" maxOccurs="1"/>
-			<property debug="nameElement-TypeColon" xmlType="element" name="State" type="RegionType" namespace="cbc" minOccurs="1" maxOccurs="1"/>
-			<property debug="nameElement-TypeColon" xmlType="element" name="Country" type="NameType" namespace="cbc" minOccurs="1" maxOccurs="1"/>
-			<property debug="nameElement-TypeColon" xmlType="element" name="ContactPerson" type="ContactType" namespace="cac" minOccurs="1" maxOccurs="1"/>
+			<property debug="nameElement-TypeColonNoNamespace" xmlType="element" name="PostalCode" type="PostalZoneType" namespace="#default#" minOccurs="1" typeNamespace="cbc" maxOccurs="1"/>
+			<property debug="nameElement-TypeColonNoNamespace" xmlType="element" name="City" type="CityNameType" namespace="#default#" minOccurs="1" typeNamespace="cbc" maxOccurs="1"/>
+			<property debug="nameElement-TypeColonNoNamespace" xmlType="element" name="State" type="RegionType" namespace="#default#" minOccurs="1" typeNamespace="cbc" maxOccurs="1"/>
+			<property debug="nameElement-TypeColonNoNamespace" xmlType="element" name="Country" type="NameType" namespace="#default#" minOccurs="1" typeNamespace="cbc" maxOccurs="1"/>
+			<property debug="nameElement-TypeColonNoNamespace" xmlType="element" name="ContactPerson" type="ContactType" namespace="#default#" minOccurs="1" typeNamespace="cac" maxOccurs="1"/>
 
 		
 	</class>

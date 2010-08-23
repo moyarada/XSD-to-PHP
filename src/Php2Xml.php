@@ -43,12 +43,16 @@ class Php2Xml extends Common {
      */
     private $root;
     
+    private $namespaces = array();
+    
+    private $lastNsKey = 0;
+    
+    private $rootTagName;
+    
     public function __construct($phpClass = null) {
-        
         if ($phpClass != null) {
             $this->phpClass = $phpClass;
         }
-        
         $this->buildXml();
     }
     
@@ -61,16 +65,10 @@ class Php2Xml extends Common {
             $this->phpClass = $phpClass;
         }
         
-        $xml = "XML";
-        
         $propDocs = $this->parseClass($this->phpClass, $this->dom, true);
-        
-        //$this->logger = \Zend_Registry::get('logger');
         
         foreach ($propDocs as $name => $data) {
             if (is_array($data['value'])) {
-                
-                $this->logger->debug(print_r($name, true));
                 $elName = array_reverse(explode("\\",$name));
                 $code = $this->getNsCode($data['xmlNamespace']);
                 foreach ($data['value'] as $arrEl) {
@@ -84,14 +82,11 @@ class Php2Xml extends Common {
             }
         }
         
-        //print_r($propDocs);
         return $this->dom->saveXML();
         
     }
     
-    private $namespaces = array();
-    private $lastNsKey = 0;
-    private $rootTagName;
+    
     
     private function getNsCode($longNs, $rt = false) {
         // if namespace exists - just use its name
@@ -114,7 +109,6 @@ class Php2Xml extends Common {
         $refl = new \ReflectionClass($object);
         $docs = $this->parseDocComments($refl->getDocComment());
         
-        
         if ($docs['xmlNamespace'] != '') {
             $code = '';
             if (is_object($this->root)) { // root initialized
@@ -127,8 +121,8 @@ class Php2Xml extends Common {
             
             $dom->appendChild($root);
         } else {
-            $code = $this->getNsCode($docs['xmlNamespace']);
-            $root = $this->dom->createElement($code.":".$docs['xmlName']);
+            //print_r("No Namespace found \n");
+            $root = $this->dom->createElement($docs['xmlName']);
             $dom->appendChild($root);
         }
         
@@ -160,51 +154,33 @@ class Php2Xml extends Common {
     
     private function addProperty($docs, $dom) {
         if ($docs['value'] != '') {
-            $code = $this->getNsCode($docs['xmlNamespace']);
-            $el = $this->dom->createElement($code.":".$docs['xmlName']);
-            if (is_object($docs['value'])) {
-                $el = $this->parseObjectValue($docs['value'], $el);
+            $el = "";
+            
+            if (array_key_exists('xmlNamespace', $docs)) {
+                $code = $this->getNsCode($docs['xmlNamespace']);
+                $el = $this->dom->createElement($code.":".$docs['xmlName']);
             } else {
-                if (is_string($docs['value'])) {
+                $el = $this->dom->createElement($docs['xmlName']);
+            }
+            
+            if (is_object($docs['value'])) {
+                //print_r("Value is object \n");
+                $el = $this->parseObjectValue($docs['value'], $el);
+            } elseif (is_string($docs['value'])) {
+                if (array_key_exists('xmlNamespace', $docs)) {
                     $code = $this->getNsCode($docs['xmlNamespace']);
                     $el = $this->dom->createElement($code.":".$docs['xmlName'], $docs['value']);
+                } else {
+                    $el = $this->dom->createElement($docs['xmlName'], $docs['value']);
                 }
-                
+            } else {
+                //print_r("Value is not string");
             }
             
             $dom->appendChild($el);
         }
     }
-    
-    private function parseArrayValue($arr, $element) {
-        if (!is_array($arr) || count($arr) == 0) {
-            return;
-        }
-        //$el = '';
-        foreach ($arr as $key => $value) {
-            if (is_string($value)) {
-                //$el =
-                //@todo is this case possible? 
-            }
-            if (is_object($value)) {
-                $name = array_reverse(explode("\\",get_class($value)));
-                //$this->logger = \Zend_Registry::get('logger');
-                //$this->logger->debug(print_r($name[0], true));
-                //$el = $this->dom->createElement($name[0]);
-                $element = $this->parseObjectValue($value, $element); 
-            }
-            
-            if (is_array($value)) {
-                //@todo implement and test on  multi level arrays
-            }
-           // if value string = append child
-           // if value array = parse array value
-           // if value object = parseObjectValue
-           //$element->appendChild($el);         
-        }
-        
-        return $element;
-    }
+  
     
     private function parseObjectValue($obj, $element) {
         
@@ -213,37 +189,32 @@ class Php2Xml extends Common {
         $classDocs  = $this->parseDocComments($refl->getDocComment());
         $classProps = $refl->getProperties(); 
         $namespace = $classDocs['xmlNamespace'];
-        
+        //print_r($classProps);
         foreach($classProps as $prop) {
             $propDocs = $this->parseDocComments($prop->getDocComment());
-            //print('Value:');
-            //print_r($prop->getValue($refl));
+            //print_r($prop->getDocComment());
             if (is_object($prop->getValue($obj))) {
-                
-                /*
                 $code = '';
-                if (is_object($this->root)) {
-                    $code = $this->getNsCode($docs['xmlNamespace']);
-                    $root = $this->dom->createElementNS($docs['xmlNamespace'], $code.":".$docs['xmlName']);
+                //print($propDocs['xmlName']."\n");
+                if (array_key_exists('xmlNamespace', $propDocs)) {
+                    $code = $this->getNsCode($propDocs['xmlNamespace']);
+                    $el = $this->dom->createElement($code.":".$propDocs['xmlName']); 
+                    $el = $this->parseObjectValue($prop->getValue($obj), $el);
                 } else {
-                    $root = $this->dom->createElementNS($docs['xmlNamespace'], $docs['xmlName']);
-                }*/
+                    $el = $this->dom->createElement($propDocs['xmlName']); 
+                    $el = $this->parseObjectValue($prop->getValue($obj), $el);
+                }
+                //print_r("Value is object in Parse\n");
                 
-                //$el = '';
-                //if ($namespace != '') {
-                $code = $this->getNsCode($namespace);
-                $el = $this->dom->createElement($code.":".$propDocs['xmlName']); 
-                $el = $this->parseObjectValue($prop->getValue($obj), $el);
                 $element->appendChild($el);
             } else {
                 if ($prop->getValue($obj) != '') {
                     if ($propDocs['xmlType'] == 'element') {
                         $el = '';
-                        
-                        $code = $this->getNsCode($namespace);
+                        $code = $this->getNsCode($propDocs['xmlNamespace']);
                         $el = $this->dom->createElement($code.":".$propDocs['xmlName'], $prop->getValue($obj));
-                        //}
                         $element->appendChild($el);
+                        //print_r("Added element ".$propDocs['xmlName']." with NS = ".$propDocs['xmlNamespace']." \n");
                     } elseif ($propDocs['xmlType'] == 'attribute') {
                         $atr = $this->dom->createAttribute($propDocs['xmlName']);
                         $text = $this->dom->createTextNode($prop->getValue($obj));
@@ -259,9 +230,4 @@ class Php2Xml extends Common {
         
         return $element;
     }
-    
-    
-    
-    
-    
 }

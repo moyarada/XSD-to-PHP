@@ -1,5 +1,9 @@
 <?php
+use dk\nordsign\schema\ContactCompany as CCP;
+use oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2 as CAC2;
+use oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2 as CBC2;
 use com\mikebevz\xsd2php;
+use oasis\names\specification\ubl\schema\xsd\Order_2;
 
 set_include_path(dirname(__FILE__).'/data/expected/ubl2.0'.PATH_SEPARATOR.
                  dirname(__FILE__).'/data/expected/simple1'.PATH_SEPARATOR.
@@ -8,13 +12,12 @@ set_include_path(dirname(__FILE__).'/data/expected/ubl2.0'.PATH_SEPARATOR.
 
 
 function __autoload($className){
-    //Directories added here must be 
-//relative to the script going to use this file. 
-//New entries can be added to this list
+
     $directories = array(
       '',
       'data/expected/ubl2.0/',
       'data/expected/simple1/',  
+      'data/expected/ContactCompany/',
       'data/'
     );
 
@@ -23,10 +26,7 @@ function __autoload($className){
       '%s.php'
     );
     
-    // @todo include classes using namespaces
-   // if (preg_match('/\\/', $className)) {
-        
-    //}
+
         
     // this is to take care of the PEAR style of naming classes
     $path = str_ireplace('_', '/', $className);
@@ -54,10 +54,6 @@ function __autoload($className){
     }
 }
                         
-use oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2;
-use oasis\names\specification\ubl\schema\xsd\Order_2;
-use oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2;
-
 //require_once dirname(__FILE__) . '/../../bootstrap.php';
 require_once 'PHPUnit/Framework.php';
 require_once "../src/Php2Xml.php";
@@ -79,28 +75,19 @@ class Php2XmlTest extends PHPUnit_Framework_TestCase
     
     public function testOrderClass() {
        
-       
-       
-       //print(get_include_path());
-
-       //require_once 'oasis/names/specification/ubl/schema/xsd/Order_2/OrderType.php';
-       //
-       
-       
-       
        $order = new Order_2\Order();
        
-       $orderLine =   new CommonAggregateComponents_2\OrderLine();
+       $orderLine = new CAC2\OrderLine();
        
-            $lineItem = new CommonAggregateComponents_2\LineItem();
+            $lineItem = new CAC2\LineItem();
             $lineItem->ID = 'DYE_SUB';
             $lineItem->Quantity = 110.5;
        
-                $price = new CommonAggregateComponents_2\Price();       
+                $price = new CAC2\Price();       
                 $price->PriceAmount = 200.75;
             $lineItem->Price = $price;
        
-       $quantity = new CommonBasicComponents_2\Quantity();
+       $quantity = new CBC2\Quantity();
        $quantity->value = 110.22;
        $quantity->unitCode = 'M2';
        
@@ -110,10 +97,10 @@ class Php2XmlTest extends PHPUnit_Framework_TestCase
        $orderLine->LineItem = $lineItem;
        $order->OrderLine = $orderLine; 
        
-        $buyerCustomer = new CommonAggregateComponents_2\BuyerCustomerParty();
+        $buyerCustomer = new CAC2\BuyerCustomerParty();
         $buyerCustomer->AccountingContact = '';
         $buyerCustomer->AdditionalAccountID = '';
-          $buyerContact = new CommonAggregateComponents_2\BuyerContact();
+          $buyerContact = new CAC2\BuyerContact();
           $buyerContact->ElectronicMail = "email@example.com";
           $buyerContact->ID = "CT2344332";
           $buyerContact->Name = 'Jon Doe';
@@ -129,9 +116,8 @@ class Php2XmlTest extends PHPUnit_Framework_TestCase
        $xml = $php2xml->getXml($order);
        //file_put_contents("data/expected/ubl2.0/Order.xml", $xml);
        $expected = file_get_contents("data/expected/ubl2.0/Order.xml");
-       
-       $this->assertEquals($expected, $xml);
        //print_r($xml);
+       $this->assertEquals($expected, $xml);
        
     }
     
@@ -204,4 +190,68 @@ class Php2XmlTest extends PHPUnit_Framework_TestCase
        $this->assertEquals($expected, $xml);
        //print_r($xml);
     }
+    
+    public function testContactCompany() {
+        
+        $cc = new CCP\ContactCompany();
+        $bilAd = new CCP\AddressType();
+        $addLine = new CAC2\AddressLine();
+        $line = new CBC2\Line();
+        $line->value = "Address line";
+        $addLine->Line = $line;
+        $bilAd->Address = $addLine;
+        
+        $bilAd->City = "Aalborg"; 
+        $bilAd->Country = "DK";
+        $bilAd->PostalCode = "9200"; 
+        $cc->BillingAddress = $bilAd;
+        
+        $cId = new CBC2\CompanyID();
+        $cId->value = "23423423423";
+        $cc->CompanyID = $cId;
+
+        $id = new CBC2\ID();
+        $id->value = "3242342323";
+        $cc->ID = $id;
+        
+        $ships = array();
+        
+        $ship1 = new CCP\AddressType();
+        
+        $addLine1 = new CAC2\AddressLine();
+        $sLine = new CBC2\Line();
+        $sLine->value = "Gammelnibevej 122";
+        $addLine1->Line = $sLine; 
+        $ship1->Address = $addLine1;        
+        
+        array_push($ships, $ship1);
+        
+        $ship2 = new CCP\AddressType();
+        
+        $addLine2 = new CAC2\AddressLine();
+        $sLine2 = new CBC2\Line();
+        $sLine2->value = "Nyborgvej 23 st th";
+        $addLine2->Line = $sLine2;
+        
+        $ship2->Address = $addLine2; 
+        
+        
+        array_push($ships, $ship2);
+        
+        
+        $cc->ShippingAddress = $ships;
+        
+                
+        $php2xml = new xsd2php\Php2Xml();
+        
+        $xml = $php2xml->getXml($cc);
+        //print_r($xml);
+        
+        //file_put_contents("data/expected/ContactCompany/ContactCompany.xml", $xml);
+       
+        $expected = file_get_contents("data/expected/ContactCompany/ContactCompany.xml");
+       
+        $this->assertEquals($expected, $xml);
+    }
+    
 }

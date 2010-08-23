@@ -138,7 +138,7 @@ class Xsd2Php extends Common
         $this->shortNamespaces = $this->getNamespaces($this->xpath);
         
         //$this->dom = $this->importIncludes($this->xsdFile, $this->dom);
-        $this->dom = $xsd = $this->loadIncludes($this->dom, dirname($this->xsdFile));
+        $this->dom = $xsd = $this->loadIncludes($this->dom, dirname($this->xsdFile), $this->targetNamespace);
         $this->dom = $this->loadImports($this->dom, $this->xsdFile);
         
         
@@ -241,7 +241,7 @@ class Xsd2Php extends Common
                 $mxpath = new \DOMXPath($xsd);
                 $this->shortNamespaces = array_merge($this->shortNamespaces, $this->getNamespaces($mxpath));
                 
-                $xsd = $this->loadIncludes($xsd, $filepath);
+                $xsd = $this->loadIncludes($xsd, $filepath, $namespace);
                 
                 $this->loadedImportFiles[] = $xsdFileName;
                 $this->loadedImportFiles = array_unique($this->loadedImportFiles);
@@ -285,7 +285,7 @@ class Xsd2Php extends Common
         return $dom;
     }
     
-    public function loadIncludes($dom, $filepath = '') {
+    public function loadIncludes($dom, $filepath = '', $namespace = '') {
         $xpath = new \DOMXPath($dom);    
         $query = "//*[local-name()='include' and namespace-uri()='http://www.w3.org/2001/XMLSchema']";
         $includes = $xpath->query($query);
@@ -316,6 +316,14 @@ class Xsd2Php extends Common
                     $newNode = $dom->importNode($node, true);
                     $parent->insertBefore($newNode, $entry);
                 } else {
+                    
+                    if ($namespace != '') {
+                        $newNodeNs = $xsd->createAttribute("namespace");
+                        $textEl = $xsd->createTextNode($namespace);
+                        $newNodeNs->appendChild($textEl);
+                        $node->appendChild($newNodeNs);
+                    }
+                    
                     $newNode = $dom->importNode($node, true);
                     $parent->insertBefore($newNode, $entry);
                 }
@@ -475,7 +483,11 @@ class Xsd2Php extends Common
             //}
             $docBlock['xmlType']      = $phpClass->type;
             $docBlock['xmlName']      = $phpClass->name;
-            $docBlock['var'] = $this->namespaceToPhp($this->expandNS($phpClass->namespace))."\\".$phpClass->name;
+            if ($phpClass->namespace != '') {
+                $docBlock['var'] = $this->namespaceToPhp($this->expandNS($phpClass->namespace))."\\".$phpClass->name;
+            } else {
+                $docBlock['var'] = $phpClass->name;
+            }
             
             foreach ($docs as $doc) {
                 if ($doc->nodeValue != '') {

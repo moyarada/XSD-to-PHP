@@ -656,7 +656,7 @@ class Xsd2Php extends Common
         $ns = explode(DIRECTORY_SEPARATOR, $ns);
         $i = 0;
         foreach($ns as $elem) {
-            if (preg_match('/^[0-9]$/', $elem)) {
+            if (preg_match('/^[0-9]+$/', $elem)) {
                 $ns[$i] = "_".$elem;
             }
             if (in_array($elem, $this->reservedWords)) {

@@ -39,6 +39,8 @@ class Common {
                                 'QName', 'short', 'string', 'time', 'token',
                                 'unsignedByte', 'unsignedInt', 'unsignedLong', 'unsignedShort'
                                 );
+                                
+                           
     
     protected $reservedWords = array (
         'and', 'or', 'xor', '__FILE__', 'exception',
@@ -73,6 +75,67 @@ class Common {
         }
         
         return $commentsOut;
+    }
+    
+    /**
+     * Convert XMLSchema data type to PHP data type
+     * 
+     * @param mixed $type XML Schema data type
+     * 
+     * @return string
+     */
+    protected function normalizeType($type) {
+        switch ($type) {
+            case 'decimal':
+            case 'double': 
+            case 'float':        
+                return 'float';
+                break;
+                
+            case 'base64Binary':
+            case 'normalizedString':
+            case 'dateTime':
+            case 'date':
+            case 'anySimpleType':
+            case 'anyURI':
+            case 'duration': 
+            case 'gDay': 
+            case 'gMonth':
+            case 'gMonthDay': 
+            case 'gYear': 
+            case 'gYearMonth': 
+            case 'language': 
+            case 'QName':  
+            case 'string':
+            case 'time':
+            case 'token':           
+                return 'string';
+                break;
+                  
+            case 'boolean':
+                return 'boolean';
+                break;
+                
+            case 'positiveInteger': 
+            case 'byte':
+            case 'hexBinary': 
+            case 'int':
+            case 'integer':
+            case 'long':  
+            case 'negativeInteger':
+            case 'nonPositiveInteger':
+            case 'nonNegativeInteger':
+            case 'short':    
+            case 'unsignedByte':
+            case 'unsignedInt':
+            case 'unsignedLong':
+            case 'unsignedShort':      
+                return 'integer';
+                break; 
+            default:
+                return $type;
+                break;                   
+        }
     }
 
 }

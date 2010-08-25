@@ -245,9 +245,9 @@ class Php2XmlTest extends PHPUnit_Framework_TestCase
         $php2xml = new xsd2php\Php2Xml();
         
         $xml = $php2xml->getXml($cc);
-        print_r($xml);
+        //print_r($xml);
         
-        file_put_contents("data/expected/ContactCompany/ContactCompany.xml", $xml);
+        //file_put_contents("data/expected/ContactCompany/ContactCompany.xml", $xml);
        
         $expected = file_get_contents("data/expected/ContactCompany/ContactCompany.xml");
        

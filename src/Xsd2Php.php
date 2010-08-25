@@ -525,7 +525,10 @@ class Xsd2Php extends Common
                 }
                 
                 //@todo if $prop->getAttribute('maxOccurs') > 1 - var can be an array - in future special accessor cane be implemented
-                if ($prop->getAttribute('type') != '') {
+                if ($prop->getAttribute('type') != '' && $prop->getAttribute('typeNamespace') == '') {
+                    /**
+                     * In general it's stange to give to Type name's namespace. Reconsider this part
+                     */
                     if ($prop->getAttribute('namespace') != '' && $prop->getAttribute('namespace') != $this->xsdNs) {
                         $ns = "";
                         if ($prop->getAttribute('namespace') == "#default#") {
@@ -538,6 +541,22 @@ class Xsd2Php extends Common
                         $properties[$i]["docs"]['var'] = $prop->getAttribute('type');
                     }
                 }
+                
+                if ($prop->getAttribute('type') != '' && $prop->getAttribute('typeNamespace') != '') {
+                    $ns = "";
+                    if ($prop->getAttribute('typeNamespace') == "#default#") {
+                        $ns = $this->namespaceToPhp($this->targetNamespace);
+                    } else {
+                        $ns = $this->namespaceToPhp($this->expandNS($prop->getAttribute('typeNamespace')));
+                    }
+                    
+                    if ($prop->getAttribute('typeNamespace') == $this->xsdNs) {
+                        $properties[$i]["docs"]['var'] = $this->normalizeType($prop->getAttribute('type'));
+                    } else {
+                        $properties[$i]["docs"]['var'] = $ns.'\\'.$prop->getAttribute('type');
+                    }
+                }
+                
                 $i++;
             }
             

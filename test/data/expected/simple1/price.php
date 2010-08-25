@@ -11,7 +11,7 @@ class price
 
 		/**
 		 * @xmlType value
-		 * @var decimal
+		 * @var float
 		 */
 		public $value;
 

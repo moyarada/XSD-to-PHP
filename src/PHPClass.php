@@ -54,6 +54,12 @@ class PHPClass extends Common {
     public $namespace;
     
     /**
+     * Class type namespace
+     * @var string
+     */
+    public $typeNamespace;
+    
+    /**
      * Class properties
      * 
      * @var array
@@ -110,7 +116,7 @@ class PHPClass extends Common {
         $code .= "\t".'{'."\n";
         $code .= ''."\n";
         if (in_array($this->type, $this->basicTypes)) {
-            $code .= "\t\t".$this->getDocBlock(array('xmlType'=>'value', 'var' => $this->type), "\t\t");
+            $code .= "\t\t".$this->getDocBlock(array('xmlType'=>'value', 'var' => $this->normalizeType($this->type)), "\t\t");
             $code .= "\t\tpublic ".'$value;';
         }
         

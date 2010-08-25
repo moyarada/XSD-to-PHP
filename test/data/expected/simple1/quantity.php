@@ -11,7 +11,7 @@ class quantity
 
 		/**
 		 * @xmlType value
-		 * @var positiveInteger
+		 * @var integer
 		 */
 		public $value;
 

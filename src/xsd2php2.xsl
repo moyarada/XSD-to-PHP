@@ -68,17 +68,19 @@
 					select="*[local-name()='complexType' and namespace-uri()='http://www.w3.org/2001/XMLSchema']">
 					<xsl:variable name="classSimpleType"
 						select="substring-after(current()/*[local-name()='simpleContent']/*[local-name()='extension']/@base, ':')" />
+					<xsl:variable name="classSimpleTypeNs"
+						select="substring-before(current()/*[local-name()='simpleContent']/*[local-name()='extension']/@base, ':')" />
 					<xsl:choose>
 						<xsl:when test="@namespace">
 
-							<class debug="1.2-1" name="{@name}" simpleType="{$classSimpleType}"
-								namespace="{@namespace}">
+							<class debug="1.2-1" name="{@name}" type="{$classSimpleType}"
+								typeNamespace="{$classSimpleTypeNs}" namespace="{@namespace}">
 								<xsl:apply-templates />
 							</class>
 						</xsl:when>
 						<xsl:otherwise>
-							<class debug="1.2-2" name="{@name}" simpleType="{$classSimpleType}"
-								namespace="{$targetNamespace}">
+							<class debug="1.2-2" name="{@name}" type="{$classSimpleType}"
+								typeNamespace="{$classSimpleTypeNs}" namespace="{$targetNamespace}">
 								<xsl:apply-templates />
 							</class>
 						</xsl:otherwise>
@@ -176,20 +178,20 @@
 					<xsl:when test="contains(@type, ':')">
 						<xsl:choose>
 							<xsl:when test="../../@namespace">
-								<property debug="nameElement-TypeColonNamespace" xmlType="element"
-									name="{@name}" type="{substring-after(@type, ':')}" namespace="{../../@namespace}"
-									minOccurs="{@minOccurs}" typeNamespace="{substring-before(@type, ':')}"
-									maxOccurs="{@maxOccurs}">
+								<property debug="nameElement-TypeColonNamespace"
+									xmlType="element" name="{@name}" type="{substring-after(@type, ':')}"
+									namespace="{../../@namespace}" minOccurs="{@minOccurs}"
+									typeNamespace="{substring-before(@type, ':')}" maxOccurs="{@maxOccurs}">
 									<xsl:apply-templates />
 								</property>
 							</xsl:when>
 							<xsl:otherwise>
-							     <property debug="nameElement-TypeColonNoNamespace" xmlType="element"
-                                    name="{@name}" type="{substring-after(@type, ':')}" namespace="#default#"
-                                    minOccurs="{@minOccurs}" typeNamespace="{substring-before(@type, ':')}"
-                                    maxOccurs="{@maxOccurs}">
-                                    <xsl:apply-templates />
-                                </property>
+								<property debug="nameElement-TypeColonNoNamespace"
+									xmlType="element" name="{@name}" type="{substring-after(@type, ':')}"
+									namespace="#default#" minOccurs="{@minOccurs}"
+									typeNamespace="{substring-before(@type, ':')}" maxOccurs="{@maxOccurs}">
+									<xsl:apply-templates />
+								</property>
 							</xsl:otherwise>
 						</xsl:choose>
 					</xsl:when>
@@ -270,11 +272,22 @@
 		match="*[local-name()='attribute' and namespace-uri()='http://www.w3.org/2001/XMLSchema']">
 		<xsl:choose>
 			<xsl:when test="@name">
-				<property debug="attribute" xmlType="attribute" name="{@name}"
-					type="{@type}" default="{@default}" use="{@use}">
+				<xsl:choose>
+					<xsl:when test="contains(@type, ':')">
+						<property debug="attribute-TypeNs" xmlType="attribute" name="{@name}"
+							type="{substring-after(@type, ':')}" typeNamespace="{substring-before(@type, ':')}" default="{@default}" use="{@use}">
+							<xsl:apply-templates />
+						</property>
+					</xsl:when>
+					<xsl:otherwise>
+                        <property debug="attribute-TypeNoNs" xmlType="attribute" name="{@name}"
+                            type="{@type}"  default="{@default}" use="{@use}">
+                            <xsl:apply-templates />
+                        </property>
+					</xsl:otherwise>
 
-					<xsl:apply-templates />
-				</property>
+				</xsl:choose>
+
 			</xsl:when>
 			<xsl:when test="@ref">
 				<xsl:variable name="attRef"

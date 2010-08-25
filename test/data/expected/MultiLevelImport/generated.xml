@@ -97,53 +97,53 @@
     <class debug="1.1-1" name="ContactPerson" type="ContactPersonType" namespace="urn:dk:nordsign:schema:ContactPerson">
       <extends debug="1.2Extend" name="ContactPersonType"/>
     </class>
-    <class debug="1.2-1" name="CodeType" simpleType="normalizedString" namespace="urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2">
+    <class debug="1.2-1" name="CodeType" type="normalizedString" typeNamespace="xsd" namespace="urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2">
       <docs>
          <doc name="UniqueID">UDT000007</doc><doc name="CategoryCode">UDT</doc><doc name="DictionaryEntryName">Code. Type</doc><doc name="VersionID">1.0</doc><doc name="Definition">A character string (letters, figures, or symbols) that for brevity and/or languange independence may be used to represent or replace a definitive value or text of an attribute together with relevant supplementary information.</doc><doc name="RepresentationTermName">Code</doc><doc name="PrimitiveType">string</doc><doc name="BuiltinType">normalizedString</doc><doc name="UsageRule">Other supplementary components in the CCT are captured as part of the token and name for the schema module containing the code list and thus, are not declared as attributes. </doc>
       </docs>
       
          
-            <property debug="attribute" xmlType="attribute" name="listID" type="xsd:normalizedString" default="" use="optional">
+            <property debug="attribute-TypeNs" xmlType="attribute" name="listID" type="normalizedString" typeNamespace="xsd" default="" use="optional">
                <docs>
                   <doc name="UniqueID">UDT000007-SC2</doc><doc name="CategoryCode">SC</doc><doc name="DictionaryEntryName">Code List. Identifier</doc><doc name="Definition">The identification of a list of codes.</doc><doc name="ObjectClass">Code List</doc><doc name="PropertyTermName">Identification</doc><doc name="RepresentationTermName">Identifier</doc><doc name="PrimitiveType">string</doc>
                </docs>
             </property>
-            <property debug="attribute" xmlType="attribute" name="listAgencyID" type="xsd:normalizedString" default="" use="optional">
+            <property debug="attribute-TypeNs" xmlType="attribute" name="listAgencyID" type="normalizedString" typeNamespace="xsd" default="" use="optional">
                <docs>
                   <doc name="UniqueID">UDT000007-SC3</doc><doc name="CategoryCode">SC</doc><doc name="DictionaryEntryName">Code List. Agency. Identifier</doc><doc name="Definition">An agency that maintains one or more lists of codes.</doc><doc name="ObjectClass">Code List</doc><doc name="PropertyTermName">Agency</doc><doc name="RepresentationTermName">Identifier</doc><doc name="PrimitiveType">string</doc><doc name="UsageRule">Defaults to the UN/EDIFACT data element 3055 code list.</doc>
                </docs>
             </property>
-            <property debug="attribute" xmlType="attribute" name="listAgencyName" type="xsd:string" default="" use="optional">
+            <property debug="attribute-TypeNs" xmlType="attribute" name="listAgencyName" type="string" typeNamespace="xsd" default="" use="optional">
                <docs>
                   <doc name="UniqueID">UDT000007-SC4</doc><doc name="CategoryCode">SC</doc><doc name="DictionaryEntryName">Code List. Agency Name. Text</doc><doc name="Definition">The name of the agency that maintains the list of codes.</doc><doc name="ObjectClass">Code List</doc><doc name="PropertyTermName">Agency Name</doc><doc name="RepresentationTermName">Text</doc><doc name="PrimitiveType">string</doc>
                </docs>
             </property>
-            <property debug="attribute" xmlType="attribute" name="listName" type="xsd:string" default="" use="optional">
+            <property debug="attribute-TypeNs" xmlType="attribute" name="listName" type="string" typeNamespace="xsd" default="" use="optional">
                <docs>
                   <doc name="UniqueID">UDT000007-SC5</doc><doc name="CategoryCode">SC</doc><doc name="DictionaryEntryName">Code List. Name. Text</doc><doc name="Definition">The name of a list of codes.</doc><doc name="ObjectClass">Code List</doc><doc name="PropertyTermName">Name</doc><doc name="RepresentationTermName">Text</doc><doc name="PrimitiveType">string</doc>
                </docs>
             </property>
-            <property debug="attribute" xmlType="attribute" name="listVersionID" type="xsd:normalizedString" default="" use="optional">
+            <property debug="attribute-TypeNs" xmlType="attribute" name="listVersionID" type="normalizedString" typeNamespace="xsd" default="" use="optional">
                <docs>
                   <doc name="UniqueID">UDT000007-SC6</doc><doc name="CategoryCode">SC</doc><doc name="DictionaryEntryName">Code List. Identifier</doc><doc name="Definition">The identification of a list of codes.</doc><doc name="ObjectClass">Code List</doc><doc name="PropertyTermName">Identification</doc><doc name="RepresentationTermName">Identifier</doc><doc name="PrimitiveType">string</doc><doc name="BuiltinType">string</doc>
                </docs>
             </property>
-            <property debug="attribute" xmlType="attribute" name="name" type="xsd:string" default="" use="optional">
+            <property debug="attribute-TypeNs" xmlType="attribute" name="name" type="string" typeNamespace="xsd" default="" use="optional">
                <docs>
                   <doc name="UniqueID">UDT000007-SC7</doc><doc name="CategoryCode">SC</doc><doc name="DictionaryEntryName">Code. Name. Text</doc><doc name="Definition">The textual equivalent of the code content component.</doc><doc name="ObjectClass">Code</doc><doc name="PropertyTermName">Name</doc><doc name="RepresentationTermName">Text</doc><doc name="PrimitiveType">string</doc><doc name="BuiltinType">string</doc>
                </docs>
             </property>
-            <property debug="attribute" xmlType="attribute" name="languageID" type="xsd:language" default="" use="optional">
+            <property debug="attribute-TypeNs" xmlType="attribute" name="languageID" type="language" typeNamespace="xsd" default="" use="optional">
                <docs>
                   <doc name="UniqueID">UDT000007-SC8</doc><doc name="CategoryCode">SC</doc><doc name="DictionaryEntryName">Language. Identifier</doc><doc name="Definition">The identifier of the language used in the code name.</doc><doc name="ObjectClass">Language</doc><doc name="PropertyTermName">Identification</doc><doc name="RepresentationTermName">Identifier</doc><doc name="PrimitiveType">string</doc><doc name="BuiltinType">language</doc>
                </docs>
             </property>
-            <property debug="attribute" xmlType="attribute" name="listURI" type="xsd:anyURI" default="" use="optional">
+            <property debug="attribute-TypeNs" xmlType="attribute" name="listURI" type="anyURI" typeNamespace="xsd" default="" use="optional">
                <docs>
                   <doc name="UniqueID">UDT000007-SC9</doc><doc name="CategoryCode">SC</doc><doc name="DictionaryEntryName">Code List. Uniform Resource. Identifier</doc><doc name="Definition">The Uniform Resource Identifier that identifies where the code list is located.</doc><doc name="ObjectClass">Code List</doc><doc name="PropertyTermName">Uniform Resource Identifier</doc><doc name="RepresentationTermName">Identifier</doc><doc name="PrimitiveType">string</doc><doc name="BuiltinType">anyURI</doc>
                </docs>
             </property>
-            <property debug="attribute" xmlType="attribute" name="listSchemeURI" type="xsd:anyURI" default="" use="optional">
+            <property debug="attribute-TypeNs" xmlType="attribute" name="listSchemeURI" type="anyURI" typeNamespace="xsd" default="" use="optional">
                <docs>
                   <doc name="UniqueID">UDT000007-SC10</doc><doc name="CategoryCode">SC</doc><doc name="DictionaryEntryName">Code List Scheme. Uniform Resource. Identifier</doc><doc name="Definition">The Uniform Resource Identifier that identifies where the code list scheme is located.</doc><doc name="ObjectClass">Code List Scheme</doc><doc name="PropertyTermName">Uniform Resource Identifier</doc><doc name="RepresentationTermName">Identifier</doc><doc name="PrimitiveType">string</doc><doc name="BuiltinType">anyURI</doc>
                </docs>
@@ -151,7 +151,7 @@
          
       
    </class>
-    <class debug="1.2-1" name="IdentifierType" simpleType="normalizedString" namespace="urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2">
+    <class debug="1.2-1" name="IdentifierType" type="normalizedString" typeNamespace="xsd" namespace="urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2">
 		<docs>
 			<doc name="UniqueID">UDT0000011</doc><doc name="CategoryCode">UDT</doc><doc name="DictionaryEntryName">Identifier. Type
 				</doc><doc name="VersionID">1.0</doc><doc name="Definition">A character string to identify and distinguish
@@ -165,7 +165,7 @@
 		</docs>
 		
 			
-				<property debug="attribute" xmlType="attribute" name="schemeID" type="xsd:normalizedString" default="" use="optional">
+				<property debug="attribute-TypeNs" xmlType="attribute" name="schemeID" type="normalizedString" typeNamespace="xsd" default="" use="optional">
 					<docs>
 						<doc name="UniqueID">UDT000011-SC2</doc><doc name="CategoryCode">SC</doc><doc name="DictionaryEntryName">Identification Scheme. Identifier
 							</doc><doc name="Definition">The identification of the identification scheme.
@@ -173,14 +173,14 @@
 							</doc><doc name="PrimitiveType">string</doc>
 					</docs>
 				</property>
-				<property debug="attribute" xmlType="attribute" name="schemeName" type="xsd:string" default="" use="optional">
+				<property debug="attribute-TypeNs" xmlType="attribute" name="schemeName" type="string" typeNamespace="xsd" default="" use="optional">
 					<docs>
 						<doc name="UniqueID">UDT000011-SC3</doc><doc name="CategoryCode">SC</doc><doc name="DictionaryEntryName">Identification Scheme. Name. Text
 							</doc><doc name="Definition">The name of the identification scheme.
 							</doc><doc name="ObjectClass">Identification Scheme</doc><doc name="PropertyTermName">Name</doc><doc name="RepresentationTermName">Text</doc><doc name="PrimitiveType">string</doc>
 					</docs>
 				</property>
-				<property debug="attribute" xmlType="attribute" name="schemeAgencyID" type="xsd:normalizedString" default="" use="optional">
+				<property debug="attribute-TypeNs" xmlType="attribute" name="schemeAgencyID" type="normalizedString" typeNamespace="xsd" default="" use="optional">
 					<docs>
 						<doc name="UniqueID">UDT000011-SC4</doc><doc name="CategoryCode">SC</doc><doc name="DictionaryEntryName">Identification Scheme Agency.
 								Identifier</doc><doc name="Definition">The identification of the agency that maintains
@@ -189,14 +189,14 @@
 								list.</doc>
 					</docs>
 				</property>
-				<property debug="attribute" xmlType="attribute" name="schemeAgencyName" type="xsd:string" default="" use="optional">
+				<property debug="attribute-TypeNs" xmlType="attribute" name="schemeAgencyName" type="string" typeNamespace="xsd" default="" use="optional">
 					<docs>
 						<doc name="UniqueID">UDT000011-SC5</doc><doc name="CategoryCode">SC</doc><doc name="DictionaryEntryName">Identification Scheme Agency. Name.
 								Text</doc><doc name="Definition">The name of the agency that maintains the
 								identification scheme.</doc><doc name="ObjectClass">Identification Scheme Agency</doc><doc name="PropertyTermName">Agency Name</doc><doc name="RepresentationTermName">Text</doc><doc name="PrimitiveType">string</doc>
 					</docs>
 				</property>
-				<property debug="attribute" xmlType="attribute" name="schemeVersionID" type="xsd:normalizedString" default="" use="optional">
+				<property debug="attribute-TypeNs" xmlType="attribute" name="schemeVersionID" type="normalizedString" typeNamespace="xsd" default="" use="optional">
 					<docs>
 						<doc name="UniqueID">UDT000011-SC6</doc><doc name="CategoryCode">SC</doc><doc name="DictionaryEntryName">Identification Scheme. Version.
 								Identifier</doc><doc name="Definition">The version of the identification scheme.
@@ -204,7 +204,7 @@
 							</doc><doc name="PrimitiveType">string</doc><doc name="BuiltinType">normalizedString</doc>
 					</docs>
 				</property>
-				<property debug="attribute" xmlType="attribute" name="schemeDataURI" type="xsd:anyURI" default="" use="optional">
+				<property debug="attribute-TypeNs" xmlType="attribute" name="schemeDataURI" type="anyURI" typeNamespace="xsd" default="" use="optional">
 					<docs>
 						<doc name="UniqueID">UDT0000011-SC7</doc><doc name="CategoryCode">SC</doc><doc name="DictionaryEntryName">Identification Scheme Data. Uniform
 								Resource. Identifier</doc><doc name="Definition">The Uniform Resource Identifier that identifies
@@ -214,7 +214,7 @@
 							</doc><doc name="PrimitiveType">string</doc><doc name="BuiltinType">anyURI</doc>
 					</docs>
 				</property>
-				<property debug="attribute" xmlType="attribute" name="schemeURI" type="xsd:anyURI" default="" use="optional">
+				<property debug="attribute-TypeNs" xmlType="attribute" name="schemeURI" type="anyURI" typeNamespace="xsd" default="" use="optional">
 					<docs>
 						<doc name="UniqueID">UDT0000011-SC8</doc><doc name="CategoryCode">SC</doc><doc name="DictionaryEntryName">Identification Scheme. Uniform
 								Resource. Identifier</doc><doc name="Definition">The Uniform Resource Identifier that identifies
@@ -226,14 +226,14 @@
 			
 		
 	</class>
-    <class debug="1.2-1" name="NameType" simpleType="string" namespace="urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2">
+    <class debug="1.2-1" name="NameType" type="string" typeNamespace="xsd" namespace="urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2">
 		<docs>
 			<doc name="UniqueID">UDT0000020</doc><doc name="CategoryCode">UDT</doc><doc name="DictionaryEntryName">Name. Type</doc><doc name="VersionID">1.0</doc><doc name="Definition">A character string that consititues the distinctive
 					designation of a person, place, thing or concept.</doc><doc name="RepresentationTermName">Name</doc><doc name="PrimitiveType">string</doc><doc name="BuiltinType">string</doc>
 		</docs>
 		
 			
-				<property debug="attribute" xmlType="attribute" name="languageID" type="xsd:language" default="" use="optional">
+				<property debug="attribute-TypeNs" xmlType="attribute" name="languageID" type="language" typeNamespace="xsd" default="" use="optional">
 					<docs>
 						<doc name="UniqueID">UDT0000020-SC2</doc><doc name="CategoryCode">SC</doc><doc name="DictionaryEntryName">Language. Identifier
 							</doc><doc name="Definition">The identifier of the language used in the
@@ -244,7 +244,7 @@
 			
 		
 	</class>
-    <class debug="1.2-1" name="TextType" simpleType="string" namespace="urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2">
+    <class debug="1.2-1" name="TextType" type="string" typeNamespace="xsd" namespace="urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2">
 		<docs>
 			<doc name="UniqueID">UDT0000019</doc><doc name="CategoryCode">UDT</doc><doc name="DictionaryEntryName">Text. Type</doc><doc name="VersionID">1.0</doc><doc name="Definition">A character string (i.e. a finite set of
 					characters) generally in the form of words of a language.
@@ -252,7 +252,7 @@
 		</docs>
 		
 			
-				<property debug="attribute" xmlType="attribute" name="languageID" type="xsd:language" default="" use="optional">
+				<property debug="attribute-TypeNs" xmlType="attribute" name="languageID" type="language" typeNamespace="xsd" default="" use="optional">
 					<docs>
 						<doc name="UniqueID">UDT0000019-SC2</doc><doc name="CategoryCode">SC</doc><doc name="DictionaryEntryName">Language. Identifier
 							</doc><doc name="Definition">The identifier of the language used in the
@@ -263,152 +263,152 @@
 			
 		
 	</class>
-    <class debug="1.2-1" name="InhouseMailType" simpleType="TextType" namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
+    <class debug="1.2-1" name="InhouseMailType" type="TextType" typeNamespace="udt" namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
     
       <extends debug="Extends3" name="TextType" namespace="udt"/>
     
   </class>
-    <class debug="1.2-1" name="BlockNameType" simpleType="NameType" namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
+    <class debug="1.2-1" name="BlockNameType" type="NameType" typeNamespace="udt" namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
     
       <extends debug="Extends3" name="NameType" namespace="udt"/>
     
   </class>
-    <class debug="1.2-1" name="BuildingNameType" simpleType="NameType" namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
+    <class debug="1.2-1" name="BuildingNameType" type="NameType" typeNamespace="udt" namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
     
       <extends debug="Extends3" name="NameType" namespace="udt"/>
     
   </class>
-    <class debug="1.2-1" name="BuildingNumberType" simpleType="TextType" namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
+    <class debug="1.2-1" name="BuildingNumberType" type="TextType" typeNamespace="udt" namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
     
       <extends debug="Extends3" name="TextType" namespace="udt"/>
     
   </class>
-    <class debug="1.2-1" name="AdditionalStreetNameType" simpleType="NameType" namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
+    <class debug="1.2-1" name="AdditionalStreetNameType" type="NameType" typeNamespace="udt" namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
     
       <extends debug="Extends3" name="NameType" namespace="udt"/>
     
   </class>
-    <class debug="1.2-1" name="StreetNameType" simpleType="NameType" namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
+    <class debug="1.2-1" name="StreetNameType" type="NameType" typeNamespace="udt" namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
     
       <extends debug="Extends3" name="NameType" namespace="udt"/>
     
   </class>
-    <class debug="1.2-1" name="RoomType" simpleType="TextType" namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
+    <class debug="1.2-1" name="RoomType" type="TextType" typeNamespace="udt" namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
     
       <extends debug="Extends3" name="TextType" namespace="udt"/>
     
   </class>
-    <class debug="1.2-1" name="FloorType" simpleType="TextType" namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
+    <class debug="1.2-1" name="FloorType" type="TextType" typeNamespace="udt" namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
     
       <extends debug="Extends3" name="TextType" namespace="udt"/>
     
   </class>
-    <class debug="1.2-1" name="PostboxType" simpleType="TextType" namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
+    <class debug="1.2-1" name="PostboxType" type="TextType" typeNamespace="udt" namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
     
       <extends debug="Extends3" name="TextType" namespace="udt"/>
     
   </class>
-    <class debug="1.2-1" name="AddressFormatCodeType" simpleType="CodeType" namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
+    <class debug="1.2-1" name="AddressFormatCodeType" type="CodeType" typeNamespace="udt" namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
     
       <extends debug="Extends3" name="CodeType" namespace="udt"/>
     
   </class>
-    <class debug="1.2-1" name="AddressTypeCodeType" simpleType="CodeType" namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
+    <class debug="1.2-1" name="AddressTypeCodeType" type="CodeType" typeNamespace="udt" namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
     
       <extends debug="Extends3" name="CodeType" namespace="udt"/>
     
   </class>
-    <class debug="1.2-1" name="LineType" simpleType="TextType" namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
+    <class debug="1.2-1" name="LineType" type="TextType" typeNamespace="udt" namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
     
       <extends debug="Extends3" name="TextType" namespace="udt"/>
     
   </class>
-    <class debug="1.2-1" name="IdentificationCodeType" simpleType="IdentifierType" namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
+    <class debug="1.2-1" name="IdentificationCodeType" type="IdentifierType" typeNamespace="udt" namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
     
       <extends debug="Extends3" name="IdentifierType" namespace="udt"/>
     
   </class>
-    <class debug="1.2-1" name="IdentificationIDType" simpleType="IdentifierType" namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
+    <class debug="1.2-1" name="IdentificationIDType" type="IdentifierType" typeNamespace="udt" namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
     
       <extends debug="Extends3" name="IdentifierType" namespace="udt"/>
     
   </class>
-    <class debug="1.2-1" name="LongitudeDegreesMeasureType" simpleType="IdentifierType" namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
+    <class debug="1.2-1" name="LongitudeDegreesMeasureType" type="IdentifierType" typeNamespace="udt" namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
     
       <extends debug="Extends3" name="IdentifierType" namespace="udt"/>
     
   </class>
-    <class debug="1.2-1" name="LongitudeDirectionCodeType" simpleType="IdentifierType" namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
+    <class debug="1.2-1" name="LongitudeDirectionCodeType" type="IdentifierType" typeNamespace="udt" namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
     
       <extends debug="Extends3" name="IdentifierType" namespace="udt"/>
     
   </class>
-    <class debug="1.2-1" name="LongitudeMinutesMeasureType" simpleType="IdentifierType" namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
+    <class debug="1.2-1" name="LongitudeMinutesMeasureType" type="IdentifierType" typeNamespace="udt" namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
     
       <extends debug="Extends3" name="IdentifierType" namespace="udt"/>
     
   </class>
-    <class debug="1.2-1" name="LatitudeDegreesMeasureType" simpleType="IdentifierType" namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
+    <class debug="1.2-1" name="LatitudeDegreesMeasureType" type="IdentifierType" typeNamespace="udt" namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
 		
 			<extends debug="Extends3" name="IdentifierType" namespace="udt"/>
 		
 	</class>
-    <class debug="1.2-1" name="LatitudeDirectionCodeType" simpleType="IdentifierType" namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
+    <class debug="1.2-1" name="LatitudeDirectionCodeType" type="IdentifierType" typeNamespace="udt" namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
 		
 			<extends debug="Extends3" name="IdentifierType" namespace="udt"/>
 		
 	</class>
-    <class debug="1.2-1" name="LatitudeMinutesMeasureType" simpleType="IdentifierType" namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
+    <class debug="1.2-1" name="LatitudeMinutesMeasureType" type="IdentifierType" typeNamespace="udt" namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
 		
 			<extends debug="Extends3" name="IdentifierType" namespace="udt"/>
 		
 	</class>
-    <class debug="1.2-1" name="CoordinateSystemCodeType" simpleType="CodeType" namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
+    <class debug="1.2-1" name="CoordinateSystemCodeType" type="CodeType" typeNamespace="udt" namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
 		
 			<extends debug="Extends3" name="CodeType" namespace="udt"/>
 		
 	</class>
-    <class debug="1.2-1" name="IDType" simpleType="IdentifierType" namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
+    <class debug="1.2-1" name="IDType" type="IdentifierType" typeNamespace="udt" namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
 		
 			<extends debug="Extends3" name="IdentifierType" namespace="udt"/>
 		
 	</class>
-    <class debug="1.2-1" name="NameType" simpleType="NameType" namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
+    <class debug="1.2-1" name="NameType" type="NameType" typeNamespace="udt" namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
 		
 			<extends debug="Extends3" name="NameType" namespace="udt"/>
 		
 	</class>
-    <class debug="1.2-1" name="TelephoneType" simpleType="TextType" namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
+    <class debug="1.2-1" name="TelephoneType" type="TextType" typeNamespace="udt" namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
 		
 			<extends debug="Extends3" name="TextType" namespace="udt"/>
 		
 	</class>
-    <class debug="1.2-1" name="ElectronicMailType" simpleType="TextType" namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
+    <class debug="1.2-1" name="ElectronicMailType" type="TextType" typeNamespace="udt" namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
 		
 			<extends debug="Extends3" name="TextType" namespace="udt"/>
 		
 	</class>
-    <class debug="1.2-1" name="TextType" simpleType="TextType" namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
+    <class debug="1.2-1" name="TextType" type="TextType" typeNamespace="udt" namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
 		
 			<extends debug="Extends3" name="TextType" namespace="udt"/>
 		
 	</class>
-    <class debug="1.2-1" name="DateType" simpleType="DateType" namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
+    <class debug="1.2-1" name="DateType" type="DateType" typeNamespace="udt" namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
 		
 			<extends debug="Extends3" name="DateType" namespace="udt"/>
 		
 	</class>
-    <class debug="1.2-1" name="TitleType" simpleType="TextType" namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
+    <class debug="1.2-1" name="TitleType" type="TextType" typeNamespace="udt" namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
 		
 			<extends debug="Extends3" name="TextType" namespace="udt"/>
 		
 	</class>
-    <class debug="1.2-1" name="CompanyIDType" simpleType="IdentifierType" namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
+    <class debug="1.2-1" name="CompanyIDType" type="IdentifierType" typeNamespace="udt" namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
 		
 			<extends debug="Extends3" name="IdentifierType" namespace="udt"/>
 		
 	</class>
-    <class debug="1.2-1" name="CountryType" simpleType="" namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2">
+    <class debug="1.2-1" name="CountryType" type="" typeNamespace="" namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2">
 		<docs>
 			<doc name="ComponentType">ABIE</doc><doc name="DictionaryEntryName">Country. Details
 					</doc><doc name="Definition">Information about a geopolitical country.
@@ -429,7 +429,7 @@
 			</property>
 		
 	</class>
-    <class debug="1.2-1" name="AddressLineType" simpleType="" namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2">
+    <class debug="1.2-1" name="AddressLineType" type="" typeNamespace="" namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2">
 		<docs>
 			<doc name="ComponentType">ABIE</doc><doc name="DictionaryEntryName">Address Line. Details
 					</doc><doc name="Definition">Information about a line of address expressed as
@@ -445,7 +445,7 @@
 			</property>
 		
 	</class>
-    <class debug="1.2-1" name="LocationCoordinateType" simpleType="" namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2">
+    <class debug="1.2-1" name="LocationCoordinateType" type="" typeNamespace="" namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2">
     <docs>
       <doc name="ComponentType">ABIE</doc><doc name="DictionaryEntryName">Location Coordinate. Details</doc><doc name="Definition">Information about physical (geographical) location.</doc><doc name="ObjectClass">Location Coordinate</doc>
     </docs>
@@ -487,7 +487,7 @@
       </property>
     
   </class>
-    <class debug="1.2-1" name="AddressType" simpleType="" namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2">
+    <class debug="1.2-1" name="AddressType" type="" typeNamespace="" namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2">
         <docs>
             <doc name="ComponentType">ABIE</doc><doc name="DictionaryEntryName">Address. Details
                     </doc><doc name="Definition">Information about a structured address.
@@ -609,7 +609,7 @@
             </property>
         
     </class>
-    <class debug="1.2-2" name="ContactPersonType" simpleType="" namespace="urn:dk:nordsign:schema:ContactPerson">
+    <class debug="1.2-2" name="ContactPersonType" type="" typeNamespace="" namespace="urn:dk:nordsign:schema:ContactPerson">
 		
 			<property debug="nameElement-TypeColonNoNamespace" xmlType="element" name="ID" type="IDType" namespace="#default#" minOccurs="1" typeNamespace="cbc" maxOccurs="1"/>
 			<property debug="nameElement-TypeColonNoNamespace" xmlType="element" name="Name" type="NameType" namespace="#default#" minOccurs="1" typeNamespace="cbc" maxOccurs="1"/>

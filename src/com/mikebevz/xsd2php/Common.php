@@ -27,6 +27,8 @@ namespace com\mikebevz\xsd2php;
  */
 class Common {
     
+    
+    
     protected $basicTypes = array('decimal', 'base64Binary', 'normalizedString', 
                                 'dateTime', 'date', 'boolean',
                                 'positiveInteger', 'anySimpleType',

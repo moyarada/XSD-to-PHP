@@ -1,4 +1,8 @@
 <?php
+
+set_include_path(get_include_path().PATH_SEPARATOR.
+                realpath("../src"));
+
 use dk\nordsign\schema\ContactCompany as CCP;
 use oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2 as CAC2;
 use oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2 as CBC2;
@@ -9,54 +13,9 @@ set_include_path(dirname(__FILE__).'/data/expected/ubl2.0'.PATH_SEPARATOR.
                  dirname(__FILE__).'/data/expected/simple1'.PATH_SEPARATOR.
                  get_include_path());
                         
-
-
-function __autoload($className){
-
-    $directories = array(
-      '',
-      'data/expected/ubl2.0/',
-      'data/expected/simple1/',  
-      'data/expected/ContactCompany/',
-      'data/'
-    );
-
-    //Add your file naming formats here
-    $fileNameFormats = array(
-      '%s.php'
-    );
-    
-
-        
-    // this is to take care of the PEAR style of naming classes
-    $path = str_ireplace('_', '/', $className);
-    if(@include_once $path.'.php'){
-        return;
-    }
-    
-    //if (preg_match('/\\/', $className)) {
-        $className = str_replace('\\', '/', $className);
-    //echo($className."\n");
-    //}
-    
-    //exit();
-    foreach($directories as $directory){
-        foreach($fileNameFormats as $fileNameFormat){
-
-            $path = $directory.sprintf($fileNameFormat, $className);
-
-            if(file_exists($path)){
-                
-                include_once $path;
-                return;
-            }
-        }
-    }
-}
-                        
 //require_once dirname(__FILE__) . '/../../bootstrap.php';
 require_once 'PHPUnit/Framework.php';
-require_once "../src/Php2Xml.php";
+require_once "com/mikebevz/xsd2php/Php2Xml.php";
 
 class Php2XmlTest extends PHPUnit_Framework_TestCase
 {

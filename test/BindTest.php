@@ -1,10 +1,12 @@
 <?php
+set_include_path(get_include_path().PATH_SEPARATOR.
+                realpath("../src"));
 
 use com\mikebevz\xsd2php;
 
 require_once 'PHPUnit/Framework.php';
-require_once "../src/Bind.php";
-require_once "../src/Php2Xml.php";
+require_once "com/mikebevz/xsd2php/Bind.php";
+require_once "com/mikebevz/xsd2php/Php2Xml.php";
 
 class BindTest extends PHPUnit_Framework_TestCase
 {

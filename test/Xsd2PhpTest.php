@@ -1,10 +1,14 @@
 <?php
 
+set_include_path(get_include_path().PATH_SEPARATOR.
+                realpath("../src"));
+
 use oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2;
 use dk\nordsign\schema\ContactCompany;
 use com\mikebevz\xsd2php;
+
 require_once 'PHPUnit/Framework.php';
-require_once dirname(__FILE__)."/../src/Xsd2Php.php";
+require_once "com/mikebevz/xsd2php/Xsd2Php.php";
 
 class Xsd2PhpTest extends PHPUnit_Framework_TestCase
 {
@@ -26,18 +30,19 @@ class Xsd2PhpTest extends PHPUnit_Framework_TestCase
         $this->tclass = null;        
     }
     
+    /*
     private function rmdir_recursive($dir) {
         if (is_dir($dir)) { 
          $objects = scandir($dir); 
          foreach ($objects as $object) { 
            if ($object != "." && $object != "..") { 
-             if (filetype($dir."/".$object) == "dir") $this->rmdir_recursive($dir."/".$object); else unlink($dir."/".$object); 
+             if (filetype($dir."/".$object) == "dir") rmdir_recursive($dir."/".$object); else unlink($dir."/".$object); 
            } 
          } 
          reset($objects); 
          rmdir($dir); 
        } 
-    }
+    }*/
     
     public function testXSDMustBeConvertedToXML() {
         $xml = $this->tclass->getXML();
@@ -67,7 +72,7 @@ class Xsd2PhpTest extends PHPUnit_Framework_TestCase
                     'data/generated/ubl2.0/oasis/names/specification/ubl/schema/xsd/CommonBasicComponents_2/AccountingCost.php');
         
         if (file_exists(dirname(__FILE__).'/data/generated/ubl2.0')) {
-            $this->rmdir_recursive(realpath('data/generated/ubl2.0'));
+            rmdir_recursive(realpath('data/generated/ubl2.0'));
         }
         $this->tclass->saveClasses(dirname(__FILE__).'/data/generated/ubl2.0', true);
         
@@ -78,7 +83,7 @@ class Xsd2PhpTest extends PHPUnit_Framework_TestCase
         }
         
         if (file_exists('data/generated/ubl2.0')) {
-           $this->rmdir_recursive(realpath('data/generated/ubl2.0'));
+           rmdir_recursive(realpath('data/generated/ubl2.0'));
         }
         
     }
@@ -92,7 +97,7 @@ class Xsd2PhpTest extends PHPUnit_Framework_TestCase
         
         
         if (file_exists(dirname(__FILE__).'/data/generated/simple1')) {
-            $this->rmdir_recursive(realpath('data/generated/simple1'));
+            rmdir_recursive(realpath('data/generated/simple1'));
         }
         
         $shipModelExpected = array(
@@ -134,7 +139,7 @@ class Xsd2PhpTest extends PHPUnit_Framework_TestCase
         }
         
         if (file_exists(dirname(__FILE__).'/data/generated/simple1')) {
-            $this->rmdir_recursive(realpath('data/generated/simple1'));
+            rmdir_recursive(realpath('data/generated/simple1'));
         }
     }
     
@@ -147,13 +152,13 @@ class Xsd2PhpTest extends PHPUnit_Framework_TestCase
          $this->assertEquals($expectedXml, $xml->saveXml());
          
          if (file_exists(dirname(__FILE__).'/data/generated/MultiLevelImport')) {
-            $this->rmdir_recursive(realpath(dirname(__FILE__).'/data/generated/MultiLevelImport'));
+            rmdir_recursive(realpath(dirname(__FILE__).'/data/generated/MultiLevelImport'));
          } 
          
          $this->tclass->saveClasses(dirname(__FILE__).'/data/generated/MultiLevelImport', true);
          
          if (file_exists(dirname(__FILE__).'/data/generated/MultiLevelImport')) {
-            $this->rmdir_recursive(realpath(dirname(__FILE__).'/data/generated/MultiLevelImport'));
+            rmdir_recursive(realpath(dirname(__FILE__).'/data/generated/MultiLevelImport'));
          } 
     }
     
@@ -169,13 +174,13 @@ class Xsd2PhpTest extends PHPUnit_Framework_TestCase
          $this->assertEquals($expectedXml, $xml->saveXml());
          
          if (file_exists($genPath)) {
-            $this->rmdir_recursive(realpath($genPath));
+            rmdir_recursive(realpath($genPath));
          } 
          
          $this->tclass->saveClasses($genPath, true);
          
          if (file_exists($genPath)) {
-           $this->rmdir_recursive(realpath($genPath));
+           rmdir_recursive(realpath($genPath));
          } 
         
         
@@ -193,7 +198,7 @@ class Xsd2PhpTest extends PHPUnit_Framework_TestCase
          $this->assertEquals($expectedXml, $xml->saveXml());
          
          if (file_exists($genPath)) {
-            $this->rmdir_recursive(realpath($genPath));
+            rmdir_recursive(realpath($genPath));
          } 
          
          $this->tclass->saveClasses($genPath, true);
@@ -203,7 +208,7 @@ class Xsd2PhpTest extends PHPUnit_Framework_TestCase
             
          
          if (file_exists($genPath)) {
-           $this->rmdir_recursive(realpath($genPath));
+           rmdir_recursive(realpath($genPath));
          } 
     }
     

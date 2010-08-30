@@ -5,9 +5,15 @@ XSD to PHP compiler
 
 Versions history
 
+0.0.4 Issue #12. WSDL autodiscovery
+ # Fixed #10: Directory structure do not correspond to PHP namespaces
+ # Fixed #5: Add debug output option to XSD2PHP
+ # Fixed #9: Generated WSDL tested with Zend_Soap
+ # WSDL tested with Apache CXF
+
 0.0.3 XML generation refactored
  # namespaces generated as ns0 ... nsX 
- # added @var to PHP models with full class name (with namespace)
+ # Fixed #4: added @var to PHP models with full class name (with namespace)
  
 0.0.2 XSD Imports and includes routines rewritten
  # Refactored XSD import and include tags processing

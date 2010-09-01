@@ -12,7 +12,7 @@ class CurrencyCodeContentType
 
 		/**
 		 * @xmlType value
-		 * @var token
+		 * @var string
 		 */
 		public $value;
 

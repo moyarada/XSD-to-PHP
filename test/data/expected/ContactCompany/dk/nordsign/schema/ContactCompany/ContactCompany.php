@@ -17,9 +17,18 @@ class ContactCompany
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName ID
-	 * @var dk\nordsign\schema\ContactCompany\IDType
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\IDType
 	 */
 	public $ID;
+	/**
+	 * @xmlType element
+	 * @xmlNamespace urn:dk:nordsign:schema:ContactCompany
+	 * @xmlMinOccurs 1
+	 * @xmlMaxOccurs 1
+	 * @xmlName ExtID
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\IDType
+	 */
+	public $ExtID;
 	/**
 	 * @xmlType element
 	 * @xmlNamespace urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2
@@ -83,6 +92,6 @@ class ContactCompany
 	 * @var dk\nordsign\schema\ContactCompany\AddressType
 	 */
 	public $ShippingAddress;
-
+	
 
 } // end class ContactCompany

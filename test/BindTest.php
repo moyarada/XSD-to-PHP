@@ -1,6 +1,10 @@
 <?php
+use oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2;
+use oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2;
+use dk\nordsign\schema\ContactCompany;
 set_include_path(get_include_path().PATH_SEPARATOR.
-                realpath("../src"));
+                realpath("../src").PATH_SEPARATOR.
+                realpath("data/expected/ContactCompany"));
 
 use com\mikebevz\xsd2php;
 
@@ -16,6 +20,9 @@ class BindTest extends PHPUnit_Framework_TestCase
      */
     private $tclass;  
     
+    private $expDir = "data/expected/ContactCompany";
+    private $genDir = "data/generated/ContactCompany";
+    
     
     protected function setUp ()
     {
@@ -26,6 +33,7 @@ class BindTest extends PHPUnit_Framework_TestCase
         $this->tclass = null;        
     }
     
+    /**
     public function testBindSimple1() {
         require_once dirname(__FILE__).'/data/expected/simple1/shiporder.php';
         require_once dirname(__FILE__).'/data/expected/simple1/shipto.php';
@@ -96,4 +104,74 @@ class BindTest extends PHPUnit_Framework_TestCase
         
         
     }
+    */
+    
+    public function testContactCompany() {
+        $this->tclass->debug = true;
+        
+        $input = file_get_contents($this->expDir.DIRECTORY_SEPARATOR."BindTest.xml");
+        
+        $expBinding = new ContactCompany\ContactCompany();
+        $bilAdd = new ContactCompany\AddressType();
+        $line = new CommonBasicComponents_2\Line();
+        $line->value = "Nytorv 50 22 2";
+        $addrTypeLine = new CommonAggregateComponents_2\AddressLineType();
+        $addrTypeLine->Line = $line;
+        $bilAdd->Address = $addrTypeLine;
+        
+        $city = new CommonBasicComponents_2\CityNameType();
+        $city->value = "Aalborg";
+        $bilAdd->City = $city;
+        
+        $country = new CommonBasicComponents_2\NameType();
+        $country->value = "DK";
+        $bilAdd->Country = $country;
+        
+        $state = new CommonBasicComponents_2\RegionType();
+        $state->value = "Nordjylland";
+        $bilAdd->State = $state;
+        $postCode = new CommonBasicComponents_2\PostalZoneType();
+        $postCode->value = "9000";
+        
+        $bilAdd->PostalCode = $postCode;
+        
+        $expBinding->BillingAddress = $bilAdd;
+        
+        $party = new CommonAggregateComponents_2\Party();
+        $webURI = new CommonBasicComponents_2\WebsiteURI();
+        $webURI->value = "test.com";
+        $party->WebsiteURI = $webURI;        
+        $expBinding->Party = $party;
+        
+        $fax = new CommonBasicComponents_2\Telefax();
+        $fax->value = "12341234622";
+        
+        $expBinding->Telefax = $fax;
+        
+        $phone = new CommonBasicComponents_2\Telephone();
+        $phone->value = "24234234222";
+        
+        $expBinding->Telephone = $phone;
+        
+        $name = new CommonBasicComponents_2\Name();
+        $name->value = "TON s.r.o.";
+        
+        $expBinding->Name = $name;
+        
+        $compId = new CommonBasicComponents_2\CompanyID();
+        $compId->value = "DK234234234234234";
+        
+        $expBinding->CompanyID = $compId;
+        
+        $extId = new CommonBasicComponents_2\IDType();
+        $extId->value = "DK234234234234234";
+        $expBinding->ExtID = $extId;
+        
+        //
+        $model = $this->tclass->unmarshal($input);
+        
+        $this->assertEquals($expBinding, $model);
+    }
+    
+    
 }

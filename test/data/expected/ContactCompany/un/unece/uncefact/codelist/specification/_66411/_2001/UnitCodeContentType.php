@@ -12,7 +12,7 @@ class UnitCodeContentType
 
 		/**
 		 * @xmlType value
-		 * @var token
+		 * @var string
 		 */
 		public $value;
 

@@ -21,7 +21,7 @@ class MeasureType
 
 		/**
 		 * @xmlType value
-		 * @var decimal
+		 * @var float
 		 */
 		public $value;	
 	/**
@@ -37,7 +37,7 @@ class MeasureType
 	 * @UsageRule Reference UN/ECE Rec 20 and X12 355.
 	 * @xmlType attribute
 	 * @xmlName unitCode
-	 * @var clm66411:UnitCodeContentType
+	 * @var un\unece\uncefact\codelist\specification\_66411\_2001\UnitCodeContentType
 	 */
 	public $unitCode;
 

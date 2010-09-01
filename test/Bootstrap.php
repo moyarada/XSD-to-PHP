@@ -28,12 +28,8 @@ function __autoload($className){
         return;
     }
     
-    //if (preg_match('/\\/', $className)) {
-        $className = str_replace('\\', '/', $className);
-    //echo($className."\n");
-    //}
-    
-    //exit();
+    $className = str_replace('\\', '/', $className);
+
     foreach($directories as $directory){
         foreach($fileNameFormats as $fileNameFormat){
 

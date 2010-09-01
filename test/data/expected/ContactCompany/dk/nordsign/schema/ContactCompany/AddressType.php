@@ -17,7 +17,7 @@ class AddressType
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName Address
-	 * @var dk\nordsign\schema\ContactCompany\AddressLineType
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\AddressLineType
 	 */
 	public $Address;
 	/**
@@ -26,7 +26,7 @@ class AddressType
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName Address2
-	 * @var dk\nordsign\schema\ContactCompany\AddressLineType
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\AddressLineType
 	 */
 	public $Address2;
 	/**
@@ -35,7 +35,7 @@ class AddressType
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName PostBox
-	 * @var dk\nordsign\schema\ContactCompany\PostboxType
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\PostboxType
 	 */
 	public $PostBox;
 	/**
@@ -44,7 +44,7 @@ class AddressType
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName PostalCode
-	 * @var dk\nordsign\schema\ContactCompany\PostalZoneType
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\PostalZoneType
 	 */
 	public $PostalCode;
 	/**
@@ -53,7 +53,7 @@ class AddressType
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName City
-	 * @var dk\nordsign\schema\ContactCompany\CityNameType
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\CityNameType
 	 */
 	public $City;
 	/**
@@ -62,7 +62,7 @@ class AddressType
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName State
-	 * @var dk\nordsign\schema\ContactCompany\RegionType
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\RegionType
 	 */
 	public $State;
 	/**
@@ -71,7 +71,7 @@ class AddressType
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName Country
-	 * @var dk\nordsign\schema\ContactCompany\NameType
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2\NameType
 	 */
 	public $Country;
 	/**
@@ -80,7 +80,7 @@ class AddressType
 	 * @xmlMinOccurs 1
 	 * @xmlMaxOccurs 1
 	 * @xmlName ContactPerson
-	 * @var dk\nordsign\schema\ContactCompany\ContactType
+	 * @var oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2\ContactType
 	 */
 	public $ContactPerson;
 

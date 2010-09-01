@@ -35,7 +35,7 @@ class NameType
 	 * @BuiltinType language
 	 * @xmlType attribute
 	 * @xmlName languageID
-	 * @var xsd:language
+	 * @var string
 	 */
 	public $languageID;
 

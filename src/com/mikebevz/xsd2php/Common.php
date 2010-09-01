@@ -68,12 +68,92 @@ class Common {
     
     protected $lastNsKey = 0;
     
+    public $debug = false;
+    
     /**
      * Dom document
      * @var DOMDocument
      */
     protected $dom;
     
+    protected function getDocNamespaces($dom) {
+        $xpath = new \DOMXPath($dom);
+        
+        $query = "namespace::*";
+        $nss = array();
+        $namespaces = $xpath->query($query);
+        
+        foreach ($namespaces as $node) {
+            
+            $key = "";
+            if (preg_match("/:/", $node->nodeName)) {
+                list ($pref, $key) = explode(":", $node->nodeName);
+                if ($key == "xml") {
+                    continue;
+                }    
+            }            
+            $nss[$key] = $node->nodeValue;
+        }
+        
+        return $nss;
+    }
+    
+    /**
+     * 
+     * @param string  $qname            QName string (fx, ns1:Name)
+     * @param boolean $resolveNamespace [optional] Resolve namespace code to full form
+     * 
+     * @return array($namespace, $nodeName)
+     */
+    protected function parseQName($qname, $resolveNamespace = false) {
+        if (!preg_match('/:/', $qname)) {
+            throw new \RuntimeException("Given argument is not of QName type");    
+        } 
+        
+        list ($ns, $name) = explode(":", $qname);
+        
+        if ($resolveNamespace === true) {
+            $ns = $this->resolveNamespace($ns);    
+        }
+        
+        return array($ns, $name);
+    } 
+    
+    protected function urnToPhpName($urn) {
+        $urn = preg_replace('/urn:|http:\/\//', '', $urn);
+        $urn = preg_replace('/-/', '_', $urn);
+        return preg_replace('/:|\//', '\\', $urn);
+    }
+    
+    /**
+     * Resolve short namespace to long, or return the same code if not found
+     * 
+     * @param unknown_type $shortNs
+     * 
+     * @return string Long namespace
+     */
+    protected function resolveNamespace($shortNs) {
+        if (!($this->dom instanceof \DOMDocument)) {
+            throw new RuntimeException("DOM is not initialized");
+        }
+        if (!is_array($this->namespaces)) {
+            $this->namespaces = $this->getDocNamespaces($this->dom);
+        }
+        
+        if (array_key_exists($shortNs, $this->namespaces)) {
+            return $this->namespaces[$shortNs];    
+        } else {
+            return $shortNs;
+        }    
+    }
+    
+    /**
+     * Parse Doc comments
+     * 
+     * @param string $comments
+     * 
+     * @return array
+     */
     protected function parseDocComments($comments) {
         $comments = explode("\n", $comments);
         $commentsOut = array();

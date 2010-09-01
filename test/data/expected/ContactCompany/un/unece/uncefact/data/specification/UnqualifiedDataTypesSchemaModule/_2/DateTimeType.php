@@ -21,7 +21,7 @@ class DateTimeType
 
 		/**
 		 * @xmlType value
-		 * @var dateTime
+		 * @var string
 		 */
 		public $value;
 

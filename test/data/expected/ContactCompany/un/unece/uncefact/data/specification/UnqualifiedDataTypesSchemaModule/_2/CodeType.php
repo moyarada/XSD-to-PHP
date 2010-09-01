@@ -21,7 +21,7 @@ class CodeType
 
 		/**
 		 * @xmlType value
-		 * @var normalizedString
+		 * @var string
 		 */
 		public $value;	
 	/**
@@ -35,7 +35,7 @@ class CodeType
 	 * @PrimitiveType string
 	 * @xmlType attribute
 	 * @xmlName listID
-	 * @var xsd:normalizedString
+	 * @var string
 	 */
 	public $listID;
 	/**
@@ -50,7 +50,7 @@ class CodeType
 	 * @UsageRule Defaults to the UN/EDIFACT data element 3055 code list.
 	 * @xmlType attribute
 	 * @xmlName listAgencyID
-	 * @var xsd:normalizedString
+	 * @var string
 	 */
 	public $listAgencyID;
 	/**
@@ -64,7 +64,7 @@ class CodeType
 	 * @PrimitiveType string
 	 * @xmlType attribute
 	 * @xmlName listAgencyName
-	 * @var xsd:string
+	 * @var string
 	 */
 	public $listAgencyName;
 	/**
@@ -78,7 +78,7 @@ class CodeType
 	 * @PrimitiveType string
 	 * @xmlType attribute
 	 * @xmlName listName
-	 * @var xsd:string
+	 * @var string
 	 */
 	public $listName;
 	/**
@@ -93,7 +93,7 @@ class CodeType
 	 * @BuiltinType string
 	 * @xmlType attribute
 	 * @xmlName listVersionID
-	 * @var xsd:normalizedString
+	 * @var string
 	 */
 	public $listVersionID;
 	/**
@@ -108,7 +108,7 @@ class CodeType
 	 * @BuiltinType string
 	 * @xmlType attribute
 	 * @xmlName name
-	 * @var xsd:string
+	 * @var string
 	 */
 	public $name;
 	/**
@@ -123,7 +123,7 @@ class CodeType
 	 * @BuiltinType language
 	 * @xmlType attribute
 	 * @xmlName languageID
-	 * @var xsd:language
+	 * @var string
 	 */
 	public $languageID;
 	/**
@@ -138,7 +138,7 @@ class CodeType
 	 * @BuiltinType anyURI
 	 * @xmlType attribute
 	 * @xmlName listURI
-	 * @var xsd:anyURI
+	 * @var string
 	 */
 	public $listURI;
 	/**
@@ -153,7 +153,7 @@ class CodeType
 	 * @BuiltinType anyURI
 	 * @xmlType attribute
 	 * @xmlName listSchemeURI
-	 * @var xsd:anyURI
+	 * @var string
 	 */
 	public $listSchemeURI;
 

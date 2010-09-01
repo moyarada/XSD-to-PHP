@@ -12,7 +12,7 @@ class LanguageCodeContentType
 
 		/**
 		 * @xmlType value
-		 * @var token
+		 * @var string
 		 */
 		public $value;
 

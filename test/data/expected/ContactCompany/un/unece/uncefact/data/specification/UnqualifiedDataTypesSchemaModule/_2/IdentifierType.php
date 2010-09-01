@@ -21,9 +21,15 @@ class IdentifierType
 
 		/**
 		 * @xmlType value
-		 * @var normalizedString
+		 * @var string
 		 */
 		public $value;	
+		
+		/**
+         * @xmlType value
+         * @var string
+         */
+		public $_;
 	/**
 	 * @UniqueID UDT000011-SC2
 	 * @CategoryCode SC
@@ -35,7 +41,7 @@ class IdentifierType
 	 * @PrimitiveType string
 	 * @xmlType attribute
 	 * @xmlName schemeID
-	 * @var xsd:normalizedString
+	 * @var string
 	 */
 	public $schemeID;
 	/**
@@ -49,7 +55,7 @@ class IdentifierType
 	 * @PrimitiveType string
 	 * @xmlType attribute
 	 * @xmlName schemeName
-	 * @var xsd:string
+	 * @var string
 	 */
 	public $schemeName;
 	/**
@@ -64,7 +70,7 @@ class IdentifierType
 	 * @UsageRule Defaults to the UN/EDIFACT data element 3055 code list.
 	 * @xmlType attribute
 	 * @xmlName schemeAgencyID
-	 * @var xsd:normalizedString
+	 * @var string
 	 */
 	public $schemeAgencyID;
 	/**
@@ -78,7 +84,7 @@ class IdentifierType
 	 * @PrimitiveType string
 	 * @xmlType attribute
 	 * @xmlName schemeAgencyName
-	 * @var xsd:string
+	 * @var string
 	 */
 	public $schemeAgencyName;
 	/**
@@ -93,7 +99,7 @@ class IdentifierType
 	 * @BuiltinType normalizedString
 	 * @xmlType attribute
 	 * @xmlName schemeVersionID
-	 * @var xsd:normalizedString
+	 * @var string
 	 */
 	public $schemeVersionID;
 	/**
@@ -108,7 +114,7 @@ class IdentifierType
 	 * @BuiltinType anyURI
 	 * @xmlType attribute
 	 * @xmlName schemeDataURI
-	 * @var xsd:anyURI
+	 * @var string
 	 */
 	public $schemeDataURI;
 	/**
@@ -123,7 +129,7 @@ class IdentifierType
 	 * @BuiltinType anyURI
 	 * @xmlType attribute
 	 * @xmlName schemeURI
-	 * @var xsd:anyURI
+	 * @var string
 	 */
 	public $schemeURI;
 

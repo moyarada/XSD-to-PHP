@@ -170,9 +170,6 @@ class Wsdl extends Common
             $this->class = new $this->class();
         }
         
-        // @todo check for location
-        // @todo check for publicPath, schemasPath - in some cases?
-        
         $this->refl = new \ReflectionClass($this->class);
         $this->wsdl = new \Zend_Soap_Wsdl($this->refl->getShortName(), $this->namespaceToUrn($this->refl->getNamespaceName()));        
         
@@ -266,19 +263,26 @@ class Wsdl extends Common
         }
     }
     
+    /**
+     * Add operations to binding
+     * 
+     * @return void
+     */
     public function addBindingOperations() {
         $methods = $this->getClassMethods();
+
+        //@todo Check if binding is instantiated
         
         foreach ($methods as $method) {
             $data = $this->getMethodIO($method->name);
             $bindingInput = false;
             $bindingOutput = false;
             if (array_key_exists("params", $data)) {
-                $bindingInput  = array('use' => 'literal'); //@todo is literal always good?
+                $bindingInput  = array('use' => 'literal'); 
             }
             
             if (array_key_exists("return", $data)) {
-                $bindingOutput = array('use' => 'literal'); //@todo is literal always good?
+                $bindingOutput = array('use' => 'literal'); 
             }
             
             $operation     = $this->wsdl->addBindingOperation($this->binding, $method->name, $bindingInput, $bindingOutput);
@@ -291,7 +295,7 @@ class Wsdl extends Common
     /**
      * Add Port operations
      * 
-     * 
+     * @return void
      */
     private function addPortOperations() {
         $methods = $this->getClassMethods();
@@ -299,36 +303,23 @@ class Wsdl extends Common
         foreach ($methods as $method) {
             $data = $this->getMethodIO($method->name);
             
-            $element = array('name' => $method->name,
-                             'sequence' => array() );
-            $input = false;
-            $output = false;
-            $bindingInput = false;
+            $input         = false;
+            $output        = false;
+            $bindingInput  = false;
             $bindingOutput = false;
             
-            // Add inputs if any
             if (array_key_exists("params", $data)) {
                 $input = $this->targetNsPrefix.":".$method->name.$this->requestSuffix;
-                //$bindingInput  = array('use' => 'literal'); //@todo is literal always good?
             }
             
-            // Add outputs if any
             if (array_key_exists("return", $data)) {
-                
-                //array_push($messages, array('name' => $method->name.$this->responseSuffix, 'refType' => 'element', 'content' => array('parameters'=>$this->targetNsPrefix.":".$method->name.$this->responseSuffix)));
-                
                 $output = $this->targetNsPrefix.":".$method->name.$this->responseSuffix;
-                //$bindingOutput = array('use' => 'literal'); //@todo is literal always good?
             }
-            
-              
             
             $this->wsdl->addPortOperation($this->portType, 
                                           $method->name, 
                                           $input, 
                                           $output);
-            
-            
             
         }   
     }
@@ -362,6 +353,8 @@ class Wsdl extends Common
      * @param array $messages Messages to add
      * 
      * @return void
+     * @throws RuntimeException If method does not have any inputs/outputs
+     * @throws RuntimeException If 
      */
     public function addMessages() {
         $methods = $this->getClassMethods();
@@ -373,12 +366,14 @@ class Wsdl extends Common
             $output = false;
             // Add inputs if any
             if (array_key_exists("params", $data)) {
-                array_push($messages, array('name' => $method->name.$this->requestSuffix, 'refType' => 'element', 'content' => array('parameters'=> $this->targetNsPrefix.":".$method->name)));
+                array_push($messages, array('name' => $method->name.$this->requestSuffix, 'refType' => 'element', 
+                 'content' => array($method->name.$this->requestSuffix => $this->targetNsPrefix.":".$method->name)));
             }
             
             // Add outputs if any
             if (array_key_exists("return", $data)) {
-                array_push($messages, array('name' => $method->name.$this->responseSuffix, 'refType' => 'element', 'content' => array('parameters'=>$this->targetNsPrefix.":".$method->name.$this->responseSuffix)));
+                array_push($messages, array('name' => $method->name.$this->responseSuffix, 'refType' => 'element', 
+                 'content' => array($method->name.$this->responseSuffix => $this->targetNsPrefix.":".$method->name.$this->responseSuffix)));
             }
            
         }
@@ -388,7 +383,7 @@ class Wsdl extends Common
         }  
         
         
-        //@todo if message part refers to a type - then use type, in case of element - use element attribute
+        
         if (!is_array($messages)) {
             throw new \RuntimeException("Argument is not array");        
         }
@@ -486,12 +481,12 @@ class Wsdl extends Common
      * @param string $type Type name
      * 
      * @return string
+     * @throws RuntimeException If class of type cannot be found
      */
     private function getTypeName($type) {
         
         //@todo Check must be performed against PHP data types not XMLSchema
         if (!in_array($type, $this->basicTypes)) {
-            //@todo extract type name
             if (!class_exists($type)) {
                 throw new \RuntimeException("Cannot find class ".$type);                
             }
@@ -530,31 +525,17 @@ class Wsdl extends Common
             $nsAttr->appendChild($txtNode);
             
             $nsAttr2   = $dom->createAttribute("schemaLocation");
-            // Find out if there are any schemas in schemasPath with targetNamespace = $namespace
             $schemaLocation = $this->getSchemaLocation($namespace);
-            
-            //print_r($schemaLocation."\n");
-            
             $publicSchema = $this->copyToPublic($schemaLocation, true);
-            
-            // If schema is there - then
-            // -- copy to publicPath
             $publicSchema = $this->copyToPublic($schemaLocation, true);
-            // -- substitute schemaLocation to current location
             $schemaUrl = $this->importsToAbsUrl($publicSchema, $this->getSchemasPath());
-            // For each imported/included schema 
-            // Copy to publicPath keeping directory structure
-            // -- substitute schemaLocation to location
              
-            $txtNode2  = $dom->createTextNode($schemaUrl); // @todo remove workaround - this NS is not real path to schema
-            
+            $txtNode2  = $dom->createTextNode($schemaUrl); 
             $nsAttr2->appendChild($txtNode2);
             
             $importEl->appendChild($nsAttr);
             $importEl->appendChild($nsAttr2);
-            
             $this->wsdl->getSchema();
-            
             $xpath = new \DOMXPath($dom);
             $query = "//*[local-name()='types']/child::*/*";
             $firstElement = $xpath->query($query);
@@ -609,6 +590,13 @@ class Wsdl extends Common
         return $url;
     }
     
+    /**
+     * Compose URL of kind schema://host:port
+     * 
+     * @param array $parts
+     * 
+     *  @return string URL
+     */
     public function composeUrl($parts) {
         $url = "";
         if (array_key_exists('scheme', $parts)) {
@@ -637,6 +625,7 @@ class Wsdl extends Common
      * @param boolean $overwrite Overwrite file if it exists? default false
      * 
      * @return string Path to new file
+     * @throws RuntimeException If file cannot be copied
      */
     public function copyToPublic($path, $overwrite = false) {
         $publicPath = realpath($this->getPublicPath());
@@ -657,6 +646,11 @@ class Wsdl extends Common
      * @param string $ns Namespace to match
      * 
      * @return string absolut path to schema file
+     * @throws RuntimeException If SchemaPath is not specified
+     * @throws RuntimeException If Public folder is not specified
+     * @throws RuntimeException If SchemaPath is not readable
+     * @throws RuntimeException If PublicPath is not writable
+     * @throws RuntimeException If namespace cannot be found in SchemaPath
      */
     public function getSchemaLocation($ns) {
         if ($this->getSchemasPath() == null || !file_exists($this->getSchemasPath())) {
@@ -676,10 +670,9 @@ class Wsdl extends Common
         }
         // Scan directory for xsd files
         
-        $dir = new \RecursiveDirectoryIterator(realpath($this->getSchemasPath()));
-        $iter = new \RecursiveIteratorIterator($dir);
+        $dir   = new \RecursiveDirectoryIterator(realpath($this->getSchemasPath()));
+        $iter  = new \RecursiveIteratorIterator($dir);
         $regex = new \RegexIterator($iter, '/\.xsd$/', \RecursiveRegexIterator::MATCH);   
-        
         $files = array();
         foreach ($regex as $key => $value) {
             array_push($files, $key);
@@ -700,9 +693,10 @@ class Wsdl extends Common
     }
     
     /**
+     * Check if $schema XML Schema file belongs to $ns
      * 
      * @param string $schema Path to XML Schema file
-     * @param $ns    Target namespace to match
+     * @param string $ns     Target namespace to match
      * 
      * @return boolean
      */
@@ -725,11 +719,26 @@ class Wsdl extends Common
         
     }
     
+    /**
+     * Get base name from URI 
+     * 
+     * @param string $ns URI
+     * 
+     * @return string Base name
+     */
     public function getBaseNsName($ns) {
         $ns = array_reverse(explode(":", $ns));
         return $ns[0];
     }
     
+    /**
+     * Return class XML namespace taken from @xmlNamespace doc
+     *  
+     * @param string $class Class name
+     * 
+     * @return string XML namespace
+     * @throws RuntimeException If namespace cannot be found in class DocBlock
+     */
     public function getClassNamespace($class) {
         $refl = new \ReflectionClass($class);
         
@@ -740,6 +749,13 @@ class Wsdl extends Common
         return $docs['xmlNamespace'];
     }
     
+    /**
+     * Get class name without namespace
+     * 
+     * @param string $longName Class full name
+     * 
+     * @return string Class base name
+     */
     private function getShortName($longName) {
         
         $arr = array_reverse(explode('\\',$longName));
@@ -747,27 +763,18 @@ class Wsdl extends Common
         return $shortName;
     }
     
+    /**
+     * @todo Check this method
+     * 
+     * @param string $type Data type
+     * 
+     * @return string 
+     */
     private function addType($type) {
         if (!in_array($type, $this->basicTypes)) {
-            //@todo Get info on Class and get its data
-            $typeName = $this->getShortName($type);
+            $typeName      = $this->getShortName($type);
             $typeNamespace = $this->getClassNamespace($type);
-            $nsCode = $this->getNsCode($typeNamespace, true);
-            
-            
-            
-            /*
-            $typeDom = $this->wsdl->addType($nsCode.":".$typeName);
-            $dom = $this->wsdl->toDomDocument();
-            $complTypeEl = $dom->createElement("xsd:import");
-            $seqEl = $dom->createAttribute("name");
-            $txtNode = $dom->createTextNode($nsCode.":".$typeName);
-            $seqEl->appendChild($txtNode);
-            $complTypeEl->appendChild($seqEl);
-            
-            $this->wsdl->getSchema()->appendChild($complTypeEl);
-            */
-            
+            $nsCode        = $this->getNsCode($typeNamespace, true);
         } else {
             return $type; 
         }

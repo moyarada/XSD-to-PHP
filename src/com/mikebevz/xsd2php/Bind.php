@@ -25,8 +25,8 @@ require_once 'Common.php';
  */
 class Bind extends Common {
     
-    protected $dom;
-    protected $namespaces;
+    //protected $dom;
+    //protected $namespaces;
     
     /**
      * Unmarshal XML string to corresponding PHP binding
@@ -58,7 +58,7 @@ class Bind extends Common {
         $className = $this->urnToPhpName($ns)."\\".$name;
         
         if (!class_exists($className)) {
-            throw new RuntimeException('Class '.$className. ' is not found. Make sure it was included');
+            throw new \RuntimeException('Class '.$className. ' is not found. Make sure it was included');
         }
         
         $binding = new $className();

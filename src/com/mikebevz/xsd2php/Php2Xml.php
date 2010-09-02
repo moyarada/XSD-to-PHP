@@ -46,6 +46,8 @@ class Php2Xml extends Common {
         if ($phpClass != null) {
             $this->phpClass = $phpClass;
         }
+        
+        
         $this->buildXml();
     }
     

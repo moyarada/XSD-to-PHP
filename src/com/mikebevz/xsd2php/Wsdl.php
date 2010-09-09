@@ -1,12 +1,15 @@
 <?php
 namespace com\mikebevz\xsd2php;
 
+use com\mikebevz\xsd2php\wsdl;
+
 set_include_path(get_include_path().PATH_SEPARATOR.
                 realpath("../lib/ZF/1.10.7").PATH_SEPARATOR.
                 realpath("../src"));
 
 require_once 'Zend/Soap/Wsdl.php';
 require_once 'com/mikebevz/xsd2php/Common.php';
+require_once 'com/mikebevz/xsd2php/wsdl/WsdlFactory.php';
 
 class Wsdl extends Common 
 {
@@ -20,7 +23,7 @@ class Wsdl extends Common
      * Instance of Zend_Soap_Wsdl
      * 
      * @todo consider replace this class - it's not that useful
-     * @var \Zend_Soap_Wsdl
+     * @var com\mikebevz\xsd2php\wsdl\AbstractWsdl
      */
     private $wsdl;
         
@@ -122,12 +125,7 @@ class Wsdl extends Common
      */
     private $importedNamespaces = array();
     
-    /**
-     * Debug mode - verbose output
-     * 
-     * @var boolean
-     */
-    private $debug = false;
+
     
     /**
      * Creates new wsdl for the $class given
@@ -153,6 +151,7 @@ class Wsdl extends Common
      * @throws RuntimeException If given class is not found, ie was not included before
      */
     public function getWsdl($class = null) {
+        /*
         if ($class != null) {
             $this->class = $class;
         } elseif ($this->class == null) {
@@ -170,9 +169,19 @@ class Wsdl extends Common
             $this->class = new $this->class();
         }
         
-        $this->refl = new \ReflectionClass($this->class);
-        $this->wsdl = new \Zend_Soap_Wsdl($this->refl->getShortName(), $this->namespaceToUrn($this->refl->getNamespaceName()));        
+        */
         
+        //$this->refl = new \ReflectionClass($this->class);
+        
+        //$this->wsdl = new \Zend_Soap_Wsdl($this->refl->getShortName(),
+        //                                 $this->namespaceToUrn($this->refl->getNamespaceName()));        
+        
+        
+                                          
+        $factory = new wsdl\WsdlFactory($class, wsdl\WsdlFactory::WSDL_1_1);
+        $this->wsdl = $factory->getImplementation(); 
+        $this->wsdl->debug = true;                                        
+        /*                                  
         $this->addTypes();
         $this->addMessages();
         $this->addPortType();
@@ -183,8 +192,9 @@ class Wsdl extends Common
         $dom = $this->wsdl->toDomDocument();
         if ($this->debug) {
             $dom->formatOutput = true;
-        }
-        return $dom->saveXml();
+        }*/
+        
+        return $this->wsdl->toXml();//$dom->saveXml();
     }
      
     /**

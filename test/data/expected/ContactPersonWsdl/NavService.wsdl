@@ -36,16 +36,16 @@
     </xsd:schema>
   </types>
   <message name="updateContactPersonRequest">
-    <part name="parameters" element="tns:updateContactPerson"/>
+    <part name="updateContactPersonRequest" element="tns:updateContactPerson"/>
   </message>
   <message name="updateContactPersonResponse">
-    <part name="parameters" element="tns:updateContactPersonResponse"/>
+    <part name="updateContactPersonResponse" element="tns:updateContactPersonResponse"/>
   </message>
   <message name="updateContactCompanyRequest">
-    <part name="parameters" element="tns:updateContactCompany"/>
+    <part name="updateContactCompanyRequest" element="tns:updateContactCompany"/>
   </message>
   <message name="updateContactCompanyResponse">
-    <part name="parameters" element="tns:updateContactCompanyResponse"/>
+    <part name="updateContactCompanyResponse" element="tns:updateContactCompanyResponse"/>
   </message>
   <portType name="NavService_Port">
     <operation name="updateContactPerson">

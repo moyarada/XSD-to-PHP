@@ -44,7 +44,9 @@ class Common {
                                 'unsignedByte', 'unsignedInt', 'unsignedLong', 'unsignedShort'
                                 );
                                 
-                           
+    public $phpTypes = array(
+        'int', 'integer', 'float', 'string', 'boolean', 'bool', 'object'
+    );                       
     
     public $reservedWords = array (
         'and', 'or', 'xor', '__FILE__', 'exception',
@@ -309,5 +311,31 @@ class Common {
                 break;                   
         }
     }
+    
+    public function phpTypeToSoap($phpType) {
+        switch ($phpType) {
+            case 'bool':
+            case 'boolean':
+                return 'boolean';
+                break;
+            case 'integer':
+            case 'int':
+                return 'integer';
+                break;
+            case 'float':
+            case 'double':
+                return 'float';
+                break;
 
+            case 'string':
+                return 'string';
+                break;
+            //case 'array[integer]':
+            //case 'array[integer]':    
+            default:
+                return false;
+            //case 'object':  
+        }
+    }
+ 
 }

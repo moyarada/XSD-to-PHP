@@ -8,7 +8,7 @@ require_once 'PHPUnit/Framework.php';
 require_once "com/mikebevz/xsd2php/SoapServer.php";
 //require_once "com/mikebevz/xsd2php/Php2Xml.php";
 
-class BindTest extends PHPUnit_Framework_TestCase
+class SoapServerTest extends PHPUnit_Framework_TestCase
 {
 /**
      * 

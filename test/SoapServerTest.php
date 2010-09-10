@@ -46,7 +46,7 @@ class SoapServerTest extends PHPUnit_Framework_TestCase
         
         require_once $this->expDir.DIRECTORY_SEPARATOR."services".DIRECTORY_SEPARATOR."NavService.php";
         
-        $service = new services\NavService();
+        $service = new services\NavService2();
         $this->tclass->setObject($service);
                 
         $req = '<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body>

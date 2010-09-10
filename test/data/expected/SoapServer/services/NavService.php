@@ -5,7 +5,7 @@ use dk\nordsign\schema\ContactCompany as CC;
 
 use dk\nordsign\schema\ContactPerson as CP;
 
-class NavService
+class NavService2
 {
     
     /**

@@ -61,13 +61,13 @@ class WsdlTest extends PHPUnit_Framework_TestCase
         
         $wsdl = $this->tclass->toXml();
         
-        print_r($wsdl);
+        //print_r($wsdl);
         //file_put_contents($this->expDir."/NavService.wsdl", $wsdl);
-        //$expected = file_get_contents($this->expDir."/NavService.wsdl");
+        $expected = file_get_contents($this->expDir."/NavService.wsdl");
         
-        //$this->assertEquals($expected, $wsdl);
+        $this->assertEquals($expected, $wsdl);
 
-        /*
+        
         foreach ($schemas as $schema) {
             $exp = file_get_contents($this->expDir."/public/schemas/".$schema);
             $act = file_get_contents($this->genDir."/public/schemas/".$schema);
@@ -76,6 +76,6 @@ class WsdlTest extends PHPUnit_Framework_TestCase
         
         if (file_exists($this->genDir)) {
             rmdir_recursive($this->genDir);    
-        }*/
+        }
     }
 }

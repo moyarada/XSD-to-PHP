@@ -10,7 +10,7 @@ require_once "com/mikebevz/xsd2php/SoapServer.php";
 
 class SoapServerTest extends PHPUnit_Framework_TestCase
 {
-/**
+    /**
      * 
      * @var xsd2php\SoapServer
      */
@@ -22,7 +22,7 @@ class SoapServerTest extends PHPUnit_Framework_TestCase
     
     private $expDir = "data/expected/SoapServer";
     private $genDir = "data/generated/SoapServer";
-    
+    private static $actual;
     
     protected function setUp ()
     {
@@ -73,9 +73,19 @@ class SoapServerTest extends PHPUnit_Framework_TestCase
         </ns4:updateContactPerson>
         </soap:Body></soap:Envelope>';
         
+        $expected = '<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="urn:dk:nordsign:application:services"><SOAP-ENV:Body><ns1:updateContactPersonResponse>TON s.r.o.</ns1:updateContactPersonResponse></SOAP-ENV:Body></SOAP-ENV:Envelope>
+';
         
+        ob_start('SoapServerTest::callback');
         $resp = $this->tclass->handle($req);
+        ob_end_flush();
         
-        print_r($resp);
+        //print_r(self::$actual);
+        $this->assertEquals($expected, self::$actual);
+    }
+    
+    public static function callback($buf) {
+        self::$actual = $buf;
     }
 }

@@ -28,10 +28,36 @@ require_once dirname(__FILE__).'/Common.php';
 class Php2Xml extends Common {
     /**
      * Php class to convert to XML
+     * 
      * @var Object
      */
     private $phpClass = null;
     
+    /**
+     * XML output encoding
+     * 
+     * @var string
+     */
+    private $domEncoding = 'UTF-8';
+    
+    /**
+     * Format XML output
+     * 
+     * @var boolean
+     */
+    private $domFormatOutput = true;
+    
+    /**
+     * 
+     * @var boolean
+     */
+    private $domPreserveWhiteSpace = false;
+    
+    /**
+     * 
+     * @var boolean
+     */
+    private $domRecover = false;
     
     /**
      * 
@@ -39,18 +65,29 @@ class Php2Xml extends Common {
      */
     private $root;
     
-    
     protected $rootTagName;
     
+    /**
+     * Construct new marshaller
+     * 
+     * @param object $phpClass
+     * 
+     * @return void
+     */
     public function __construct($phpClass = null) {
         if ($phpClass != null) {
             $this->phpClass = $phpClass;
         }
-        
-        
         $this->buildXml();
     }
     
+    /**
+     * Get XML string for given phpClass
+     * 
+     * @param object $phpClass Object to 
+     * 
+     * @return string
+     */
     public function getXml($phpClass = null) {
         if ($this->phpClass == null && $phpClass == null) {
             throw new \RuntimeException("Php class is not set");
@@ -65,7 +102,7 @@ class Php2Xml extends Common {
         foreach ($propDocs as $name => $data) {
             if (is_array($data['value'])) {
                 $elName = array_reverse(explode("\\",$name));
-                $code = $this->getNsCode($data['xmlNamespace']);
+                $code   = $this->getNsCode($data['xmlNamespace']);
                 foreach ($data['value'] as $arrEl) {
                     //@todo fix this workaroung. it's only works for one level array
                     $dom = $this->dom->createElement($code.":".$elName[0]);
@@ -76,16 +113,20 @@ class Php2Xml extends Common {
                 $this->addProperty($data, $this->root);
             }
         }
-        
-        return $this->dom->saveXML();
-        
+        $xml = $this->dom->saveXML();
+        //$xml = utf8_encode($xml);
+        return $xml;
     }
     
-    
-    
-    
-  
-    
+    /**
+     * Parse given class
+     * 
+     * @param object      $object 
+     * @param DOMDocument $dom    
+     * @param boolean     $rt     Root
+     * 
+     * @return 
+     */
     private function parseClass($object, $dom, $rt = false) {
         $refl = new \ReflectionClass($object);
         $docs = $this->parseDocComments($refl->getDocComment());
@@ -125,14 +166,27 @@ class Php2Xml extends Common {
         return $propDocs;
     }
     
+    /**
+     * Prepare new DOM document
+     * 
+     * @retun void
+     */
     private function buildXml() {
-        $this->dom = new \DOMDocument('1.0', 'UTF-8');
-        $this->dom->formatOutput = true;
-        
+        $this->dom = new \DOMDocument('1.0', $this->encoding);
+        $this->dom->formatOutput = $this->domFormatOutput;
+        $this->dom->preserveWhiteSpace = $this->domPreserveWhiteSpace;
+        $this->dom->recover = $this->domRecover;
+        $this->dom->encoding = $this->domEncoding;
     }
     
-    
-    
+    /**
+     * 
+     * 
+     * @param array       $docs Doc
+     * @param DOMDocument $dom  
+     * 
+     * @return void
+     */
     private function addProperty($docs, $dom) {
         if ($docs['value'] != '') {
             $el = "";
@@ -162,7 +216,14 @@ class Php2Xml extends Common {
         }
     }
   
-    
+    /**
+     * Parse object value
+     * 
+     * @param object $obj
+     * @param DOMElement $element
+     * 
+     * @return DOMElement
+     */
     private function parseObjectValue($obj, $element) {
         
         $refl = new \ReflectionClass($obj);
@@ -211,4 +272,75 @@ class Php2Xml extends Common {
         
         return $element;
     }
+    
+	/**
+	 * Get XML output encoding, default UTF-8
+	 * 
+     * @return string
+     */
+    public function getEncoding()
+    {
+        return $this->domEncoding;
+    }
+
+	/**
+	 * Set XML output encoding
+	 * 
+     * @param string $encoding Encoding for XML output
+     */
+    public function setDomEncoding($encoding)
+    {
+        $this->domEncoding = $encoding;
+    }
+    
+	/**
+     * @return the $domFormatOutput
+     */
+    public function getDomFormatOutput()
+    {
+        return $this->domFormatOutput;
+    }
+
+	/**
+     * @return the $domPreserveWhiteSpace
+     */
+    public function getDomPreserveWhiteSpace()
+    {
+        return $this->domPreserveWhiteSpace;
+    }
+
+	/**
+     * @return the $domRecover
+     */
+    public function getDomRecover()
+    {
+        return $this->domRecover;
+    }
+
+	/**
+     * @param $domFormatOutput the $domFormatOutput to set
+     */
+    public function setDomFormatOutput($domFormatOutput)
+    {
+        $this->domFormatOutput = $domFormatOutput;
+    }
+
+	/**
+     * @param $domPreserveWhiteSpace the $domPreserveWhiteSpace to set
+     */
+    public function setDomPreserveWhiteSpace(
+    $domPreserveWhiteSpace)
+    {
+        $this->domPreserveWhiteSpace = $domPreserveWhiteSpace;
+    }
+
+	/**
+     * @param $domRecover the $domRecover to set
+     */
+    public function setDomRecover($domRecover)
+    {
+        $this->domRecover = $domRecover;
+    }
+
+
 }

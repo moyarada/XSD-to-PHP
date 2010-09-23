@@ -23,41 +23,15 @@ require_once dirname(__FILE__).'/Common.php';
  * PHP to XML converter
  * 
  * @author Mike Bevz <myb@mikebevz.com>
- * @version 0.0.1
+ * @version 0.0.4
  */
 class Php2Xml extends Common {
     /**
      * Php class to convert to XML
-     * 
      * @var Object
      */
     private $phpClass = null;
     
-    /**
-     * XML output encoding
-     * 
-     * @var string
-     */
-    private $domEncoding = 'UTF-8';
-    
-    /**
-     * Format XML output
-     * 
-     * @var boolean
-     */
-    private $domFormatOutput = true;
-    
-    /**
-     * 
-     * @var boolean
-     */
-    private $domPreserveWhiteSpace = false;
-    
-    /**
-     * 
-     * @var boolean
-     */
-    private $domRecover = false;
     
     /**
      * 
@@ -65,29 +39,26 @@ class Php2Xml extends Common {
      */
     private $root;
     
+    
     protected $rootTagName;
     
-    /**
-     * Construct new marshaller
-     * 
-     * @param object $phpClass
-     * 
-     * @return void
-     */
+    private $logger;
+    
     public function __construct($phpClass = null) {
         if ($phpClass != null) {
             $this->phpClass = $phpClass;
         }
+        
+        // @todo implement logger injection
+        if (class_exists('\Zend_Registry')) { // this does not work due to PHP bug @see http://bugs.php.net/bug.php?id=46813
+            $this->logger = \Zend_Registry::get('logger');
+        } else {
+            $this->logger = new NullLogger(); 
+        }
+        
         $this->buildXml();
     }
     
-    /**
-     * Get XML string for given phpClass
-     * 
-     * @param object $phpClass Object to 
-     * 
-     * @return string
-     */
     public function getXml($phpClass = null) {
         if ($this->phpClass == null && $phpClass == null) {
             throw new \RuntimeException("Php class is not set");
@@ -102,7 +73,7 @@ class Php2Xml extends Common {
         foreach ($propDocs as $name => $data) {
             if (is_array($data['value'])) {
                 $elName = array_reverse(explode("\\",$name));
-                $code   = $this->getNsCode($data['xmlNamespace']);
+                $code = $this->getNsCode($data['xmlNamespace']);
                 foreach ($data['value'] as $arrEl) {
                     //@todo fix this workaroung. it's only works for one level array
                     $dom = $this->dom->createElement($code.":".$elName[0]);
@@ -114,19 +85,13 @@ class Php2Xml extends Common {
             }
         }
         $xml = $this->dom->saveXML();
-        //$xml = utf8_encode($xml);
+            $xml = utf8_encode($xml);
+        
         return $xml;
+        
     }
     
-    /**
-     * Parse given class
-     * 
-     * @param object      $object 
-     * @param DOMDocument $dom    
-     * @param boolean     $rt     Root
-     * 
-     * @return 
-     */
+    
     private function parseClass($object, $dom, $rt = false) {
         $refl = new \ReflectionClass($object);
         $docs = $this->parseDocComments($refl->getDocComment());
@@ -166,27 +131,17 @@ class Php2Xml extends Common {
         return $propDocs;
     }
     
-    /**
-     * Prepare new DOM document
-     * 
-     * @retun void
-     */
     private function buildXml() {
-        $this->dom = new \DOMDocument('1.0', $this->encoding);
-        $this->dom->formatOutput = $this->domFormatOutput;
-        $this->dom->preserveWhiteSpace = $this->domPreserveWhiteSpace;
-        $this->dom->recover = $this->domRecover;
-        $this->dom->encoding = $this->domEncoding;
+        $this->dom = new \DOMDocument('1.0', 'UTF-8');
+        $this->dom->formatOutput = true;
+        $this->dom->preserveWhiteSpace = false;
+        $this->dom->recover = false;
+        $this->dom->encoding = 'UTF-8';
+        
     }
     
-    /**
-     * 
-     * 
-     * @param array       $docs Doc
-     * @param DOMDocument $dom  
-     * 
-     * @return void
-     */
+    
+    
     private function addProperty($docs, $dom) {
         if ($docs['value'] != '') {
             $el = "";
@@ -217,14 +172,17 @@ class Php2Xml extends Common {
     }
   
     /**
-     * Parse object value
      * 
-     * @param object $obj
+     * Parse value of the object
+     * 
+     * @param Object $obj
      * @param DOMElement $element
      * 
      * @return DOMElement
      */
     private function parseObjectValue($obj, $element) {
+        
+        $this->logger->debug("Start with:".$element->getNodePath());
         
         $refl = new \ReflectionClass($obj);
         
@@ -254,8 +212,22 @@ class Php2Xml extends Common {
                     if ($propDocs['xmlType'] == 'element') {
                         $el = '';
                         $code = $this->getNsCode($propDocs['xmlNamespace']);
-                        $el = $this->dom->createElement($code.":".$propDocs['xmlName'], $prop->getValue($obj));
-                        $element->appendChild($el);
+                        $value = $prop->getValue($obj);
+                        
+                        if (is_array($value)) {
+                            $this->logger->debug("Creating element:".$code.":".$propDocs['xmlName']);
+                            $this->logger->debug(print_r($value, true));
+                            foreach ($value as $node) {
+                                $this->logger->debug(print_r($node, true));
+                                $el = $this->dom->createElement($code.":".$propDocs['xmlName']);
+                                $arrNode = $this->parseObjectValue($node, $el);
+                                $element->appendChild($arrNode);
+                            }
+                            
+                        } else {
+                            $el = $this->dom->createElement($code.":".$propDocs['xmlName'], $value);
+                            $element->appendChild($el);
+                        }
                         //print_r("Added element ".$propDocs['xmlName']." with NS = ".$propDocs['xmlNamespace']." \n");
                     } elseif ($propDocs['xmlType'] == 'attribute') {
                         $atr = $this->dom->createAttribute($propDocs['xmlName']);
@@ -263,6 +235,9 @@ class Php2Xml extends Common {
                         $atr->appendChild($text);
                         $element->appendChild($atr);
                     } elseif ($propDocs['xmlType'] == 'value') {
+                        
+                        $this->logger->debug(print_r($prop->getValue($obj), true));
+                        
                         $txtNode = $this->dom->createTextNode($prop->getValue($obj));
                         $element->appendChild($txtNode);
                     } 
@@ -272,75 +247,4 @@ class Php2Xml extends Common {
         
         return $element;
     }
-    
-	/**
-	 * Get XML output encoding, default UTF-8
-	 * 
-     * @return string
-     */
-    public function getEncoding()
-    {
-        return $this->domEncoding;
-    }
-
-	/**
-	 * Set XML output encoding
-	 * 
-     * @param string $encoding Encoding for XML output
-     */
-    public function setDomEncoding($encoding)
-    {
-        $this->domEncoding = $encoding;
-    }
-    
-	/**
-     * @return the $domFormatOutput
-     */
-    public function getDomFormatOutput()
-    {
-        return $this->domFormatOutput;
-    }
-
-	/**
-     * @return the $domPreserveWhiteSpace
-     */
-    public function getDomPreserveWhiteSpace()
-    {
-        return $this->domPreserveWhiteSpace;
-    }
-
-	/**
-     * @return the $domRecover
-     */
-    public function getDomRecover()
-    {
-        return $this->domRecover;
-    }
-
-	/**
-     * @param $domFormatOutput the $domFormatOutput to set
-     */
-    public function setDomFormatOutput($domFormatOutput)
-    {
-        $this->domFormatOutput = $domFormatOutput;
-    }
-
-	/**
-     * @param $domPreserveWhiteSpace the $domPreserveWhiteSpace to set
-     */
-    public function setDomPreserveWhiteSpace(
-    $domPreserveWhiteSpace)
-    {
-        $this->domPreserveWhiteSpace = $domPreserveWhiteSpace;
-    }
-
-	/**
-     * @param $domRecover the $domRecover to set
-     */
-    public function setDomRecover($domRecover)
-    {
-        $this->domRecover = $domRecover;
-    }
-
-
 }

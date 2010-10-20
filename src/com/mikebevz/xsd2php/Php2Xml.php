@@ -85,7 +85,7 @@ class Php2Xml extends Common {
             }
         }
         $xml = $this->dom->saveXML();
-            $xml = utf8_encode($xml);
+        //$xml = utf8_encode($xml);
         
         return $xml;
         

@@ -1,19 +1,16 @@
 Legko XML
 
-XSD to PHP compiler 
-
+With the present library you are able to compile PHP binding from XML Schema files, and consequently, bind XML files to PHP models (unmarshalling), and save PHP bindings as XML (marshalling).
 
 Versions history
 
-
-Current Development
+0.0.5 Major refactoring 
  # Fixed #17: Array of objects is not converted to XML correctly
  # Implemented #12: Feature: WSDL generator utilizing existing mapping in classes
  # Added NullLogger - mock for logger. It will be used later for #18: Feature: Logger injection
  # In progress #13 Command line tool: Initial version developed, compile-schema target only.
  # In progress #8 Create facade class: Initial version implemented, only compileSchema method works. (See LegkoXml.php)
  
-
 0.0.4 Issue #12. WSDL autodiscovery
  # Fixed #10: Directory structure do not correspond to PHP namespaces
  # Fixed #5: Add debug output option to XSD2PHP

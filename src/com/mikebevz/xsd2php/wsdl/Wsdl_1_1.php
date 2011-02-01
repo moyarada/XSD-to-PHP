@@ -170,9 +170,22 @@ class Wsdl_1_1 extends AbstractWsdl implements IWsdl {
     /**
      * Add operations to bindings
      * 
+     * <code>
+     *  <operation name="$operation">
+	 *		<soap:operation
+	 *			soapAction="targetNamespace/$operation" />
+	 *		<input>
+	 *			$input
+	 *		</input>
+	 *		<output>
+	 *			$output
+	 *		</output>
+	 *	</operation>
+     * </code>
+     * 
      * @param string $operation Operation name
-     * @param array  $input     Array of inputs     
-     * @param array  $output    Array of outputs
+     * @param array  $input     Array of inputs [optional]     
+     * @param array  $output    Array of outputs [optional]
      * 
      * @return void
      */
@@ -206,6 +219,13 @@ class Wsdl_1_1 extends AbstractWsdl implements IWsdl {
     /**
      * Add operations to port
      * 
+     * <code>
+     *  <operation name="$name">
+	 *		<input message="tns:messageName" />
+	 *		<output message="tns:messageName" />
+	 *	</operation>
+     * </code>
+     * 
      * @param string $operation Name of the operation 
      * @param array  $input     Array of inputs
      * @param array  $output    Array of outputs
@@ -231,6 +251,12 @@ class Wsdl_1_1 extends AbstractWsdl implements IWsdl {
     
     /**
      * Add message
+     * 
+     * <code>
+     *   <message name="$name">
+	 *	   <part name="$name" element="$type" />
+	 *  </message>
+     * </code>
      * 
      * @param string $name Message name
      * @param string $type Message type
@@ -314,7 +340,7 @@ class Wsdl_1_1 extends AbstractWsdl implements IWsdl {
      * Create simple element
      * 
      * <code>
-     * 	<element name="$name" type="$type" />
+     * <element name="$name" type="$type" />
      * </code>
      * 
      * @param string $name Element name

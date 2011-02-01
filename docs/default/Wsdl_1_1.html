@@ -131,6 +131,13 @@ Source Location: /mikebevz/xsd2php/wsdl/Wsdl_1_1.php<br /><br />
 <td valign="top">
 <h3><a href="#class_methods">Methods</a></h3>
 <ul>
+    <li><a href="../default/Wsdl_1_1.html#methodaddBindingOperations">addBindingOperations</a></li>
+    <li><a href="../default/Wsdl_1_1.html#methodaddMessage">addMessage</a></li>
+    <li><a href="../default/Wsdl_1_1.html#methodaddPortOperations">addPortOperations</a></li>
+    <li><a href="../default/Wsdl_1_1.html#methodcreateElementWithComplexType">createElementWithComplexType</a></li>
+    <li><a href="../default/Wsdl_1_1.html#methodcreateRefElement">createRefElement</a></li>
+    <li><a href="../default/Wsdl_1_1.html#methodcreateSimpleElement">createSimpleElement</a></li>
+    <li><a href="../default/Wsdl_1_1.html#methodextractTypes">extractTypes</a></li>
     <li><a href="../default/Wsdl_1_1.html#methodprepare">prepare</a></li>
   </ul>
 </td>
@@ -191,6 +198,12 @@ Source Location: /mikebevz/xsd2php/wsdl/Wsdl_1_1.php<br /><br />
    
 </dd>
 <dt>
+  <a href="../default/AbstractWsdl.html#var$location">AbstractWsdl::$location</a>
+  </dt>
+<dd>
+   
+</dd>
+<dt>
   <a href="../default/AbstractWsdl.html#var$methodsMeta">AbstractWsdl::$methodsMeta</a>
   </dt>
 <dd>
@@ -198,6 +211,18 @@ Source Location: /mikebevz/xsd2php/wsdl/Wsdl_1_1.php<br /><br />
 </dd>
 <dt>
   <a href="../default/AbstractWsdl.html#var$portNameSuffix">AbstractWsdl::$portNameSuffix</a>
+  </dt>
+<dd>
+   
+</dd>
+<dt>
+  <a href="../default/AbstractWsdl.html#var$publicPath">AbstractWsdl::$publicPath</a>
+  </dt>
+<dd>
+   
+</dd>
+<dt>
+  <a href="../default/AbstractWsdl.html#var$publicUrl">AbstractWsdl::$publicUrl</a>
   </dt>
 <dd>
    
@@ -216,6 +241,12 @@ Source Location: /mikebevz/xsd2php/wsdl/Wsdl_1_1.php<br /><br />
 </dd>
 <dt>
   <a href="../default/AbstractWsdl.html#var$responseSuffix">AbstractWsdl::$responseSuffix</a>
+  </dt>
+<dd>
+   
+</dd>
+<dt>
+  <a href="../default/AbstractWsdl.html#var$schemasPath">AbstractWsdl::$schemasPath</a>
   </dt>
 <dd>
    
@@ -344,6 +375,12 @@ Source Location: /mikebevz/xsd2php/wsdl/Wsdl_1_1.php<br /><br />
     
   </dd>
     <dt>
+    <a href="../default/AbstractWsdl.html#methodaddImportToSchema">AbstractWsdl::addImportToSchema()</a>
+  </dt>
+  <dd>
+    Add xsd:import tag to XML schema before any childs added
+  </dd>
+    <dt>
     <a href="../default/AbstractWsdl.html#methodcomposeUrl">AbstractWsdl::composeUrl()</a>
   </dt>
   <dd>
@@ -354,6 +391,12 @@ Source Location: /mikebevz/xsd2php/wsdl/Wsdl_1_1.php<br /><br />
   </dt>
   <dd>
     Copy given file to publicSchemaPath
+  </dd>
+    <dt>
+    <a href="../default/AbstractWsdl.html#methodgetClassMethods">AbstractWsdl::getClassMethods()</a>
+  </dt>
+  <dd>
+    Get service class public methods
   </dd>
     <dt>
     <a href="../default/AbstractWsdl.html#methodgetClassNamespace">AbstractWsdl::getClassNamespace()</a>
@@ -372,6 +415,12 @@ Source Location: /mikebevz/xsd2php/wsdl/Wsdl_1_1.php<br /><br />
   </dt>
   <dd>
     Get SOAP service location (service-&gt;port-&gt;address-&gt;location)
+  </dd>
+    <dt>
+    <a href="../default/AbstractWsdl.html#methodgetMethodIO">AbstractWsdl::getMethodIO()</a>
+  </dt>
+  <dd>
+    Return method input/output
   </dd>
     <dt>
     <a href="../default/AbstractWsdl.html#methodgetNsCode">AbstractWsdl::getNsCode()</a>
@@ -438,6 +487,18 @@ Source Location: /mikebevz/xsd2php/wsdl/Wsdl_1_1.php<br /><br />
   </dt>
   <dd>
     Convert PHP namespace to URN
+  </dd>
+    <dt>
+    <a href="../default/AbstractWsdl.html#methodprepareDom">AbstractWsdl::prepareDom()</a>
+  </dt>
+  <dd>
+    Prepare DOM
+  </dd>
+    <dt>
+    <a href="../default/AbstractWsdl.html#methodprepareReflection">AbstractWsdl::prepareReflection()</a>
+  </dt>
+  <dd>
+    Prepare service class reflection
   </dd>
     <dt>
     <a href="../default/AbstractWsdl.html#methodsetDebug">AbstractWsdl::setDebug()</a>
@@ -540,6 +601,315 @@ Source Location: /mikebevz/xsd2php/wsdl/Wsdl_1_1.php<br /><br />
 <div class="tags">
 
   <hr />
+	<a name="methodaddBindingOperations"></a>
+	<h3>method addBindingOperations <span class="smalllinenumber">[line 192]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void addBindingOperations(
+string
+$operation, [array
+$input = false], [array
+$output = false])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Add operations to bindings<br /><br /><p><ol><li><div class="src-line">&nbsp;&nbsp;&lt;<span class="src-id">operation&nbsp;name</span>=<span class="src-str">&quot;</span><span class="src-str"><span class="src-var">$operation</span></span><span class="src-str">&quot;</span>&gt;</div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="src-id">soap</span>:<span class="src-id">operation</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-id">soapAction</span>=<span class="src-str">&quot;</span><span class="src-str">targetNamespace/<span class="src-var">$operation</span></span><span class="src-str">&quot;&nbsp;</span>/&gt;</div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="src-id">input</span>&gt;</div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$input</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/<span class="src-id">input</span>&gt;</div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="src-id">output</span>&gt;</div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$output</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/<span class="src-id">output</span>&gt;</div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/<span class="src-id">operation</span>&gt;</div></li>
+</ol></p><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>private</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$operation</b>&nbsp;&nbsp;</td>
+        <td>Operation name</td>
+      </tr>
+          <tr>
+        <td class="type">array&nbsp;&nbsp;</td>
+        <td><b>$input</b>&nbsp;&nbsp;</td>
+        <td>Array of inputs [optional]</td>
+      </tr>
+          <tr>
+        <td class="type">array&nbsp;&nbsp;</td>
+        <td><b>$output</b>&nbsp;&nbsp;</td>
+        <td>Array of outputs [optional]</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodaddMessage"></a>
+	<h3>method addMessage <span class="smalllinenumber">[line 266]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void addMessage(
+string
+$name, string
+$type)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Add message<br /><br /><p><ol><li><div class="src-line">&nbsp;&nbsp;&nbsp;&lt;<span class="src-id">message&nbsp;name</span>=<span class="src-str">&quot;</span><span class="src-str"><span class="src-var">$name</span></span><span class="src-str">&quot;</span>&gt;</div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="src-id">part&nbsp;name</span>=<span class="src-str">&quot;</span><span class="src-str"><span class="src-var">$name</span></span><span class="src-str">&quot;&nbsp;</span><span class="src-id">element</span>=<span class="src-str">&quot;</span><span class="src-str"><span class="src-var">$type</span></span><span class="src-str">&quot;&nbsp;</span>/&gt;</div></li>
+<li><div class="src-line">&nbsp;&nbsp;&lt;/<span class="src-id">message</span>&gt;</div></li>
+</ol></p><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>private</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$name</b>&nbsp;&nbsp;</td>
+        <td>Message name</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$type</b>&nbsp;&nbsp;</td>
+        <td>Message type</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodaddPortOperations"></a>
+	<h3>method addPortOperations <span class="smalllinenumber">[line 235]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void addPortOperations(
+string
+$operation, [array
+$input = false], [array
+$output = false])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Add operations to port<br /><br /><p><ol><li><div class="src-line">&nbsp;&nbsp;&lt;<span class="src-id">operation&nbsp;name</span>=<span class="src-str">&quot;</span><span class="src-str"><span class="src-var">$name</span></span><span class="src-str">&quot;</span>&gt;</div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="src-id">input&nbsp;message</span>=<span class="src-str">&quot;tns:messageName&quot;&nbsp;</span>/&gt;</div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="src-id">output&nbsp;message</span>=<span class="src-str">&quot;tns:messageName&quot;&nbsp;</span>/&gt;</div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/<span class="src-id">operation</span>&gt;</div></li>
+</ol></p><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>private</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$operation</b>&nbsp;&nbsp;</td>
+        <td>Name of the operation</td>
+      </tr>
+          <tr>
+        <td class="type">array&nbsp;&nbsp;</td>
+        <td><b>$input</b>&nbsp;&nbsp;</td>
+        <td>Array of inputs</td>
+      </tr>
+          <tr>
+        <td class="type">array&nbsp;&nbsp;</td>
+        <td><b>$output</b>&nbsp;&nbsp;</td>
+        <td>Array of outputs</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodcreateElementWithComplexType"></a>
+	<h3>method createElementWithComplexType <span class="smalllinenumber">[line 321]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>DOMElement createElementWithComplexType(
+string
+$name, array
+$elements)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Create an element with complex type<br /><br /><p><ol><li><div class="src-line">&nbsp;&lt;<span class="src-id">element&nbsp;name</span>=<span class="src-str">&quot;</span><span class="src-str"><span class="src-var">$name</span></span><span class="src-str">&quot;</span>&gt;</div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&lt;<span class="src-id">complexType</span>&gt;</div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="src-id">sequence</span>&gt;</div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$elements</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/<span class="src-id">sequence</span>&gt;</div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&lt;/<span class="src-id">complexType</span>&gt;</div></li>
+<li><div class="src-line">&nbsp;&lt;/<span class="src-id">element</span>&gt;</div></li>
+</ol></p><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>private</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$name</b>&nbsp;&nbsp;</td>
+        <td>Element name</td>
+      </tr>
+          <tr>
+        <td class="type">array&nbsp;&nbsp;</td>
+        <td><b>$elements</b>&nbsp;&nbsp;</td>
+        <td>Array of elements to include into sequence</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodcreateRefElement"></a>
+	<h3>method createRefElement <span class="smalllinenumber">[line 296]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>DOMElement createRefElement(
+string
+$ref)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Create ref element<br /><br /><p><ol><li><div class="src-line">&nbsp;&lt;<span class="src-id">element&nbsp;ref</span>=<span class="src-str">&quot;</span><span class="src-str"><span class="src-var">$ref</span></span><span class="src-str">&quot;&nbsp;</span>/&gt;</div></li>
+</ol></p><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>private</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$ref</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodcreateSimpleElement"></a>
+	<h3>method createSimpleElement <span class="smalllinenumber">[line 351]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>DOMElement createSimpleElement(
+string
+$name, string
+$type)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Create simple element<br /><br /><p><ol><li><div class="src-line">&nbsp;&lt;<span class="src-id">element&nbsp;name</span>=<span class="src-str">&quot;</span><span class="src-str"><span class="src-var">$name</span></span><span class="src-str">&quot;&nbsp;</span><span class="src-id">type</span>=<span class="src-str">&quot;</span><span class="src-str"><span class="src-var">$type</span></span><span class="src-str">&quot;&nbsp;</span>/&gt;</div></li>
+</ol></p><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>private</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$name</b>&nbsp;&nbsp;</td>
+        <td>Element name</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$type</b>&nbsp;&nbsp;</td>
+        <td>Element type</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodextractTypes"></a>
+	<h3>method extractTypes <span class="smalllinenumber">[line 92]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void extractTypes(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Extract types from WSDL<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>private</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
 	<a name="methodprepare"></a>
 	<h3>method prepare <span class="smalllinenumber">[line 30]</span></h3>
 	<div class="function">
@@ -574,7 +944,7 @@ Source Location: /mikebevz/xsd2php/wsdl/Wsdl_1_1.php<br /><br />
 
         <div class="credit">
 		    <hr />
-		    Documentation generated on Tue, 01 Feb 2011 17:58:55 +0100 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
+		    Documentation generated on Tue, 01 Feb 2011 22:29:29 +0100 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
 	      </div>
       </td></tr></table>
     </td>

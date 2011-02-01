@@ -126,11 +126,15 @@ Source Location: /mikebevz/xsd2php/wsdl/AbstractWsdl.php<br /><br />
     <li><a href="../default/AbstractWsdl.html#var$dom">$dom</a></li>
     <li><a href="../default/AbstractWsdl.html#var$importedNamespaces">$importedNamespaces</a></li>
     <li><a href="../default/AbstractWsdl.html#var$lastNsKey">$lastNsKey</a></li>
+    <li><a href="../default/AbstractWsdl.html#var$location">$location</a></li>
     <li><a href="../default/AbstractWsdl.html#var$methodsMeta">$methodsMeta</a></li>
     <li><a href="../default/AbstractWsdl.html#var$portNameSuffix">$portNameSuffix</a></li>
+    <li><a href="../default/AbstractWsdl.html#var$publicPath">$publicPath</a></li>
+    <li><a href="../default/AbstractWsdl.html#var$publicUrl">$publicUrl</a></li>
     <li><a href="../default/AbstractWsdl.html#var$refl">$refl</a></li>
     <li><a href="../default/AbstractWsdl.html#var$requestSuffix">$requestSuffix</a></li>
     <li><a href="../default/AbstractWsdl.html#var$responseSuffix">$responseSuffix</a></li>
+    <li><a href="../default/AbstractWsdl.html#var$schemasPath">$schemasPath</a></li>
     <li><a href="../default/AbstractWsdl.html#var$service">$service</a></li>
     <li><a href="../default/AbstractWsdl.html#var$serviceNameSuffix">$serviceNameSuffix</a></li>
     <li><a href="../default/AbstractWsdl.html#var$soapBindingStyle">$soapBindingStyle</a></li>
@@ -157,11 +161,14 @@ Source Location: /mikebevz/xsd2php/wsdl/AbstractWsdl.php<br /><br />
 <h3><a href="#class_methods">Methods</a></h3>
 <ul>
     <li><a href="../default/AbstractWsdl.html#method__construct">__construct</a></li>
+    <li><a href="../default/AbstractWsdl.html#methodaddImportToSchema">addImportToSchema</a></li>
     <li><a href="../default/AbstractWsdl.html#methodcomposeUrl">composeUrl</a></li>
     <li><a href="../default/AbstractWsdl.html#methodcopyToPublic">copyToPublic</a></li>
+    <li><a href="../default/AbstractWsdl.html#methodgetClassMethods">getClassMethods</a></li>
     <li><a href="../default/AbstractWsdl.html#methodgetClassNamespace">getClassNamespace</a></li>
     <li><a href="../default/AbstractWsdl.html#methodgetDebug">getDebug</a></li>
     <li><a href="../default/AbstractWsdl.html#methodgetLocation">getLocation</a></li>
+    <li><a href="../default/AbstractWsdl.html#methodgetMethodIO">getMethodIO</a></li>
     <li><a href="../default/AbstractWsdl.html#methodgetNsCode">getNsCode</a></li>
     <li><a href="../default/AbstractWsdl.html#methodgetPublicPath">getPublicPath</a></li>
     <li><a href="../default/AbstractWsdl.html#methodgetPublicUrl">getPublicUrl</a></li>
@@ -173,6 +180,8 @@ Source Location: /mikebevz/xsd2php/wsdl/AbstractWsdl.php<br /><br />
     <li><a href="../default/AbstractWsdl.html#methodimportsToAbsUrl">importsToAbsUrl</a></li>
     <li><a href="../default/AbstractWsdl.html#methodisTargetNamespaceEqualsTo">isTargetNamespaceEqualsTo</a></li>
     <li><a href="../default/AbstractWsdl.html#methodnamespaceToUrn">namespaceToUrn</a></li>
+    <li><a href="../default/AbstractWsdl.html#methodprepareDom">prepareDom</a></li>
+    <li><a href="../default/AbstractWsdl.html#methodprepareReflection">prepareReflection</a></li>
     <li><a href="../default/AbstractWsdl.html#methodsetDebug">setDebug</a></li>
     <li><a href="../default/AbstractWsdl.html#methodsetLocation">setLocation</a></li>
     <li><a href="../default/AbstractWsdl.html#methodsetPublicPath">setPublicPath</a></li>
@@ -397,6 +406,30 @@ Source Location: /mikebevz/xsd2php/wsdl/AbstractWsdl.php<br /><br />
       </table>
 	</div><br /><br />
 	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="var$location"></a>
+	<p></p>
+	<h4>$location = <span class="value"></span></h4>
+	<p>[line 137]</p>
+  <br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>private</td>
+  </tr>
+</table>
+</div>
+
+  <br />
+	<div class="tags">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><b>Type:</b>&nbsp;&nbsp;</td>
+      <td>mixed</td>
+    </tr>
+      </table>
+	</div><br /><br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
 	<a name="var$methodsMeta"></a>
 	<p></p>
 	<h4>$methodsMeta = <span class="value"></span></h4>
@@ -441,6 +474,54 @@ Source Location: /mikebevz/xsd2php/wsdl/AbstractWsdl.php<br /><br />
     <tr>
       <td><b>Type:</b>&nbsp;&nbsp;</td>
       <td>string</td>
+    </tr>
+      </table>
+	</div><br /><br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="var$publicPath"></a>
+	<p></p>
+	<h4>$publicPath = <span class="value">&nbsp;null</span></h4>
+	<p>[line 131]</p>
+  Path to publicly accessable folder to store imported/included schemas<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>private</td>
+  </tr>
+</table>
+</div>
+
+  <br />
+	<div class="tags">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><b>Type:</b>&nbsp;&nbsp;</td>
+      <td>string</td>
+    </tr>
+      </table>
+	</div><br /><br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="var$publicUrl"></a>
+	<p></p>
+	<h4>$publicUrl = <span class="value">&nbsp;null</span></h4>
+	<p>[line 133]</p>
+  <br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>private</td>
+  </tr>
+</table>
+</div>
+
+  <br />
+	<div class="tags">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><b>Type:</b>&nbsp;&nbsp;</td>
+      <td>mixed</td>
     </tr>
       </table>
 	</div><br /><br />
@@ -503,6 +584,30 @@ Source Location: /mikebevz/xsd2php/wsdl/AbstractWsdl.php<br /><br />
 <table border="0" cellspacing="0" cellpadding="0">
   <tr>
     <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
+  </tr>
+</table>
+</div>
+
+  <br />
+	<div class="tags">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><b>Type:</b>&nbsp;&nbsp;</td>
+      <td>string</td>
+    </tr>
+      </table>
+	</div><br /><br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="var$schemasPath"></a>
+	<p></p>
+	<h4>$schemasPath = <span class="value">&nbsp;null</span></h4>
+	<p>[line 124]</p>
+  Path to schema to be imported/included in XSD<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>private</td>
   </tr>
 </table>
 </div>
@@ -993,6 +1098,48 @@ $service)</code>
         <div class="top">[ <a href="#top">Top</a> ]</div>
   </div>
   <hr />
+	<a name="methodaddImportToSchema"></a>
+	<h3>method addImportToSchema <span class="smalllinenumber">[line 330]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void addImportToSchema(
+string
+$namespace, string
+$code)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Add xsd:import tag to XML schema before any childs added<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>private</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$namespace</b>&nbsp;&nbsp;</td>
+        <td>Namespace URI</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$code</b>&nbsp;&nbsp;</td>
+        <td>Shortcut for namespace, fx, ns0. Returned by getNsCode()</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
 	<a name="methodcomposeUrl"></a>
 	<h3>method composeUrl <span class="smalllinenumber">[line 560]</span></h3>
 	<div class="function">
@@ -1077,6 +1224,31 @@ $overwrite = false])</code>
       </tr>
         </table>
     </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodgetClassMethods"></a>
+	<h3>method getClassMethods <span class="smalllinenumber">[line 242]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>array<ReflectionMethod> getClassMethods(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Get service class public methods<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>private</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
         <div class="top">[ <a href="#top">Top</a> ]</div>
   </div>
   <hr />
@@ -1169,6 +1341,42 @@ $class)</code>
 <br /><br />
 
 	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodgetMethodIO"></a>
+	<h3>method getMethodIO <span class="smalllinenumber">[line 231]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>array getMethodIO(
+string
+$method)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Return method input/output<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>private</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$method</b>&nbsp;&nbsp;</td>
+        <td>Method name</td>
+      </tr>
+        </table>
+    </div><br />
         <div class="top">[ <a href="#top">Top</a> ]</div>
   </div>
   <hr />
@@ -1569,6 +1777,56 @@ $namespace)</code>
         <div class="top">[ <a href="#top">Top</a> ]</div>
   </div>
   <hr />
+	<a name="methodprepareDom"></a>
+	<h3>method prepareDom <span class="smalllinenumber">[line 196]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void prepareDom(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Prepare DOM<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>private</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodprepareReflection"></a>
+	<h3>method prepareReflection <span class="smalllinenumber">[line 217]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void prepareReflection(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Prepare service class reflection<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>private</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
 	<a name="methodsetDebug"></a>
 	<h3>method setDebug <span class="smalllinenumber">[line 673]</span></h3>
 	<div class="function">
@@ -1814,7 +2072,7 @@ $soapBindingStyle)</code>
 
         <div class="credit">
 		    <hr />
-		    Documentation generated on Tue, 01 Feb 2011 17:58:53 +0100 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
+		    Documentation generated on Tue, 01 Feb 2011 22:29:28 +0100 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
 	      </div>
       </td></tr></table>
     </td>

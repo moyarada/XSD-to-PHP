@@ -128,6 +128,16 @@ Source Location: /mikebevz/xsd2php/Xsd2Php.php<br /><br />
 <h3><a href="#class_vars">Variables</a></h3>
 <ul>
     <li><a href="../default/Xsd2Php.html#var$debug">$debug</a></li>
+    <li><a href="../default/Xsd2Php.html#var$importHeadNS">$importHeadNS</a></li>
+    <li><a href="../default/Xsd2Php.html#var$loadedImportFiles">$loadedImportFiles</a></li>
+    <li><a href="../default/Xsd2Php.html#var$nspace">$nspace</a></li>
+    <li><a href="../default/Xsd2Php.html#var$shortNamespaces">$shortNamespaces</a></li>
+    <li><a href="../default/Xsd2Php.html#var$targetNamespace">$targetNamespace</a></li>
+    <li><a href="../default/Xsd2Php.html#var$xmlForPhp">$xmlForPhp</a></li>
+    <li><a href="../default/Xsd2Php.html#var$xmlSource">$xmlSource</a></li>
+    <li><a href="../default/Xsd2Php.html#var$xpath">$xpath</a></li>
+    <li><a href="../default/Xsd2Php.html#var$xsdFile">$xsdFile</a></li>
+    <li><a href="../default/Xsd2Php.html#var$xsdNs">$xsdNs</a></li>
   </ul>
 </td>
 
@@ -136,13 +146,19 @@ Source Location: /mikebevz/xsd2php/Xsd2Php.php<br /><br />
 <h3><a href="#class_methods">Methods</a></h3>
 <ul>
     <li><a href="../default/Xsd2Php.html#method__construct">__construct</a></li>
+    <li><a href="../default/Xsd2Php.html#methodexpandNS">expandNS</a></li>
     <li><a href="../default/Xsd2Php.html#methodgetNamespaces">getNamespaces</a></li>
+    <li><a href="../default/Xsd2Php.html#methodgetPHP">getPHP</a></li>
+    <li><a href="../default/Xsd2Php.html#methodgetTargetNS">getTargetNS</a></li>
     <li><a href="../default/Xsd2Php.html#methodgetXML">getXML</a></li>
     <li><a href="../default/Xsd2Php.html#methodgetXmlForPhp">getXmlForPhp</a></li>
     <li><a href="../default/Xsd2Php.html#methodgetXmlSource">getXmlSource</a></li>
     <li><a href="../default/Xsd2Php.html#methodloadImports">loadImports</a></li>
     <li><a href="../default/Xsd2Php.html#methodloadIncludes">loadIncludes</a></li>
+    <li><a href="../default/Xsd2Php.html#methodnamespaceToPath">namespaceToPath</a></li>
+    <li><a href="../default/Xsd2Php.html#methodnamespaceToPhp">namespaceToPhp</a></li>
     <li><a href="../default/Xsd2Php.html#methodsaveClasses">saveClasses</a></li>
+    <li><a href="../default/Xsd2Php.html#methodsavePhpFiles">savePhpFiles</a></li>
     <li><a href="../default/Xsd2Php.html#methodsetXmlForPhp">setXmlForPhp</a></li>
     <li><a href="../default/Xsd2Php.html#methodsetXmlSource">setXmlSource</a></li>
   </ul>
@@ -330,6 +346,246 @@ Generate PHP classes based on XSD schema<br /><br /><br /><br />
       </table>
 	</div><br /><br />
 	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="var$importHeadNS"></a>
+	<p></p>
+	<h4>$importHeadNS = <span class="value">array()</span></h4>
+	<p>[line 88]</p>
+  <br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>private</td>
+  </tr>
+</table>
+</div>
+
+  <br />
+	<div class="tags">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><b>Type:</b>&nbsp;&nbsp;</td>
+      <td>mixed</td>
+    </tr>
+      </table>
+	</div><br /><br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="var$loadedImportFiles"></a>
+	<p></p>
+	<h4>$loadedImportFiles = <span class="value">array()</span></h4>
+	<p>[line 86]</p>
+  Already processed imports<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>private</td>
+  </tr>
+</table>
+</div>
+
+  <br />
+	<div class="tags">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><b>Type:</b>&nbsp;&nbsp;</td>
+      <td>array</td>
+    </tr>
+      </table>
+	</div><br /><br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="var$nspace"></a>
+	<p></p>
+	<h4>$nspace = <span class="value"></span></h4>
+	<p>[line 50]</p>
+  Namespaces in the current xsd schema<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>private</td>
+  </tr>
+</table>
+</div>
+
+  <br />
+	<div class="tags">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><b>Type:</b>&nbsp;&nbsp;</td>
+      <td>array</td>
+    </tr>
+      </table>
+	</div><br /><br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="var$shortNamespaces"></a>
+	<p></p>
+	<h4>$shortNamespaces = <span class="value"></span></h4>
+	<p>[line 70]</p>
+  Namespaces = array (className =&gt; namespace ), used in dirs/files generation<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>private</td>
+  </tr>
+</table>
+</div>
+
+  <br />
+	<div class="tags">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><b>Type:</b>&nbsp;&nbsp;</td>
+      <td>array</td>
+    </tr>
+      </table>
+	</div><br /><br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="var$targetNamespace"></a>
+	<p></p>
+	<h4>$targetNamespace = <span class="value"></span></h4>
+	<p>[line 74]</p>
+  <br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>private</td>
+  </tr>
+</table>
+</div>
+
+  <br />
+	<div class="tags">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><b>Type:</b>&nbsp;&nbsp;</td>
+      <td>mixed</td>
+    </tr>
+      </table>
+	</div><br /><br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="var$xmlForPhp"></a>
+	<p></p>
+	<h4>$xmlForPhp = <span class="value"></span></h4>
+	<p>[line 56]</p>
+  XML file suitable for PHP code generation<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>private</td>
+  </tr>
+</table>
+</div>
+
+  <br />
+	<div class="tags">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><b>Type:</b>&nbsp;&nbsp;</td>
+      <td>string</td>
+    </tr>
+      </table>
+	</div><br /><br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="var$xmlSource"></a>
+	<p></p>
+	<h4>$xmlSource = <span class="value"></span></h4>
+	<p>[line 72]</p>
+  <br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>private</td>
+  </tr>
+</table>
+</div>
+
+  <br />
+	<div class="tags">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><b>Type:</b>&nbsp;&nbsp;</td>
+      <td>mixed</td>
+    </tr>
+      </table>
+	</div><br /><br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="var$xpath"></a>
+	<p></p>
+	<h4>$xpath = <span class="value"></span></h4>
+	<p>[line 44]</p>
+  <br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>private</td>
+  </tr>
+</table>
+</div>
+
+  <br />
+	<div class="tags">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><b>Type:</b>&nbsp;&nbsp;</td>
+      <td>DOMXPath</td>
+    </tr>
+      </table>
+	</div><br /><br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="var$xsdFile"></a>
+	<p></p>
+	<h4>$xsdFile = <span class="value"></span></h4>
+	<p>[line 36]</p>
+  XSD schema to convert from<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>private</td>
+  </tr>
+</table>
+</div>
+
+  <br />
+	<div class="tags">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><b>Type:</b>&nbsp;&nbsp;</td>
+      <td>String</td>
+    </tr>
+      </table>
+	</div><br /><br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="var$xsdNs"></a>
+	<p></p>
+	<h4>$xsdNs = <span class="value"></span></h4>
+	<p>[line 80]</p>
+  XSD root namespace alias (fx, xsd = http://www.w3.org/2001/XMLSchema)<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>private</td>
+  </tr>
+</table>
+</div>
+
+  <br />
+	<div class="tags">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><b>Type:</b>&nbsp;&nbsp;</td>
+      <td>string</td>
+    </tr>
+      </table>
+	</div><br /><br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
 </div><br />
 
 <hr />
@@ -380,6 +636,42 @@ $debug = false])</code>
         <div class="top">[ <a href="#top">Top</a> ]</div>
   </div>
   <hr />
+	<a name="methodexpandNS"></a>
+	<h3>method expandNS <span class="smalllinenumber">[line 577]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>string expandNS(
+string
+$ns)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Resolve short namespace<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>private</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$ns</b>&nbsp;&nbsp;</td>
+        <td>Short namespace</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
 	<a name="methodgetNamespaces"></a>
 	<h3>method getNamespaces <span class="smalllinenumber">[line 163]</span></h3>
 	<div class="function">
@@ -408,6 +700,67 @@ $xpath)</code>
     <table border="0" cellspacing="0" cellpadding="0">
           <tr>
         <td class="type">DOMXPath&nbsp;&nbsp;</td>
+        <td><b>$xpath</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodgetPHP"></a>
+	<h3>method getPHP <span class="smalllinenumber">[line 430]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>string getPHP(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Return generated PHP source code<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>private</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodgetTargetNS"></a>
+	<h3>method getTargetNS <span class="smalllinenumber">[line 146]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void getTargetNS(
+
+$xpath)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		<br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>private</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">&nbsp;&nbsp;</td>
         <td><b>$xpath</b>&nbsp;&nbsp;</td>
         <td></td>
       </tr>
@@ -584,6 +937,78 @@ $namespace = ''])</code>
         <div class="top">[ <a href="#top">Top</a> ]</div>
   </div>
   <hr />
+	<a name="methodnamespaceToPath"></a>
+	<h3>method namespaceToPath <span class="smalllinenumber">[line 637]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>string namespaceToPath(
+string
+$xmlNS)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Convert XML URI to Path<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>private</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$xmlNS</b>&nbsp;&nbsp;</td>
+        <td>XML URI</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodnamespaceToPhp"></a>
+	<h3>method namespaceToPhp <span class="smalllinenumber">[line 597]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>string namespaceToPhp(
+string
+$xmlNS)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Convert XML URI to PHP complient namespace<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>private</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$xmlNS</b>&nbsp;&nbsp;</td>
+        <td>XML URI</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
 	<a name="methodsaveClasses"></a>
 	<h3>method saveClasses <span class="smalllinenumber">[line 195]</span></h3>
 	<div class="function">
@@ -620,6 +1045,51 @@ $createDirectory)</code>
         <td class="type">boolean&nbsp;&nbsp;</td>
         <td><b>$createDirectory</b>&nbsp;&nbsp;</td>
         <td>Create directory, false by default</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodsavePhpFiles"></a>
+	<h3>method savePhpFiles <span class="smalllinenumber">[line 401]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void savePhpFiles(
+string
+$dir, [
+$createDirectory = false])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Save PHP files to directory structure<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>throws:</b>&nbsp;&nbsp;</td><td>RuntimeException if given directory does not exist</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>private</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$dir</b>&nbsp;&nbsp;</td>
+        <td>Directory to save files to</td>
+      </tr>
+          <tr>
+        <td class="type">&nbsp;&nbsp;</td>
+        <td><b>$createDirectory</b>&nbsp;&nbsp;</td>
+        <td></td>
       </tr>
         </table>
     </div><br />
@@ -702,7 +1172,7 @@ $xmlSource)</code>
 
         <div class="credit">
 		    <hr />
-		    Documentation generated on Tue, 01 Feb 2011 17:58:55 +0100 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
+		    Documentation generated on Tue, 01 Feb 2011 22:29:30 +0100 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
 	      </div>
       </td></tr></table>
     </td>

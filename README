@@ -6,7 +6,11 @@ If you would like to help to our project, please send your story about how you h
 LegkoXML in your project. Email is myb (at) mikebevz (dot) com. 
 !!!!
 
-With the present library you are able to compile PHP binding from XML Schema files, and consequently, bind XML files to PHP models (unmarshalling), and save PHP bindings as XML (marshalling).
+See PhpDocs at http://legkoxml.org/docs
+
+With the present library you are able to compile PHP binding from XML Schema files, 
+and consequently, bind XML files to PHP models (unmarshalling), and save PHP bindings 
+as XML (marshalling).
 
 Versions history
 

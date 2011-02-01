@@ -6,6 +6,11 @@ require_once 'IWsdl.php';
 
 class Wsdl_1_1 extends AbstractWsdl implements IWsdl {
     
+    /**
+     * WSDL 1.1 XML namespaces
+     * 
+     * @var array
+     */
     protected $namespaces = array (
         'wsdl' => 'http://schemas.xmlsoap.org/wsdl/',
         'soap' => 'http://schemas.xmlsoap.org/wsdl/soap/',
@@ -79,6 +84,11 @@ class Wsdl_1_1 extends AbstractWsdl implements IWsdl {
         
     }
     
+    /**
+     * Extract types from WSDL
+     * 
+     * @return void
+     */
     private function extractTypes() {
         $allEl = array();
         $allImp = array();
@@ -157,6 +167,15 @@ class Wsdl_1_1 extends AbstractWsdl implements IWsdl {
         
     }
     
+    /**
+     * Add operations to bindings
+     * 
+     * @param string $operation Operation name
+     * @param array  $input     Array of inputs     
+     * @param array  $output    Array of outputs
+     * 
+     * @return void
+     */
     private function addBindingOperations($operation, $input = false, $output = false) {
         $el = $this->dom->createElement('wsdl:operation');
         $el->setAttribute('name', $operation);
@@ -184,6 +203,15 @@ class Wsdl_1_1 extends AbstractWsdl implements IWsdl {
         $this->wsBinding->appendChild($el);
     }
     
+    /**
+     * Add operations to port
+     * 
+     * @param string $operation Name of the operation 
+     * @param array  $input     Array of inputs
+     * @param array  $output    Array of outputs
+     * 
+     * @return void
+     */
     private function addPortOperations($operation, $input = false, $output = false) {
         $el = $this->dom->createElement("wsdl:operation");
         $el->setAttribute('name', $operation);
@@ -201,6 +229,14 @@ class Wsdl_1_1 extends AbstractWsdl implements IWsdl {
         $this->wsPortType->appendChild($el);
     } 
     
+    /**
+     * Add message
+     * 
+     * @param string $name Message name
+     * @param string $type Message type
+     * 
+     * @return void
+     */
     private function addMessage($name, $type) {
         $el = $this->dom->createElement("wsdl:message");
         $el->setAttribute('name', $name);
@@ -220,6 +256,17 @@ class Wsdl_1_1 extends AbstractWsdl implements IWsdl {
         $this->wsDefinitions->insertBefore($el, $types->item(1));
     }
     
+    /**
+     * Create ref element
+     * 
+     * <code>
+     * <element ref="$ref" />
+     * </code>
+     * 
+     * @param string $ref
+     * 
+     * @return DOMElement
+     */
     private function createRefElement($ref) {
         $el = $this->dom->createElement($this->xmlSchemaPreffix.':element');
         $el->setAttribute('ref', $ref);
@@ -227,6 +274,24 @@ class Wsdl_1_1 extends AbstractWsdl implements IWsdl {
         return $el;
     } 
     
+    /**
+     * Create an element with complex type
+     * 
+     * <code>
+     * <element name="$name">
+     *   <complexType>
+     *   	<sequence>
+     *   		$elements
+     *   	</sequence>
+     *   </complexType>
+     * </element>
+     * </code>
+     * 
+     * @param string $name     Element name
+     * @param array  $elements Array of elements to include into sequence
+     * 
+     * @return DOMElement
+     */
     private function createElementWithComplexType($name, $elements) {
         //print_r('Create complex type '.$name."\n");
         $el = $this->dom->createElement($this->xmlSchemaPreffix.':element');
@@ -245,6 +310,18 @@ class Wsdl_1_1 extends AbstractWsdl implements IWsdl {
         return $el;
     }
     
+    /**
+     * Create simple element
+     * 
+     * <code>
+     * 	<element name="$name" type="$type" />
+     * </code>
+     * 
+     * @param string $name Element name
+     * @param string $type Element type
+     * 
+     * @return DOMElement
+     */
     private function createSimpleElement($name, $type) {
         $el = $this->dom->createElement($this->xmlSchemaPreffix.':element');
         $el->setAttribute('name', $name);

@@ -7,7 +7,6 @@ use oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2;
 use dk\nordsign\schema\ContactCompany;
 use com\mikebevz\xsd2php;
 
-require_once 'PHPUnit/Framework.php';
 require_once "com/mikebevz/xsd2php/Xsd2Php.php";
 
 class Xsd2PhpTest extends PHPUnit_Framework_TestCase

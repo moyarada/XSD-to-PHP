@@ -1,16 +1,17 @@
 <?php
 use oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2;
 use oasis\names\specification\ubl\schema\xsd\CommonBasicComponents_2;
-use dk\nordsign\schema\ContactCompany;
+use dk\nordsign\schema\ContactCompany as CC;
 set_include_path(get_include_path().PATH_SEPARATOR.
                 realpath("../src").PATH_SEPARATOR.
                 realpath("data/expected/ContactCompany"));
 
 use com\mikebevz\xsd2php;
 
-require_once 'PHPUnit/Framework.php';
 require_once "com/mikebevz/xsd2php/Bind.php";
 require_once "com/mikebevz/xsd2php/Php2Xml.php";
+//require_once "dk/nordsign/schema/ContactCompany/ContactCompany.php";
+//require_once "dk/nordsign/schema/ContactCompany/AddressType.php";
 
 class BindTest extends PHPUnit_Framework_TestCase
 {
@@ -111,8 +112,8 @@ class BindTest extends PHPUnit_Framework_TestCase
         
         $input = file_get_contents($this->expDir.DIRECTORY_SEPARATOR."BindTest.xml");
         
-        $expBinding = new ContactCompany\ContactCompany();
-        $bilAdd = new ContactCompany\AddressType();
+        $expBinding = new CC\ContactCompany();
+        $bilAdd = new CC\AddressType();
         $line = new CommonBasicComponents_2\Line();
         $line->value = "Nytorv 50 22 2";
         $addrTypeLine = new CommonAggregateComponents_2\AddressLineType();

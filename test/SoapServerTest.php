@@ -4,9 +4,8 @@ set_include_path(
     get_include_path() . PATH_SEPARATOR . realpath("../src"));
 use com\mikebevz\xsd2php;
 
-require_once 'PHPUnit/Framework.php';
+
 require_once "com/mikebevz/xsd2php/SoapServer.php";
-//require_once "com/mikebevz/xsd2php/Php2Xml.php";
 
 class SoapServerTest extends PHPUnit_Framework_TestCase
 {

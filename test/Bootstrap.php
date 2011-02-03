@@ -11,7 +11,7 @@ function __autoload($className){
       'data/expected/simple1/',  
       'data/expected/ContactCompany/',
       'data/expected/ContactPerson1/',
-      'data/expected/ContactPersonWsdl',
+      'data/expected/ContactPersonWsdl/',
       'data/'
     );
 

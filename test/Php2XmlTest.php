@@ -13,8 +13,7 @@ set_include_path(dirname(__FILE__).'/data/expected/ubl2.0'.PATH_SEPARATOR.
                  dirname(__FILE__).'/data/expected/simple1'.PATH_SEPARATOR.
                  get_include_path());
                         
-//require_once dirname(__FILE__) . '/../../bootstrap.php';
-require_once 'PHPUnit/Framework.php';
+
 require_once "com/mikebevz/xsd2php/Php2Xml.php";
 
 class Php2XmlTest extends PHPUnit_Framework_TestCase

@@ -4,7 +4,9 @@ set_include_path(get_include_path().PATH_SEPARATOR.
                 realpath("../src"));
 
 function __autoload($className){
-
+    
+    
+    
     $directories = array(
       '',
       'data/expected/ubl2.0/',
@@ -43,6 +45,9 @@ function __autoload($className){
         }
     }
 }
+
+
+spl_autoload_register('__autoload');
 
 function rmdir_recursive($dir) {
         if (is_dir($dir)) { 

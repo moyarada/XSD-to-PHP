@@ -7,6 +7,7 @@ LegkoXML in your project. Email is myb (at) mikebevz (dot) com.
 !!!!
 
 See PhpDocs at http://legkoxml.org/docs
+Discussion Group http://groups.google.com/group/legkoxml-support
 
 With the present library you are able to compile PHP binding from XML Schema files, 
 and consequently, bind XML files to PHP models (unmarshalling), and save PHP bindings 

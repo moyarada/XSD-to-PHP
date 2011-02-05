@@ -41,6 +41,11 @@ class SoapServerTest extends PHPUnit_Framework_TestCase
         $this->tclass = null;        
     }
     
+    /**
+     * Case is that we've got NavService.php, a webservice class, which we would 
+     * like to expose as a webservice using SoapServer.
+     * 
+     */
     public function test1() {
         
         require_once $this->expDir.DIRECTORY_SEPARATOR."services".DIRECTORY_SEPARATOR."NavService.php";

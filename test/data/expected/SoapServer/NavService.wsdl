@@ -83,7 +83,7 @@
 	</binding>
 	<service name="NavService_Service">
 		<port name="NavService_Port" binding="tns:NavService_Binding">
-			<soap:address location="http://localhost:10088/api/soap.php" />
+			<soap:address location="http://127.0.0.1/api/soap.php" />
 		</port>
 	</service>
 </definitions> 

@@ -18,8 +18,8 @@ class Wsdl_1_1 extends AbstractWsdl implements IWsdl {
         'mime' => 'http://schemas.xmlsoap.org/wsdl/mime/',
         'soapenc' => 'http://schemas.xmlsoap.org/soap/encoding/',
         'soapenv' => 'http://schemas.xmlsoap.org/soap/envelope/',
-        'xsi' => 'http://www.w3.org/2000/10/XMLSchema-instance',
-        'xsd' => 'http://www.w3.org/2000/10/XMLSchema',
+        'xsi' => 'http://www.w3.org/2001/XMLSchema-instance',
+        'xsd' => 'http://www.w3.org/2001/XMLSchema',
     );
     
     /**
@@ -202,7 +202,7 @@ class Wsdl_1_1 extends AbstractWsdl implements IWsdl {
             $body = $this->dom->createElement('soap:body');
             $body->setAttribute('use', 'literal');
             $inp->appendChild($body);
-            $soapOperation->appendChild($inp);
+            $el->appendChild($inp);
         }
         
         if ($output === true) {
@@ -210,7 +210,7 @@ class Wsdl_1_1 extends AbstractWsdl implements IWsdl {
             $body = $this->dom->createElement('soap:body');
             $body->setAttribute('use', 'literal');
             $out->appendChild($body);
-            $soapOperation->appendChild($out);
+            $el->appendChild($out);
         }
         
         $this->wsBinding->appendChild($el);

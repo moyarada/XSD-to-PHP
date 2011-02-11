@@ -25,6 +25,7 @@ class SoapServerTest extends PHPUnit_Framework_TestCase
     
     protected function setUp ()
     {
+        
         $this->options = array(
             'soap_version' => SOAP_1_2,
             'cache_wsdl' => WSDL_CACHE_NONE,

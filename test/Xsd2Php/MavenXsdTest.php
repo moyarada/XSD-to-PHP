@@ -5,6 +5,7 @@ realpath("../../src"));
 use com\mikebevz\xsd2php;
 
 require_once "com/mikebevz/xsd2php/Xsd2Php.php";
+require_once "../Bootstrap.php";
 
 class MavenXsdTest extends PHPUnit_Framework_TestCase
 {
@@ -59,10 +60,16 @@ class MavenXsdTest extends PHPUnit_Framework_TestCase
     }
     
     public function testSavePHPBindings() {
-    
+        
+        if (file_exists($this->expectedDir."/bindings")) {
+            rmdir_recursive($this->expectedDir."/bindings");
+        } 
+        
         $this->tclass->saveClasses($this->expectedDir."/bindings", true);
         
-        
+        if (file_exists($this->expectedDir."/bindings")) {
+            rmdir_recursive($this->expectedDir."/bindings");
+        } 
     }
 
 }

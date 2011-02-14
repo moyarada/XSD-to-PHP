@@ -20,7 +20,7 @@ class AmountType
 
 		/**
 		 * @xmlType value
-		 * @var decimal
+		 * @var float
 		 */
 		public $value;	
 	/**
@@ -35,7 +35,7 @@ class AmountType
 	 * @BuiltinType normalisedString
 	 * @xmlType attribute
 	 * @xmlName currencyID
-	 * @var clm54217:CurrencyCodeContentType
+	 * @var un\unece\uncefact\codelist\specification\_54217\_2001\CurrencyCodeContentType
 	 */
 	public $currencyID;
 

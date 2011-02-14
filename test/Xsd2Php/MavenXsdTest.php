@@ -7,7 +7,7 @@ use com\mikebevz\xsd2php;
 require_once "com/mikebevz/xsd2php/Xsd2Php.php";
 require_once "../Bootstrap.php";
 
-class MavenXsdTest extends PHPUnit_Framework_TestCase
+class MavenXsdTest extends LegkoXMLTestCase
 {
 
     /**
@@ -19,36 +19,38 @@ class MavenXsdTest extends PHPUnit_Framework_TestCase
     private $xsd;
 
     private $expectedDir;
+    private $generatedDir;
 
     protected function setUp ()
     {
         $this->xsd = realpath(dirname(__FILE__)."/../../resources/maven/maven-v4_0_0.xsd");
         $this->expectedDir = realpath(dirname(__FILE__)."/../data/expected/Xsd2Php/MavenTests");
+        $this->generatedDir = realpath(dirname(__FILE__)."/../data/generated/Xsd2Php/MavenTests");
         $this->tclass = new xsd2php\Xsd2Php($this->xsd);
     }
     protected function tearDown ()
     {
         $this->tclass = null;
     }
-    
+
     public function testNamespaceToPHP() {
-        
+
         $ns[0] = "http://maven.apache.org/POM/4.0.0";
         $ns[1] = "urn:dk:nordsign:schema:ContactCompany";
         $ns[2] = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2";
         $ns[3] = "http://www.loc.gov/METS/";
-        
+
         $nse[0] = 'org\apache\maven\POM\_4_0_0';
         $nse[1] = 'dk\nordsign\schema\ContactCompany';
         $nse[2] = 'oasis\names\specification\ubl\schema\xsd\CommonAggregateComponents_2';
         $nse[3] = 'gov\loc\www\METS';
-        
+
         $i = 0;
         foreach ($ns as $key => $value) {
-             $this->assertEquals ($nse[$i], $this->tclass->namespaceToPhp($value));
+            $this->assertEquals ($nse[$i], $this->tclass->namespaceToPhp($value));
             $i++;
-        } 
-    
+        }
+
     }
 
     public function testXSDMustBeConvertedToXML() {
@@ -58,18 +60,24 @@ class MavenXsdTest extends PHPUnit_Framework_TestCase
         $expected = file_get_contents($this->expectedDir.'/ParsedSchema.xml');
         $this->assertEquals($expected, $actual);
     }
-    
+
     public function testSavePHPBindings() {
-        
-        if (file_exists($this->expectedDir."/bindings")) {
-            rmdir_recursive($this->expectedDir."/bindings");
-        } 
-        
-        $this->tclass->saveClasses($this->expectedDir."/bindings", true);
-        
-        if (file_exists($this->expectedDir."/bindings")) {
-            rmdir_recursive($this->expectedDir."/bindings");
-        } 
+
+        if (file_exists($this->generatedDir."/bindings")) {
+            rmdir_recursive($this->generatedDir."/bindings");
+        }
+
+        //$this->tclass->saveClasses($this->expectedDir."/bindings", true);
+
+        $this->tclass->saveClasses($this->generatedDir."/bindings", true);
+
+        $this->assertDirContentsEquals($this->expectedDir."/bindings", $this->generatedDir."/bindings");
+
+        if (file_exists($this->generatedDir."/bindings")) {
+            rmdir_recursive($this->generatedDir."/bindings");
+        }
     }
+
+    
 
 }

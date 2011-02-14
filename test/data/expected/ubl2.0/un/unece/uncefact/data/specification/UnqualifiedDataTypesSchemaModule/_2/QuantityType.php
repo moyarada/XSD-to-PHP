@@ -20,7 +20,7 @@ class QuantityType
 
 		/**
 		 * @xmlType value
-		 * @var decimal
+		 * @var float
 		 */
 		public $value;	
 	/**
@@ -35,7 +35,7 @@ class QuantityType
 	 * @BuiltinType normalizedString
 	 * @xmlType attribute
 	 * @xmlName unitCode
-	 * @var clm66411:UnitCodeContentType
+	 * @var un\unece\uncefact\codelist\specification\_66411\_2001\UnitCodeContentType
 	 */
 	public $unitCode;
 

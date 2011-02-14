@@ -8,8 +8,9 @@ use dk\nordsign\schema\ContactCompany;
 use com\mikebevz\xsd2php;
 
 require_once "com/mikebevz/xsd2php/Xsd2Php.php";
+require_once "Bootstrap.php";
 
-class Xsd2PhpTest extends PHPUnit_Framework_TestCase
+class Xsd2PhpTest extends LegkoXMLTestCase
 {
     /**
      * XSD to PHP convertor class
@@ -73,13 +74,11 @@ class Xsd2PhpTest extends PHPUnit_Framework_TestCase
         if (file_exists(dirname(__FILE__).'/data/generated/ubl2.0')) {
             rmdir_recursive(realpath('data/generated/ubl2.0'));
         }
+        //$this->tclass->saveClasses(dirname(__FILE__).'/data/expected/ubl2.0', true);
         $this->tclass->saveClasses(dirname(__FILE__).'/data/generated/ubl2.0', true);
         
-        $i = 0;
-        foreach ($orderModelExpected as $model) {
-            $this->assertEquals(file_get_contents($model), file_get_contents($orderModelActual[$i]));
-            $i++;
-        }
+        $this->assertDirContentsEquals(dirname(__FILE__).'/data/expected/ubl2.0/oasis', dirname(__FILE__).'/data/generated/ubl2.0/oasis');
+        $this->assertDirContentsEquals(dirname(__FILE__).'/data/expected/ubl2.0/un', dirname(__FILE__).'/data/generated/ubl2.0/un');
         
         if (file_exists('data/generated/ubl2.0')) {
            rmdir_recursive(realpath('data/generated/ubl2.0'));
@@ -96,7 +95,8 @@ class Xsd2PhpTest extends PHPUnit_Framework_TestCase
         
         
         if (file_exists(dirname(__FILE__).'/data/generated/simple1')) {
-            rmdir_recursive(realpath('data/generated/simple1'));
+            rmdir_recursive(realpath(dirname(__FILE__).'/data/generated/simple1'));
+            mkdir(dirname(__FILE__).'/data/generated/simple1');
         }
         
         $shipModelExpected = array(
@@ -129,13 +129,16 @@ class Xsd2PhpTest extends PHPUnit_Framework_TestCase
                     );
         
         
-        $this->tclass->saveClasses(dirname(__FILE__).'/data/generated/simple1', true);
+        $this->tclass->saveClasses(dirname(__FILE__).'/data/generated/simple1/bindings', true);
         
+        $this->assertDirContentsEquals(dirname(__FILE__).'/data/expected/simple1/bindings', dirname(__FILE__).'/data/generated/simple1/bindings');
+        
+        /*
         $i = 0;
         foreach ($shipModelExpected as $model) {
             $this->assertEquals(file_get_contents($model), file_get_contents($shipModelActual[$i]));
             $i++;
-        }
+        }*/
         
         if (file_exists(dirname(__FILE__).'/data/generated/simple1')) {
             rmdir_recursive(realpath('data/generated/simple1'));

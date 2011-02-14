@@ -20,7 +20,7 @@ class PercentType
 
 		/**
 		 * @xmlType value
-		 * @var decimal
+		 * @var float
 		 */
 		public $value;
 

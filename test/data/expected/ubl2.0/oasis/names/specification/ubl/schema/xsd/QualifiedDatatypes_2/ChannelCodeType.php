@@ -25,7 +25,7 @@ class ChannelCodeType
 	 * @PrimitiveType String
 	 * @xmlType attribute
 	 * @xmlName listID
-	 * @var xsd:normalizedString
+	 * @var string
 	 */
 	public $listID;
 	/**
@@ -34,7 +34,7 @@ class ChannelCodeType
 	 * @PrimitiveType String
 	 * @xmlType attribute
 	 * @xmlName listAgencyID
-	 * @var xsd:normalizedString
+	 * @var string
 	 */
 	public $listAgencyID;
 	/**
@@ -43,7 +43,7 @@ class ChannelCodeType
 	 * @PrimitiveType String
 	 * @xmlType attribute
 	 * @xmlName listAgencyName
-	 * @var xsd:string
+	 * @var string
 	 */
 	public $listAgencyName;
 	/**
@@ -52,7 +52,7 @@ class ChannelCodeType
 	 * @PrimitiveType String
 	 * @xmlType attribute
 	 * @xmlName listName
-	 * @var xsd:string
+	 * @var string
 	 */
 	public $listName;
 	/**
@@ -61,7 +61,7 @@ class ChannelCodeType
 	 * @PrimitiveType String
 	 * @xmlType attribute
 	 * @xmlName listVersionID
-	 * @var xsd:normalizedString
+	 * @var string
 	 */
 	public $listVersionID;
 	/**
@@ -70,7 +70,7 @@ class ChannelCodeType
 	 * @PrimitiveType String
 	 * @xmlType attribute
 	 * @xmlName name
-	 * @var xsd:string
+	 * @var string
 	 */
 	public $name;
 	/**
@@ -79,7 +79,7 @@ class ChannelCodeType
 	 * @PrimitiveType String
 	 * @xmlType attribute
 	 * @xmlName languageID
-	 * @var xsd:language
+	 * @var string
 	 */
 	public $languageID;
 	/**
@@ -88,7 +88,7 @@ class ChannelCodeType
 	 * @PrimitiveType String
 	 * @xmlType attribute
 	 * @xmlName listURI
-	 * @var xsd:anyURI
+	 * @var string
 	 */
 	public $listURI;
 	/**
@@ -97,7 +97,7 @@ class ChannelCodeType
 	 * @PrimitiveType String
 	 * @xmlType attribute
 	 * @xmlName listSchemeURI
-	 * @var xsd:anyURI
+	 * @var string
 	 */
 	public $listSchemeURI;
 

@@ -20,7 +20,7 @@ class TimeType
 
 		/**
 		 * @xmlType value
-		 * @var time
+		 * @var string
 		 */
 		public $value;
 

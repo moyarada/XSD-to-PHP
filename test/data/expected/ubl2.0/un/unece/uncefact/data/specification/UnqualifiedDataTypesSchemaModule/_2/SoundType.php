@@ -20,7 +20,7 @@ class SoundType
 
 		/**
 		 * @xmlType value
-		 * @var base64Binary
+		 * @var string
 		 */
 		public $value;	
 	/**
@@ -35,7 +35,7 @@ class SoundType
 	 * @BuiltinType string
 	 * @xmlType attribute
 	 * @xmlName format
-	 * @var xsd:string
+	 * @var string
 	 */
 	public $format;
 	/**
@@ -50,7 +50,7 @@ class SoundType
 	 * @BuiltinType normalizedString
 	 * @xmlType attribute
 	 * @xmlName mimeCode
-	 * @var clmIANAMIMEMediaType:BinaryObjectMimeCodeContentType
+	 * @var un\unece\uncefact\codelist\specification\IANAMIMEMediaType\_2003\BinaryObjectMimeCodeContentType
 	 */
 	public $mimeCode;
 	/**
@@ -65,7 +65,7 @@ class SoundType
 	 * @BuiltinType normalizedString
 	 * @xmlType attribute
 	 * @xmlName encodingCode
-	 * @var xsd:normalizedString
+	 * @var string
 	 */
 	public $encodingCode;
 	/**
@@ -80,7 +80,7 @@ class SoundType
 	 * @BuiltinType anyURI
 	 * @xmlType attribute
 	 * @xmlName uri
-	 * @var xsd:anyURI
+	 * @var string
 	 */
 	public $uri;
 	/**
@@ -95,7 +95,7 @@ class SoundType
 	 * @BuiltinType string
 	 * @xmlType attribute
 	 * @xmlName filename
-	 * @var xsd:string
+	 * @var string
 	 */
 	public $filename;
 

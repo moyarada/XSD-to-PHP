@@ -425,6 +425,7 @@ class Xsd2Php extends Common
         }
 
         if (!file_exists($dir) && $createDirectory === true) {
+            //@todo Implement Recursive mkdir
             mkdir($dir, 0777, true);
         }
 

@@ -20,7 +20,7 @@ class DateType
 
 		/**
 		 * @xmlType value
-		 * @var date
+		 * @var string
 		 */
 		public $value;
 

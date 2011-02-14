@@ -12,7 +12,7 @@ class BinaryObjectMimeCodeContentType
 
 		/**
 		 * @xmlType value
-		 * @var normalizedString
+		 * @var string
 		 */
 		public $value;
 

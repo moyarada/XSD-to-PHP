@@ -11,6 +11,7 @@ use oasis\names\specification\ubl\schema\xsd\Order_2;
 
 set_include_path(dirname(__FILE__).'/data/expected/ubl2.0'.PATH_SEPARATOR.
                  dirname(__FILE__).'/data/expected/simple1'.PATH_SEPARATOR.
+                 dirname(__FILE__).'/data/expected/simple1/bindings'.PATH_SEPARATOR.
                  get_include_path());
                         
 

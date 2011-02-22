@@ -10,8 +10,8 @@
 			<file>WsdlTest.php</file>
 			<file>SoapServerTest.php</file>
 		</testsuite>
-		<testsuite name="Xsd2Php">
-			<file>MavenXsdTest.php</file>
+		<testsuite name="Xsd2Php" >
+			<file>Xsd2Php/MavenXsdTest.php</file>
 		</testsuite>
 	</testsuites>
 </phpunit>

@@ -15,12 +15,15 @@ as XML (marshalling).
 
 Versions history
 
+Current release
+ # Fixed #24: Fix problem with WSDL generation - soap:operation must not have any child 
+
 0.0.5 Major refactoring 
  # Fixed #17: Array of objects is not converted to XML correctly
  # Implemented #12: Feature: WSDL generator utilizing existing mapping in classes
  # Added NullLogger - mock for logger. It will be used later for #18: Feature: Logger injection
- # In progress #13 Command line tool: Initial version developed, compile-schema target only.
- # In progress #8 Create facade class: Initial version implemented, only compileSchema method works. (See LegkoXml.php)
+ # #13 Command line tool: Initial version developed, compile-schema target only.
+ # #8 Create facade class: Initial version implemented, only compileSchema method works. (See LegkoXml.php)
  
 0.0.4 Issue #12. WSDL autodiscovery
  # Fixed #10: Directory structure do not correspond to PHP namespaces

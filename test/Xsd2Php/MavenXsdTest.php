@@ -5,7 +5,7 @@ realpath("../../src"));
 use com\mikebevz\xsd2php;
 
 require_once "com/mikebevz/xsd2php/Xsd2Php.php";
-require_once "../Bootstrap.php";
+require_once realpath(dirname(__FILE__)."/../Bootstrap.php");
 
 class MavenXsdTest extends LegkoXMLTestCase
 {

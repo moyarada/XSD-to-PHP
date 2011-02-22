@@ -35,8 +35,6 @@ class Xsd2Php extends Common
      */
     private $xsdFile;
 
-
-
     /**
      *
      * @var DOMXPath
@@ -66,27 +64,44 @@ class Xsd2Php extends Common
      * @var array
      */
     //private $namespaces;
-
+    
+    /**
+     * Short namespaces
+     * 
+     * @var array
+     */
     private $shortNamespaces;
-
+    
+    /**
+     * XML Source
+     * 
+     * @var string
+     */
     private $xmlSource;
-
+    
+    /**
+     * Target namespace
+     * 
+     * @var string
+     */
     private $targetNamespace;
 
     /**
      * XSD root namespace alias (fx, xsd = http://www.w3.org/2001/XMLSchema)
+     * 
      * @var string
      */
     private $xsdNs;
 
     /**
      * Already processed imports
+     * 
      * @var array
      */
     private $loadedImportFiles = array();
 
     /**
-     *
+     * Processed namespaces
      *
      * @var array
      */
@@ -150,7 +165,7 @@ class Xsd2Php extends Common
     }
 
     /**
-     * Return targer namespace for given DOMXPath object
+     * Return target namespace for given DOMXPath object
      *
      * @param DOMXPath $xpath DOMXPath Object
      *
@@ -506,13 +521,14 @@ class Xsd2Php extends Common
             } else {
                 $docBlock['var'] = $phpClass->name;
             }
-
+            
             foreach ($docs as $doc) {
                 if ($doc->nodeValue != '') {
                     $docBlock["xml".$doc->getAttribute('name')] = $doc->nodeValue;
                 } elseif ($doc->getAttribute('value') != '') {
                     $docBlock["xml".$doc->getAttribute('name')] = $doc->getAttribute('value');
                 }
+                
             }
 
             $phpClass->classDocBlock = $docBlock;
@@ -520,6 +536,7 @@ class Xsd2Php extends Common
             $props      = $xPath->query('property', $class);
             $properties = array();
             $i = 0;
+            $isArray = false;
             foreach($props as $prop) {
                 $properties[$i]['name'] = $prop->getAttribute('name');
                 $docs                   = $xPath->query('docs/doc', $prop);
@@ -537,6 +554,14 @@ class Xsd2Php extends Common
                 }
                 if ($prop->getAttribute('maxOccurs') != '') {
                     $properties[$i]["docs"]['xmlMaxOccurs'] = $prop->getAttribute('maxOccurs');
+                    // If maxOccurs > 1, mark type as an array
+                    if ($prop->getAttribute('maxOccurs') > 1) {
+                        $isArray = $prop->getAttribute('maxOccurs');
+                        
+                    } elseif($prop->getAttribute('maxOccurs')=='unbounded') {
+                        $isArray = true;
+                    }
+                    
                 }
                 if ($prop->getAttribute('name') != '') {
                     $properties[$i]["docs"]['xmlName']      = $prop->getAttribute('name');
@@ -557,6 +582,16 @@ class Xsd2Php extends Common
                         $properties[$i]["docs"]['var'] = $ns.'\\'.$prop->getAttribute('type');
                     } else {
                         $properties[$i]["docs"]['var'] = $prop->getAttribute('type');
+                    }
+                    // Is it unbounded array?
+                    if ($isArray === true) {
+                        $properties[$i]["docs"]['var'] = $properties[$i]["docs"]['var']."[]";
+                        $isArray = false;
+                    }
+                    // Is it array with defined maximum amount of elements?
+                    if ($isArray > 1) {
+                        $properties[$i]["docs"]['var'] = $properties[$i]["docs"]['var']."[".$isArray."]";
+                        $isArray = false;
                     }
                 }
 

@@ -57,7 +57,7 @@ class Xsd2Php extends Common
      * Show debug info
      * @var boolean
      */
-    public $debug = false;
+    public $debug = true;
 
     /**
      * Namespaces = array (className => namespace ), used in dirs/files generation
@@ -367,12 +367,12 @@ class Xsd2Php extends Common
             $parent->removeChild($entry);
         }
 
-        $xpath = new \DOMXPath($dom);
+/*         $xpath = new \DOMXPath($dom);
         $query = "//*[local-name()='include' and namespace-uri()='http://www.w3.org/2001/XMLSchema']";
         $includes = $xpath->query($query);
         if ($includes->length != 0) {
             $dom = $this->loadIncludes($dom);
-        }
+        } */
 
         if ($this->debug) print_r("\n------------------------------------\n");
 

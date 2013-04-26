@@ -13,11 +13,11 @@
 <xsl:stylesheet version="1.0"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
 	xmlns:exslt="http://exslt.org/common">
+	
+	<xsl:variable name="targetNamespace" select="@targetNamespace" />
 
 	<xsl:template
 		match="//*[local-name()='schema' and namespace-uri()='http://www.w3.org/2001/XMLSchema']">
-
-		<xsl:variable name="targetNamespace" select="@targetNamespace" />
 
 		<!-- Generate classes for each element with data type as extention -->
 		<xsdschema>

@@ -1,9 +1,14 @@
 #!/usr/bin/php -q
 <?php
+$cwd = dirname(__FILE__);
+$sourceFolder = dirname($cwd);
+$root = dirname($sourceFolder);
 set_include_path(get_include_path().
-    PATH_SEPARATOR.realpath("../../lib/ZF/1.10.7"));
+    PATH_SEPARATOR.$root."/lib/ZF/1.10.7".
+    PATH_SEPARATOR.$sourceFolder
+);
 
-require_once '../com/mikebevz/xsd2php/LegkoXML.php';
+require_once 'com/mikebevz/xsd2php/LegkoXML.php';
 require_once 'Zend/Console/Getopt.php';
 //require_once '../../lib/ZF/1.10.7/Zend/Exception.php';
 //require_once '../../lib/ZF/1.10.7/Zend/Console/Getopt/Exception.php';

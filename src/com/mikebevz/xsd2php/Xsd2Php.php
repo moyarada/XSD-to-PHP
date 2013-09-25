@@ -693,6 +693,12 @@ class Xsd2Php extends Common
             foreach($elements as $key => $value) {
                 if ($value != '') {
                     $value = preg_replace('/\./', '_', $value);
+                    $hashpos = strpos($value, '#');
+                    if ($hashpos !== false)
+                    {
+                        $ns .= "\\" . substr($value, 0, $hashpos);
+                        break;
+                    }
                     $ns .= "\\" . $value;
                 }
             }
@@ -748,7 +754,14 @@ class Xsd2Php extends Common
             foreach($elements as $key => $value) {
                 if ($value != '') {
                     $value = preg_replace('/[\.|-]/', '_', $value);
+                    $hashpos = strpos($value, '#');
+                    if ($hashpos !== false)
+                    {
+                        $ns .= DIRECTORY_SEPARATOR . substr($value, 0, $hashpos);
+                        break;
+                    }
                     $ns .= DIRECTORY_SEPARATOR . $value;
+                    
                 }
             }
         }

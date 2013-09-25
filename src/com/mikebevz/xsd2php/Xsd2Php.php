@@ -513,10 +513,19 @@ class Xsd2Php extends Common
             }
 
             if ($class->getElementsByTagName('extends')->length > 0) {
-                if (!in_array($class->getElementsByTagName('extends')->item(0)->getAttribute('name'), $this->basicTypes)) {
-                    $phpClass->extends = $class->getElementsByTagName('extends')->item(0)->getAttribute('name');
-                    $phpClass->type    = $class->getElementsByTagName('extends')->item(0)->getAttribute('name');
-                    $phpClass->extendsNamespace = $this->namespaceToPhp($class->getElementsByTagName('extends')->item(0)->getAttribute('namespace'));
+                $rawType = $type = $class->getElementsByTagName('extends')->item(0)->getAttribute('name');
+                $extendsNamespace = $this->namespaceToPhp($class->getElementsByTagName('extends')->item(0)->getAttribute('namespace'));
+                $colonPos = strpos($type, ':');
+                if (empty($extendsNamespace) && $colonPos !== false)
+                {
+                    $type = substr ($type, $colonPos + 1);
+                    if (empty($phpClass->type))
+                        $phpClass->type = $type;
+                }
+                if (!in_array($type, $this->basicTypes)) {
+                    $phpClass->extends = $type;
+                    $phpClass->type    = $rawType;
+                    $phpClass->extendsNamespace = $extendsNamespace;
                 }
             }
 

@@ -106,9 +106,20 @@ class Xsd2Php extends Common
      * @var array
      */
     private $importHeadNS = array();
-
+    
+    /**
+     * Map of already generated paths for a XML namespace
+     * @var array
+     */
+    private $namespaceToPath = array();
 
     /**
+     * Map of already generated PHP namespaces for an XML namespace
+     * @var array
+     */
+    private $namespaceToPhp = array();
+    
+        /**
      * XML Schema converted to XML
      *
      * @return string $xmlSource
@@ -652,6 +663,8 @@ class Xsd2Php extends Common
      * @return string
      */
     public function namespaceToPhp($xmlNS) {
+        if (!empty($this->namespaceToPhp[$xmlNS]))
+            return ($this->namespaceToPhp[$xmlNS]);
         $ns = $xmlNS;
         $ns = $this->expandNS($ns);
         if (preg_match('/urn:/',$ns)) {
@@ -700,7 +713,7 @@ class Xsd2Php extends Common
         }
 
         $ns = implode('\\', $ns);
-         
+        $this->namespaceToPhp[$xmlNS] = $ns;
         return $ns;
     }
      
@@ -711,6 +724,8 @@ class Xsd2Php extends Common
      * @return string
      */
     private function namespaceToPath($xmlNS) {
+        if (!empty($this->namespaceToPath[$xmlNS]))
+            return $this->namespaceToPath[$xmlNS];
         $ns = $xmlNS;
         $ns = $this->expandNS($ns);
 
@@ -750,6 +765,7 @@ class Xsd2Php extends Common
             $i++;
         }
         $ns = implode(DIRECTORY_SEPARATOR, $ns);
+        $this->namespaceToPath[$xmlNS] = $ns;
         return $ns;
     }
 }

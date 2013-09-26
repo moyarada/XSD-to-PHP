@@ -518,9 +518,13 @@ class Xsd2Php extends Common
                 $colonPos = strpos($type, ':');
                 if (empty($extendsNamespace) && $colonPos !== false)
                 {
-                    $type = substr ($type, $colonPos + 1);
-                    if (empty($phpClass->type))
-                        $phpClass->type = $type;
+                    $ns = substr($type, 0, $colonPos);
+                    if (!empty($this->shortNamespaces[$ns]) && $this->shortNamespaces[$ns] == 'http://www.w3.org/2001/XMLSchema')
+                    {
+                        $type = substr ($type, $colonPos + 1);
+                        if (empty($phpClass->type))
+                            $phpClass->type = $type;
+                    }
                 }
                 if (!in_array($type, $this->basicTypes)) {
                     $phpClass->extends = $type;

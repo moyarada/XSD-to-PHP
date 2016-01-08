@@ -106,9 +106,20 @@ class Xsd2Php extends Common
      * @var array
      */
     private $importHeadNS = array();
-
+    
+    /**
+     * Map of already generated paths for a XML namespace
+     * @var array
+     */
+    private $namespaceToPath = array();
 
     /**
+     * Map of already generated PHP namespaces for an XML namespace
+     * @var array
+     */
+    private $namespaceToPhp = array();
+    
+        /**
      * XML Schema converted to XML
      *
      * @return string $xmlSource
@@ -502,10 +513,23 @@ class Xsd2Php extends Common
             }
 
             if ($class->getElementsByTagName('extends')->length > 0) {
-                if (!in_array($class->getElementsByTagName('extends')->item(0)->getAttribute('name'), $this->basicTypes)) {
-                    $phpClass->extends = $class->getElementsByTagName('extends')->item(0)->getAttribute('name');
-                    $phpClass->type    = $class->getElementsByTagName('extends')->item(0)->getAttribute('name');
-                    $phpClass->extendsNamespace = $this->namespaceToPhp($class->getElementsByTagName('extends')->item(0)->getAttribute('namespace'));
+                $rawType = $type = $class->getElementsByTagName('extends')->item(0)->getAttribute('name');
+                $extendsNamespace = $this->namespaceToPhp($class->getElementsByTagName('extends')->item(0)->getAttribute('namespace'));
+                $colonPos = strpos($type, ':');
+                if (empty($extendsNamespace) && $colonPos !== false)
+                {
+                    $ns = substr($type, 0, $colonPos);
+                    if (!empty($this->shortNamespaces[$ns]) && $this->shortNamespaces[$ns] == 'http://www.w3.org/2001/XMLSchema')
+                    {
+                        $type = substr ($type, $colonPos + 1);
+                        if (empty($phpClass->type))
+                            $phpClass->type = $type;
+                    }
+                }
+                if (!in_array($type, $this->basicTypes)) {
+                    $phpClass->extends = $type;
+                    $phpClass->type    = $rawType;
+                    $phpClass->extendsNamespace = $extendsNamespace;
                 }
             }
 
@@ -652,6 +676,8 @@ class Xsd2Php extends Common
      * @return string
      */
     public function namespaceToPhp($xmlNS) {
+        if (!empty($this->namespaceToPhp[$xmlNS]))
+            return ($this->namespaceToPhp[$xmlNS]);
         $ns = $xmlNS;
         $ns = $this->expandNS($ns);
         if (preg_match('/urn:/',$ns)) {
@@ -680,6 +706,12 @@ class Xsd2Php extends Common
             foreach($elements as $key => $value) {
                 if ($value != '') {
                     $value = preg_replace('/\./', '_', $value);
+                    $hashpos = strpos($value, '#');
+                    if ($hashpos !== false)
+                    {
+                        $ns .= "\\" . substr($value, 0, $hashpos);
+                        break;
+                    }
                     $ns .= "\\" . $value;
                 }
             }
@@ -700,7 +732,7 @@ class Xsd2Php extends Common
         }
 
         $ns = implode('\\', $ns);
-         
+        $this->namespaceToPhp[$xmlNS] = $ns;
         return $ns;
     }
      
@@ -711,6 +743,8 @@ class Xsd2Php extends Common
      * @return string
      */
     private function namespaceToPath($xmlNS) {
+        if (!empty($this->namespaceToPath[$xmlNS]))
+            return $this->namespaceToPath[$xmlNS];
         $ns = $xmlNS;
         $ns = $this->expandNS($ns);
 
@@ -733,7 +767,14 @@ class Xsd2Php extends Common
             foreach($elements as $key => $value) {
                 if ($value != '') {
                     $value = preg_replace('/[\.|-]/', '_', $value);
+                    $hashpos = strpos($value, '#');
+                    if ($hashpos !== false)
+                    {
+                        $ns .= DIRECTORY_SEPARATOR . substr($value, 0, $hashpos);
+                        break;
+                    }
                     $ns .= DIRECTORY_SEPARATOR . $value;
+                    
                 }
             }
         }
@@ -750,6 +791,7 @@ class Xsd2Php extends Common
             $i++;
         }
         $ns = implode(DIRECTORY_SEPARATOR, $ns);
+        $this->namespaceToPath[$xmlNS] = $ns;
         return $ns;
     }
 }
